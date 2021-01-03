@@ -1,0 +1,318 @@
+Написать программу, которая осуществляет добавление строки или столбца в любое место двумерной
+матрицы по выбору пользователя.
+
+#include<iostream>;
+using namespace std;
+#include<time.h>;
+
+int** Create(int m, int n)
+{
+	int** mas = (int**)malloc(m * sizeof(int*));
+	for (int i = 0; i < m; i++)
+	{
+		mas[i] = (int*)malloc(n * sizeof(int));
+	}
+	return mas;
+}
+
+void Full(int**& mas, int m, int n)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			mas[i][j] = rand() % 100;
+		}
+	}
+}
+
+void Add_col(int**& mas, int m, int& n, int pos)
+{
+	for (int i = 0; i < m; i++)
+	{
+		mas[i] = (int*)realloc(mas[i], (n + 1) * sizeof(int));
+		for (int j = n; j > pos; j--)
+		{
+			mas[i][j] = mas[i][j - 1];
+		}
+		mas[i][pos] = 101;
+	}
+	n++;
+}
+
+void Add_row(int**& mas, int& m, int n, int pos)
+{
+	mas = (int**)realloc(mas, (m+1) * sizeof(int*));
+	for (int i = m; i > pos; i--)
+	{
+		mas[i] = mas[i - 1];
+	}
+	mas[pos] = (int*)malloc(n * sizeof(int));
+	m++;
+	for (int i = 0; i < n; i++)
+	{
+		mas[pos][i] = 101;
+	}
+}
+
+void Show(int** mas, int m, int n)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+void Destroy(int** mas, int m)
+{
+	for (int i = 0; i < m; i++)
+	{
+		free(mas[i]);
+	}
+	free(mas);
+}
+
+int main()
+{
+	srand(time(0));
+	int** mas;
+	int m, n, pos_add, pos_row;
+	cout << "Enter m and n:\n";
+	cin >> m >> n;
+	cout << "Enter position for add coll:\n";
+	cin >> pos_add;
+	cout << "Enter position for add row:\n";
+	cin >> pos_row;
+	mas = Create(m, n);
+	Full(mas, m, n);
+	Show(mas, m, n);
+	Add_col(mas, m, n, pos_add);
+	Show(mas, m, n);
+	Add_row(mas, m, n, pos_row);
+	Show(mas, m, n);
+	Destroy(mas, m);
+}
+
+
+//Cоздать структуру ВИДЕОМАГАЗИН со следующими
+//полями :
+//■ Название фильма
+//■ Режиссер
+//■ Жанр
+//■ Рейтинг популярности
+//■ Цена диска
+//Реализовать следующие возможности :
+//■ Поиск по названию
+//■ Поиск по жанру
+//■ Поиск по режиссеру
+//■ Самый популярный фильм в жанре
+//■ Показ всех записей и добавление
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>;
+using namespace std;
+
+struct Video
+{
+	char name[40];
+	char creator[40];
+	char type[30];
+	int rate;
+	double cost;
+};
+
+Video* Read(Video* mas, int& n)
+{
+	FILE* fp;
+	fp = fopen("Video.txt", "r");
+	if (fp)
+	{
+		fread(&n, sizeof(n), 1, fp);
+		mas = (Video*)malloc(n * sizeof(Video));
+		fread(mas, sizeof(mas[0]), n, fp);
+		fclose(fp);
+	}
+	else
+	{
+		cout << "File not found\n";
+	}
+	return mas;
+}
+
+void Write(Video* mas, int n)
+{
+	FILE* fp;
+	fp = fopen("Video.txt", "w");
+	if (fp)
+	{
+		fwrite(&n, sizeof(n), 1, fp);
+		fwrite(mas, sizeof(mas[0]), n, fp);
+		fclose(fp);
+	}
+	else
+	{
+		cout << "Error!";
+	}
+}
+
+void Show(Video* mas, int n, int pos)
+{
+	cout << "|Name\t|Creator\t|Type\t|rate\t|Cost\t|\n";
+	if (pos == -1)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			cout << "|" << mas[i].name << "\t|" << mas[i].creator << "\t|" << mas[i].type << "\t|" << mas[i].rate << "\t|" << mas[i].cost << "\t|\n";
+		}
+	}
+	else
+	{
+		cout << "|" << mas[pos].name << "\t|" << mas[pos].creator << "\t|" << mas[pos].type << "\t|" << mas[pos].rate << "\t|" << mas[pos].cost << "\t|\n";
+	}
+}
+
+Video* Add(Video* mas, int& n)
+{
+	mas = (Video*)realloc(mas, (n + 1) * sizeof(Video));
+	getchar();
+	cout << "Ener info of the new video\n";
+	cout << "Enter name: ";
+	gets_s(mas[n].name, 40);
+	cout << "Enter creator: ";
+	gets_s(mas[n].creator, 40);
+	cout << "Enter type: ";
+	gets_s(mas[n].type, 30);
+	cout << "Enter base rate: ";
+	cin >> mas[n].rate;
+	cout << "Enter cost: ";
+	cin >> mas[n].cost;
+	n++;
+	Write(mas, n);
+	return mas;
+}
+
+void Find_par(Video* mas, int n, int opt)
+{
+	char fch[40];
+	cout << "Enter data for find: \n";
+	gets_s(fch, 20);
+	for (int i = 0; i < n; i++)
+	{
+		switch (opt)
+		{
+		case 1:
+		{
+			if (strcmp(fch,mas[i].name)==0) Show(mas, n, i);
+			break;
+		}
+		case 2:
+		{
+			if (strcmp(fch,mas[i].creator)==0) Show(mas, n, i);
+			break;
+		}
+		case 3:
+		{
+			if (strcmp(fch,mas[i].type)==0) Show(mas, n, i);
+			break;
+		}
+		default:
+			break;
+		}
+	}
+}
+
+void Find(Video* mas, int n)
+{
+	int opt;
+	do
+	{
+		do
+		{
+			cout << "Select parameter for find:\n";
+			cout << "1 - of name;\n";
+			cout << "2 - of creator;\n";
+			cout << "3 - of type;\n";
+			cout << "0 - Exit.\n";
+			cin >> opt;
+			getchar();
+		} while (opt < 0 || opt>3);
+		if (opt != 0) Find_par(mas, n, opt);
+	} while (opt != 0);
+}
+
+void Maxrate(Video* mas, int n)
+{
+	char tmp[30];
+	int max = 0;
+	char flag = 0;
+	getchar();
+	cout << "Enter type: ";
+	gets_s(tmp, 30);
+	for (int i = 0; i < n; i++)
+	{
+		if (strcmp(mas[i].type, tmp) == 0)
+		{
+			if (flag == 0)
+			{
+				max = i;
+				flag = 1;
+			}
+			if (mas[i].rate > mas[max].rate)
+			{
+				max = i;
+			}
+		}
+	}
+	if (flag == 1) Show(mas, n, max);
+	else cout << "No video by type.\n";
+}
+
+int main()
+{
+	Video* mas = nullptr;
+	int n = 0;
+	mas = Read(mas, n);
+	int opt;
+	do {
+		do
+		{
+			cout << "Select action:\n";
+			cout << "1 - Add video;\n";
+			cout << "2 - Find video(s);\n";
+			cout << "3 - Show all videos;\n";
+			cout << "4 - Vis max rate by type;\n";
+			cout << "0 - Exit.\n";
+			cin >> opt;
+		} while (opt < 0 || opt>4);
+		switch (opt)
+		{
+		case 1:
+		{
+			mas = Add(mas, n);
+			break;
+		}
+		case 2:
+		{
+			Find(mas, n);
+			break;
+		}
+		case 3:
+		{
+			Show(mas, n, -1);
+			break;
+		}
+		case 4:
+		{
+			Maxrate(mas, n);
+			break;
+		}
+		default:
+			break;
+		}
+	} while (opt != 0);
+}

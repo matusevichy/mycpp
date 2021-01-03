@@ -1,0 +1,48 @@
+#include<iostream>;
+using namespace std;
+
+1.
+int main() {
+	cout << "=================================================================================\n";
+	cout << "|\tX\t|\tY\t|\tX AND Y\t|\tX OR Y\t|\tNOT X\t|\n";
+	cout << "=================================================================================\n";
+	cout << "|\t0\t|\t0\t|\t0\t|\t0\t|\t1\t|\n";
+	cout << "|\t0\t|\t1\t|\t0\t|\t1\t|\t1\t|\n";
+	cout << "|\t1\t|\t0\t|\t0\t|\t1\t|\t0\t|\n";
+	cout << "|\t1\t|\t1\t|\t1\t|\t1\t|\t0\t|\n";
+	cout << "=================================================================================\n\n";
+}
+
+2.
+#include<iostream>;
+#include<math.h>;
+using namespace std;
+
+int main() {
+	cout << "Input diagonal, inch ";
+	float d;
+	cin >> d;
+	cout << "It`s " << ceil(d*2.54) << " cm.\n";
+}
+
+3.
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input akk. capacity, mAh:";
+	int N;
+	cin >> N;
+	cout << "You need powerbank with min capacity " << N * 3 << " mAh.\n";
+}
+
+4.
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input food weight, gramm:";
+	float K;
+	cin >> K;
+	cout << "You need pay " << K*30/1000 << "kg food on 30 days.\n";
+}

@@ -1,0 +1,89 @@
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input cheked number:";
+	int n;
+	cin >> n;
+	(n % 2) ? cout << "Entered number is odd." : cout << "Entered number is even.";
+	cout << endl;
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input number < 100:";
+	int n;
+	cin >> n;
+	if (n >= 100) {
+		cout << "Inputed number >=100. It`s incorrect.";
+	}
+	else {
+		short i, j;
+		i = n / 10;
+		(i) ? cout << "Number contains 2 digits.\n" : cout << "Number contains 1 digits.\n";
+		j = n % 10;
+		cout << "Sum all digits is " << i + j << endl;
+	}
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "If you want convert inches to cm. input 1.\nIf you want convert cm. to inches input 2.\n";
+	short i;
+	float n;
+	cin >> i;
+	if ((i != 1) && (i != 2)) {
+		cout << "You inputed incorrect number (not 1 or 2)." << endl;
+	}
+	else {
+		cout << "Input number:";
+		cin >> n;
+		switch (i) {
+		case 1:cout << n << " inches = " << n * 2.54 << " cm." << endl; break;
+		case 2:cout << n << " cm. = " << n / 2.54 << " inches." << endl; break;
+		}
+	}
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	float a, b;
+	short act;
+	cout << "Input first number:";
+	cin >> a;
+	cout << "Input second number:";
+	cin >> b;
+	cout << "Select action:"<<endl;
+	cout << "\t1 - \"+\""<<endl;
+	cout << "\t2 - \"-\""<<endl;
+	cout << "\t3 - \"*\"" << endl;
+	cout << "\t4 - \"/\"" << endl;
+	cout << "\t5 - \"max\"" << endl;
+	cout << "\t6 - \"min\""<<endl;
+	cin >> act; 
+
+	switch (act)
+	{
+	case 1:cout << a << "+" << b << "= " << a + b << endl; break;
+	case 2:cout << a << "-" << b << "= " << a - b << endl; break;
+	case 3:cout << a << "*" << b << "= " << a * b << endl; break;
+	case 4:cout << a << "/" << b << "= " << a / b << endl; break;
+	case 5:(a > b) ? cout << a << " is max number." : cout << b << " is max number."; break;
+	case 6:(a > b) ? cout << b << " is min number." : cout << a << " is min number."; break;
+	default:cout << "Incorrect action."; break;
+	}
+}

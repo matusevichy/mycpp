@@ -1,0 +1,128 @@
+Многомерные массивы
+
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	const short n = 5, m = 5;
+	int mass[n][m];
+	cout << "Enter number:";
+	cin >> mass[0][0];
+	for (short i = 1; i < m * n; i++) {
+		mass[0][i] = mass[0][i - 1] * 2;
+	}
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++)
+		{
+			cout << mass[i][j] << "\t";
+		}
+		cout << endl;
+	}
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	const short n = 5, m = 5;
+	int mass[n][m];
+	cout << "Enter number:";
+	cin >> mass[0][0];
+	for (short i = 1; i < m * n; i++) {
+		mass[0][i] = mass[0][i - 1] +1;
+	}
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++)
+		{
+			cout << mass[i][j] << "\t";
+		}
+		cout << endl;
+	}
+}
+
+Задание 3.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short n = 5, m = 5;
+	int mass[n][m], count, tmp, tmp0;
+	srand(time(0));
+	char act;
+	for (short i = 0; i < n; i++)
+	{
+		for (short j = 0; j < m; j++) {
+			mass[i][j] = rand() % 100;
+			cout << mass[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	do {
+		cout << "Select the direction of shift.\n";
+		cout << "1 - left; \n2 - right; \n3 - up; \n4 - down; \n0 - exit.\n";
+		cin >> act;
+		if (act == '0') { break; }
+		cout << "Enter the number of shift: ";
+		cin >> count;
+		switch (act)
+		{
+		case '1': {
+			for (short s = 1; s <= count; s++) {
+				for (short i = 0; i < n; i++) {
+					tmp0 = mass[i][0];
+					for (short j = 1; j < m; j++) {
+						mass[i][j - 1] = mass[i][j];
+					}
+					mass[i][m-1] = tmp0;
+				}
+			}
+			break;
+		}
+		case '2': {
+			for (short s = 1; s <= count; s++) {
+				for (short i = 0; i < n; i++) {
+					tmp0 = mass[i][m-1];
+					for (short j = m-1; j >= 0; j--) {
+						mass[i][j] = mass[i][j-1];
+					}
+					mass[i][0] = tmp0;
+				}
+			}
+			break;
+		}
+		case '3': {
+			for (short s = 1; s <= count; s++) {
+				for (short j = 0; j < m; j++) {
+					tmp0 = mass[i][m - 1];
+					for (short j = m - 1; j >= 0; j--) {
+						mass[i][j] = mass[i][j - 1];
+					}
+					mass[i][0] = tmp0;
+				}
+			}
+			break;
+		}
+		case '4': {
+
+		}
+		case '0': break;
+		default: {
+			cout << "Uncorrect selection.";
+			break;
+		}
+		}
+		for (short i = 0; i < n; i++)
+		{
+			for (short j = 0; j < m; j++) {
+				cout << mass[i][j] << "\t";
+			}
+			cout << endl;
+		}
+	} while (act != 0 || act == 8);
+}

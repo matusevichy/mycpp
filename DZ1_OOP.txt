@@ -1,0 +1,362 @@
+Задание 1.
+
+Drob.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+class Drob
+{
+	int chisl;
+	int znam;
+public:
+	Drob();
+	void Set();
+	void Sum(Drob);
+	void Razn(Drob);
+	void Prod(Drob);
+	void Div(Drob);
+};
+
+
+Drop.cpp
+
+#include "Drob.h"
+
+Drob::Drob()
+{
+	this->chisl = 0;
+	this->znam = 1;
+}
+
+void Drob::Set()
+{
+	do
+	{
+		cout << "Enter chisl (>=0): ";
+		cin >> this->chisl;
+	} while (this->chisl < 0);
+	do
+	{
+		cout << "Enter znam (> 0): ";
+		cin >> this->znam;
+	} while (this->znam <= 0);
+}
+
+void Drob::Sum(Drob num)
+{
+	cout << "Summa is:\n" << this->chisl * num.znam + num.chisl*this->znam << "/" << this->znam * num.znam << "\n";
+}
+
+void Drob::Razn(Drob num)
+{
+	cout << "Razn is :\n" << this->chisl * num.znam - num.chisl * this->znam << "/" << this->znam * num.znam << "\n";
+}
+
+void Drob::Prod(Drob num)
+{
+	cout << "Production is :\n" << this->chisl * num.chisl << "/" << this->znam * num.znam << "\n";
+}
+
+void Drob::Div(Drob num)
+{
+	cout << "Razn is :\n" << this->chisl * num.znam  << "/" << this->znam * num.chisl << "\n";
+}
+
+
+Source.cpp
+
+#include "Drob.h";
+
+
+int main()
+{
+	short act;
+	Drob n1, n2;
+	do
+	{
+		do
+		{
+			cout << "select option:\n";
+			cout << "1 - Enter numbers;\n";
+			cout << "2 - Sum numbers;\n";
+			cout << "3 - Razn numbers;\n";
+			cout << "4 - Production numbers;\n";
+			cout << "5 - Divide by;\n";
+			cout << "0 - Exit.\n";
+			cin >> act;
+		} while (act < 0 || act>5);
+		switch (act)
+		{
+		case 1:
+		{
+			cout << "Number 1:\n";
+			n1.Set();
+			cout << "Number 2:\n";
+			n2.Set();
+			break;
+		}
+		case 2:
+		{
+			n1.Sum(n2);
+			break;
+		}
+		case 3:
+		{
+			n1.Razn(n2);
+			break;
+		}
+		case 4:
+		{
+			n1.Prod(n2);
+			break;
+		}
+		case 5:
+		{
+			n1.Div(n2);
+			break;
+		}
+		default:
+			break;
+		}
+	} while (act != 0);
+}
+
+
+Задание 2.
+
+Phone.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+class Phone
+{
+	char type;
+	char number[10];
+public:
+	void Set();
+	void Get();
+};
+
+Phone.cpp
+
+#include "Phone.h"
+
+void Phone::Set()
+{
+	char flag = 0;
+	do
+	{
+		cout << "Enter type of phone:\n";
+		cout << "1 - mobile; 2 - work; 3 - home.\n";
+		this->type=getchar();
+		getchar();
+	} while (this->type < '1' || this->type > '3');
+	do
+	{
+		cout << "Enter the phone number (10 digits):\n";
+		gets_s(this->number, 11);
+		for (short i = 0; i < 10; i++)
+		{
+			if (!isdigit(this->number[i]))
+			{
+				flag = 1;
+				cout << "Incorrect number!\n";
+				break;
+			}
+			else flag = 0;
+		}
+	} while (flag != 0);
+}
+
+void Phone::Get()
+{
+	if (this->type == '1') cout << "Mobile number\t";
+	else if (this->type == '2') cout << "Work number\t";
+	else if (this->type == '3') cout << "Home number\t";
+	cout << this->number << "\n";
+}
+
+Abonent.h
+
+#pragma once
+#include"Phone.h"
+
+class Abonent
+{
+	char Fio[30];
+	Phone* numbers=nullptr;
+	short count_number=0;
+	char Note[50];
+public:
+	void Add();
+	char* Get_Fio() { return Fio; }
+	void Show();
+};
+
+Abonent.cpp
+
+#include "Abonent.h"
+
+void Abonent::Add()
+{
+	char ch;
+	cout << "Enter Fio:\n";
+	gets_s(Fio, 30);
+	cout << "Enter note:\n";
+	gets_s(this->Note);
+	do
+	{
+		cout << "Do you want add the phone number (Y or N)?(Max count is 5, current count is " << this->count_number << "\n";
+		ch=getchar();
+		getchar();
+		if (ch == 'Y')
+		{
+			this->numbers = (Phone*)realloc(this->numbers, (this->count_number + 1) * sizeof(Phone));
+			this->numbers[this->count_number].Set();
+			this->count_number++;
+		}
+		else if (ch == 'N') break;
+	} while (this->count_number < 5);
+}
+
+void Abonent::Show()
+{
+	cout << this->Fio << "\n";
+	for (short i = 0; i < this->count_number; i++)
+	{
+		this->numbers[i].Get();
+	}
+	cout << this->Note << "\n";
+}
+
+Phonebook.h
+
+#pragma once
+#include "Abonent.h"
+
+class Phonebook
+{
+	char Name[20];
+	Abonent mas[100];
+	short curr_count;
+public:
+	Phonebook(const char*);
+	void Add();
+	void Print();
+	void Delete();
+	void Find_by_Fio();
+};
+
+Phonebook.cpp
+
+#include "Phonebook.h"
+
+Phonebook::Phonebook(const char* name)
+{
+	strcpy_s(this->Name, name);
+	curr_count = 0;
+}
+
+void Phonebook::Add()
+{
+	if (curr_count < 100)
+	{
+		mas[this->curr_count].Add();
+		curr_count++;
+	}
+	else
+	{
+		cout << "Phonebook is full!";
+	}
+}
+
+void Phonebook::Print()
+{
+	cout << this->Name << "\n";
+	for (int i = 0; i < curr_count; i++)
+	{
+		mas[i].Show();
+	}
+}
+
+void Phonebook::Delete()
+{
+	char tmp[30];
+	cout << "Enter Fio for delete from the phonebook:\n";
+	gets_s(tmp, 30);
+	for (short i = 0; i < this->curr_count; i++)
+	{
+		if (strcmp(tmp, mas[i].Get_Fio()) == 0)
+		{
+			for (short j = i; j < this->curr_count - 1; j++)
+			{
+				mas[j] = mas[j + 1];
+			}
+			this->curr_count--;
+			break;
+		}
+	}
+}
+
+void Phonebook::Find_by_Fio()
+{
+	char tmp[30];
+	cout << "Enter Fio:\n";
+	cin >> tmp;
+	for (short i = 0; i < this->curr_count; i++)
+	{
+		if (strcmp(tmp, mas[i].Get_Fio()) == 0) mas[i].Show();
+	}
+
+}
+
+Source.cpp
+
+#include "Phonebook.h"
+
+int main()
+{
+	short act;
+	Phonebook book("My_phonebook");
+	do
+	{
+		do
+		{
+			cout << "select option:\n";
+			cout << "1 - Add abonent;\n";
+			cout << "2 - Delete abonent;\n";
+			cout << "3 - Find abonent by Fio;\n";
+			cout << "4 - Show all abonent;\n";
+			cout << "0 - Exit.\n";
+			cin >> act;
+			getchar();
+		} while (act < 0 || act>4);
+		switch (act)
+		{
+		case 1:
+		{
+			book.Add();
+			break;
+		}
+		case 2:
+		{
+			book.Delete();
+			break;
+		}
+		case 3:
+		{
+			book.Find_by_Fio();
+			break;
+		}
+		case 4:
+		{
+			book.Print();
+			break;
+		}
+		default:
+			break;
+		}
+	} while (act != 0);
+}

@@ -1,0 +1,573 @@
+Многомерные массивы
+
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	const short n = 5, m = 5;
+	int mass[n][m];
+	cout << "Enter number:";
+	cin >> mass[0][0];
+	for (short i = 1; i < m * n; i++) {
+		mass[0][i] = mass[0][i - 1] * 2;
+	}
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++)
+		{
+			cout << mass[i][j] << "\t";
+		}
+		cout << endl;
+	}
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	const short n = 5, m = 5;
+	int mass[n][m];
+	cout << "Enter number:";
+	cin >> mass[0][0];
+	for (short i = 1; i < m * n; i++) {
+		mass[0][i] = mass[0][i - 1] +1;
+	}
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++)
+		{
+			cout << mass[i][j] << "\t";
+		}
+		cout << endl;
+	}
+}
+
+Задание 3.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short n = 5, m = 5;
+	int mass[n][m], count, tmp, tmp0;
+	srand(time(0));
+	char act;
+	for (short i = 0; i < n; i++)
+	{
+		for (short j = 0; j < m; j++) {
+			mass[i][j] = rand() % 100;
+			cout << mass[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	do {
+		cout << "Select the direction of shift.\n";
+		cout << "1 - left; \n2 - right; \n3 - up; \n4 - down; \n0 - exit.\n";
+		cin >> act;
+		if (act == '0') { break; }
+		cout << "Enter the number of shift: ";
+		cin >> count;
+		switch (act)
+		{
+		case '1': {
+			for (short s = 1; s <= count; s++) {
+				for (short i = 0; i < n; i++) {
+					tmp0 = mass[i][0];
+					for (short j = 1; j < m; j++) {
+						mass[i][j - 1] = mass[i][j];
+					}
+					mass[i][m - 1] = tmp0;
+				}
+			}
+			break;
+		}
+		case '2': {
+			for (short s = 1; s <= count; s++) {
+				for (short i = 0; i < n; i++) {
+					tmp0 = mass[i][m - 1];
+					for (short j = m - 1; j >= 0; j--) {
+						mass[i][j] = mass[i][j - 1];
+					}
+					mass[i][0] = tmp0;
+				}
+			}
+			break;
+		}
+		case '3': {
+			for (short s = 1; s <= count; s++) {
+				for (short j = 0; j < m; j++) {
+					tmp0 = mass[0][j];
+					for (short i = 1; i < n; i++) {
+						mass[i-1][j] = mass[i][j];
+					}
+					mass[n-1][j] = tmp0;
+				}
+			}
+			break;
+		}
+		case '4': {
+			for (short s = 1; s <= count; s++) {
+				for (short j = 0; j < m; j++) {
+					tmp0 = mass[n-1][j];
+					for (short i = n-1; i >= 0; i--) {
+						mass[i][j] = mass[i-1][j];
+					}
+					mass[0][j] = tmp0;
+				}
+			}
+			break;
+		}
+		case '0': break;
+		default: {
+			cout << "Uncorrect selection.";
+			break;
+		}
+		}
+		for (short i = 0; i < n; i++)
+		{
+			for (short j = 0; j < m; j++) {
+				cout << mass[i][j] << "\t";
+			}
+			cout << endl;
+		}
+	} while (act != 0 || act == 8);
+}
+
+Задание 4.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short n = 5, m = 5;
+	int arr[n][m];
+	int sum=0, min, max;
+	srand(time(0));
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++) {
+			arr[i][j] = rand() % 100;
+			cout << arr[i][j]<<"\t";
+		}
+		cout << endl;
+	}
+	min = arr[0][0];
+	max = min;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++) {
+			sum += arr[i][j];
+			if (arr[i][j] < min)min = arr[i][j];
+			if (arr[i][j] > max)max = arr[i][j];
+		}
+	}
+	cout << "The sum of all elements is " << sum << endl;
+	cout << "The arithmetical mean of all elements is " << sum /(double) (m * n) << endl;
+	cout << "The max element is " << max << endl;
+	cout << "The min element is " << min << endl;
+}
+
+Задание 5.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short n = 5, m = 5;
+	int arr[n][m];
+	int sum=0, sum_i,sum_j;
+	srand(time(0));
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++) {
+			arr[i][j] = rand() % 100;
+		}
+	}
+	for (short i = 0; i < n; i++) {
+		sum_i = 0;
+		for (short j = 0; j < m; j++) {
+			sum += arr[i][j];
+			sum_i += arr[i][j];
+			cout << arr[i][j] << "\t";
+		}
+		cout << "|" << sum_i << endl;
+	}
+	cout << "----------------------------------------------\n";
+	for (short j = 0; j < m; j++) {
+		sum_j = 0;
+		for (short i = 0; i < n; i++) {
+			sum_j += arr[i][j];
+		}
+		cout << sum_j << "\t";
+	}
+	cout << "|" << sum << endl;
+}
+
+Задание 6.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short n = 5, m = 10;
+	int arr[n][m], arr1[n][m / 2];
+	srand(time(0));
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++) {
+			arr[i][j] = rand() % 50;
+			cout << arr[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m/2; j++) {
+			arr1[i][j] = arr[i][j * 2] + arr[i][j * 2 + 1];
+			cout << arr1[i][j] << "\t";
+		}
+		cout << endl;
+	}
+}
+
+Функции.
+
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+double step(int, int);
+
+int main() {
+	cout << "Enter X and Y: ";
+	int X, Y;
+	cin >> X >> Y;
+	cout<< step(X, Y);
+}
+
+double step(int X, int Y) {
+	return pow(X, Y);
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+int sum(int, int);
+
+int main() {
+	cout << "Enter A and B: ";
+	int A, B;
+	cin >> A >> B;
+	cout<< sum(A, B);
+}
+
+int sum(int A, int B) {
+	int sum_b = 0;
+	if (A > B) {
+		int tmp;
+		tmp = A;
+		A = B;
+		B = tmp;
+	}
+	for (int i = A + 1; i < B; i++) {
+		sum_b += i;
+	}
+	return sum_b;
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+void find(int, int);
+
+int main() {
+	cout << "Enter A and B: ";
+	int A, B;
+	cin >> A >> B;
+	find(A, B);
+}
+
+void find(int A, int B) {
+	int sum;
+	if (A > B) {
+		int tmp;
+		tmp = A;
+		A = B;
+		B = tmp;
+	}
+	for (int i = A; i <= B; i++) {
+		sum = 0;
+		for (int j = 1; j < i; j++) {
+			if (i % j == 0) {
+				sum += j;
+			}
+		}
+		if (i == sum)cout << i << endl;
+	}
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+void show(short, short);
+
+int main() {
+	short n, m;
+	do {
+		cout << "Enter n (between 2 and 14) and m (between 1 and 4): ";
+		cin >> n >> m;
+	} while (n < 2 || n>14 || m < 1 || m>4);
+	show(n, m);
+}
+
+void show(short n, short m) {
+	switch (n) {
+	case 11: {
+		cout << "Jack of ";
+		break;
+	}
+	case 12: {
+		cout << "Queen of ";
+		break;
+	}
+	case 13: {
+		cout << "King of ";
+		break;
+	}
+	case 14: {
+		cout << "Ace of ";
+		break;
+	}
+	default: {
+		cout << n << " of ";
+	}
+	}
+	switch(m){
+	case 1: {
+		cout << "hearts";
+		break;
+	}
+	case 2: {
+		cout << "diamonds";
+		break;
+	}
+	case 3: {
+		cout << "clubs";
+		break;
+	}
+	case 4: {
+		cout << "spades";
+		break;
+	}
+	}
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+void check(int);
+
+int main() {
+	int n;
+	do {
+		cout << "Enter six-digit number: ";
+		cin >> n;
+	} while (n < 100000 || n>999999);
+	check(n);
+}
+
+void check(int n) {
+	short s1=0, s2=0,counter=1;
+	while (n) {
+		if (counter <= 3) {
+			s1 += n % 10;
+		}
+		else {
+			s2 += n % 10;
+		}
+		n /= 10;
+		counter++;
+	}
+	if (s1 == s2) {
+		cout << "It`s a 'happy' number";
+	}
+	else {
+		cout << "It isn`t a 'happy' number";
+	}
+}
+
+Задание 6.
+
+#include<iostream>;
+using namespace std;
+
+int countdaybetween(short, short, short, short, short, short);
+int countdayfrom0(short, short, short);
+char checkdate(short, short, short);
+char checkyear(short);
+
+int main() {
+	short d1, m1, y1, d2, m2, y2;
+	char flag;
+	do {
+		cout << "Enter firtst date (day month year): \n";
+		cin >> d1 >> m1 >> y1;
+		flag = checkdate(d1, m1, y1);
+		if (flag == 0) {
+			cout << "Uncorrect date\n";
+		}
+	} while (flag != 1);
+	do {
+		cout << "Enter last date (day month year): \n";
+		cin >> d2 >> m2 >> y2;
+		flag = checkdate(d2, m2, y2);
+		if (flag == 0) {
+			cout << "Uncorrect date\n";
+		}
+	} while (flag != 1);
+	cout << countdaybetween(d1, m1, y1, d2, m2, y2);
+}
+
+char checkdate(short d, short m, short y) {
+	if (((m == 4 || m == 6 || m == 9 || m == 11) && d == 31) || d < 1 || d>31 || y < 0 || m < 1 || m>12) {
+		return 0;
+	}
+	else if ((m == 2 && checkyear(y) == 0 && d > 28) || (m == 2 && checkyear(y) ==1 && d > 29)) {
+		return 0;
+	}
+	else	
+	{
+		return 1;
+	}
+}
+
+char checkyear(short y) {
+	if (y % 4 != 0) {
+		return 0;
+	}
+	else if (y % 100 != 0) {
+		return 1;
+	}
+	else if (y % 400 == 0) {
+		return 1;
+	}
+	else return 0;
+}
+
+int countdaybetween(short d1, short m1, short y1, short d2, short m2, short y2) {
+	return countdayfrom0(d2, m2, y2) - countdayfrom0(d1, m1, y1);
+}
+
+int countdayfrom0(short d, short m, short y) {
+	int count =0;
+	for (short i = 0; i < y; i++) {
+		for (short j = 1; j <= 12; j++) {
+			if (j == 4 || j == 6 || j == 9 || j == 11) {
+				count += 30;
+			}
+			else if (j == 2 && checkyear(y) == 1) {
+				count += 29;
+			}
+			else if (j == 2 && checkyear(y) == 0) {
+				count += 28;
+			}
+			else {
+				count += 31;
+			}
+		}
+	}
+	for (short j = 1; j <= m; j++) {
+		if (j == 4 || j == 6 || j == 9 || j == 11) {
+			count += 30;
+		}
+		else if (j == 2 && checkyear(y) == 1) {
+			count += 29;
+		}
+		else if (j == 2 && checkyear(y) == 0) {
+			count += 28;
+		}
+		else {
+			count += 31;
+		}
+	}
+	cout << count + d << endl;
+	return count + d;
+}
+
+Задание 7.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+double mean(int[], short);
+
+int main() {
+	srand(time(0));
+	const short n = 10;
+	int arr[n];
+	for (short i = 0; i < n; i++) {
+		arr[i] = rand() % 100;
+		cout << arr[i] << "\t";
+	}
+	cout << endl << mean(arr, n);
+}
+
+double mean(int arr[], short n) {
+	int s = 0;
+	for (short i = 0; i < n; i++) {
+		s += arr[i];
+	}
+	return (double) s/ n;
+}
+
+Задание 8.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+void counter (int [][10], short, short);
+
+int main() {
+	srand(time(0));
+	const short n = 10, m = 10;
+	int arr[n][m];
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++) {
+			arr[i][j] = -100 + rand() % (100 + 100 -1);
+			cout << arr[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	counter(arr, n, m);
+}
+
+void counter(int arr[][10], short n, short m) {
+	short counter_p = 0, counter_n = 0, counter_z = 0;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++) {
+			if (arr[i][j] > 0) {
+				counter_p++;
+			}
+			else if (arr[i][j] < 0) {
+				counter_n++;
+			}
+			else counter_z++;
+		}
+	}
+	cout << "The count of pozitive elements is " << counter_p << endl;
+	cout << "The count of negative elements is " << counter_n << endl;
+	cout << "The count of zero elements is " << counter_z << endl;
+}

@@ -1,0 +1,479 @@
+Урок 7.
+
+Задание 1.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short n = 3, m = 4;
+	srand(time(0));
+	int mas[n][m];
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++) {
+			mas[i][j] = rand() % 6;
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	short counter = 0;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < m; j++) {
+			if (mas[i][j] == 0)counter++;
+		}
+	}
+	cout << "The count of zeroes is " << counter;
+}
+
+Задание 2.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short n = 7;
+	srand(time(0));
+	short mas[n][n], fg;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			mas[i][j] = rand() % 200;
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	do {
+		cout << "Select figure (number between 1 and 10). Enter 0 for exit.\n";
+		cin >> fg;
+		if (fg == 0)break;
+		else if (fg > 0 && fg <= 10) {
+			short max;
+			char flag = 0;
+			for (short i = 0; i < n; i++) {
+				for (short j = 0; j < n; j++) {
+					switch (fg) {
+					case(1): {
+						if (j >= i) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if(mas[i][j]>max){
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					case(2): {
+						if (j <= i) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if (mas[i][j] > max) {
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					case(3): {
+						if (j >= i && i + j <= (n - 1)) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if (mas[i][j] > max) {
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					case(4): {
+						if (j <= i && i + j >= (n - 1)) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if (mas[i][j] > max) {
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					case(5): {
+						if ((j >= i && i + j <= (n - 1)) || (j <= i && i + j >= (n - 1))) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if (mas[i][j] > max) {
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					case(6): {
+						if ((j <= i && i + j <= (n - 1)) || (j >= i && i + j >= (n - 1))) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if (mas[i][j] > max) {
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					case(7): {
+						if (j <= i && i + j <= (n - 1)) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if (mas[i][j] > max) {
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					case(8): {
+						if (j >= i && i + j >= (n - 1)) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if (mas[i][j] > max) {
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					case(9): {
+						if (i + j <= (n - 1)) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if (mas[i][j] > max) {
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					case(10): {
+						if (i + j >= (n-1)) {
+							if (flag == 0) {
+								flag = 1;
+								max = mas[i][j];
+							}
+							else if (mas[i][j] > max) {
+								max = mas[i][j];
+							}
+						}
+						break;
+					}
+					}
+				}
+			}
+			cout << "The max number is " << max << endl;;
+		}
+	} while (fg < 0 || fg>10 || fg != 0);
+}
+
+Урок 8.
+
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+void convert(int, short);
+
+int main() {
+	cout << "Enter a positive integer: ";
+	unsigned int n;
+	cin >> n;
+	short b;
+	do {
+		cout << "Enter a base (between 2 and 36): ";
+		cin >> b;
+	} while (b < 2 || b>36);
+	convert(n, b);
+}
+
+void convert(int n, short b) {
+	char mas[36] = { '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z' };
+	char res[50];
+	short counter = 0;
+	char flag = 0;
+	while (flag==0)
+	{
+		if (n / b <= b - 1) {
+			res[counter] = mas[n % b];
+			counter++;
+			res[counter] = mas[n / b];
+			flag = 1;
+		}
+		else {
+			res[counter] = mas[n % b];
+			n /= b;
+			counter++;
+		}
+	}
+	cout << "The result of convertation is ";
+	for (short i = counter; i >= 0; i--) {
+		cout << res[i];
+	}
+}
+
+Задание 2.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+short drop();
+void show(short);
+
+int main() {
+	srand(time(0));
+	short first;
+	int sum_h=0, sum_c=0;
+	do {
+		cout << "Who first? 1-Human, 2-Computer\n";
+		cin >> first;
+	} while (first < 1 || first > 2);
+	for (short i = 1; i < 6; i++) {
+		cout << "Step " << i << endl;
+		switch (first) {
+		case 1: {
+			cout << "Human" << endl;
+			cout << "Run!";
+			cin.get();
+			sum_h += drop();
+			cout << sum_h << endl;
+			cout << "Computer" << endl;
+			sum_c += drop();
+			cout << sum_c << endl;
+			break;
+		}
+		case 2: {
+			cout << "Computer" << endl;
+			sum_c += drop();
+			cout << sum_c << endl;
+			cout << "Human" << endl;
+			cout << "Run!";
+			cin.get();
+			sum_h += drop();
+			cout << sum_h << endl;
+			break;
+		}
+		}
+	}
+	if (sum_h > sum_c)cout << "Human is win!!!\n";
+	if (sum_c > sum_h)cout << "Computer is win!!!\n";
+	if (sum_c == sum_h)cout << "Draw!\n";
+	cout << "The average sum of human is " << sum_h / 5 << endl;
+	cout << "The average sum of computer is " << sum_c / 5 << endl;
+}
+
+short drop() {
+	short sum = 0, tmp = 0;
+	tmp= rand() % 6 + 1;
+	show(tmp);
+	sum += tmp;
+	tmp = rand() % 6 + 1;
+	show(tmp);
+	cout << endl;
+	sum += tmp;
+	return sum;
+}
+
+void show(short num) {
+	switch (num)
+	{
+	case 1: {
+		cout << "-----\n";
+		cout << "|   |\n";
+		cout << "| * |\n";
+		cout << "|   |\n";
+		cout << "-----\n";
+		break;
+	}
+	case 2: {
+		cout << "-----\n";
+		cout << "|  *|\n";
+		cout << "|   |\n";
+		cout << "|*  |\n";
+		cout << "-----\n";
+		break;
+	}
+	case 3: {
+		cout << "-----\n";
+		cout << "|  *|\n";
+		cout << "| * |\n";
+		cout << "|*  |\n";
+		cout << "-----\n";
+		break;
+	}
+	case 4: {
+		cout << "-----\n";
+		cout << "|* *|\n";
+		cout << "|   |\n";
+		cout << "|* *|\n";
+		cout << "-----\n";
+		break;
+	}
+	case 5: {
+		cout << "-----\n";
+		cout << "|* *|\n";
+		cout << "| * |\n";
+		cout << "|* *|\n";
+		cout << "-----\n";
+		break;
+	}
+	case 6: {
+		cout << "-----\n";
+		cout << "|* *|\n";
+		cout << "|* *|\n";
+		cout << "|* *|\n";
+		cout << "-----\n";
+		break;
+	}
+	default:
+		break;
+	}
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+void show(short, short);
+
+int main() {
+	const short N = 10, K = 20;
+	show(N, K);
+}
+
+void show(short N, short K) {
+	for (short i = 1; i <= N; i++) {
+		for (short j = 1; j <= K; j++) {
+			cout << "*";
+		}
+		cout << endl;
+	}
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+int fact(short);
+
+int main() {
+	cout << "Enter number";
+	short n;
+	cin >> n;
+	cout << n << "!=" << fact(n);
+}
+
+int fact(short n) {
+	int f = 1;
+	for (short i = 1; i <= n; i++) {
+		f *= i;
+	}
+	return f;
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+char check(int);
+
+int main() {
+	cout << "Enter number: ";
+	int n;
+	cin >> n;
+	(check(n)) ? cout << "Not prime number" : cout << "Prime number";
+}
+
+char check(int n) {
+	char flag = 0;
+	for (int i = 2; i < n; i++) {
+		if (n % i == 0) {
+			flag = 1;
+			break;
+		}
+	}
+	return flag;
+}
+
+Задание 6.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+void minmax(int mas[], short size);
+
+int main() {
+	const short n = 10;
+	int mas[n];
+	srand(time(0));
+	for (short i = 0; i < n; i++) {
+		mas[i] = rand() % 100;
+		cout << mas[i] << "\t";
+	}
+	cout << endl;
+	minmax(mas, n);
+}
+
+void minmax(int mas[], short size) {
+	short min_i = 0, max_i = 0;
+	for (short i = 1; i < size; i++) {
+		if (mas[i] < mas[min_i])min_i = i;
+		if (mas[i] > mas[max_i])max_i = i;
+	}
+	cout << "Max element number " << max_i+1 << " - " << mas[max_i] << endl;
+	cout << "Min element number " << min_i+1 << " - " << mas[min_i] << endl;
+}
+
+Задание 7.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+void revers(int mas[], short size);
+
+int main() {
+	const short n = 9;
+	int mas[n];
+	srand(time(0));
+	for (short i = 0; i < n; i++) {
+		mas[i] = rand() % 100;
+		cout << mas[i] << "\t";
+	}
+	cout << endl;
+	revers(mas, n);
+	for (short i = 0; i < n; i++) {
+		cout << mas[i] << "\t";
+	}
+}
+
+void revers(int mas[], short size) {
+	int tmp;
+	short i=0;
+	do {
+		tmp = mas[i];
+		mas[i] = mas[size - 1 - i];
+		mas[size - 1 - i] = tmp;
+		i++;
+	} while (i != size - 1 - i && i + 1 <= size - 1 - i);
+}

@@ -1,0 +1,167 @@
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int a, s = 0;
+	do {
+		cout << "Input start number between 0 and 500:";
+		cin >> a;
+	} while (a < 0 || a > 500);
+	for (int i = a; i <= 500; i++) {
+		s += i;
+	}
+	cout << "Summ all number between " << a << " and 500 = " << s;
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input X and Y:";
+	int x, y, s = 1;
+	cin >> x >> y;
+	for (int i = 1; i <= y; i++) {
+		s *= x;
+	}
+	cout << "X ^ Y = " << s;
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	float s = 0;
+	for (int i = 1; i <= 1000; i++) {
+		s += i;
+	}
+	cout << "Result:" << s / 1000.0;
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	short a;
+	do {
+		cout << "Input start number between 1 and 20:";
+		cin >> a;
+	} while (a < 1 || a>20);
+	long long s=1;
+	for (short i = a; i <= 20; i++) {
+		s *= i;
+	}
+	cout << "Product of numbers between " << a << " and 20 = " << s;
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	short k;
+	do {
+		cout << "Input k (digit between 1 and 9):";
+		cin >> k;
+	} while (k < 1 || k>9);
+	for (short i = 1; i <= 9; i++) {
+		cout << k << " x " << i << " = " << k * i << endl;
+	}
+}
+
+Задание 6.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int a;
+	do {
+		cout << "Input number (>0):";
+		cin >> a;
+	} while (a <= 0);
+	for (int i = 0; i <= a; i++) {
+		cout << i << endl;
+	}
+}
+
+Задание 7.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int l, r, tmp;
+	cout << "Input Left and Right border:";
+	cin >> l >> r;
+	if (l > r) {
+		tmp = l;
+		l = r;
+		r = tmp;
+	}
+	cout << "All numbers between " << l << " and " << r<<endl;
+	for (int i = l; i <= r; i++) {
+		cout << i << endl;
+	}
+	cout << "All even numbers between " << l << " and " << r << endl;
+	for (int i = l; i <= r; i++) {
+		if (!(i % 2)) {
+			cout << i << endl;
+		}
+	}
+	cout << "All odd numbers between " << l << " and " << r << endl;
+	for (int i = l; i <= r; i++) {
+		if (i % 2) {
+			cout << i << endl;
+		}
+	}
+	cout << "All numbers between " << l << " and " << r << ", multiple of seven" << endl;
+	for (int i = l; i <= r; i++) {
+		if (!(i % 7)) {
+			cout << i << endl;
+		}
+	}
+
+}
+
+Задание 8.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Inpul Left and Right border:";
+	int i, l, r, s = 0;
+	cin >> l >> r;
+	s = l;
+	while (l != r) 
+	{
+		(l < r) ? l++ : l--;
+		s += l;
+	} 
+	cout << "Summ is " << s;
+}
+
+
+Задание 9.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int n,s=0;
+	do {
+		cout << "Input number:";
+		cin >> n;
+		s += n;
+	} while (n != 0);
+	cout << "Summa is " << s;
+}

@@ -1,0 +1,222 @@
+Урок 1.
+
+Задание 1. 
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input character:";
+	char ch,o;
+	string br;
+	cin >> ch;
+	int n;
+	do {
+		cout << "Input character count:";
+		cin >> n;
+	} while (n <= 0);
+	do {
+		cout << "Select orientation (0-horizontal, 1-vertical):";
+		cin >> o;
+	} while (o != '0' && o != '1');
+	(o == '0') ? br = "" : br = "\n";
+	for (int i = 1; i <= n; i++) {
+		cout << ch << br;
+	}
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input Left and Right border:";
+	int l, r, s;
+	cin >> l >> r;
+	(l % 2)? s = l:s=0;
+	while( l != r) {
+		(l < r) ? l++ : l--;
+		if(l%2) s += l;
+	}
+	cout << "Summ all odd number=" << s;
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int n;
+	do {
+		cout << "Input number >0:";
+		cin >> n;
+	} while (n <= 0);
+	unsigned int p=1;
+	for (unsigned int i = 1; i <= n; i++) {
+		p *= i;
+	}
+	cout << n << "!=" << p;
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int L, P,n=0;
+	do {
+		cout << "Input correct textile lengs (L) and pillow length (P):";
+		cin >> L >> P;
+	} while (L <= 0 || P <= 0);
+	while (L >= P) {
+		L -= P;
+		n++;
+	}
+	cout << "Seamstress can create " << n << " pillow.";
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int N,cars=0;
+	const int b = 6;
+	do {
+		cout << "Input count of boxes with apples:";
+		cin >> N;
+	} while (N <= 0);
+	while (N > 0) {
+		N -= b;
+		cars++;
+	}
+	cout << "Need " << cars << " cars.";
+}
+
+Урок 2.
+
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int n1;
+	do {
+		cout << "Input number >0:";
+		cin >> n1;
+	} while (n1 <= 0);
+	while (n1) {
+		cout << n1 % 10;
+		n1 /= 10;
+	}
+	cout << endl;
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int n, s = 0;
+	do {
+		cout << "Input number >0:";
+		cin >> n;
+	} while (n <= 0);
+	while (n) {
+		s += n % 10;
+		n /= 10;
+	}
+	cout << "Summa is " << s << endl;
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int fd = 15, N, l = 0;
+	do {
+		cout << "Input count of day, N>0:";
+		cin >> N;
+	} while (N <= 0);
+	for (int i = 0; i <= N - 1; i++) {
+		l += fd + 2 * i;
+	}
+	cout << "Lengt = " << l << endl;
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	short rez, o = 0, r = 0;
+	for (short i = 1; i <= 9; i++) {
+		do {
+			cout << "Input rezult (0 or 1):";
+			cin >> rez;
+		} while (rez != 0 && rez != 1);
+		(rez) ? o++ : r++;
+	}
+	(o > r) ? cout << "Result +" << endl : cout << "Result -" << endl;
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	short nm, nd, nw, nd1, num, tmp1, wnd = 0;
+	do {
+		cout << "Input month number (1-12):";
+		cin >> nm;
+	} while (nm < 1 || nm>12);
+	do {
+		cout << "Input number of first day of week in this month (1-7):";
+		cin >> nd;
+	} while (nd < 1 || nd>7);
+	cout << "\t\t\t\t\t";
+	switch (nm) {
+	case 1: cout << "January"; num = 31; break;
+	case 2: cout << "February"; num = 28; break;
+	case 3: cout << "March"; num = 31; break;
+	case 4: cout << "April"; num = 30; break;
+	case 5: cout << "May"; num = 31; break;
+	case 6: cout << "June"; num = 30; break;
+	case 7: cout << "July"; num = 31; break;
+	case 8: cout << "August"; num = 31; break;
+	case 9: cout << "September"; num = 30; break;
+	case 10:cout << "October"; num = 31; break;
+	case 11:cout << "November"; num = 30; break;
+	case 12:cout << "December"; num = 31; break;
+	}
+	cout << endl;
+	cout << "Mo\t\tTu\t\tWe\t\tTh\t\tFr\t\tSa\t\tSu" << endl;
+	tmp1 = --nd + num;
+	nd1 = 1;
+	(tmp1 / 7.0 > tmp1 / 7) ? nw = tmp1 / 7 + 1 : nw = tmp1 / 7;
+	for (short i = 1; i <= nw; i++) {
+		for (short j = 1; j <= 7; j++) {
+			if (nd) {
+				cout << "\t\t";
+				nd--;
+			}
+			else if (nd1 <= num) {
+				cout << nd1 << "\t\t";
+				nd1++;
+				if (j == 6 || j == 7) wnd++;
+			}
+		}
+		cout << endl;
+	}
+	cout << "This month has " << wnd << " weekends" << endl;
+}

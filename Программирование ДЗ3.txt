@@ -1,0 +1,521 @@
+Циклы
+
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int n;
+	do {
+		cout << "Input the size of the square (>0 and Odd):";
+		cin >> n;
+	} while (n <= 0 || !(n%2));
+	char v;
+	do {
+		cout << "Select output option:\n";
+		cout << "a - right top triangle;\n";
+		cout << "b - left bottom triangle;\n";
+		cout << "c - top triangle;\n";
+		cout << "d - bottom triangle;\n";
+		cout << "e - top&bottom triangle;\n";
+		cout << "f - left&right triangle;\n";
+		cout << "g - left triangle;\n";
+		cout << "i - right triangle;\n";
+		cout << "j - left top triangle;\n";
+		cout << "k - right bottom triangle;\n";
+		cout << "0 - exit;\n";
+		cin >> v;
+		if (v == '0') { break; }
+		short set;
+		for (unsigned int i = 1; i <= n; i++) {
+			for (unsigned int j = 1; j <= n; j++) {
+				switch (v)
+				{
+				case 'a': {
+					if (j >= i) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				case 'b': {
+					if (j <= i) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				case 'c': {
+					if (j >= i && i + j <= n + 1) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				case 'd': {
+					if (j <= i && i + j >= n + 1) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				case 'e': {
+					if ((j >= i && i + j <= n + 1) || (j <= i && i + j >= n + 1)) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				case 'f': {
+					if ((j <= i && i + j <= n + 1) || (j >= i && i + j >= n + 1)) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				case 'g': {
+					if (j <= i && i + j <= n + 1) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				case'i': {
+					if (j >= i && i + j >= n + 1) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				case 'j': {
+					if (i + j <= n+1) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				case 'k': {
+					if (i + j >= n + 1) {
+						cout << "*";
+					}
+					else {
+						cout << " ";
+					}
+					break;
+				}
+				default: {
+					cout << "Incorrect option.";
+					v = 'o';
+					break;
+				}
+				}
+				if (v == 'o')break;
+			}
+			if(v == 'o') break;
+			cout << endl;
+		}			
+	} while (v != '0');
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	short n1, n2, n3, tmp;
+	short counter=0;
+	for (short i = 100; i <= 999; i++) {
+		tmp = i;
+		n1 = tmp % 10;
+		tmp /= 10;
+		n2 = tmp % 10;
+		tmp /= 10;
+		n3 = tmp % 10;
+		if (n1 == n2 || n2 == n3 || n1 == n3) {
+			counter++;
+		}
+	}
+	cout << counter << endl;
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	short n1, n2, n3, tmp;
+	short counter=0;
+	for (short i = 100; i <= 999; i++) {
+		tmp = i;
+		n1 = tmp % 10;
+		tmp /= 10;
+		n2 = tmp % 10;
+		tmp /= 10;
+		n3 = tmp % 10;
+		if (n1 != n2 && n2 != n3 && n1 != n3) {
+			counter++;
+		}
+	}
+	cout << counter << endl;
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input number:";
+	int n,n1=0,m=1;
+	short tmp;
+	cin >> n;
+	while (n) {
+		tmp = n % 10;
+		if (abs(tmp) != 3 && abs(tmp) != 6) {
+			n1+=tmp*m;
+			m *= 10;
+		}
+		n /= 10;
+	}
+	cout << n1;
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input number A:";
+	int A;
+	char flag=0;
+	cin >> A;
+	for (int i = 1; i <= A; i++) {
+		if (A % (i * i) == 0 && A % (i * i * i) != 0) {
+			cout << i << endl;
+			flag = 1;
+		}
+	}
+	if (flag == 0)cout << "Not number.";
+}
+
+Задание 6.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int A, tmp, S=0;
+	cout << "Input number A:";
+	cin >> A;
+	tmp = A;
+	while (tmp)
+	{
+		S += abs(tmp) % 10;
+		tmp /= 10;
+	}
+	if (S * S * S == A * A) { cout << "Yes"; }
+	else { cout << "No"; }
+}
+
+Задание 7.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input number:";
+	int N;
+	cin >> N;
+	for (int i = 1; i <= N; i++) {
+		if (!(N % i))cout << i << endl;
+	}
+}
+
+Задание 8.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input number 1 and number 2:";
+	int N1, N2, N;
+	cin >> N1 >> N2;
+	(N1 > N2) ? N = N2 : N = N1;
+	for (int i = 1; i <= N; i++) {
+		if (N1 % i == 0 && N2 % i == 0)cout << i << endl;
+	}
+}
+
+Задание 9.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int N, tmpN;
+	cout << "Input number:";
+	cin >> N;
+	short v,dcount,sum,zcount,n1;
+	do {
+		cout << "Select option:\n";
+		cout << "1 - Count the number of digits.\n";
+		cout << "2 - Calculate the sum of digits.\n";
+		cout << "3 - Calculate the arithmetic mean.\n";
+		cout << "4 - Count the number of zeros.\n";
+		cout << "0 - Exit.\n";
+		cin >> v;
+		if (v == 0)break;
+		dcount = 0;
+		sum = 0;
+		zcount = 0;
+		tmpN = N;
+		do {
+			n1 = abs(tmpN % 10);
+			tmpN /= 10;
+			switch (v) {
+			case 1: {
+				dcount++;
+				if (!tmpN) {
+					cout << "The number of digits in " << N << " is " << dcount << endl;
+				}
+				break;
+			}
+			case 2: {
+				sum += n1;
+				if (!tmpN) {
+					cout << "The sum of digits of " << N << " is " << sum << endl;
+				}
+				break;
+			}
+			case 3: {
+				sum += n1;
+				dcount++;
+				if (!tmpN) {
+					cout << "The arithmetic mean of " << N << " is " << sum / (float)dcount << endl;
+				}
+				break;
+			}
+			case 4: {
+				if (n1 == 0) {
+					zcount++;
+				}
+				if (!tmpN) {
+					cout << "The number of zeros in " << N << " is " << zcount << endl;
+				}
+				break;
+			}
+			default: {
+				cout << "Incorrect option." << endl;
+				v = 99;
+				break;
+			}
+			}
+			if (v == 99)break;
+		} while (tmpN);
+	} while (v !=0);
+}
+
+Задание 10.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	short n;
+	cout << "Input the size of cell:";
+	cin >> n;
+	for (short i = 1; i <= 8*n; i++) {
+		for (short j = 1; j <= 8*n; j++) {
+			if (((i-1)/n + (j-1)/n) % 2 == 0) {
+				cout << "*";
+			}
+			else {
+				cout << "-";
+			}
+		}
+		cout << endl;
+	}
+}
+
+Массивы одомерные
+
+Задание 1.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	int min, max;
+	const short size = 10;
+	int arr1[size];
+	srand(time(0));
+	for (short i = 0; i < size; i++) {
+		arr1[i] = rand();
+		cout << arr1[i] << " ";
+	}
+	cout << endl;
+	min = arr1[0];
+	max = arr1[0];
+	for (short i = 1; i < size; i++) {
+		if (arr1[i] < min) {
+			min = arr1[i];
+		}
+		if (arr1[i] > max) {
+			max = arr1[i];
+		}
+	}
+	cout << "Max number is " << max << endl;
+	cout << "Min number is " << min << endl;
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	const short size = 12;
+	short left, right, nmax, nmin;
+	int arr[size];
+	cout << "Input profit for the year (12 numbers).\n";
+	for (short i = 0; i < size; i++) {
+		cout << "For the "<< i+1<<" month: ";
+		cin >> arr[i];
+	}
+	do {
+		cout << "Input left and right border of range (between 1 and 12):";
+		cin >> left >> right;
+	} while (left < 1 || left>12 || right < 1 || right>12);
+	nmin = left-1;
+	nmax = left-1;
+	for (short i = left-1; i < right-1; i++) {
+		if (arr[i] < arr[nmin]) {
+			nmin = i;
+		}
+		if (arr[i] > arr[nmax]) {
+			nmax = i;
+		}
+	}
+	cout << "Max profit was in " << nmax+1 << " month.\n";
+	cout << "Min profit was in " << nmin+1 << " month.\n";
+}
+
+Задание 3.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short N = 20;
+	double arr[N];
+	double sumneg=0,sumbneg=0,productminmax=1,producteven=1;
+	short min, max,fneg=21,lneg;
+	srand(time(0));
+	for (short i = 0; i < N; i++) {
+		arr[i] = (double)(rand()%(1000 - (-1000)+1) + (-1000))/(double)100;
+		cout << arr[i]<<" ";
+	}
+	cout << endl;
+	do {
+		cout << "Input min and max elements (between 1 and 20):";
+		cin >> min >> max;
+	} while (min > max || min < 1 || min>20 || max < 1 || max>20);
+	for (short i = 0; i < N; i++) {
+		if (arr[i] < 0) {
+			sumneg += arr[i];
+			if (fneg == 21)fneg = i;
+			lneg = i;
+		}
+		if (i % 2 == 0) {
+			producteven *= arr[i];
+		}
+	}
+	cout << endl;
+	for (short i = min; i < max - 1; i++) {
+		productminmax *= arr[i];
+	}
+	for (short i = fneg + 1; i < lneg; i++) {
+		sumbneg += arr[i];
+	}
+	cout << "Sum of negative elements is" << sumneg << endl;
+	cout << "Product of the elements between " << min << " and " << max << " elements is " << productminmax << endl;
+	cout << "Product of the elements with even number is " << producteven << endl;
+	cout << "Sum of the element between first and last negative elements is " << sumbneg;
+}
+
+Задание 4.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short N=10;
+	int arr[N], arr1[N / 2], arr2[N / 2];
+	srand(time(0));
+	for (short i = 0; i < 10; i++) {
+		arr[i] = rand();
+		cout << arr[i] << " ";
+	}
+	cout << endl;
+	for (short i = 0; i < N; i++) {
+		if (i < N / 2) {
+			arr1[i] = arr[i];
+		}
+		else {
+			arr2[i - N / 2] = arr[i];
+		}
+	}
+	cout << "First array:" << endl;
+	for (short i = 0; i < N / 2; i++) {
+		cout << arr1[i] << " ";
+	}
+	cout << endl << "Second array:" << endl;
+	for (short i = 0; i < N / 2; i++) {
+		cout << arr2[i] << " ";
+	}
+}
+
+Задание 5.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	const short N = 10;
+	int arr1[N], arr2[N], arr3[N];
+	srand(time(0));
+	for (short i = 0; i < N; i++) {
+		arr1[i] = rand();
+		arr2[i] = rand();
+	}
+	for (short i = 0; i < N; i++) {
+		arr3[i] = arr1[i] + arr2[i];
+		cout << arr1[i] << " + " << arr2[i] << " = " << arr3[i] << endl;
+	}
+}
