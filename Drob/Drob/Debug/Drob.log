@@ -1,0 +1,5 @@
+﻿  Drob.cpp
+  Source.cpp
+E:\work\c++\Drob\Drob\Source.cpp(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  Создание кода...
+  Drob.vcxproj -> E:\work\c++\Drob\Debug\Drob.exe
