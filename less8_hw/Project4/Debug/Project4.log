@@ -1,0 +1,8 @@
+﻿  Application.cpp
+C:\Work\c++\less8_hw\Project4\ColorConfig.h(23): warning C4091: static : пропускается слева от "ColorConfig::ConsoleColor", когда ни одна переменная не объявлена
+  Game.cpp
+C:\Work\c++\less8_hw\Project4\ColorConfig.h(23): warning C4091: static : пропускается слева от "ColorConfig::ConsoleColor", когда ни одна переменная не объявлена
+  Source.cpp
+C:\Work\c++\less8_hw\Project4\ColorConfig.h(23): warning C4091: static : пропускается слева от "ColorConfig::ConsoleColor", когда ни одна переменная не объявлена
+  Создание кода...
+  Project4.vcxproj -> C:\Work\c++\less8_hw\Debug\LabirintDemo.exe
