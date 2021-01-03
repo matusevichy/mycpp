@@ -1,0 +1,378 @@
+Задание 1.
+
+String.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+
+class String
+{
+	char* str;
+	char* Gets();
+public:
+	String();
+	String(int);
+	String(const char*);
+	void Set();
+	char* Get() { return str; }
+	void Show() { cout << str << "\n"; }
+	String& operator=(const String&);
+	char& operator[](int);
+	int operator()(char);
+	operator int();
+	String& operator++();
+	String operator++(int);
+	String& operator--();
+	String operator--(int);
+	~String();
+};
+
+String.cpp
+
+#include "String.h"
+
+char* String::Gets()
+{
+	char ch;
+	char* tmp = nullptr;;
+	int n = 0;
+	while ((ch = getchar()) != '\n')
+	{
+		tmp = (char*)realloc(tmp, n + 1);
+		tmp[n] = ch;
+		n++;
+	}
+	tmp = (char*)realloc(tmp, n + 1);
+	tmp[n] = 0;
+	return tmp;
+}
+
+String::String()
+{
+	str = (char*)malloc(80);
+}
+
+String::String(int size)
+{
+	str = (char*)malloc(size + 1);
+}
+
+String::String(const char* mas): String(strlen(mas))
+{
+	strcpy_s(str, strlen(mas)+1, mas);
+}
+
+void String::Set()
+{
+	char* tmp = nullptr;
+	cout << "Enter string:\n";
+	tmp = Gets();
+	str = (char*)realloc(str, strlen(tmp) + 1);
+	strcpy_s(str, strlen(tmp) + 1, tmp);
+}
+
+String& String::operator=(const String& copy)
+{
+	this->str = (char*)realloc(this->str, strlen(copy.str) + 1);
+	strcpy_s(this->str, strlen(copy.str) + 1, copy.str);
+	return *this;
+}
+
+char& String::operator[](int n)
+{
+	return this->str[n];
+}
+
+int String::operator()(char ch)
+{
+	char* n;
+	if ((n = strchr(this->str, ch)))
+		return n - this->str;
+	else
+		return -1;
+}
+
+String::operator int()
+{
+	return strlen(this->str);
+}
+
+String& String::operator++()
+{
+	int size = strlen(this->str);
+	this->str = (char*)realloc(this->str, size + 2);
+	this->str[size] = ' ';
+	this->str[size + 1] = 0;
+	return *this;
+}
+
+String String::operator++(int)
+{
+	String tmp=*this;
+	int size = strlen(this->str);
+	this->str = (char*)realloc(this->str, size+2);
+	this->str[size] = ' ';
+	this->str[size+1] = 0;
+	return tmp;
+}
+
+String& String::operator--()
+{
+	int size = strlen(this->str);
+	this->str = (char*)realloc(this->str, size);
+	this->str[size - 1] = 0;
+	return *this;
+}
+
+String String::operator--(int)
+{
+	String tmp = *this;
+	int size = strlen(this->str);
+	this->str = (char*)realloc(this->str, size);
+	this->str[size - 1] = 0;
+	return tmp;
+}
+
+String::~String()
+{
+	delete[] str;
+}
+
+Source.cpp
+
+#include"String.h"
+
+int main()
+{
+	String str;
+	cout << "Without param.\n" << strlen(str.Get()) << "\n";
+	String str1(10);
+	cout << "With length param.\n" << strlen(str1.Get()) << "\n";
+	String str2("qwerty");
+	cout << "With string param.\n" << str2.Get() << "\n";
+	str.Set();
+	cout << "Result of the set string:\n";
+	str.Show();
+	cout << str('5')<< "\n";
+	cout << str[6]<< "\n";
+	--str;
+	str.Show();
+	++str;
+	str.Show();
+}
+
+
+Задание 2.
+
+Drob.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+class Drob
+{
+	int chisl;
+	int znam;
+public:
+	Drob();
+	void Set();
+	void Sum(Drob);
+	void Razn(Drob);
+	void Prod(Drob);
+	void Div(Drob);
+	void Print();
+	Drob operator+(Drob&);
+	Drob operator-(Drob&);
+	Drob operator*(Drob&);
+	Drob operator/(Drob&);
+	Drob& operator++();
+	Drob operator++(int);
+	Drob& operator--();
+	Drob operator--(int);
+};
+
+Drob.cpp
+
+#include "Drob.h"
+
+Drob::Drob()
+{
+	this->chisl = 0;
+	this->znam = 1;
+}
+
+void Drob::Set()
+{
+	do
+	{
+		cout << "Enter chisl (>=0): ";
+		cin >> this->chisl;
+	} while (this->chisl < 0);
+	do
+	{
+		cout << "Enter znam (> 0): ";
+		cin >> this->znam;
+	} while (this->znam <= 0);
+}
+
+void Drob::Sum(Drob num)
+{
+	cout << "Summa is:\n" << this->chisl * num.znam + num.chisl * this->znam << "/" << this->znam * num.znam << "\n";
+}
+
+void Drob::Razn(Drob num)
+{
+	cout << "Razn is :\n" << this->chisl * num.znam - num.chisl * this->znam << "/" << this->znam * num.znam << "\n";
+}
+
+void Drob::Prod(Drob num)
+{
+	cout << "Production is :\n" << this->chisl * num.chisl << "/" << this->znam * num.znam << "\n";
+}
+
+void Drob::Div(Drob num)
+{
+	cout << "Razn is :\n" << this->chisl * num.znam << "/" << this->znam * num.chisl << "\n";
+}
+
+void Drob::Print()
+{
+	cout << chisl << "/" << znam << "\n";
+}
+
+Drob Drob::operator+(Drob& num)
+{
+	Drob tmp;
+	tmp.chisl = this->chisl * num.znam + num.chisl * this->znam;
+	tmp.znam = this->znam * num.znam;
+	return tmp;
+}
+
+Drob Drob::operator-(Drob& num)
+{
+	Drob tmp;
+	tmp.chisl = this->chisl * num.znam - num.chisl * this->znam;
+	tmp.znam = this->znam * num.znam;
+	return tmp;
+}
+
+Drob Drob::operator*(Drob& num)
+{
+	Drob tmp;
+	tmp.chisl = this->chisl * num.chisl;
+	tmp.znam = this->znam * num.znam;
+	return tmp;
+}
+
+Drob Drob::operator/(Drob& num)
+{
+	Drob tmp;
+	tmp.chisl = this->chisl * num.chisl;
+	tmp.znam = this->znam * num.znam;
+	return tmp;
+}
+
+Drob& Drob::operator++()
+{
+	chisl += znam;
+	return *this;
+}
+
+Drob Drob::operator++(int)
+{
+	Drob tmp = *this;
+	chisl += znam;
+	return tmp;
+}
+
+Drob& Drob::operator--()
+{
+	chisl -= znam;
+	return *this;
+}
+
+Drob Drob::operator--(int)
+{
+	Drob tmp = *this;
+	chisl -= znam;
+	return tmp;
+}
+
+Source.cpp
+
+#include "Drob.h";
+
+
+int main()
+{
+	short act;
+	Drob n1, n2, n3;
+	do
+	{
+		do
+		{
+			cout << "select option:\n";
+			cout << "1 - Enter numbers;\n";
+			cout << "2 - Sum numbers;\n";
+			cout << "3 - Razn numbers;\n";
+			cout << "4 - Production numbers;\n";
+			cout << "5 - Divide by;\n";
+			cout << "6 - Increment;\n";
+			cout << "7 - Decrement;\n";
+			cout << "0 - Exit.\n";
+			cin >> act;
+		} while (act < 0 || act>7);
+		switch (act)
+		{
+		case 1:
+		{
+			cout << "Number 1:\n";
+			n1.Set();
+			cout << "Number 2:\n";
+			n2.Set();
+			break;
+		}
+		case 2:
+		{
+			//n1.Sum(n2);
+			(n1 + n2).Print();
+			break;
+		}
+		case 3:
+		{
+			//n1.Razn(n2);
+			(n1 - n2).Print();
+			break;
+		}
+		case 4:
+		{
+			//n1.Prod(n2);
+			(n1 * n2).Print();
+			break;
+		}
+		case 5:
+		{
+			//n1.Div(n2);
+			(n1 / n2).Print();
+			break;
+		}
+		case 6:
+		{
+			n1++.Print();
+			++n1;
+			n1.Print();
+			break;
+		}
+		case 7:
+		{
+			n2--.Print();
+			--n2;
+			n2.Print();
+			break;
+		}
+		default:
+			break;
+		}
+	} while (act != 0);
+}

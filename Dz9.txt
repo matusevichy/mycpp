@@ -1,0 +1,325 @@
+Задание 1.
+
+function.h
+
+#pragma once
+#ifdef INTEGER
+void Full_int(int*, int);
+void Show_int(int*, int);
+void Min_int(int*, int);
+void Max_int(int*, int);
+void Sort_int(int*, int);
+void Edit_int(int*);
+#define Type int
+#define Full Full_int
+#define Show Show_int
+#define Min Min_int
+#define Max Max_int
+#define Sort Sort_int
+#define Edit Edit_int;
+#endif // INTEGER
+
+#ifdef DOUBLE
+void Full_double(double*, int);
+void Show_double(double*, int);
+void Min_double(double*, int);
+void Max_double(double*, int);
+void Sort_double(double*, int);
+void Edit_double(double*);
+#define Type double
+#define Full Full_double
+#define Show Show_double
+#define Min Min_double
+#define Max Max_double
+#define Sort Sort_double
+#define Edit Edit_double;
+#endif // DOUBLE
+
+#ifdef CHAR
+void Full_char(char*, int);
+void Show_char(char*, int);
+void Min_char(char*, int);
+void Max_char(char*, int);
+void Sort_char(char*, int);
+void Edit_char(char*);
+#define Type char
+#define Full Full_char
+#define Show Show_char
+#define Min Min_char
+#define Max Max_char
+#define Sort Sort_char
+#define	Edit Edit_char;
+#endif // CHAR
+
+
+function.cpp
+
+#include<iostream>
+using namespace std;
+//2. в файле function.cpp необходимо написать следующие функции для работы с массивом
+//данных :
+//а) функцию для заполнения массива случайными значениями;
+//б) функцию для вывода значений массива на консоль;
+//в) функцию для поиска минимального элемента;
+//г) функцию для поиска максимального элемента;
+//д) функцию для сортировки;
+//е) функцию для редактирования значения массива
+
+void Full_int(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = rand() % 25;
+	}	
+}
+
+void Show_int(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << "\t";
+	}
+	cout << endl;
+}
+
+void Min_int(int* mas, int n)
+{
+	int min = mas[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (mas[i] < min)
+		{
+			min = mas[i];
+		}
+	}
+	cout << "Min = " << min << endl;
+}
+
+void Max_int(int* mas, int n)
+{
+	int max = mas[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (mas[i] > max)
+		{
+			max = mas[i];
+		}
+	}
+	cout << "Max = " << max << endl;
+}
+void Sort_int(int* mas, int n)
+{
+	int tmp;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = n - 1; j >= 0; j--)
+		{
+			if (mas[j] < mas[j - 1])
+			{
+				tmp = mas[j - 1];
+				mas[j - 1] = mas[j];
+				mas[j] = tmp;
+			}
+		}
+	}
+ }
+
+void Edit_int(int* mas)
+{
+	int num, pos;
+	cout << "Enter position and new value: ";
+	cin >> pos >> num;
+	mas[pos] = num;
+}
+
+
+void Full_double(double* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = rand()/32767.0 * 25;
+	}
+}
+
+void Show_double(double* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << "\t";
+	}
+	cout << endl;
+}
+
+void Min_double(double* mas, int n)
+{
+	double min = mas[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (mas[i] < min)
+		{
+			min = mas[i];
+		}
+	}
+	cout << "Min = " << min << endl;
+}
+
+void Max_double(double* mas, int n)
+{
+	double max = mas[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (mas[i] > max)
+		{
+			max = mas[i];
+		}
+	}
+	cout << "Max = " << max << endl;
+}
+void Sort_double(double* mas, int n)
+{
+	double tmp;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = n - 1; j >= 0; j--)
+		{
+			if (mas[j] < mas[j - 1])
+			{
+				tmp = mas[j - 1];
+				mas[j - 1] = mas[j];
+				mas[j] = tmp;
+			}
+		}
+	}
+}
+
+void Edit_double(double* mas)
+{
+	int pos;
+	double num;
+	cout << "Enter position and new value: ";
+	cin >> pos >> num;
+	mas[pos] = num;
+}
+
+
+void Full_char(char* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = -255 + rand()/501;
+	}
+}
+
+void Show_char(char* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << "\t";
+	}
+	cout << endl;
+}
+
+void Min_char(char* mas, int n)
+{
+	char min = mas[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (mas[i] < min)
+		{
+			min = mas[i];
+		}
+	}
+	cout << "Min = " << min << endl;
+}
+
+void Max_char(char* mas, int n)
+{
+	char max = mas[0];
+	for (int i = 1; i < n; i++)
+	{
+		if (mas[i] > max)
+		{
+			max = mas[i];
+		}
+	}
+	cout << "Max = " << max << endl;
+}
+void Sort_char(char* mas, int n)
+{
+	char tmp;
+	for (int i = 0; i < n; i++)
+	{
+		for (int j = n - 1; j >= 0; j--)
+		{
+			if (mas[j] < mas[j - 1])
+			{
+				tmp = mas[j - 1];
+				mas[j - 1] = mas[j];
+				mas[j] = tmp;
+			}
+		}
+	}
+}
+
+void Edit_char(char* mas)
+{
+	char num;
+	int pos;
+	cout << "Enter position and new value: ";
+	cin >> pos >> num;
+	mas[pos] = num;
+}
+
+
+prog.cpp
+
+#include<iostream>
+#define DOUBLE
+#include"function.h"
+using namespace std;
+
+
+int main()
+{
+	const int n = 10;
+	Type mas[n];
+	Full(mas, n);
+	Show(mas, n);
+	Max(mas, n);
+	Min(mas, n);
+	Sort(mas, n);
+	Show(mas, n);
+	Edit(mas);
+	Show(mas, n);
+}
+
+Задание 2.
+
+#include<iostream>
+using namespace std;
+
+#define Min(a,b) ((a<b)?a:b)
+#define Max(a,b) ((a>b)?a:b)
+#define	Sqr(a) (a)*(a)
+#define Sqrt(a,b) pow(a,b)
+#define Even(a) ((a%2==0)?"Even":"Odd")
+
+int main()
+{
+	int a, b;
+	cout << "Enter A and B:";
+	cin >> a >> b;
+	cout << "Min number is " << Min(a, b);
+	cout << "\nEnter A and B:";
+	cin >> a >> b;
+	cout << "Max number is " << Max(a, b);
+	cout << "\nEnter number:";
+	cin >> a;
+	cout << "SQRT this number is  " << Sqr(a);
+	cout << "\nEnter A and B:";
+	cin >> a >> b;
+	cout << "A^B is " << Sqrt(a, b);
+	cout << "\nEnter number:";
+	cin >> a;
+	cout << "Number is  " << Even(a);
+}

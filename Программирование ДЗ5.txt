@@ -1,0 +1,705 @@
+Функции. Перегрузка функций
+
+Задание 1.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+/*Написать перегруженные функции (int, double, char) для выполнения следующих задач:
+ Инициализация квадратной матрицы;
+ Вывод матрицы на экран;
+ Определение максимального и минимального элемента на главной диагонали матрицы;
+ Сортировка элементов по возрастанию отдельно для каждой строки матрицы.*/
+
+void initmatrix(int mas[][5], int n) {
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			mas[i][j] = rand() % 100;
+		}
+	}
+}
+
+void initmatrix(double mas[][5], int n) {
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			mas[i][j] = (double)(rand() % 10000 - 5000) / 100;
+		}
+	}
+}
+
+void initmatrix(char mas[][5], int n) {
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			mas[i][j] = 97 + rand() % 26;
+		}
+	}
+}
+
+void showmatrix(int mas[][5], int n) {
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+}
+
+void showmatrix(double mas[][5], int n) {
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+}
+
+void showmatrix(char mas[][5], int n) {
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+}
+
+void minmax(int mas[][5], int n) {
+	int min = mas[0][0];
+	int max = min;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			if (i == j) {
+				if (mas[i][j] < min) {
+					min = mas[i][j];
+				}
+				if (mas[i][j] > max) {
+					max = mas[i][j];
+				}
+			}
+		}
+	}
+	cout << "The max element is " << max << endl;
+	cout << "The min element is " << min << endl;
+}
+
+void minmax(double mas[][5], int n) {
+	double min = mas[0][0];
+	double max = min;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			if (i == j) {
+				if (mas[i][j] < min) {
+					min = mas[i][j];
+				}
+				if (mas[i][j] > max) {
+					max = mas[i][j];
+				}
+			}
+		}
+	}
+	cout << "The max element is " << max << endl;
+	cout << "The min element is " << min << endl;
+}
+
+void minmax(char mas[][5], int n) {
+	char min = mas[0][0];
+	char max = min;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			if (i == j) {
+				if (mas[i][j] < min) {
+					min = mas[i][j];
+				}
+				if (mas[i][j] > max) {
+					max = mas[i][j];
+				}
+			}
+		}
+	}
+	cout << "The max element is " << max << endl;
+	cout << "The min element is " << min << endl;
+}
+
+void sortrow(int mas[][5], int n) {
+	int tmp;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			for (short k = j + 1; k < n; k++) {
+				if (mas[i][k] < mas[i][j]) {
+					tmp = mas[i][j];
+					mas[i][j] = mas[i][k];
+					mas[i][k] = tmp;
+				}
+			}
+		}
+	}
+}
+
+void sortrow(double mas[][5], int n) {
+	double tmp;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			for (short k = j + 1; k < n; k++) {
+				if (mas[i][k] < mas[i][j]) {
+					tmp = mas[i][j];
+					mas[i][j] = mas[i][k];
+					mas[i][k] = tmp;
+				}
+			}
+		}
+	}
+}
+
+void sortrow(char mas[][5], int n) {
+	char tmp;
+	for (short i = 0; i < n; i++) {
+		for (short j = 0; j < n; j++) {
+			for (short k = j + 1; k < n; k++) {
+				if (mas[i][k] < mas[i][j]) {
+					tmp = mas[i][j];
+					mas[i][j] = mas[i][k];
+					mas[i][k] = tmp;
+				}
+			}
+		}
+	}
+}
+
+
+int main() {
+	srand(time(0));
+	const short n = 5;
+	int intmas[n][n];
+	initmatrix(intmas, n);
+	showmatrix(intmas, n);
+	minmax(intmas, n);
+	sortrow(intmas, n);
+	showmatrix(intmas, n);
+	double doublemas[n][n];
+	initmatrix(doublemas, n);
+	showmatrix(doublemas, n);
+	minmax(doublemas, n);
+	sortrow(doublemas, n);
+	showmatrix(doublemas, n);
+	char charmas[n][n];
+	initmatrix(charmas, n);
+	showmatrix(charmas, n);
+	minmax(charmas, n);
+	sortrow(charmas, n);
+	showmatrix(charmas, n);
+}
+
+Задание 2.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int max(int mas[], int n) {
+	int max = mas[0];
+	for (int i = 1; i < n; i++) {
+		if (mas[i] > max)max = mas[i];
+	}
+	return max;
+}
+
+double max(double mas[], int n) {
+	double max = mas[0];
+	for (int i = 1; i < n; i++) {
+		if (mas[i] > max)max = mas[i];
+	}
+	return max;
+}
+
+int max(int mas[][5], int n) {
+	int max = mas[0][0];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (mas[i][j] > max)max = mas[i][j];
+		}
+	}
+	return max;
+}
+
+double max(double mas[][5], int n) {
+	double max = mas[0][0];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			if (mas[i][j] > max)max = mas[i][j];
+		}
+	}
+	return max;
+}
+
+int max(int mas[][5][5], int n) {
+	int max = mas[0][0][0];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			for (int k = 0; k < n; k++) {
+				if (mas[i][j][k] > max)max = mas[i][j][k];
+			}
+		}
+	}
+	return max;
+}
+
+double max(double mas[][5][5], int n) {
+	double max = mas[0][0][0];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			for (int k = 0; k < n; k++) {
+				if (mas[i][j][k] > max)max = mas[i][j][k];
+			}
+		}
+	}
+	return max;
+}
+
+int max(int i1, int i2) {
+	if (i1 < i2) return i2;
+	else return i1;
+}
+
+int max(int i1, int i2, int i3) {
+	int max = i1;
+	if (i2 > max)max = i2;
+	if (i3 > max)max = i3;
+	return max;
+}
+
+int main() {
+	const int n = 5;
+	srand(time(0));
+	int int1mas[n], int2mas[n][n], int3mas[n][n][n], i1=rand()%100, i2 = rand() % 100, i3 = rand() % 100;
+	double d1mas[n], d2mas[n][n], d3mas[n][n][n];
+	for (int i = 0; i < n; i++) {
+		int1mas[i] = rand() % 100;
+		cout << int1mas[i] << "\t";
+	}
+	cout << endl;
+	cout << "The max element is " << max(int1mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		d1mas[i] = (double)(rand() % 10000 - 5000) / 100;
+		cout << d1mas[i] << "\t";
+	}
+	cout << endl;
+	cout << "The max element is " << max(d1mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			int2mas[i][j] = rand() % 100;
+			cout << int2mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << "The max element is " << max(int2mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			d2mas[i][j] = (double)(rand() % 10000 - 5000) / 100;
+			cout << d2mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << "The max element is " << max(d2mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			for (int k = 0; k < n; k++) {
+				int3mas[i][j][k] = rand() % 100;
+				cout << int3mas[i][j][k] << " ";
+			}
+			cout << "\t";
+		}
+		cout << endl;
+	}
+	cout << "The max element is " << max(int3mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			for (int k = 0; k < n; k++) {
+				d3mas[i][j][k] = (double)(rand() % 10000 - 5000) / 100;
+				cout << d3mas[i][j][k] << " ";
+			}
+			cout << "\t";
+		}
+		cout << endl;
+	}
+	cout << "The max element is " << max(d3mas, n);
+	cout << endl;
+	cout << "The max element of (" << i1 << "," << i2 << ") is " << max(i1, i2) << endl;
+	cout << "The max element of (" << i1 << "," << i2 << "," << i3 << ") is " << max(i1, i2, i3);
+}
+
+Задание 3.1
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+template <typename T, typename N> T initmatrix(T mas[][5], N n) {
+	for (N i = 0; i < n; i++) {
+		for (N j = 0; j < n; j++) {
+			mas[i][j] = (T)(970 + rand() % 260)/10;
+		}
+	}
+	return 0;
+}
+
+template <typename T, typename N> T showmatrix(T mas[][5], N n) {
+	for (N i = 0; i < n; i++) {
+		for (N j = 0; j < n; j++) {
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	return 0;
+}
+
+template <typename T, typename N> T minmax(T mas[][5], N n) {
+	T min = mas[0][0];
+	T max = min;
+	for (N i = 0; i < n; i++) {
+		for (N j = 0; j < n; j++) {
+			if (i == j) {
+				if (mas[i][j] < min) {
+					min = mas[i][j];
+				}
+				if (mas[i][j] > max) {
+					max = mas[i][j];
+				}
+			}
+		}
+	}
+	cout << "The max element is " << max << endl;
+	cout << "The min element is " << min << endl;
+	return 0;
+}
+
+template <typename T, typename N> T sortrow(T mas[][5], N n) {
+	T tmp;
+	for (N i = 0; i < n; i++) {
+		for (N j = 0; j < n; j++) {
+			for (N k = j + 1; k < n; k++) {
+				if (mas[i][k] < mas[i][j]) {
+					tmp = mas[i][j];
+					mas[i][j] = mas[i][k];
+					mas[i][k] = tmp;
+				}
+			}
+		}
+	}
+	return 0;
+}
+
+int main() {
+	srand(time(0));
+	const short n = 5;
+	int intmas[n][n];
+	initmatrix(intmas, n);
+	showmatrix(intmas, n);
+	minmax(intmas, n);
+	sortrow(intmas, n);
+	showmatrix(intmas, n);
+	double doublemas[n][n];
+	initmatrix(doublemas, n);
+	showmatrix(doublemas, n);
+	minmax(doublemas, n);
+	sortrow(doublemas, n);
+	showmatrix(doublemas, n);
+	char charmas[n][n];
+	initmatrix(charmas, n);
+	showmatrix(charmas, n);
+	minmax(charmas, n);
+	sortrow(charmas, n);
+	showmatrix(charmas, n);
+}
+
+Задание 3.2
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+template <typename T, typename N> T max(T mas[], N n) {
+	T max = mas[0];
+	for (N i = 1; i < n; i++) {
+		if (mas[i] > max)max = mas[i];
+	}
+	return max;
+}
+
+template <typename T, typename N> T max(T mas[][5], N n) {
+	T max = mas[0][0];
+	for (N i = 0; i < n; i++) {
+		for (N j = 0; j < n; j++) {
+			if (mas[i][j] > max)max = mas[i][j];
+		}
+	}
+	return max;
+}
+
+template <typename T, typename N> T max(T mas[][5][5], N n) {
+	T max = mas[0][0][0];
+	for (N i = 0; i < n; i++) {
+		for (N j = 0; j < n; j++) {
+			for (N k = 0; k < n; k++) {
+				if (mas[i][j][k] > max)max = mas[i][j][k];
+			}
+		}
+	}
+	return max;
+}
+
+template <typename T> T max(T i1, T i2) {
+	if (i1 < i2) return i2;
+	else return i1;
+}
+
+template <typename T> T max(T i1, T i2, T i3) {
+	T max = i1;
+	if (i2 > max)max = i2;
+	if (i3 > max)max = i3;
+	return max;
+}
+
+int main() {
+	const int n = 5;
+	srand(time(0));
+	int int1mas[n], int2mas[n][n], int3mas[n][n][n], i1 = rand() % 100, i2 = rand() % 100, i3 = rand() % 100;
+	double d1mas[n], d2mas[n][n], d3mas[n][n][n];
+	for (int i = 0; i < n; i++) {
+		int1mas[i] = rand() % 100;
+		cout << int1mas[i] << "\t";
+	}
+	cout << endl;
+	cout << "The max element is " << max(int1mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		d1mas[i] = (double)(rand() % 10000 - 5000) / 100;
+		cout << d1mas[i] << "\t";
+	}
+	cout << endl;
+	cout << "The max element is " << max(d1mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			int2mas[i][j] = rand() % 100;
+			cout << int2mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << "The max element is " << max(int2mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			d2mas[i][j] = (double)(rand() % 10000 - 5000) / 100;
+			cout << d2mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << "The max element is " << max(d2mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			for (int k = 0; k < n; k++) {
+				int3mas[i][j][k] = rand() % 100;
+				cout << int3mas[i][j][k] << " ";
+			}
+			cout << "\t";
+		}
+		cout << endl;
+	}
+	cout << "The max element is " << max(int3mas, n);
+	cout << endl;
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			for (int k = 0; k < n; k++) {
+				d3mas[i][j][k] = (double)(rand() % 10000 - 5000) / 100;
+				cout << d3mas[i][j][k] << " ";
+			}
+			cout << "\t";
+		}
+		cout << endl;
+	}
+	cout << "The max element is " << max(d3mas, n);
+	cout << endl;
+	cout << "The max element of (" << i1 << "," << i2 << ") is " << max(i1, i2) << endl;
+	cout << "The max element of (" << i1 << "," << i2 << "," << i3 << ") is " << max(i1, i2, i3);
+}
+
+Сортировка массивов
+
+Задание 1.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+template <typename T, typename N> void sort(T mas[], N n) {
+	T tmp;
+	for (N i = 0; i < n; i++) {
+		for (N j = n - 1; j > i; j--) {
+			if (mas[j] < mas[j - 1]) {
+				tmp = mas[j - 1];
+				mas[j - 1] = mas[j];
+				mas[j] = tmp;
+			}
+		}
+	}
+}
+
+int main() {
+	srand(time(0));
+	const short n = 10;
+	int mas[n];
+	for (short i = 0; i < n; i++) {
+		mas[i] = rand() % 100;
+		cout << mas[i] << "\t";
+	}
+	cout << endl;
+	sort(mas, n);
+	for (short i = 0; i < n; i++) {
+		cout << mas[i] << "\t";
+	}
+}
+
+Задание 2.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+template <typename T, typename N> void sort(T mas[], N n) {
+	for (N i = 0; i < n; i++) {
+		T m_i = mas[i];
+		N j;
+		for (j = i - 1; j >= 0 && mas[j]>m_i; j--) {
+			mas[j + 1] = mas[j];
+		}
+		mas[j + 1] = m_i;
+	}
+}
+
+int main() {
+	srand(time(0));
+	const short n = 10;
+	int mas[n];
+	for (short i = 0; i < n; i++) {
+		mas[i] = rand() % 100;
+		cout << mas[i] << "\t";
+	}
+	cout << endl;
+	sort(mas, n);
+	for (short i = 0; i < n; i++) {
+		cout << mas[i] << "\t";
+	}
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+template <typename T, typename N> void show(T mas[], N n) {
+	for (N i = 0; i < n; i++) {
+		cout << mas[i] << "\t";
+	}
+	cout << endl;
+}
+
+template <typename T, typename N> void repeat(T mas[], N n) {
+	T newval;
+	N numel;
+	do
+	{
+		cout << "Enter the number of element (1-" << n << ") and new value:" << endl;
+		cin >> numel >> newval;
+	} while (numel<0 || numel>n-1);
+	mas[numel] = newval;
+}
+
+template <typename T, typename N> void grant(T mas[], N n) {
+	double sum = 0;
+	for (N i = 0; i < n; i++) {
+		sum += mas[i];
+	}
+	(sum / n >= 10.7)? cout << "Grant +\n" : cout << "Grant -\n";
+}
+
+int main() {
+	const int n = 10;
+	int mas[n], opt;
+
+	for (int i = 0; i < n; i++) {
+		do {
+			cout << "Enter value " << i + 1 << ": ";
+			cin >> mas[i];
+		} while (mas[i] < 1 || mas[i]>12);
+	}
+	do {
+		cout << "Select option:\n";
+		cout << "1 - show all ball.\n";
+		cout << "2 - enter new value.\n";
+		cout << "3 - info of the grant\n";
+		cout << "0 - Exit.\n";
+		cin >> opt;
+		switch (opt)
+		{
+		case 0: break;
+		case 1: {
+			show(mas, n);
+			break;
+		}
+		case 2: {
+			repeat(mas, n);
+			break;
+		}
+		case 3: {
+			grant(mas, n);
+			break;
+		}
+		default:
+			break;
+		}
+	} while (opt != 0);
+}
+
+Задание 4.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int main() {
+	srand(time(0));
+	const int n = 10;
+	int mas[n], sum=0, p, tmp;
+
+	for (int i = 0; i < n; i++) {
+		mas[i] = (rand() % 10000 - 5000) / 100;
+		cout << mas[i] << "\t";
+		sum += mas[i];
+	}
+	cout << endl;
+	(sum / n > 0) ? p = n / 3 * 2 : p = n / 3;
+	for (short i = 0; i < p; i++) {
+		for (short j = p - 1; j >= 0; j--) {
+			if (mas[j] < mas[j - 1]) {
+				tmp = mas[j];
+				mas[j] = mas[j - 1];
+				mas[j - 1] = tmp;
+			}
+		}
+	}
+	for (short i = 0; i < (n-p)/2; i++) {
+		tmp = mas[i+p];
+		mas[i + p] = mas[n - 1 - i];
+		mas[n - 1 - i] = tmp;
+	}
+
+	for (int i = 0; i < n; i++) {
+		cout << mas[i] << "\t";
+	}
+}

@@ -1,0 +1,1262 @@
+Многомерные массивы
+
+Задание 1-2
+
+#include<iostream>;
+using namespace std;
+#include<time.h>;
+
+int** Create(int m, int n)
+{
+	int** mas = (int**)malloc(m * sizeof(int*));
+	for (int i = 0; i < m; i++)
+	{
+		mas[i] = (int*)malloc(n * sizeof(int));
+	}
+	return mas;
+}
+
+void Full(int**& mas, int m, int n)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			mas[i][j] = rand() % 100;
+		}
+	}
+}
+
+void Add_col(int**& mas, int m, int& n, int pos)
+{
+	for (int i = 0; i < m; i++)
+	{
+		mas[i] = (int*)realloc(mas[i], (n + 1) * sizeof(int));
+		for (int j = n; j > pos; j--)
+		{
+			mas[i][j] = mas[i][j - 1];
+		}
+		mas[i][pos] = 101;
+	}
+	n++;
+}
+
+void Del_col(int**& mas, int m, int& n, int pos)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = pos; j < n; j++)
+		{
+			mas[i][j] = mas[i][j + 1];
+		}
+		mas[i] = (int*)realloc(mas[i], (n - 1) * sizeof(int));
+	}
+	n--;
+}
+
+void Show(int** mas, int m, int n)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+void Destroy(int** mas, int m)
+{
+	for (int i = 0; i < m; i++)
+	{
+		free(mas[i]);
+	}
+	free(mas);
+}
+
+int main()
+{
+	srand(time(0));
+	int** mas;
+	int m, n, pos_add, pos_del;
+	cout << "Enter m and n:\n";
+	cin >> m >> n;
+	cout << "Enter position for add:\n";
+	cin >> pos_add;
+	cout << "Enter position for del:\n";
+	cin >> pos_del;
+	mas = Create(m, n);
+	Full(mas, m, n);
+	Show(mas, m, n);
+	Add_col(mas, m, n, pos_add);
+	Show(mas, m, n);
+	Del_col(mas, m, n, pos_del);
+	Show(mas, m, n);
+	Destroy(mas, m);
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+#include<time.h>;
+
+int** Create(int m, int n)
+{
+	int** mas = (int**)malloc(m * sizeof(int*));
+	for (int i = 0; i < m; i++)
+	{
+		mas[i] = (int*)malloc(n * sizeof(int));
+	}
+	return mas;
+}
+
+void Full(int** mas, int m, int n)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			mas[i][j] = rand() % 100;
+		}
+	}
+}
+
+void Show(int** mas, int m, int n)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+void Move_lr(int** mas, int m, int n, int step, int direct)
+{
+	if (step != 0)
+	{
+		switch (direct)
+		{
+		case 1:
+		{
+			int tmp;
+			for (int i = 0; i < m; i++)
+			{
+				tmp = *mas[i];
+				for (int j = 1; j < n; j++)
+				{
+					*(mas[i]+j-1) = *(mas[i] + j);
+				}
+				*(mas[i] + n - 1 ) = tmp;
+			}
+			Move_lr(mas, m, n, --step, direct);
+			break;
+		}
+		case 2:
+		{
+			int tmp;
+			for (int i = 0; i < m; i++)
+			{
+				tmp = *(mas[i]+n-1);
+				for (int j = n-1; j > 0; j--)
+				{
+					*(mas[i] + j) = *(mas[i] + j - 1);
+				}
+				*(mas[i]) = tmp;
+			}
+			Move_lr(mas, m, n, --step, direct);
+			break;
+		}
+		case 3:
+		{
+			int* tmp;
+			tmp = mas[0];
+			for (int i = 1; i < m; i++)
+			{
+				mas[i - 1] = mas[i];
+			}
+			mas[m - 1] = tmp;
+			Move_lr(mas, m, n, --step, direct);
+			break;
+		}
+		case 4:
+		{
+			int* tmp;
+			tmp = mas[m - 1];
+			for (int i = m - 1; i > 0; i--)
+			{
+				mas[i] = mas[i - 1];
+			}
+			mas[0] = tmp;
+			Move_lr(mas, m, n, --step, direct);
+			break;
+		}
+		default:
+			break;
+		}
+	}
+	else
+	{
+		Show(mas, m, n);
+	}
+}
+
+void Destroy(int** mas, int m)
+{
+	for (int i = 0; i < m; i++)
+	{
+		free(mas[i]);
+	}
+	free(mas);
+}
+
+int main()
+{
+	srand(time(0));
+	int** mas;
+	int m, n, step, opt;
+	cout << "Enter m and n:\n";
+	cin >> m >> n;
+	mas = Create(m, n);
+	Full(mas, m, n);
+	Show(mas, m, n);
+	do
+	{
+		do
+		{
+			cout << "Enter count of step: ";
+			cin >> step;
+		} while (step < 0);
+		do
+		{
+			cout << "Select direction:\n";
+			cout << "1 - to left;\n";
+			cout << "2 - to right;\n";
+			cout << "3 - to up;\n";
+			cout << "4 - to down;\n";
+			cout << "0 - Exit.\n";
+			cin >> opt;
+		} while (opt < 0 || opt>4);
+		Move_lr(mas, m, n, step, opt);
+	} while (opt != 0);
+	Destroy(mas, m);
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+#include<time.h>;
+
+int** Create(int m, int n)
+{
+	int** mas = (int**)malloc(m * sizeof(int*));
+	for (int i = 0; i < m; i++)
+	{
+		mas[i] = (int*)malloc(n * sizeof(int));
+	}
+	return mas;
+}
+
+void Full(int** mas, int m, int n)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			mas[i][j] = rand() % 100;
+		}
+	}
+}
+
+void Show(int** mas, int m, int n)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			cout << mas[i][j] << "\t";
+		}
+		cout << endl;
+	}
+	cout << endl;
+}
+
+int** Transpon(int** mas, int** mas1, int m, int n)
+{
+	for (int i = 0; i < m; i++)
+	{
+		for (int j = 0; j < n; j++)
+		{
+			mas1[j][i] = mas[i][j];
+		}
+	}
+	return mas1;
+}
+
+void Destroy(int** mas, int m)
+{
+	for (int i = 0; i < m; i++)
+	{
+		free(mas[i]);
+	}
+	free(mas);
+}
+
+int main()
+{
+	srand(time(0));
+	int** mas;
+	int m, n, step, opt;
+	cout << "Enter m and n:\n";
+	cin >> m >> n;
+	mas = Create(m, n);
+	Full(mas, m, n);
+	Show(mas, m, n);
+	int** mas1 = Create(n, m);
+	mas1 = Transpon(mas, mas1, m, n);
+	Destroy(mas, m);
+	Show(mas1, n, m);
+	Destroy(mas1, n);
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+char*** Add(char*** mas, int& b, int p, int ph, int n)
+{
+	mas = (char***)realloc(mas, ++b*sizeof(char**));
+	mas[b - 1] = (char**)malloc(p * sizeof(char*));
+	mas[b - 1][0] = (char*)malloc(n);
+	mas[b - 1][1] = (char*)malloc(ph);
+	cout << "Enter name: ";
+	gets_s(mas[b - 1][0], n);
+	cout << "Enter the phone number: ";
+	gets_s(mas[b - 1][1], ph);
+	return mas;
+}
+
+char*** Edit(char*** mas, int b, int p, int ph, int n)
+{
+	int tmp;
+	do
+	{
+		cout << "Enter record number:";
+		cin >> tmp;
+		getchar();
+	} while (tmp < 0 || tmp>(sizeof(mas) / sizeof(char**)));
+	cout << "Enter name: ";
+	gets_s(mas[tmp][0], n);
+	cout << "Enter the phone number: ";
+	gets_s(mas[tmp][1], ph);
+	return mas;
+}
+
+void Show_par(char*** mas, char* str, int opt, int b, int p, int ph, int n)
+{
+	char flag = 0;
+	for (int i = 0; i < b; i++)
+	{
+		if (strstr(mas[i][opt], str) != NULL)
+		{
+			cout << "RecNo:\t" << i << endl;
+			cout << "Name:\t" << mas[i][0] << endl;
+			cout << "Phone number:\t" << mas[i][1] << endl << endl;
+			flag = 1;
+		}
+	}
+	if (flag == 0) cout << "No records.\n";
+}
+
+void Find(char*** mas, int b, int p, int ph, int n)
+{
+	int opt;
+	do
+	{
+		cout << "Select finding option:\n";
+		cout << "1 - find by name;\n";
+		cout << "2 - find by phone\n";
+		cout << "0 - break.\n";
+		cin >> opt;
+		getchar();
+	} while (opt < 0 || opt>2);
+	switch (opt)
+	{
+	case 1: 
+	{
+		char* tmp = new char[n];
+		cout << "Enter name: ";
+		gets_s(tmp, n);
+		Show_par(mas, tmp, opt-1, b, p, ph, n);
+		break;
+	}
+	case 2:
+	{
+		char* tmp = new char[n];
+		cout << "Enter phone: ";
+		gets_s(tmp, n);
+		Show_par(mas, tmp, opt - 1, b, p, ph, n);
+		break;
+	}
+	default:
+		break;
+	}
+}
+
+void Destroy(char*** mas, int m)
+{
+	for (int i = 0; i < m; i++)
+	{
+		free(mas[i][0]);
+		free(mas[i][1]);
+		free(mas[i]);
+	}
+	free(mas);
+}
+
+int main()
+{
+	char*** mas = nullptr;;
+	int b=0, opt;
+	const int p = 2, ph = 13, n = 50;
+	do
+	{
+		do
+		{
+			cout << "Select action:\n";
+			cout << "1 - Add record;\n";
+			cout << "2 - Find record(s);\n";
+			cout << "3 - Edit record;\n";
+			cout << "0 - Exit.\n";
+			cin >> opt;
+			getchar();
+		} while (opt < 0 || opt>3);
+		switch (opt)
+		{
+		case 1:
+		{
+			mas = Add(mas, b, p, ph, n);
+			break;
+		}
+		case 2:
+		{
+			Find(mas, b, p, ph, n);
+			break;
+		}
+		case 3:
+		{
+			mas = Edit(mas, b, p, ph, n);
+			break;
+		}
+		default:
+			break;
+		}
+	} while (opt != 0);
+	Destroy(mas, b);
+}
+
+Структуры.
+
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+struct Complex
+{
+	int real;
+	int imag;
+};
+
+Complex* Conv(Complex* num, char* str)
+{
+	num->real = 1;
+	num->imag = 1;
+	char* chtmp=nullptr;
+	int n;
+	if (str[0] == '-')
+	{
+		num -> real *= -1;
+		str++;
+	}
+	if (strchr(str, '+'))
+	{
+		n = strlen(str) - strlen(strchr(str, '+'));
+		chtmp = (char*)realloc(chtmp, n);
+		strncpy_s(chtmp, n+1, str, n);
+		num->real *= atoi(chtmp);
+		str += n;
+	}
+	else if(strchr(str, '-'))
+	{
+		n = strlen(str) - strlen(strchr(str, '-'));
+		chtmp = (char*)realloc(chtmp, n);
+		strncpy_s(chtmp, n+1, str, n);
+		str += n;
+		num->real *= atoi(chtmp);
+		num->imag *= -1;
+	}
+	else
+	{
+		cout << "Error number!";
+	}
+	strncpy_s(chtmp, sizeof(str)-1, ++str, strlen(str) - 1);
+	num->imag *= atoi(chtmp);
+	return num;
+}
+
+void Sum(Complex* num1, Complex* num2)
+{
+	int sum1, sum2;
+	sum1 = num1->real + num2->real;
+	sum2 = num1->imag + num2->imag;
+	cout << sum1;
+	if (sum2 >= 0)cout << "+";
+	cout << sum2 << "i\n";
+}
+
+void Diff(Complex* num1, Complex* num2)
+{
+	int sum1, sum2;
+	sum1 = num1->real - num2->real;
+	sum2 = num1->imag - num2->imag;
+	cout << sum1;
+	if (sum2 >= 0)cout << "+";
+	cout << sum2 << "i\n";
+}
+
+void Prd(Complex* num1, Complex* num2)
+{
+	int sum1, sum2;
+	sum1 = num1->real * num2->real - num1->imag * num2->imag;
+	sum2 = num1->imag * num2->real + num1->real * num2->imag;
+	cout << sum1;
+	if (sum2 >= 0)cout << "+";
+	cout << sum2 << "i\n";
+}
+
+void Div(Complex* num1, Complex* num2)
+{
+	double sum1, sum2;
+	sum1 = (double)(num1->real * num2->real + num1->imag * num2->imag) / (num2->real * num2->real + num2->imag * num2->imag);
+	sum2 = (double)(num1->imag * num2->real - num1->real * num2->imag) / (num2->real * num2->real + num2->imag * num2->imag);
+	cout << sum1;
+	if (sum2 >= 0)cout << "+";
+	cout << sum2 << "i\n";
+}
+
+int main()
+{
+	Complex* num1,* num2;
+	char str[10];
+	int act;
+	num1 = (Complex*)malloc(sizeof(Complex));
+	num2 = (Complex*)malloc(sizeof(Complex));
+	cout << "Enter complex number one: ";
+	gets_s(str, 10);
+	num1=Conv(num1,str);
+	cout << "Enter complex number two: ";
+	gets_s(str, 10);
+	num2 = Conv(num2, str);
+	do
+	{
+		do
+		{
+			cout << "Select action:\n";
+			cout << "1 - '+'\n";
+			cout << "2 - '-'\n";
+			cout << "3 - '*'\n";
+			cout << "4 - '\\'\n";
+			cout << "0 - Exit.\n";
+			cin >> act;
+		} while (act < 0 || act>4);
+		switch (act)
+		{
+		case 1:
+		{
+			Sum(num1, num2);
+			break;
+		}
+		case 2:
+		{
+			Diff(num1, num2);
+			break;
+		}
+		case 3:
+		{
+			Prd(num1, num2);
+			break;
+		}
+		case 4:
+		{
+			Div(num1, num2);
+			break;
+		}
+		default:
+			break;
+		}
+	} while (act != 0);
+}
+
+Задание 2.
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>;
+using namespace std;
+
+struct Auto
+{
+	int length;
+	int klr;
+	int V_dvg;
+	int P_dvg;
+	int D_kol;
+	char color[20];
+	char kpp[10];
+};
+
+Auto* Read(Auto* mas, int& n)
+{
+	FILE* fp;
+	fp = fopen("auto.txt", "r");
+	if (fp)
+	{
+		fread(&n, sizeof(n), 1, fp);
+		mas = (Auto*)malloc(n * sizeof(Auto));
+		fread(mas, sizeof(mas[0]), n, fp);
+		fclose(fp);
+	}
+	else
+	{
+		cout << "File not found\n";
+	}
+	return mas;
+}
+
+void Write(Auto* mas, int n)
+{
+	FILE* fp;
+	fp = fopen("auto.txt", "w");
+	if (fp)
+	{
+		fwrite(&n, sizeof(n), 1, fp);
+		fwrite(mas, sizeof(mas[0]), n, fp);
+		fclose(fp);
+	}
+	else
+	{
+		cout << "Error!";
+	}
+}
+
+void Show(Auto* mas, int n, int pos)
+{
+	cout << "|Length\t|Klirens\t|V_dvg\t|P_dvg\t|D koles\t|color\t|kpp\t|\n";
+	if (pos == -1)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			cout << "|" << mas[i].length << "\t|" << mas[i].klr << "\t\t|" << mas[i].V_dvg << "\t|" << mas[i].P_dvg << "\t|" << mas[i].D_kol << "\t\t|" << mas[i].color << "\t|" << mas[i].kpp << "\t|\n";
+		}
+	}
+	else
+	{
+		cout << "|" << mas[pos].length << "\t|" << mas[pos].klr << "\t\t|" << mas[pos].V_dvg << "\t|" << mas[pos].P_dvg << "\t|" << mas[pos].D_kol << "\t\t|" << mas[pos].color << "\t|" << mas[pos].kpp << "\t|\n";
+	}
+}
+
+Auto* Add(Auto* mas, int& n)
+{
+	mas = (Auto*)realloc(mas, (n + 1) * sizeof(Auto));
+	cout << "Ener info of the new car\n";
+	cout << "Enter length: ";
+	cin >> mas[n].length;
+	cout << "Enter klirens: ";
+	cin >> mas[n].klr;
+	cout << "Enter V_dvg: ";
+	cin >> mas[n].V_dvg;
+	cout << "Enter P_dvg: ";
+	cin >> mas[n].P_dvg;
+	cout << "Enter D koles: ";
+	cin >> mas[n].D_kol;
+	getchar();
+	cout << "Enter color: ";
+	gets_s(mas[n].color, 20);
+	cout << "Enter type of KPP: ";
+	gets_s(mas[n].kpp, 10);
+	n++;
+	Write(mas, n);
+	return mas;
+}
+
+void Find_par(Auto* mas, int n, int opt)
+{
+	int fi;
+	char fch[20];
+	cout << "Enter data for find: \n";
+	if (opt > 0 && opt < 6)
+	{
+		cin >> fi;
+	}
+	else
+	{
+		gets_s(fch, 20);
+	}
+	for (int i = 0; i < n; i++)
+	{
+		switch (opt)
+		{
+		case 1:
+		{
+			if (fi == mas[i].length) Show(mas, n, i);
+			break;
+		}
+		case 2:
+		{
+			if (fi == mas[i].klr) Show(mas, n, i);
+			break;
+		}
+		case 3:
+		{
+			if (fi == mas[i].V_dvg) Show(mas, n, i);
+			break;
+		}
+		case 4:
+		{
+			if (fi == mas[i].P_dvg) Show(mas, n, i);
+			break;
+		}
+		case 5:
+		{
+			if (fi == mas[i].D_kol) Show(mas, n, i);
+			break;
+		}
+		case 6:
+		{
+			if (strcmp(fch, mas[i].color) == 0)Show(mas, n, i);
+			break;
+		}
+		case 7:
+		{
+			if (strcmp(fch, mas[i].kpp) == 0)Show(mas, n, i);
+			break;
+		}
+		default:
+			break;
+		}
+	}
+}
+
+void Find(Auto* mas, int n)
+{
+	int opt;
+	do
+	{
+		do
+		{
+			cout << "Select parameter for find:\n";
+			cout << "1 - of length;\n";
+			cout << "2 - of klirens;\n";
+			cout << "3 - of V_dvg;\n";
+			cout << "4 - of P_dvg;\n";
+			cout << "5 - of D koles;\n";
+			cout << "6 - of color;\n";
+			cout << "7 - of kpp;\n";
+			cout << "0 - Exit.\n";
+			cin >> opt;
+		} while (opt < 0 || opt>7);
+		if (opt != 0) Find_par(mas, n, opt);
+	} while (opt != 0);
+}
+
+int main()
+{
+	Auto* mas = nullptr;
+	int n = 0;
+	mas=Read(mas, n);
+	int opt;
+	do {
+		do
+		{
+			cout << "Select action:\n";
+			cout << "1 - Add car;\n";
+			cout << "2 - Find car(s);\n";
+			cout << "3 - Show all cars;\n";
+			cout << "0 - Exit.\n";
+			cin >> opt;
+		} while (opt < 0 || opt>3);
+		switch (opt)
+		{
+		case 1:
+		{
+			mas = Add(mas, n);
+			break;
+		}
+		case 2:
+		{
+			Find(mas, n);
+			break;
+		}
+		case 3:
+		{
+			Show(mas, n, -1);
+			break;
+		}
+		default:
+			break;
+		}
+	} while (opt != 0);
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+struct Book
+{
+	char name[20];
+	char author[20];
+	char creator[30];
+	char type[20];
+};
+
+void Show(Book* mas, int n, int pos)
+{
+	cout << "|Name\t|Author\t|Creator\t|Type\t|\n";
+	if (pos == -1)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			cout << "|" << mas[i].name << "\t|" << mas[i].author << "\t|" << mas[i].creator << "\t\t|" << mas[i].type << "\t|\n";
+		}
+	}
+	else
+	{
+		cout << "|" << mas[pos].name << "\t|" << mas[pos].author << "\t|" << mas[pos].creator << "\t\t|" << mas[pos].type << "\t|\n";
+	}
+}
+
+void Edit(Book*& mas, int n)
+{
+	char fch[20];
+	cout << "Enter name: \n";
+	gets_s(fch, 20);
+	for (int i = 0; i < n; i++)
+	{
+		if (strcmp(fch, mas[i].name) == 0) 
+		{
+			Show(mas, n, i);
+			cout << "Enter new name: ";
+			gets_s(mas[i].name, 20);
+			cout << "Enter new author: ";
+			gets_s(mas[i].author);
+			cout << "Enter new creator: ";
+			gets_s(mas[i].creator);
+			cout << "Enter new type: ";
+			gets_s(mas[i].type);
+			Show(mas, n, i);
+		}
+	}
+
+}
+
+void Find_par(Book* mas, int n, int opt)
+{
+	char fch[20];
+	cout << "Enter data for find: \n";
+	gets_s(fch, 20);
+	for (int i = 0; i < n; i++)
+	{
+		switch (opt)
+		{
+		case 1:
+		{
+			if (strcmp(fch, mas[i].name) == 0)Show(mas, n, i);
+			break;
+		}
+		case 2:
+		{
+			if (strcmp(fch, mas[i].author) == 0)Show(mas, n, i);
+			break;
+		}
+		default:
+			break;
+		}
+	}
+}
+
+void Find(Book* mas, int n)
+{
+	int opt;
+	do
+	{
+		do
+		{
+			cout << "Select parameter for find:\n";
+			cout << "1 - of name;\n";
+			cout << "2 - of author;\n";
+			cout << "0 - Exit.\n";
+			cin >> opt;
+			getchar();
+		} while (opt < 0 || opt>2);
+		if (opt != 0) Find_par(mas, n, opt);
+	} while (opt != 0);
+}
+
+void Sort(Book*& mas, int n, int opt)
+{
+	int start=0;
+	Book tmp;
+	for (int i = start; i < n; i++)
+	{
+		for (int j = n-1; j > start; j--)
+		{
+			switch (opt)
+			{
+			case 1:
+			{
+				if (strcmp(mas[j].name, mas[j - 1].name) < 0)
+				{
+					tmp = mas[j];
+					mas[j] = mas[j - 1];
+					mas[j - 1] = tmp;
+				}
+				break;
+			}
+			case 2:
+			{
+				if (strcmp(mas[j].author, mas[j - 1].author) < 0)
+				{
+					tmp = mas[j];
+					mas[j] = mas[j - 1];
+					mas[j - 1] = tmp;
+				}
+				break;
+			}
+			case 3:
+			{
+				if (strcmp(mas[j].creator, mas[j - 1].creator) < 0)
+				{
+					tmp = mas[j];
+					mas[j] = mas[j - 1];
+					mas[j - 1] = tmp;
+				}
+				break;
+			}
+			default:
+				break;
+			}
+		}
+	}
+}
+
+int main()
+{
+	Book mas[] = { {"one","first","1","horror"}, {"two","first","1","horror"}, {"three","first","1","detective"}, {"four","second","2","detective"}, {"five","second","2","classic"}, {"six","second","2","classic"}, {"seven","first","1","sport"}, {"eight","first","1","sport"}, {"nine","first","1","adult"}, {"ten","second","2","adult"} };
+	Book* mp = (Book*)mas;
+	int n = 10;
+	int opt;
+	do {
+		do
+		{
+			cout << "Select action:\n";
+			cout << "1 - Edit book;\n";
+			cout << "2 - Show all books;\n";
+			cout << "3 - Find book;\n";
+			cout << "4 - Sort books by name;\n";
+			cout << "5 - Sort books by author;\n";
+			cout << "6 - Sort books by creator;\n";
+			cout << "0 - Exit.\n";
+			cin >> opt;
+		} while (opt < 0 || opt>6);
+		switch (opt)
+		{
+		case 1:
+		{
+			getchar();
+			Edit(mp,n);
+			break;
+		}
+		case 2:
+		{
+			Show(mas, n, -1);
+			break;
+		}
+		case 3:
+		{
+			Find(mas, n);
+			break;
+		}
+		case 4:
+		{
+			Sort(mp, n, 1);
+			break;
+		}
+		case 5:
+		{
+			Sort(mp, n, 2);
+			break;
+		}
+		case 6:
+		{
+			Sort(mp, n, 3);
+			break;
+		}
+		default:
+			break;
+		}
+	} while (opt != 0);
+}
+
+Задание 4.
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<iostream>;
+using namespace std;
+
+union unum
+{
+	int inum;
+	char chnum[9];
+};
+
+struct Auto
+{
+	char color[20];
+	char model[10];
+	unum number;
+	char isint;
+};
+
+Auto* Read(Auto* mas, int& n)
+{
+	FILE* fp;
+	fp = fopen("auto1.txt", "r");
+	if (fp)
+	{
+		fread(&n, sizeof(n), 1, fp);
+		mas = (Auto*)malloc(n * sizeof(Auto));
+		fread(mas, sizeof(mas[0]), n, fp);
+		fclose(fp);
+	}
+	else
+	{
+		cout << "File not found\n";
+	}
+	return mas;
+}
+
+void Write(Auto* mas, int n)
+{
+	FILE* fp;
+	fp = fopen("auto1.txt", "w");
+	if (fp)
+	{
+		fwrite(&n, sizeof(n), 1, fp);
+		fwrite(mas, sizeof(mas[0]), n, fp);
+		fclose(fp);
+	}
+	else
+	{
+		cout << "Error!";
+	}
+}
+
+void Show(Auto* mas, int n, int pos)
+{
+	cout << "|Model\t|Color\t|Number\t|\n";
+	if (pos == -1)
+	{
+		for (int i = 0; i < n; i++)
+		{
+			cout << "|" << mas[i].model << "\t|" << mas[i].color << "\t\t|";
+			if (mas[i].isint==1)
+			{
+				cout << mas[i].number.inum;
+			}
+			else
+			{
+				cout << mas[i].number.chnum;
+			}
+			cout << "\t|\n";
+		}
+	}
+	else
+	{
+		cout << "|" << mas[pos].model << "\t|" << mas[pos].color << "\t\t|";
+		if (mas[pos].isint == 1)
+		{
+			cout << mas[pos].number.inum;
+		}
+		else
+		{
+			cout << mas[pos].number.chnum;
+		}
+		cout << "\t|\n";
+	}
+}
+
+int Find_par(Auto* mas, int n, char str[])
+{
+	for (int i = 0; i < n; i++)
+	{
+		if (mas[i].isint == 1)
+		{
+			if (mas[i].number.inum == atoi(str))
+			{
+				return i;
+			}
+		}
+		else
+		{
+			if (strcmp(mas[i].number.chnum, str) == 0)
+			{
+				return i;
+			}
+		}
+	}
+	return -1;
+}
+
+Auto* Add(Auto* mas, int& n)
+{
+	char tmp[9];
+	char flag = 0;
+	mas = (Auto*)realloc(mas, (n + 1) * sizeof(Auto));
+	cout << "Ener info of the new car\n";
+	cout << "Enter color: ";
+	gets_s(mas[n].color, 20);
+	cout << "Enter model: ";
+	gets_s(mas[n].model, 10);
+	do
+	{
+		cout << "Enter number (int of 5 digits or string of 8 symbol): ";
+		gets_s(tmp, 9);
+		if (Find_par(mas, n, tmp) == -1)
+		{
+			if (atoi(tmp) > 0 && atoi(tmp) < 100000)
+			{
+				{
+					mas[n].number.inum = atoi(tmp);
+					mas[n].isint = 1;
+				}
+			}
+			else
+			{
+
+				strcpy(mas[n].number.chnum, tmp);
+				mas[n].isint = 0;
+			}
+			flag = 1;
+		}
+		else
+		{
+			cout << "This number exist\n";
+		}
+
+	} while (flag == 0);
+	n++;
+	Write(mas, n);
+	return mas;
+}
+
+Auto* Edit(Auto* mas, int n, int pos)
+{
+	char tmp[9];
+	char flag = 0;
+	Show(mas, n, pos);
+	cout << "Ener new info of the  car\n";
+	cout << "Enter color: ";
+	gets_s(mas[pos].color, 20);
+	cout << "Enter model: ";
+	gets_s(mas[pos].model, 10);
+	do
+	{
+		cout << "Enter number (int of 5 digits or string of 8 symbol): ";
+		gets_s(tmp, 9);
+		if (Find_par(mas, n, tmp) == -1)
+		{
+			if (atoi(tmp) > 0 && atoi(tmp) < 100000)
+			{
+				{
+					mas[pos].number.inum = atoi(tmp);
+					mas[n].isint = 1;
+				}
+			}
+			else
+			{
+
+				strcpy(mas[pos].number.chnum, tmp);
+				mas[n].isint = 0;
+			}
+			flag = 1;
+		}
+		else
+		{
+			cout << "This number exist\n";
+		}
+
+	} while (flag == 0);
+	Write(mas, n);
+	return mas;
+}
+
+int main()
+{
+	Auto* mas = nullptr;
+	int n = 0;
+	mas = Read(mas, n);
+	char tmp[9];
+	int opt;
+	do {
+		do
+		{
+			cout << "Select action:\n";
+			cout << "1 - Add car;\n";
+			cout << "2 - Find car(s);\n";
+			cout << "3 - Show all cars;\n";
+			cout << "4 - Edit car;\n";
+			cout << "0 - Exit.\n";
+			cin >> opt;
+			getchar();
+		} while (opt < 0 || opt>4);
+		switch (opt)
+		{
+		case 1:
+		{
+			mas = Add(mas, n);
+			break;
+		}
+		case 2:
+		{
+			cout << "Enter number for find: ";
+			gets_s(tmp, 9);
+			Show(mas, n, Find_par(mas, n, tmp));
+			break;
+		}
+		case 3:
+		{
+			Show(mas, n, -1);
+			break;
+		}
+		case 4:
+		{
+			cout << "Enter number for find: ";
+			gets_s(tmp, 9);
+			mas=Edit(mas, n, Find_par(mas, n, tmp));
+			break;
+		}
+		default:
+			break;
+		}
+	} while (opt != 0);
+}

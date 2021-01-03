@@ -1,0 +1,182 @@
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+ int main()
+{
+	const int n = 100;
+	char str[n];
+	cout << "Enter string (<100 symbol):\n";
+	gets_s(str,	n);
+	cout << "Fact size: " << strlen(str) << "\nFree: " << n - strlen(str);
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n + 1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n + 1);
+	str[n] = 0;
+}
+
+char* Addtostr(char*& src, char*& dest, int m, int n)
+{
+	int k = 0;
+	for (int i = m; i < n; i++)
+	{
+		dest = (char*)realloc(dest, k + 1);
+		dest[k] = src[i];
+		k++;
+	}
+	dest = (char*)realloc(dest, k + 1);
+	dest[k] = 0;
+	return dest;
+}
+
+int main()
+{
+	char* str;
+	char* newstr = nullptr;
+	int m, n;
+	cout << "Enter string:\n";
+	Getstring(str);
+	do
+	{
+		cout << "Enter m and n position (>=0 and <" << strlen(str) << ")\n";
+		cin >> m >> n;
+	} while (m<0 || n<0 || m>strlen(str) || n>strlen(str) || m > n);
+	cout << Addtostr(str, newstr, m, n);
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n + 1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n + 1);
+	str[n] = 0;
+}
+
+char* Delsubstr(char*& src, int m, int n)
+{
+	strcpy_s(src + m, strlen(src + n) + 2, src + n);
+	src = (char*)realloc(src, strlen(src)-m+n);
+	return src;
+}
+
+int main()
+{
+	char* str;
+	int m, n;
+	cout << "Enter string:\n";
+	Getstring(str);
+	do
+	{
+		cout << "Enter m and n position (>=0 and <" << strlen(str) << ")\n";
+		cin >> m >> n;
+	} while (m<0 || n<0 || m>strlen(str) || n>strlen(str) || m > n);
+	cout << Delsubstr(str, m, n);
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n + 1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n + 1);
+	str[n] = 0;
+}
+
+void Findchar(char* str, char ch)
+{
+	int n=strlen(str);
+	while ((str = strchr(str,ch)) != NULL)
+	{
+		cout << n - strlen(str) + 1 << " ";
+		str++;
+	}
+}
+
+int main()
+{
+	char* str;
+
+	cout << "Enter string:\n";
+	Getstring(str);
+	cout << "Enter symbol: \n";
+	char ch = getchar();
+	Findchar(str, ch);
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n + 1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n + 1);
+	str[n] = 0;
+}
+
+void Findchar(char* str, char ch)
+{
+	int n = strlen(str);
+	cout << n - strlen(strrchr(str, ch)+1);
+}
+
+int main()
+{
+	char* str;
+	
+	cout << "Enter string:\n";
+	Getstring(str);
+	cout << "Enter symbol: \n";
+	char ch = getchar();
+	Findchar(str, ch);
+}
+

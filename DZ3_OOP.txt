@@ -1,0 +1,597 @@
+Задание 1.
+
+Drob.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+class Drob
+{
+	int chisl;
+	int znam;
+public:
+	Drob();
+	void Set();
+	void Sum(Drob);
+	void Razn(Drob);
+	void Prod(Drob);
+	void Div(Drob);
+	void Print();
+	Drob operator+(Drob&);
+	Drob operator-(Drob&);
+	Drob operator*(Drob&);
+	Drob operator/(Drob&);
+};
+
+Drob.cpp
+
+#include "Drob.h"
+
+Drob::Drob()
+{
+	this->chisl = 0;
+	this->znam = 1;
+}
+
+void Drob::Set()
+{
+	do
+	{
+		cout << "Enter chisl (>=0): ";
+		cin >> this->chisl;
+	} while (this->chisl < 0);
+	do
+	{
+		cout << "Enter znam (> 0): ";
+		cin >> this->znam;
+	} while (this->znam <= 0);
+}
+
+void Drob::Sum(Drob num)
+{
+	cout << "Summa is:\n" << this->chisl * num.znam + num.chisl * this->znam << "/" << this->znam * num.znam << "\n";
+}
+
+void Drob::Razn(Drob num)
+{
+	cout << "Razn is :\n" << this->chisl * num.znam - num.chisl * this->znam << "/" << this->znam * num.znam << "\n";
+}
+
+void Drob::Prod(Drob num)
+{
+	cout << "Production is :\n" << this->chisl * num.chisl << "/" << this->znam * num.znam << "\n";
+}
+
+void Drob::Div(Drob num)
+{
+	cout << "Razn is :\n" << this->chisl * num.znam << "/" << this->znam * num.chisl << "\n";
+}
+
+void Drob::Print()
+{
+	cout << chisl << "/" << znam << "\n";
+}
+
+Drob Drob::operator+(Drob& num)
+{
+	Drob tmp;
+	tmp.chisl = this->chisl * num.znam + num.chisl * this->znam;
+	tmp.znam = this->znam * num.znam;
+	return tmp;
+}
+
+Drob Drob::operator-(Drob& num)
+{
+	Drob tmp;
+	tmp.chisl = this->chisl * num.znam - num.chisl * this->znam;
+	tmp.znam = this->znam * num.znam;
+	return tmp;
+}
+
+Drob Drob::operator*(Drob& num)
+{
+	Drob tmp;
+	tmp.chisl = this->chisl * num.chisl;
+	tmp.znam = this->znam * num.znam;
+	return tmp;
+}
+
+Drob Drob::operator/(Drob& num)
+{
+	Drob tmp;
+	tmp.chisl = this->chisl * num.chisl;
+	tmp.znam = this->znam * num.znam;
+	return tmp;
+}
+
+Source.cpp
+
+#include "Drob.h";
+
+
+int main()
+{
+	short act;
+	Drob n1, n2, n3;
+	do
+	{
+		do
+		{
+			cout << "select option:\n";
+			cout << "1 - Enter numbers;\n";
+			cout << "2 - Sum numbers;\n";
+			cout << "3 - Razn numbers;\n";
+			cout << "4 - Production numbers;\n";
+			cout << "5 - Divide by;\n";
+			cout << "0 - Exit.\n";
+			cin >> act;
+		} while (act < 0 || act>5);
+		switch (act)
+		{
+		case 1:
+		{
+			cout << "Number 1:\n";
+			n1.Set();
+			cout << "Number 2:\n";
+			n2.Set();
+			break;
+		}
+		case 2:
+		{
+			//n1.Sum(n2);
+			(n1 + n2).Print();
+			break;
+		}
+		case 3:
+		{
+			//n1.Razn(n2);
+			(n1 - n2).Print();
+			break;
+		}
+		case 4:
+		{
+			//n1.Prod(n2);
+			(n1 * n2).Print();
+			break;
+		}
+		case 5:
+		{
+			//n1.Div(n2);
+			(n1 / n2).Print();
+			break;
+		}
+		default:
+			break;
+		}
+	} while (act != 0);
+}
+
+
+Задание 2.
+
+Complex.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+
+class Complex
+{
+	int real;
+	int imag;
+	char* Gets();
+public:
+	void Set();
+	template <typename Type> void  Print(Type, Type);
+	void operator+(const Complex&);
+	void operator-(const Complex&);
+	void operator*(const Complex&);
+	void operator/(const Complex&);
+};
+
+Complex.cpp
+
+#include "Complex.h"
+
+char* Complex::Gets()
+{
+	char* tmp = nullptr;
+	int n = 0;
+	char ch;
+	while ((ch = getchar()) != '\n')
+	{
+		tmp = (char*)realloc(tmp, n + 1);
+		tmp[n] = ch;
+		n++;
+	}
+	tmp = (char*)realloc(tmp, n + 1);
+	tmp[n] = 0;
+	return tmp;
+}
+
+void Complex::Set()
+{
+	char* str;
+	cout << "Enter complex number: ";
+	str = Gets();
+	real = 1;
+	imag = 1;
+	char* chtmp = nullptr;
+	int n;
+	if (str[0] == '-')
+	{
+		real *= -1;
+		str++;
+	}
+	if (strchr(str, '+'))
+	{
+		n = strlen(str) - strlen(strchr(str, '+'));
+		chtmp = (char*)realloc(chtmp, n);
+		strncpy_s(chtmp, n + 1, str, n);
+		real *= atoi(chtmp);
+		str += n;
+	}
+	else if (strchr(str, '-'))
+	{
+		n = strlen(str) - strlen(strchr(str, '-'));
+		chtmp = (char*)realloc(chtmp, n);
+		strncpy_s(chtmp, n + 1, str, n);
+		str += n;
+		real *= atoi(chtmp);
+		imag *= -1;
+	}
+	else
+	{
+		cout << "Error number!";
+	}
+	strncpy_s(chtmp, sizeof(str) - 1, ++str, strlen(str) - 1);
+	imag *= atoi(chtmp);
+}
+
+template<typename Type>
+inline void Complex::Print(Type sum1, Type sum2)
+{
+	cout << sum1;
+	if (sum2 >= 0)cout << "+";
+	cout << sum2 << "i\n";
+}
+
+void Complex::operator+(const Complex& obj)
+{
+	Complex::Print(this->real + obj.real, this->imag + obj.imag);	
+}
+
+void Complex::operator-(const Complex& obj)
+{
+	Complex::Print(this->real - obj.real,this->imag - obj.imag);
+}
+
+void Complex::operator*(const Complex& obj)
+{
+	Complex::Print(this->real * obj.real - this->imag * obj.imag, this->imag * obj.real + this->real * obj.imag);
+}
+
+void Complex::operator/(const Complex& obj)
+{
+	double sum1, sum2;
+	sum1 = (double)(this->real * obj.real + this->imag * obj.imag) / (obj.real * obj.real + obj.imag * obj.imag);
+	sum2 = (double)(this->imag * obj.real - this->real * obj.imag) / (obj.real * obj.real + obj.imag * obj.imag);
+	Complex::Print(sum1, sum2);
+}
+
+Source.cpp
+
+#include"Complex.h"
+
+int main()
+{
+	Complex num1, num2;
+	num1.Set();
+	num2.Set();
+	int act;
+	do
+	{
+		do
+		{
+			cout << "Select action:\n";
+			cout << "1 - '+'\n";
+			cout << "2 - '-'\n";
+			cout << "3 - '*'\n";
+			cout << "4 - '/'\n";
+			cout << "0 - Exit.\n";
+			cin >> act;
+		} while (act < 0 || act>4);
+		switch (act)
+		{
+		case 1:
+		{
+			num1 + num2;
+			break;
+		}
+		case 2:
+		{
+			num1 - num2;
+			break;
+		}
+		case 3:
+		{
+			num1* num2;
+			break;
+		}
+		case 4:
+		{
+			num1 / num2;
+			break;
+		}
+		default:
+			break;
+		}
+	} while (act != 0);
+}
+
+Задание 3.
+
+Overcoat.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+
+class Overcoat
+{
+	char* type;
+	float cost;
+	char* Gets();
+public:
+	Overcoat();
+	Overcoat(const Overcoat&);
+	void Set();
+	void Show();
+	Overcoat& operator=(const Overcoat&);
+	bool operator==(const Overcoat&);
+	bool operator>(const Overcoat&);
+	~Overcoat() { delete[] type; }
+};
+
+Overcoat.cpp
+
+#include "Overcoat.h"
+
+char* Overcoat::Gets()
+{
+	char* tmp = nullptr;
+	int n = 0;
+	char ch;
+	while ((ch = getchar()) != '\n')
+	{
+		tmp = (char*)realloc(tmp, n + 1);
+		tmp[n] = ch;
+		n++;
+	}
+	tmp = (char*)realloc(tmp, n + 1);
+	tmp[n] = 0;
+	return tmp;
+}
+
+Overcoat::Overcoat()
+{
+	type = nullptr;
+	cost = 0;
+}
+
+Overcoat::Overcoat(const Overcoat& copy)
+{
+	this->type = new char[strlen(copy.type) + 1];
+	this->type = copy.type;
+	this->cost = copy.cost;
+}
+
+void Overcoat::Set()
+{
+	char* tmp;
+	cout << "Enter type of the overcoat:\n";
+	tmp = Gets();
+	type = new char[strlen(tmp) + 1];
+	strcpy_s(type, strlen(tmp) + 1, tmp);
+	cout << "Enter cost of the overcoat:\n";
+	cin >> cost;
+	cin.ignore();
+}
+
+void Overcoat::Show()
+{
+	cout << "Type: " << type << "\n";
+	cout << "Cost: " << cost << "\n";
+}
+
+Overcoat& Overcoat::operator=(const Overcoat& copy)
+{
+	if (this->type != nullptr) delete[] type;
+	this->type = new char[strlen(copy.type) + 1];
+	this->type = copy.type;
+	this->cost = copy.cost;
+	return *this;
+}
+
+bool Overcoat::operator==(const Overcoat& obj)
+{
+	if (strcmp(this->type, obj.type) == 0) return true;
+	return false;
+}
+
+bool Overcoat::operator>(const Overcoat& obj)
+{
+	if (this->cost > obj.cost) return true;
+	return false;
+}
+
+Source.cpp
+
+#include"Overcoat.h"
+
+int main()
+{
+	Overcoat obj1, obj2, obj3;
+	obj1.Set();
+	obj2.Set();
+	obj3 = obj1;
+	cout << "Obj1\n";
+	obj1.Show();
+	cout << "Obj2\n";
+	obj2.Show();
+	cout << "Obj3\n";
+	obj3.Show();
+	if (obj2 == obj3)
+	{
+		if (obj2 > obj3)
+		{
+			cout << "obj2 is more expensive then a obj3.\n";
+		}
+		else
+		{
+			cout << "obj2 is not more expensive then a obj3.\n";
+		}
+	}
+	else
+	{
+		cout << "Differrent types.\n";
+	}
+}
+
+
+Задание 4.
+
+Flat.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+
+class Flat
+{
+	char* Addr;
+	float Square;
+	float Cost;
+	char* Gets();
+public:
+	Flat();
+	Flat(Flat&);
+	void Set();
+	void Show();
+	Flat& operator=(const Flat&);
+	bool operator>(const Flat&);
+	bool operator==(const Flat&);
+	~Flat() { delete[] Addr; }
+};
+
+Flat.cpp
+
+#include "Flat.h"
+
+char* Flat::Gets()
+{
+	char* tmp = nullptr;
+	int n = 0;
+	char ch;
+	while ((ch = getchar()) != '\n')
+	{
+		tmp = (char*)realloc(tmp, n + 1);
+		tmp[n] = ch;
+		n++;
+	}
+	tmp = (char*)realloc(tmp, n + 1);
+	tmp[n] = 0;
+	return tmp;
+}
+
+Flat::Flat()
+{
+	Addr = nullptr;
+	Square = 0;
+	Cost = 0;
+}
+
+Flat::Flat(Flat& copy)
+{
+	this->Addr = new char[strlen(copy.Addr) + 1];
+	strcpy_s(this->Addr, strlen(copy.Addr) + 1, copy.Addr);
+	this->Square = copy.Square;
+	this->Cost = copy.Cost;
+}
+
+void Flat::Set()
+{
+	char* tmp;
+	cout << "Enter the addres of the flat:\n";
+	tmp = Gets();
+	this->Addr = new char[strlen(tmp) + 1];
+	strcpy_s(this->Addr, strlen(tmp) + 1, tmp);
+	cout << "Enter the square of the flat:\n";
+	cin >> this->Square;
+	cout << "Enter the cost of the flat:";
+	cin >> this->Cost;
+	cin.ignore();
+}
+
+void Flat::Show()
+{
+	cout << "Address: " << this->Addr << "\n";
+	cout << "Square: " << this->Square << "\n";
+	cout << "Cost: " << this->Cost << "\n";
+}
+
+Flat& Flat::operator=(const Flat& copy)
+{
+	if (this->Addr != nullptr) delete[] this->Addr;
+	this->Addr = new char[strlen(copy.Addr) + 1];
+	strcpy_s(this->Addr, strlen(copy.Addr) + 1, copy.Addr);
+	this->Square = copy.Square;
+	this->Cost = copy.Cost;
+	return *this;
+}
+
+bool Flat::operator>(const Flat& obj)
+{
+	if (this->Cost > obj.Cost) return true;
+	return false;
+}
+
+bool Flat::operator==(const Flat& obj)
+{
+	if (this->Square == obj.Square) return true;
+	return false;
+}
+
+Source.cpp
+
+#include"Flat.h"
+
+int main()
+{
+	Flat obj1, obj2, obj3;
+	obj1.Set();
+	obj2.Set();
+	obj3 = obj1;
+	cout << "Obj1\n";
+	obj1.Show();
+	cout << "Obj2\n";
+	obj2.Show();
+	cout << "Obj3\n";
+	obj3.Show();
+	if (obj2 == obj3)
+	{
+		cout << "This flats are the same.\n";
+	}
+	else
+	{
+		cout << "This flats are not the same.\n";
+	}
+	if (obj2 > obj3)
+	{
+		cout << "obj2 is more expensive then a obj3.\n";
+	}
+	else
+	{
+		cout << "obj2 is not more expensive then a obj3.\n";
+	}
+}

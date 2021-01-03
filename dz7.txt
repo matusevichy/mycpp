@@ -1,0 +1,876 @@
+Указатели.
+
+Задание 1.
+
+#include <iostream>
+#include<time.h>
+using namespace std;
+
+int* Create(int n) {
+	int* mas = (int*)calloc(n, sizeof(n));
+	return mas;
+}
+
+int Check(int x, int mas[], int n) {
+	for (int i = 0; i < n; i++) {
+		if (x == mas[i]) {
+			return 1;
+		}
+	}
+	return 0;
+}
+
+void Full(int* mas, int n) {
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = rand() % 10;
+	}
+}
+
+void Show(int* mas, int n) {
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << " ";
+	}
+
+}
+
+
+
+void Add(int mas1[], int m, int mas2[], int n, int* &mas3, int &k) {
+	for (int i = 0; i < m; i++) {
+		if (Check(mas1[i], mas2, n) == 0 && Check(mas1[i],mas3,k) == 0) {
+			mas3 = (int*)realloc(mas3, ++k * sizeof(int));
+			mas3[k-1] = mas1[i];
+		}
+	}
+}
+
+int main()
+{
+	srand(time(0));
+	int m, n;
+	cout << "Enter the size of arrays A and B:\n";
+	cin >> m >> n;
+	int k = 0;
+	int* A = Create(m);
+	int* B = Create(n);
+	int* C = nullptr;
+	Full(A, m);
+	Full(B, n);
+	Show(A, m);
+	cout << endl;
+	Show(B, n);
+	cout << endl;
+	Add(A, m, B, n, C, k);
+	Show(C, k);
+}
+
+Задание 2.
+
+#include<iostream>;,
+#include<time.h>;
+using namespace std;
+
+int* Create(int n)
+{
+	int* mas = (int*)calloc(n, sizeof(n));
+	return mas;
+}
+
+void Masgen(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = rand() % 10;
+	}
+}
+
+void Show(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << " ";
+	}
+}
+
+char Check(int num, int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		if (mas[i] == num)
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
+void Add(int* mas1, int n1, int* mas2, int n2, int* mas3, int& n3)
+{
+	for (int i = 0; i < n1; i++)
+	{
+		for (int j = 0; j < n2; j++)
+		{
+			if (Check(mas1[i], mas2, n2) == 0 && Check(mas1[i], mas3, n3) == 0)
+			{
+				mas3 = (int*)realloc(mas3, ++n3 * sizeof(int));
+				mas3[n3 - 1] = mas1[i];
+			}
+		}
+	}
+}
+
+int main()
+{
+	int m, n, k = 0;
+	srand(time(0));
+	cout << "Enter count the elements in the array A and B: \n";
+	cin >> m >> n;
+	int* A = Create(m);
+	int* B = Create(n);
+	int* C = Create(k);
+	Masgen(A, m);
+	Masgen(B, n);
+	cout << "Array A:\n";
+	Show(A, m);
+	cout << endl;
+	cout << "Array B:\n";
+	Show(B, n);
+	cout << endl;
+	Add(A, m, B, n, C, k);
+	Add(B, n, A, m, C, k);
+	cout << "Array C:\n";
+	Show(C, k);
+}
+
+Задание 3.
+
+#include<iostream>;,
+#include<time.h>;
+using namespace std;
+
+int* Create(int n)
+{
+	int* mas = (int*)calloc(n, sizeof(n));
+	return mas;
+}
+
+void Masgen(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = rand() % 10;
+	}
+}
+
+void Show(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << " ";
+	}
+}
+
+
+void Add(int* mas1, int n1, int* mas2, int n2)
+{
+	for (int i = 0; i < n1; i++)
+	{
+			mas2[n2 + i] = mas1[i];
+	}
+}
+
+int main()
+{
+	int m, n;
+	srand(time(0));
+	cout << "Enter count the elements in the array A and B: \n";
+	cin >> m >> n;
+	int* A = Create(m);
+	int* B = Create(n);
+	int* C = Create(m+n);
+	Masgen(A, m);
+	Masgen(B, n);
+	cout << "Array A:\n";
+	Show(A, m);
+	cout << endl;
+	cout << "Array B:\n";
+	Show(B, n);
+	cout << endl;
+	Add(A, m, C, 0);
+	Add(B, n, C, m);
+	cout << "Array C:\n";
+	Show(C, m+n);
+}
+
+Задание 4.
+
+#include<iostream>;,
+#include<time.h>;
+using namespace std;
+
+int* Create(int n)
+{
+	int* mas = (int*)calloc(n, sizeof(n));
+	return mas;
+}
+
+void Masgen(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = rand() % 10;
+	}
+}
+
+void Show(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << " ";
+	}
+}
+
+char Check(int num, int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		if (mas[i] == num)
+		{
+			return 1;
+		}
+	}
+	return 0;
+}
+
+void Add(int* mas1, int n1, int* mas2, int n2, int* mas3, int& n3)
+{
+	for (int i = 0; i < n1; i++)
+	{
+		for (int j = 0; j < n2; j++)
+		{
+			if (Check(mas1[i], mas2, n2) == 1 && Check(mas1[i], mas3, n3) == 0)
+			{
+				mas3 = (int*)realloc(mas3, ++n3 * sizeof(int));
+				mas3[n3 - 1] = mas1[i];
+			}
+		}
+	}
+}
+
+int main()
+{
+	int m, n, k = 0;
+	srand(time(0));
+	cout << "Enter count the elements in the array A and B: \n";
+	cin >> m >> n;
+	int* A = Create(m);
+	int* B = Create(n);
+	int* C = Create(k);
+	Masgen(A, m);
+	Masgen(B, n);
+	cout << "Array A:\n";
+	Show(A, m);
+	cout << endl;
+	cout << "Array B:\n";
+	Show(B, n);
+	cout << endl;
+	Add(A, m, B, n, C, k);
+	cout << "Array C:\n";
+	Show(C, k);
+}
+
+
+Задание 5.
+
+#include<iostream>;,
+#include<time.h>;
+using namespace std;
+
+int* Create(int n)
+{
+	int* mas = (int*)calloc(n, sizeof(n));
+	return mas;
+}
+
+void Masgen(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = rand() % 100;
+	}
+}
+
+void Show(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << " ";
+	}
+}
+
+int* Del(int* mas, int& n, char opt)
+{
+	for (int i = n - 1; i >= 0; i--)
+	{
+		if (opt == '1' && mas[i] % 2 == 0)
+		{
+			memmove(mas + i, mas + i + 1, (n - i - 1) * sizeof(int));
+			mas = (int*)realloc(mas, --n * sizeof(int));
+		}
+		else if (opt == '2' && mas[i] % 2 != 0)
+		{
+			memmove(mas + i, mas + i + 1, (n - i - 1) * sizeof(int));
+			mas = (int*)realloc(mas, --n * sizeof(int));
+		}
+	}
+	return mas;
+}
+
+int main()
+{
+	int m, k = 0;
+	srand(time(0));
+	cout << "Enter count the elements in the array A: \n";
+	cin >> m;
+	int* A = Create(m);
+	int* C = Create(k);
+	Masgen(A, m);
+	cout << "Array A:\n";
+	Show(A, m);
+	cout << endl;
+	char opt;
+	do
+	{
+		cout << "Select option:\n";
+		cout << "1 - Even;\n";
+		cout << "2 - Odd\n";
+		cin >> opt;
+	} while (opt != '1' && opt != '2');
+	cout << "Array A after delete number:\n";
+	A = Del(A, m, opt);
+	Show(A, m);
+}
+
+Задание 6.
+
+#include<iostream>;,
+#include<time.h>;
+using namespace std;
+
+int* Create(int n)
+{
+	int* mas = (int*)calloc(n, sizeof(n));
+	return mas;
+}
+
+void Masgen(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = rand() % 10;
+	}
+}
+
+void Show(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << " ";
+	}
+}
+
+int* Del(int* mas, int &n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		char flag = 0;
+		for (int j = 2; j < mas[i]; j++)
+		{
+			if (mas[i] % j == 0)
+			{
+				flag = 1;
+			}
+		}
+		if (flag == 0 && mas[i]!=0)
+		{
+			memmove(mas + i, mas + i + 1, (n + i - 1) * sizeof(int));
+			mas = (int*)realloc(mas, --n * sizeof(int));
+			i--;
+		}
+	}
+	return mas;
+}
+
+int main()
+{
+	int m, k = 0;
+	srand(time(0));
+	cout << "Enter count the elements in the array A: \n";
+	cin >> m;
+	int* A = Create(m);
+	int* C = Create(k);
+	Masgen(A, m);
+	cout << "Array A:\n";
+	Show(A, m);
+	cout << endl;
+	cout << "Array A after delete number:\n";
+	A = Del(A, m);
+	Show(A, m);
+	free(A);
+}
+
+
+Задание 7.
+
+#include<iostream>;,
+#include<time.h>;
+using namespace std;
+
+int* Create(int n)
+{
+	int* mas = (int*)calloc(n, sizeof(n));
+	return mas;
+}
+
+void Masgen(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		mas[i] = -100 + rand()%201;
+	}
+}
+
+void Show(int* mas, int n)
+{
+	for (int i = 0; i < n; i++)
+	{
+		cout << mas[i] << " ";
+	}
+}
+
+void Del(int* mas, int n, int*& mas1, int& k1, int*& mas2, int& k2, int*& mas3, int& k3)
+{
+	for (int i = 0; i < n; i++)
+	{
+		if (mas[i] < 0)
+		{
+			mas1 = (int*)realloc(mas1, ++k1 * sizeof(int));
+			mas1[k1 - 1] = mas[i];
+		}
+		else if (mas[i] > 0)
+		{
+			mas2 = (int*)realloc(mas2, ++k2 * sizeof(int));
+			mas2[k2 - 1] = mas[i];
+		}
+		else if (mas[i] == 0)
+		{
+			mas3 = (int*)realloc(mas3, ++k3 * sizeof(int));
+			mas3[k3 - 1] = mas[i];
+		}
+	}
+}
+
+int main()
+{
+	int const n = 10;
+	int k1 = 0, k2 = 0, k3 = 0;
+	int A[n];
+	srand(time(0));
+	int* A1 = Create(k1);
+	int* A2 = Create(k2);
+	int* A3 = Create(k3);
+	Masgen(A, n);
+	cout << "Array A:\n";
+	Show(A, n);
+	cout << endl;
+	Del(A, n, A1, k1, A2, k2, A3, k3);
+	cout << "Array A1:\n";
+	Show(A1, k1);
+	cout << endl;
+	cout << "Array A2:\n";
+	Show(A2, k2);
+	cout << endl;
+	cout << "Array A3:\n";
+	Show(A3, k3);
+}
+
+Строки.
+
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n+1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n+1);
+	str[n] = 0;
+}
+
+
+char* Del_char(char *str, int pos)
+{
+	strcpy_s(str + pos-1, strlen(str+pos+1)+2, str + pos);
+	str = (char*)realloc(str, sizeof(char)*strlen(str - 1));
+	return str;
+}
+
+int main()
+{
+	char* str;
+	int pos=5;
+	cout << "Enter string:\n";
+	Getstring(str);
+	str=Del_char(str, pos);
+	cout << str; 
+}
+
+Задание 2.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n+1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n+1);
+	str[n] = 0;
+}
+
+
+char* Del_symbol(char*& str, char* ch)
+{
+	char* symb;
+	while ((symb = strpbrk(str, ch)) != NULL)
+	{
+		strcpy_s(symb, strlen(symb+1)+2, symb+1);
+		str = (char*)realloc(str, strlen(str - 1));
+	}
+	return str;
+}
+int main()
+{
+	char* str;
+	char* ch;
+	cout << "Enter string:\n";
+	Getstring(str);
+	Getstring(ch);
+	str=Del_symbol(str, ch);
+	cout << str; 
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n+1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n+1);
+	str[n] = 0;
+}
+
+char* Ins_symb(char*& str, char ch, int n)
+{
+	str = (char*)realloc(str, strlen(str) + 1);
+	memmove(str + n, str + n-1, sizeof(char)*(strlen(str)-n+2));
+	str[n-1] = ch;
+	return str;
+}
+
+int main()
+{
+	char* str;
+	const int pos = 5;
+	cout << "Enter string:\n";
+	Getstring(str);
+	char ch = getchar();
+	str=Ins_symb(str, ch, pos);
+	cout << str; 
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n+1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n+1);
+	str[n] = 0;
+}
+
+char* Change_symb(char*& str, char symb1, char symb2)
+{
+	char* pos;
+	while ((pos = strchr(str, symb1)) !=NULL)
+	{
+		*pos = symb2;
+	}
+	return str;
+}
+
+int main()
+{
+	char* str;
+	cout << "Enter string:\n";
+	Getstring(str);
+	cout << "Enter symbol 1:\n";
+	char ch1 = getchar();
+	cout << "Enter symbol 2:\n";
+	getchar();
+	char ch2 = getchar();
+	str=Change_symb(str, ch1, ch2);
+	cout << str; 
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n+1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n+1);
+	str[n] = 0;
+}
+
+int Counter(char* str, char ch)
+{
+	int n = 0;
+	char* pos=str;
+	while ((pos=strchr(pos, ch))!=NULL)
+	{
+		pos++;
+		n++;
+	}
+	return n;
+}
+
+int main()
+{
+	char* str;
+	cout << "Enter string:\n";
+	Getstring(str);
+	cout << "Enter symbol:\n";
+	char ch = getchar();
+	cout << Counter(str, ch);
+}
+
+Задание 6.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n+1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n+1);
+	str[n] = 0;
+}
+
+void Counter(char* str, int & num, int& let, int& oth)
+{
+	while (*str!=0)
+	{
+		if (*str >= 48 && *str <= 57) num++;
+		else if ((*str >= 65 && *str <= 90) || (*str >= 97 && *str <= 122)) let++;
+		else oth++;
+		str++;
+	}
+}
+
+int main()
+{
+	char* str;
+	int num_c, let_c, oth_c;
+	cout << "Enter string:\n";
+	Getstring(str);
+	Counter(str, num_c=0, let_c=0, oth_c=0);
+	cout << num_c << endl;
+	cout << let_c << endl;
+	cout << oth_c << endl;
+}
+
+Задание 7.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n + 1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n + 1);
+	str[n] = 0;
+}
+
+char* Change_symb(char*& str, char symb1, char symb2)
+{
+	char* pos;
+	while ((pos = strchr(str, symb1)) != NULL)
+	{
+		*pos = symb2;
+	}
+	return str;
+}
+
+int main()
+{
+	char* str;
+	char ch1 = ' ', ch2 = '\t';
+	cout << "Enter string:\n";
+	Getstring(str);
+	str = Change_symb(str, ch1, ch2);
+	cout << str;
+}
+
+Задание 8.
+
+дубль задания 6.
+
+Задание 9.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n + 1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n + 1);
+	str[n] = 0;
+}
+
+void Counter(char* str, int& num)
+{
+	char* next;
+	char* pos = strtok_s(str, " ,.?!:;",&next);
+	while (pos!=NULL)
+	{
+		pos = strtok_s(NULL, " ,.?!:;", &next);
+		num++;
+	}
+}
+
+int main()
+{
+	char* str;
+	int counter;
+	cout << "Enter string:\n";
+	Getstring(str);
+	Counter(str, counter=0);
+	cout << counter;
+}
+
+Задание 10.
+
+#include<iostream>;
+using namespace std;
+
+void Getstring(char*& str)
+{
+	str = nullptr;
+	int n = 0;
+	char symbol;
+	while ((symbol = getchar()) != '\n')
+	{
+		str = (char*)realloc(str, n + 1);
+		str[n] = symbol;
+		n++;
+	}
+	str = (char*)realloc(str, n + 1);
+	str[n] = 0;
+}
+
+
+ void isPalindrom(char*& str)
+{
+	 char* symb;
+	 int res;
+	while ((symb = strpbrk(str, " ',.")) != NULL)
+	{
+		strcpy_s(symb, strlen(symb + 1) + 2, symb + 1);
+		str = (char*)realloc(str, strlen(str - 1));
+	}
+
+	res=_stricmp(str, _strrev(_strdup(str)));
+	if (res==0) cout << "Yes";
+	else cout << "No";
+
+}
+int main()
+{
+	char* str;
+	cout << "Enter string:\n";
+	Getstring(str);
+	isPalindrom(str);
+}

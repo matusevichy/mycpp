@@ -1,0 +1,468 @@
+Рекурсия.
+
+Задание 1.
+
+#include<iostream>;
+using namespace std;
+
+int maxdivide(int min, int max) {
+	if (max % min == 0) {
+		return min;
+	}
+	else {
+		maxdivide(min - 1, max);
+	}
+}
+
+int main() {
+	int min, max, tmp;
+	cout << "Enter two number:\n";
+	cin >> min >> max;
+	if (min > max) {
+		tmp = min;
+		min = max;
+		max = tmp;
+	}
+	cout << maxdivide(min, max);
+}
+
+Задание 2.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+void gen(short arr[]) {
+	srand(time(0));
+	short v;
+	arr[0] = rand() % 10;
+	for (short i = 1; i < 4; i++) {
+		v = 1;
+		while (v) {
+			arr[i] = rand() % 9+1;
+			for (short j = i - 1; j >= 0; j--) {
+				if (arr[i] == arr[j]) {
+					v = 1;
+					break;
+				}
+				else {
+					v = 0;
+				}
+			}
+		}
+	}
+
+}
+
+int check(short mas[], int counter) {
+	int num;
+	short mas1[4], cow = 0, bull = 0;
+	do {
+		cout << "Enter 4-digits number:";
+		cin >> num;
+	} while (num < 1000 || num>9999);
+	for (short i = 3; i >= 0; i--) {
+		mas1[i] = num % 10;
+		num /= 10;
+	}
+	for (short i = 0; i < 4; i++) {
+		for (short j = 0; j < 4; j++) {
+			if(i==j && mas[i]==mas1[j]){
+				cow++;
+			}
+			else if (mas[i] == mas1[j]) {
+				bull++;
+			}
+		}
+	}
+	cout << "Cow: " << cow << " Bull: " << bull << endl;
+	counter++;
+	if (cow != 4) check(mas, counter);
+	else return counter;
+}
+
+int main() {
+	short arr[4];
+	gen(arr);
+	cout << endl;
+	cout << check(arr, 0);
+}
+
+Задание 3.
+
+#include<iostream>;
+using namespace std;
+
+int run(int x, int y, int mas[][6], int n, int step) {
+	int mas_go[8][2] = { {-1, -2}, {-2, -1}, {-2,  1}, { 1, -2},
+		{-1,  2}, { 2, -1}, { 1,  2}, { 2,  1} };
+	int i, j;
+	mas[x][y] = step;
+	if (step > n * n -1) {
+		return 1;
+	}
+		for (int k = 0; k < 7; k++) {
+			i = x + mas_go[k][0];
+			j = y + mas_go[k][1];
+			if (i >= 0 && i < n && j >= 0 && j < n && mas[i][j] == 0)
+				if (run(i, j, mas, n, step + 1)) return 1;
+		}
+	mas[x][y] = 0;
+	step++;
+	return 0;
+}
+
+int main() {
+	const int n = 6;
+	int mas[n][n];
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			mas[i][j] = 0;
+		}
+	}
+	run(0, 0, mas, n, 1);
+	for (int i = 0; i < n; i++) {
+		for (int j = 0; j < n; j++) {
+			cout << mas[i][j] << " ";
+		}
+		cout << endl;
+	}
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+int pow1(int num, int pow, int step) {
+if (step == 0) {
+return 1;
+}
+else if (step == 1) {
+return pow;
+}
+else {
+pow = num * pow1(num, pow, step-1);
+}
+}
+
+int main() {
+int num, step;
+cout << "Enter number and pow:\n";
+cin >> num >> step;
+if (step < 0)step *= -1;
+cout << pow1(num, num, step);
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+int showstars(int N) {
+if (N == 0)return 0;
+else {
+cout << "*";
+showstars(N - 1);
+}
+}
+int main() {
+int N;
+do {
+cout << "Enter count of stars:\n";
+cin >> N;
+} while (N < 1);
+showstars(N);
+}
+
+Задание 6.
+
+#include<iostream>;
+using namespace std;
+
+int summa(int a, int b, int sum) {
+if (a > b) {
+return sum;
+}
+else if (a == b) {
+return sum + a;
+}
+else {
+sum += a+b+ summa(a+1, b-1, sum);
+}
+}
+
+int main() {
+int a, b, tmp;
+cout << "Enter numbers a and b:\n";
+cin >> a >> b;
+if (a > b) {
+tmp = a;
+a = b;
+b = tmp;
+}
+cout << summa(a, b, 0);
+}
+
+Задание 7.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int find(int start, int finish, int count, int mas[], int startmin, int sum) {
+int sumnew=0;
+if (start == 0) {
+for (short i = start; i < count; i++) {
+sum += mas[i];
+}
+find(start + 1, finish, count, mas, start, sum);
+}
+else if (start > finish - count)
+return startmin;
+else {
+for (short i = start; i < start+count; i++) {
+sumnew += mas[i];
+}
+if(sumnew<sum) find(start + 1, finish, count, mas, start, sumnew);
+else find(start + 1, finish, count, mas, startmin, sum);
+}
+}
+
+int main() {
+const int start = 0, finish = 99, count = 10;
+int mas[finish + 1];
+srand(time(0));
+for (int i = start; i <= finish; i++) {
+mas[i] = rand() % 100;
+cout << mas[i] << " ";
+}
+cout << endl << find(start, finish, count, mas, 0, 0);
+}
+
+Указатели.
+
+Задание 1.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+void copy(int* mp1, int* mp2, short n) {
+	for (short i = 0; i < n; i++) {
+		*(mp2 + i) = *(mp1 + i);
+	}
+}
+
+int main() {
+	srand(time(0));
+	const short n = 5;
+	int mas1[n], mas2[n];
+	int* mp1, * mp2;
+	mp1 = mas1;
+	mp2 = mas2;
+	cout << "Array 1:\n";
+	for (short i = 0; i < n; i++) {
+		*(mp1 + i) = rand() % 100;
+		cout << *(mp1 + i)<<" ";
+	}
+	copy(mas1, mas2, n);
+	cout << "\nArray 2:\n";
+	for (short i = 0; i < n; i++) {
+		cout << *(mp2 + i) << " ";
+	}
+}
+
+Задание 2.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+void revert(int* mp1, short n) {
+	for (short i = 0; i < n/2; i++) {
+		int tmp, tmp1;
+		tmp = *(mp1 + i);
+		*(mp1 + i) = *(mp1+n -1 -i);
+		*(mp1 + n -1 - i) = tmp;
+	}
+}
+
+int main() {
+	srand(time(0));
+	const short n = 5;
+	int mas1[n];
+	int* mp1;
+	mp1 = mas1;
+	cout << "Array before:\n";
+	for (short i = 0; i < n; i++) {
+		*(mp1 + i) = rand() % 100;
+		cout << *(mp1 + i)<<" ";
+	}
+	revert(mas1, n);
+	cout << "\nArray after:\n";
+	for (short i = 0; i < n; i++) {
+		cout << *(mp1 + i) << " ";
+	}
+}
+
+Задание 3.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+void copyarr(int* mas1, int* mas2, short n) {
+	for (short i = 0; i < n; i++) {
+		*(mas2 + i) = *(mas1 + n - 1 - i);
+	}
+}
+
+int main() {
+	srand(time(0));
+	const short n = 6;
+	int arr1[n], arr2[n];
+	int* ap2 = arr2;
+	cout << "Array 1:\n";
+	for (short i = 0; i < n; i++) {
+		*(arr1 + i) = rand() % 100;
+		cout << *(arr1 + i) << " ";
+	}
+	copyarr(arr1, arr2, n);
+	cout << "\nArray 2:\n";
+	for (short i = 0; i < n; i++) {
+		cout << *(ap2 + i) << " ";
+	}
+}
+
+Задание 4.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int a, b;
+	int* ap, * bp;
+	cout << "Enter two number:\n";
+	cin >> a >> b;
+	ap = &a;
+	bp = &b;
+	if (*ap < *bp) cout << *ap;
+	else cout << *bp;
+}
+
+Задание 5.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int n;
+	int* np;
+	np = &n;
+	cout << "Enter number:\n";
+	cin >> n;
+	if (*np < 0) cout << "-";
+	else if (*np > 0) cout << "+";
+	else cout << "0";
+}
+
+Задание 6.
+
+#include<iostream>;
+using namespace std;
+
+void revert(int* ap, int* bp) {
+	int tmp;
+	tmp = *ap;
+	*ap = *bp;
+	*bp = tmp;
+}
+
+int main() {
+	int a, b;
+	int* ap, * bp;
+	ap = &a;
+	bp = &b;
+	cout << "Enter two number:\n";
+	cin >> a >> b;
+	cout << "Before: a = " << a << ", b = " << b << endl;
+	revert(ap, bp);
+	cout << "After: a = " << *ap << ", b = " << *bp << endl;
+}
+
+Задание 7.
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	int a, b;
+	int* ap=&a, * bp=&b;
+	char opt;
+	char* optp=&opt;
+	do {
+		cout << "Select operation:\n";
+		cout << "'+' - sum\n";
+		cout << "'-' - difference\n";
+		cout << "'*' - product\n";
+		cout << "'/' - divide\n";
+		cout << "'0' - Exit\n";
+		cin >> *optp;
+		if (*optp == '0')break;
+		cout << "Enter two number:\n";
+		cin >> *ap >> *bp;
+		switch (*optp)
+		{
+		case '+':{
+			cout << *ap + *bp; 
+			break;
+		}
+		case '-': {
+			cout << *ap - *bp;
+			break;
+		}
+		case '*': {
+			cout << *ap * *bp;
+			break;
+		}
+		case '/': {
+			cout << (double)*ap / *bp;
+			break;
+		}
+		default:
+			break;
+		}
+		cout << endl;
+	} while (*optp != '0');
+}
+
+Задание 8.
+
+#include<iostream>;
+#include<time.h>;
+using namespace std;
+
+int sum(int* mas, short n) {
+	int sum = 0;
+	for (short i = 0; i < n; i++) {
+		sum += *(mas + i);
+	}
+	return sum;
+}
+
+int main() {
+	srand(time(0));
+	const short n = 10;
+	int arr[n];
+	int* ap = arr;
+	for (short i = 0; i < n; i++) {
+		*(ap + i) = rand() % 100;
+		cout << *(ap + i) << " ";
+	}
+	cout << "\nSum of all numbers is " << sum(arr, n);
+}

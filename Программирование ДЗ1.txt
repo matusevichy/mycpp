@@ -1,0 +1,176 @@
+Задание 1
+
+#include<iostream>;
+#include<locale>;
+#include<Windows.h>;
+using namespace std;
+
+
+int main() {
+	SetConsoleCP(1251);
+	SetConsoleOutputCP(1251);
+
+	cout << "Як умру, то поховайте\nМене на могилі,\nСеред степу широкого,\nНа Вкраїні милій,\nЩоб лани широкополі,\nІ Дніпро, і кручі\nБуло видно, було чути,\nЯк реве ревучий.\n\n";
+	cout << "\"Тарас Шевченко\"\n";
+}
+
+Задание 2
+
+#include <iostream>;
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "rus");
+	cout << "Каждый\n\tОхотник\n\t\tЖелает\n\t\t\t" << "Знать\n\t\t\t\t" << "Где\n\t\t\t\t\t" << "Сидит\n\t\t\t\t\t\t" << "Фазан\n";
+}
+
+Задание 3
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	setlocale(LC_ALL, "rus");
+	cout << "_________________________________________________\n";
+	cout << "|\t\tО Б Ъ Я В Л Е Н И Е\t\t|\n";
+	cout << "|Продам пасеку 100 семей в многокорпусных ульях.|\n";
+	cout << "|Порода: Украинская степная.\t\t\t|\n";
+	cout << "|Полный комплект пчеловодческого инвентаря,\t|\n|рамконосы, медогонка 4-х рамочная.\t\t|\n";
+	cout << "|Цена: $15000, разумный торг уместен.\t\t|\n|\t\t\t\t\t\t|\n";
+	cout << "|Тел.: 095-111-11-11\t\t\t\t|\n";
+	cout << "|Звонить с 18:00 до 21:00. Юра.\t\t\t|\n";
+	cout << "|_______________________________________________|\n";
+	cout << "| 095 | 095 | 095 | 095 | 095 | 095 | 095 | 095 |\n";
+	cout << "|     |     |     |     |     |     |     |     |\n";
+	cout << "| 111 | 111 | 111 | 111 | 111 | 111 | 111 | 111 |\n";
+	cout << "|     |     |     |     |     |     |     |     |\n";
+	cout << "|  11 |  11 |  11 |  11 |  11 |  11 |  11 |  11 |\n";
+	cout << "|     |     |     |     |     |     |     |     |\n";
+	cout << "|  11 |  11 |  11 |  11 |  11 |  11 |  11 |  11 |\n";
+	cout << "|_____|_____|_____|_____|_____|_____|_____|_____|\n";
+}
+
+Задание 4
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	float R1;
+	cout << "Input R1: ";
+	cin >> R1;
+	float R2;
+	cout << "Input R2: ";
+	cin >> R2;
+	float R3;
+	cout << "Input R3: ";
+	cin >> R3;
+	float R0=1.0/(1.0/R1+1.0/R2+1.0/R3);
+	cout << "R0=" << R0<<"\n";
+}
+
+Задание 5
+
+#include<iostream>;
+#include<math.h>;
+using namespace std;
+
+int main() {
+	cout << "Input L: ";
+	float L;
+	cin >> L;
+	float pi = 3.14;
+	float R = L / (2 * pi);
+	float S = pi * pow(R,2);
+	cout << "Scircle=" << S <<  "\n";
+}
+
+Задание 6
+
+#include<iostream>;
+#include<math.h>;
+using namespace std;
+
+int main() {
+	cout << "Input speed, m/s: ";
+	float v, t, a, S;
+	cin >> v;
+	cout << "Input time, s: ";
+	cin >> t;
+	cout << "Input speed-up, m/s2: ";
+	cin >> a;
+	S = v * t + (a * pow(t, 2)) / 2.0;
+	cout << "Length=" << S << "meters\n";
+}
+
+Задание 7
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	float l, t;
+	cout << "Input lengs, km:";
+	cin >> l;
+	cout << "Input time, hour:";
+	cin >> t;
+	cout << "Needed speed:" << l / t << "\n";
+}
+
+Задание 8
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input begin time (hour, minets,second)\n";
+	int begin_h, begin_m, begin_s;
+	cin >> begin_h >> begin_m >> begin_s;
+	cout << "Input end time (hour, minets,second)\n";
+	int end_h, end_m, end_s;
+	cin >> end_h >> end_m >> end_s;
+	int h,m,s;
+	if (end_h < begin_h) { 
+		end_h += 24; 
+	}
+	h = end_h - begin_h;
+	if (end_m < begin_m) {
+		end_m += 60;
+		h -=1;
+	}
+	m = end_m - begin_m;
+	if (end_s < begin_s) {
+		end_s += 60;
+		m -= 1;
+	}
+	s = end_s - begin_s;
+	int time;
+	float cost;
+	time = h * 3600 + m * 60 + s;
+	cost = time * 30 / 60.0;
+	cout << "Cost of call " << cost << "kop." << endl;
+}
+
+Задание 9
+
+#include<iostream>;
+using namespace std;
+
+int main() {
+	cout << "Input length (km) and gas consumption (l/100km)\n";
+	float l, gc;
+	cin >> l >> gc;
+	cout << "Input cost of AI-98, AI-95 and AI-92 (uan)\n";
+	float c_98, c_95, c_92;
+	cin >> c_98 >> c_95 >> c_92;
+	float l_c = l * gc / 100;
+	float end_98 = l_c * c_98;
+	float end_95 = l_c * c_95;
+	float end_92 = l_c * c_92;
+	cout << "_________________________________________________________________________\n";
+	cout << "|Length,|Consumption,\t|Cost on AI-98,\t|Cost on AI-95,\t|Cost on AI-92,\t|\n";
+	cout << "|km\t|l/100km\t|UAN\t\t|UAN\t\t|UAN\t\t|\n";
+	cout << "|_______|_______________|_______________|_______________|_______________|\n";
+	cout << "|"<<l<<"\t|"<<gc<<"\t\t|"<<end_98<<"\t\t|"<<end_95<<"\t\t|"<<end_92<<"\t\t|\n";
+	cout << "|_______|_______________|_______________|_______________|_______________|\n";
+}

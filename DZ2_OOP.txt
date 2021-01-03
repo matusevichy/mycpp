@@ -1,0 +1,646 @@
+Задание 1.
+
+Human.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+
+class Human
+{
+	char* Fio;
+	short Age;
+public:
+	static char* Gets();
+	Human();
+	Human(Human&);
+	void operator=(Human&);
+	void Add();
+	void Show();
+	char* GetFio() { return Fio; }
+	~Human() { free(Fio); }
+};
+
+Human.cpp
+
+#include "Human.h"
+
+char* Human::Gets()
+{
+	char* tmp = nullptr;
+	int n = 0;
+	char ch;
+	while ((ch = getchar()) != '\n')
+	{
+		tmp = (char*)realloc(tmp, n + 1);
+		tmp[n] = ch;
+		n++;
+	}
+	tmp = (char*)realloc(tmp, n + 1);
+	tmp[n] = 0;
+	return tmp;
+}
+
+Human::Human()
+{
+	Fio = nullptr;
+}
+
+Human::Human(Human& obj)
+{
+	if (this->Fio == nullptr)
+	{
+		this->Fio = (char*)malloc(strlen(obj.Fio) + 1);
+	}
+	strcpy_s(this->Fio, strlen(obj.Fio)+1, obj.Fio);
+	this->Age = obj.Age;
+}
+
+void Human::operator=(Human& obj)
+{
+	this->Fio = (char*)malloc(strlen(obj.Fio) + 1);
+	strcpy_s(this->Fio, strlen(obj.Fio) + 1, obj.Fio);
+	this->Age = obj.Age;
+
+}
+
+void Human::Add()
+{
+	char* tmp;
+	cout << "Enter FIO:\n";
+	tmp = Gets();
+	Fio = (char*)malloc(strlen(tmp)+1);
+	strcpy_s(Fio, strlen(tmp) + 1, tmp);
+	cout << "Enter age:";
+	cin >> Age;
+}
+
+void Human::Show()
+{
+	cout << "Fio: " << Fio << "\n";
+	cout << "Age: " << Age << "\n";
+}
+
+Flat.h
+
+#pragma once
+#include"Human.h"
+class Flat
+{
+	Human* mas;
+	short count;
+public:
+	Flat();
+	void Add();
+	void Delete();
+	void Show();
+	~Flat() { free(mas); }
+};
+
+Flat.cpp
+
+#include "Flat.h"
+
+Flat::Flat()
+{
+	mas = nullptr;
+	count = 0;
+}
+
+void Flat::Add()
+{
+	Human tmp;
+	char flag=0;
+	tmp.Add();
+	for (int i = 0; i < count; i++)
+	{
+		if (strcmp(mas[i].GetFio(), tmp.GetFio()) == 0)
+		{
+			flag = 1;
+			break;
+		}
+	}
+	if (flag == 0)
+	{
+		mas = (Human*)realloc(mas, (count + 1) * sizeof(Human));
+		mas[count] = tmp;
+		count++;
+		cout << "Human added.\n";
+	}
+	else
+	{
+		cout << "This human exist.\n";
+	}
+}
+
+void Flat::Delete()
+{
+	char* str;
+	cout << "Enter human`s Fio:\n";
+	str = Human::Gets();
+	for (short i = 0; i < count; i++)
+	{
+		if (strcmp(str, mas[i].GetFio()) == 0)
+		{
+			for (short j = i; j < count-1; j++)
+			{
+				mas[j] = mas[j + 1];
+			}
+			count--;
+			mas = (Human*)realloc(mas, (count + 1) * sizeof(Human));
+		}
+	}
+}
+
+void Flat::Show()
+{
+	for (short i = 0; i < count; i++)
+	{
+		mas[i].Show();
+	}
+}
+
+House.h
+
+#pragma once
+#include"Flat.h"
+class House
+{
+	int size;
+	Flat* mas;
+public:
+	House(int);
+	void Add();
+	void Delete();
+	void ShowAll();
+	~House() { free(mas); }
+};
+
+House.cpp
+
+#include "House.h"
+
+
+House::House(int count)
+{
+	size = count;
+	mas = new Flat[count];
+}
+
+void House::Add()
+{
+	int n;
+	do
+	{
+		cout << "Enter the number of the flat (1 to " << size << "):\n";
+		cin >> n;
+		cin.ignore();
+	} while (n <= 0 || n > size);
+	mas[n - 1].Add();
+}
+
+void House::Delete()
+{
+	int n;
+	do
+	{
+		cout << "Enter the number of the flat (1 to " << size << "):\n";
+		cin >> n;
+		cin.ignore();
+	} while (n <= 0 || n > size);
+	mas[n - 1].Delete();
+}
+
+void House::ShowAll()
+{
+	for (int i = 0; i < size; i++)
+	{
+		cout << "Flat n." << i + 1 << "\n";
+		mas[i].Show();
+	}
+}
+
+Source.cpp
+
+#include"House.h"
+
+int main()
+{
+	short act, size;
+	cout << "Enter the count of the flat:\n";
+	cin >> size;
+	House obj1(size);
+	do {
+		do {
+			cout << "Select action:\n";
+			cout << "1 - Add human;\n";
+			cout << "2 - Delete human;\n";
+			cout << "3 - Show all;\n";
+			cout << "0 - Exit.\n";
+			cin >> act;
+			cin.ignore();
+		} while (act < 0 || act>3);
+		switch (act)
+		{
+		case 1:
+		{
+			obj1.Add();
+			break;
+		}
+		case 2:
+		{
+			obj1.Delete();
+			break;
+		}
+		case 3:
+		{
+			obj1.ShowAll();
+			break;
+		}
+		default:
+			break;
+		}
+	} while (act != 0);
+}
+
+
+Задание 2.
+
+Reservoir.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+
+class Reservoir
+{
+	char* Name;
+	char type;
+	float width;
+	float length;
+	float depth;
+	char* Gets();
+public:
+	Reservoir();
+	Reservoir(const char*,char,float,float,float);
+	Reservoir(Reservoir&);
+	void operator=(Reservoir&);
+	void PrintType();
+	float Square();
+	float Volume();
+	void CompareSQ(Reservoir&);
+	void CompareType(Reservoir&);
+	void Set();
+	char* Getname();
+	void Show();
+	Reservoir Get() { return *this; }
+	~Reservoir() { delete[] Name; }
+};
+
+Reservoir.cpp
+
+#include "Reservoir.h"
+
+char* Reservoir::Gets()
+{
+	char* tmp=nullptr;
+	int n = 0;
+	char ch;
+	while ((ch = getchar()) != '\n')
+	{
+		tmp = (char*)realloc(tmp, n + 1);
+		tmp[n] = ch;
+		n++;
+	}
+	tmp = (char*)realloc(tmp, n + 1);
+	tmp[n] = 0;
+	return tmp;
+}
+
+Reservoir::Reservoir()
+{
+	Name = NULL;
+	type = 0;
+	width = 0;
+	length = 0;
+	depth = 0;
+}
+
+Reservoir::Reservoir(const char* name, char type, float width, float length, float depth):Reservoir()
+{
+	strcpy_s(this->Name, strlen(name) + 1, name);
+	this->type = type;
+	this->width = width;
+	this->length = length;
+	this->depth = depth;
+}
+
+Reservoir::Reservoir(Reservoir& obj)
+{
+	this->Name = (char*)realloc(this->Name, strlen(obj.Name) + 1);
+	strcpy_s(this->Name, strlen(obj.Name) + 1, obj.Name);
+	this->type = obj.type;
+	this->width = obj.width;
+	this->length = obj.length;
+	this->depth = obj.depth;
+}
+
+void Reservoir::operator=(Reservoir& obj)
+{
+	this->Name = (char*)realloc(this->Name, strlen(obj.Name) + 1);
+	strcpy_s(this->Name, strlen(obj.Name) + 1, obj.Name);
+	this->type = obj.type;
+	this->width = obj.width;
+	this->length = obj.length;
+	this->depth = obj.depth;
+}
+
+void Reservoir::PrintType()
+{
+	switch (type)
+	{
+	case '1':
+	{
+		cout << "Sea";
+		break;
+	}
+	case '2':
+	{
+		cout << "Pool";
+		break;
+	}
+	case '3':
+	{
+		cout << "Lake";
+		break;
+	}
+	}
+}
+
+float Reservoir::Square()
+{
+	return width * length;
+}
+
+float Reservoir::Volume()
+{
+	return width * length * depth;
+}
+
+void Reservoir::CompareSQ(Reservoir& obj)
+{
+	if (this->type == obj.type)
+	{
+		cout << this->Name << ": " << this->Square() << " - " << obj.Name << ": " << obj.Square() << "\n";
+	}
+	else
+	{
+		cout << "Differen types of reservoirs.\n";
+	}
+}
+
+void Reservoir::CompareType(Reservoir& obj)
+{	
+	this->PrintType();
+	cout << " - ";
+	obj.PrintType();
+	cout << "\n";
+}
+
+void Reservoir::Set()
+{
+	char* tmp;
+	char type;
+	float tmpf;
+	cout << "Enter name:\n";
+	tmp = Gets();
+	if (tmp[0]!=0)
+	{
+		this->Name = (char*)malloc(strlen(tmp) + 1);
+		strcpy_s(this->Name, strlen(tmp) + 1, tmp);
+	}
+	else
+	{
+		this->Name = NULL;
+	}
+	cout << "Enter type: (1 - Sea; 2 - Pool; 3 - Lake):\n";
+	cin >> type;
+	this->type = type;
+	cout << "Enter width:\n";
+	cin >> tmpf;
+	this->width = tmpf;
+	tmpf = NULL;
+	cout << "Enter length:\n";
+	cin >> tmpf;
+	this->length = tmpf;
+	tmpf = NULL;
+	cout << "Enter depth:\n";
+	cin >> tmpf;
+	this->depth = tmpf;
+	getchar();
+}
+
+char* Reservoir::Getname()
+{
+	return Name;
+}
+
+void Reservoir::Show()
+{
+	cout << Name << "\n";
+	PrintType();
+	cout << "\n" << width << "\n" << length << "\n" << depth << "\n";
+}
+
+Base.h
+
+#pragma once
+#include"Reservoir.h"
+
+class Base
+{
+	Reservoir* mas;
+	int size;
+	char* Gets();
+public:
+	Base();
+	void Add();
+	void Delete();
+	void Print();
+	Reservoir& Get(int);
+};
+
+Base.cpp
+
+#include "Base.h"
+
+char* Base::Gets()
+{
+	char* tmp = nullptr;
+	int n = 0;
+	char ch;
+	while ((ch = getchar()) != '\n')
+	{
+		tmp = (char*)realloc(tmp, n + 1);
+		tmp[n] = ch;
+		n++;
+	}
+	tmp = (char*)realloc(tmp, n + 1);
+	tmp[n] = 0;
+	return tmp;
+}
+
+Base::Base()
+{
+	mas = nullptr;
+	size = 0;
+}
+
+void Base::Add()
+{
+	mas = (Reservoir*)realloc(mas, (size + 1) * sizeof(Reservoir));
+	mas[size].Set();
+	size++;
+}
+
+void Base::Delete()
+{
+	char* tmp;
+	cout << "Enter name of the reservoir for delete:\n";
+	tmp = Gets();
+	for (int i = 0; i < size; i++)
+	{
+		if (strcmp(tmp, mas[i].Getname()) == 0)
+		{
+			for (int j = i; j < size-1; j++)
+			{
+				mas[j] = mas[j + 1];
+			}
+			size--;
+			mas = (Reservoir*)realloc(mas, (size + 1) * sizeof(Reservoir));
+		}
+	}
+}
+
+void Base::Print()
+{
+	for (int i = 0; i < size; i++)
+	{
+		mas[i].Show();
+	}
+}
+
+Reservoir& Base::Get(int n)
+{
+	return mas[n];
+}
+
+Source.cpp
+
+#include"Base.h"
+
+int main()
+{
+	Base newbase;
+	newbase.Add();
+	newbase.Add();
+	newbase.Print();
+	Reservoir obj1,obj2;
+	obj1.Set();
+	obj2 = obj1;
+	obj2.Show();
+	obj2.CompareType(newbase.Get(0));
+	obj1.CompareSQ(newbase.Get(1));
+	cout<<newbase.Get(0).Square();
+	cout << newbase.Get(1).Volume();
+	newbase.Delete();
+}
+
+
+Задание 3.
+
+String.h
+
+#pragma once
+#include<iostream>
+using namespace std;
+
+class String
+{
+	char* str;
+	char* Gets();
+public:
+	String();
+	String(int);
+	String(const char*);
+	void Set();
+	char* Get() { return str; }
+	void Show() { cout << str << "\n"; }
+	~String();
+};
+
+String.cpp
+
+#include "String.h"
+
+char* String::Gets()
+{
+	char ch;
+	char* tmp = nullptr;;
+	int n = 0;
+	while ((ch = getchar()) != '\n')
+	{
+		tmp = (char*)realloc(tmp, n + 1);
+		tmp[n] = ch;
+		n++;
+	}
+	tmp = (char*)realloc(tmp, n + 1);
+	tmp[n] = 0;
+	return tmp;
+}
+
+String::String()
+{
+	str = (char*)malloc(80);
+}
+
+String::String(int size)
+{
+	str = (char*)malloc(size + 1);
+}
+
+String::String(const char* mas): String(strlen(mas))
+{
+	strcpy_s(str, strlen(mas)+1, mas);
+}
+
+void String::Set()
+{
+	char* tmp = nullptr;
+	cout << "Enter string:\n";
+	tmp = Gets();
+	str = (char*)realloc(str, strlen(tmp) + 1);
+	strcpy_s(str, strlen(tmp) + 1, tmp);
+}
+
+String::~String()
+{
+	delete[] str;
+}
+
+Source.cpp
+
+#include"String.h"
+
+int main()
+{
+	String str;
+	cout << "Without param.\n" << strlen(str.Get()) << "\n";
+	String str1(10);
+	cout << "With length param.\n" << strlen(str1.Get()) << "\n";
+	String str2("qwerty");
+	cout << "With string param.\n" << str2.Get() << "\n";
+	str.Set();
+	cout << "Result of the set string:\n";
+	str.Show();
+}
