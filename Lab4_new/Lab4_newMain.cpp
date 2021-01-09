@@ -1,0 +1,394 @@
+/***************************************************************
+ * Name:      Lab4_newMain.cpp
+ * Purpose:   Code for Application Frame
+ * Author:     ()
+ * Created:   2021-01-06
+ * Copyright:  ()
+ * License:
+ **************************************************************/
+
+#include "Lab4_newMain.h"
+#include <wx/msgdlg.h>
+
+//(*InternalHeaders(Lab4_newFrame)
+#include <wx/intl.h>
+#include <wx/settings.h>
+#include <wx/string.h>
+//*)
+
+//helper functions
+enum wxbuildinfoformat {
+    short_f, long_f };
+
+wxString wxbuildinfo(wxbuildinfoformat format)
+{
+    wxString wxbuild(wxVERSION_STRING);
+
+    if (format == long_f )
+    {
+#if defined(__WXMSW__)
+        wxbuild << _T("-Windows");
+#elif defined(__UNIX__)
+        wxbuild << _T("-Linux");
+#endif
+
+#if wxUSE_UNICODE
+        wxbuild << _T("-Unicode build");
+#else
+        wxbuild << _T("-ANSI build");
+#endif // wxUSE_UNICODE
+    }
+
+    return wxbuild;
+}
+
+//(*IdInit(Lab4_newFrame)
+const long Lab4_newFrame::idMenuOpen = wxNewId();
+const long Lab4_newFrame::idMenuSaveAs = wxNewId();
+const long Lab4_newFrame::idMenuClose = wxNewId();
+const long Lab4_newFrame::idMenuExport = wxNewId();
+const long Lab4_newFrame::idMenuQuit = wxNewId();
+const long Lab4_newFrame::idMenuTableData = wxNewId();
+const long Lab4_newFrame::idMenuGraphicData = wxNewId();
+const long Lab4_newFrame::idMenuGenerateData = wxNewId();
+const long Lab4_newFrame::idMenuAbout = wxNewId();
+const long Lab4_newFrame::ID_STATUSBAR1 = wxNewId();
+//*)
+
+BEGIN_EVENT_TABLE(Lab4_newFrame,wxFrame)
+    //(*EventTable(Lab4_newFrame)
+    //*)
+END_EVENT_TABLE()
+
+Lab4_newFrame::Lab4_newFrame(wxWindow* parent,wxWindowID id)
+{
+    //(*Initialize(Lab4_newFrame)
+    wxMenu* Menu1;
+    wxMenu* Menu2;
+    wxMenuBar* MenuBar1;
+    wxMenuItem* MenuItem1;
+    wxMenuItem* MenuItem2;
+
+    Create(parent, id, _("Lab4"), wxDefaultPosition, wxDefaultSize, wxDEFAULT_FRAME_STYLE, _T("id"));
+    SetClientSize(wxSize(758,473));
+    SetBackgroundColour(wxSystemSettings::GetColour(wxSYS_COLOUR_WINDOW));
+    MenuBar1 = new wxMenuBar();
+    Menu1 = new wxMenu();
+    MenuItem3 = new wxMenuItem(Menu1, idMenuOpen, _("Open"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItem3);
+    MenuItem4 = new wxMenuItem(Menu1, idMenuSaveAs, _("SaveAs\tCtrl-s"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItem4);
+    MenuItem5 = new wxMenuItem(Menu1, idMenuClose, _("Close"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItem5);
+    Menu1->AppendSeparator();
+    MenuItem6 = new wxMenuItem(Menu1, idMenuExport, _("Export"), wxEmptyString, wxITEM_NORMAL);
+    Menu1->Append(MenuItem6);
+    Menu1->AppendSeparator();
+    MenuItem1 = new wxMenuItem(Menu1, idMenuQuit, _("Exit\tAlt-F4"), _("Quit the application"), wxITEM_NORMAL);
+    Menu1->Append(MenuItem1);
+    MenuBar1->Append(Menu1, _("&File"));
+    Menu3 = new wxMenu();
+    MenuItem7 = new wxMenuItem(Menu3, idMenuTableData, _("TableData"), wxEmptyString, wxITEM_RADIO);
+    Menu3->Append(MenuItem7);
+    MenuItem8 = new wxMenuItem(Menu3, idMenuGraphicData, _("GraphicData"), wxEmptyString, wxITEM_RADIO);
+    Menu3->Append(MenuItem8);
+    MenuBar1->Append(Menu3, _("&View"));
+    Menu4 = new wxMenu();
+    MenuItem9 = new wxMenuItem(Menu4, idMenuGenerateData, _("Generate Data"), wxEmptyString, wxITEM_NORMAL);
+    Menu4->Append(MenuItem9);
+    MenuBar1->Append(Menu4, _("&Processing"));
+    Menu2 = new wxMenu();
+    MenuItem2 = new wxMenuItem(Menu2, idMenuAbout, _("About\tF1"), _("Show info about this application"), wxITEM_NORMAL);
+    Menu2->Append(MenuItem2);
+    MenuBar1->Append(Menu2, _("Help"));
+    SetMenuBar(MenuBar1);
+    StatusBar1 = new wxStatusBar(this, ID_STATUSBAR1, 0, _T("ID_STATUSBAR1"));
+    int __wxStatusBarWidths_1[1] = { -1 };
+    int __wxStatusBarStyles_1[1] = { wxSB_NORMAL };
+    StatusBar1->SetFieldsCount(1,__wxStatusBarWidths_1);
+    StatusBar1->SetStatusStyles(1,__wxStatusBarStyles_1);
+    SetStatusBar(StatusBar1);
+
+    Connect(idMenuQuit,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Lab4_newFrame::OnQuit);
+    Connect(idMenuAbout,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Lab4_newFrame::OnAbout);
+    //*)
+    Grid = new wxGrid(this,0,0,758,473);
+    Grid->CreateGrid(1, 3);
+    mainsizer=new wxBoxSizer(wxVERTICAL);
+    mainsizer->Add(Grid, 1, wxEXPAND, 0);
+    mainsizer->Show(false);
+    Connect(idMenuSaveAs,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Lab4_newFrame::OnSaveAs);
+    Connect(idMenuExport,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Lab4_newFrame::OnExport);
+    Connect(idMenuOpen,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Lab4_newFrame::OnOpen);
+    Connect(idMenuGraphicData,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Lab4_newFrame::OnGraphicData);
+    Connect(idMenuClose,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Lab4_newFrame::OnClose);
+    Connect(idMenuTableData,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Lab4_newFrame::OnTableData);
+    Connect(idMenuGenerateData,wxEVT_COMMAND_MENU_SELECTED,(wxObjectEventFunction)&Lab4_newFrame::OnGenerateData);
+    MenuItem8->Check();
+}
+
+Lab4_newFrame::~Lab4_newFrame()
+{
+    //(*Destroy(Lab4_newFrame)
+    //*)
+}
+
+void Lab4_newFrame::OnQuit(wxCommandEvent& event)
+{
+    if(filename!="")
+    {
+        wxTextFile file(filename);
+        if(file.Exists())
+        {
+            file.Open();
+            file.Clear();
+        }
+        else
+        {
+            file.Create();
+        }
+        wxArrayString tmp=dataCoords.print();
+        wxString head=(wxT("X Y Z"));
+        file.AddLine(head);
+        for(int i=0; i<tmp.GetCount();i++)
+        {
+            file.AddLine(tmp[i]);
+        }
+        file.Write();
+        file.Close();
+    }
+    Close();
+}
+
+void Lab4_newFrame::OnAbout(wxCommandEvent& event)
+{
+    wxString msg = wxbuildinfo(long_f);
+    wxMessageBox(msg, _("Welcome to..."));
+}
+
+void Lab4_newFrame::OnOpen(wxCommandEvent& event)
+{
+    MenuItem8->Check();
+    wxFileDialog openFileDialog(this, _("Open DAT file"), "", "", "DAT files (*.dat)|*.dat", wxFD_OPEN|wxFD_FILE_MUST_EXIST);
+    if (openFileDialog.ShowModal() == wxID_CANCEL)
+        return;     // the user changed idea...
+
+    // proceed loading the file chosen by the user;
+    // this can be done with e.g. wxWidgets input streams:
+    filename=openFileDialog.GetPath();
+    wxTextFile file(filename);
+    if(file.Open())
+    {
+        wxString str;
+//        wxRegEx parser ("(\d+)\s+(\d+)\s+(\d+)");
+//        parser.Matches(str);
+        StatusBar1->SetStatusText(wxT("Source file opened..."));
+        dataCoords.clear();
+        str=file.GetFirstLine();
+        wxStringTokenizer tokenizer(str," ");
+        if(tokenizer.GetNextToken()=="X"&&tokenizer.GetNextToken()=="Y" && tokenizer.GetNextToken()=="Z")
+        {
+            XYZ tmppoint;
+            for(str=file.GetNextLine();!file.Eof();str=file.GetNextLine())
+            {
+                wxStringTokenizer tokenizer(str," ");
+                tokenizer.GetNextToken().ToDouble(&tmppoint.X);
+                tokenizer.GetNextToken().ToDouble(&tmppoint.Y);
+                tokenizer.GetNextToken().ToDouble(&tmppoint.Z);
+                dataCoords.addPoint(tmppoint);
+                StatusBar1->SetStatusText(wxString::Format(wxT("%d"), (int)dataCoords.count()));
+            }
+        }
+        else
+        {
+            StatusBar1->SetStatusText(wxT("Source file incorrect..."));
+        }
+    }
+    else
+    {
+        StatusBar1->SetStatusText(wxT("File not found..."));
+    }
+    mainsizer->Show(false);
+    Draw();
+    Grid->DeleteRows(0,Grid->GetNumberRows()-1);
+}
+
+void Lab4_newFrame::Draw()
+{
+        if(MenuItem8->IsChecked())
+    {
+        wxCoord x,y;
+        wxClientDC dc(this);
+        dc.Clear();
+        wxBrush brush(*wxWHITE);
+        wxPen pen(*wxBLACK, 1, wxPENSTYLE_SOLID); // красное перо с шириной 1
+        dc.SetPen(pen);
+        dc.SetBackground(brush);
+        for(int i=0; i<dataCoords.count();i++)
+        {
+//            wxString msg = wxString::Format(wxT("%f"), (double)dataCoords[i].X);
+//            wxMessageBox(msg, _(wxString::Format(wxT("%f"), (double)dataCoords[i].Y)));
+            dc.DrawPoint((wxCoord)dataCoords[i].X,(wxCoord)dataCoords[i].Y);
+//            x=dataCoords[i].X;
+//            y=dataCoords[i].Y;
+//            dc.DrawLine(5,100,x,100);
+//            dc.DrawText(wxString::FromDouble(dataCoords[i].X),dataCoords[i].X,dataCoords[i].Y);
+        }
+//        wxCoord x1 = 50, y1 = 60;
+//        wxCoord x2 = 190, y2 = 60;
+//        dc.DrawLine(x1, y1, x2, y2);
+//        dc.DrawLine(x2, y2, x, y);
+        if(dataCoords.count())
+            {
+                StatusBar1->SetStatusText(wxString::Format(wxT("%d"), (int)dataCoords.count()));
+            }
+    }
+
+}
+
+void Lab4_newFrame::OnExport(wxCommandEvent& event)
+{
+    if(!MenuItem8->IsCheck())
+    {
+        MenuItem8->Check();
+        mainsizer->Show(false);
+        Draw();
+    }
+ 	//Create a DC for the whole screen area
+    wxClientDC dcScreen(this);
+//	wxScreenDC dcScreen;
+
+	//Get the size of the screen/DC
+	wxCoord screenWidth, screenHeight;
+	dcScreen.GetSize(&screenWidth, &screenHeight);
+
+	//Create a Bitmap that will later on hold the screenshot image
+	//Note that the Bitmap must have a size big enough to hold the screenshot
+	//-1 means using the current default colour depth
+	wxBitmap screenshot(screenWidth, screenHeight,-1);
+
+	//Create a memory DC that will be used for actually taking the screenshot
+	wxMemoryDC memDC;
+	//Tell the memory DC to use our Bitmap
+	//all drawing action on the memory DC will go to the Bitmap now
+	memDC.SelectObject(screenshot);
+	//Blit (in this case copy) the actual screen on the memory DC
+	//and thus the Bitmap
+	memDC.Blit( 0, //Copy to this X coordinate
+				0, //Copy to this Y coordinate
+				screenWidth, //Copy this width
+				screenHeight, //Copy this height
+				&dcScreen, //From where do we copy?
+				0, //What's the X offset in the original DC?
+				0  //What's the Y offset in the original DC?
+			);
+	//Select the Bitmap out of the memory DC by selecting a new
+	//uninitialized Bitmap
+	memDC.SelectObject(wxNullBitmap);
+
+    wxFileDialog saveFileDialog(this, _("Export to BMP file"), "", "", "BMP files (*.bmp)|*.bmp", wxFD_SAVE|wxFD_OVERWRITE_PROMPT);
+    if (saveFileDialog.ShowModal() == wxID_CANCEL)
+        return;     // the user changed idea...
+
+    // save the current contents in the file;
+    // this can be done with e.g. wxWidgets output streams:
+//    wxFileOutputStream output_stream(saveFileDialog.GetPath());
+//    if (!output_stream.IsOk())
+//    {
+//        wxLogError("Cannot save current contents in file '%s'.", saveFileDialog.GetPath());
+//        return;
+//    }
+
+	//Our Bitmap now has the screenshot, so let's save it :-)
+    screenshot.SaveFile(saveFileDialog.GetPath(),wxBITMAP_TYPE_JPEG);
+}
+
+void Lab4_newFrame::OnSaveAs(wxCommandEvent& event)
+{
+    wxFileDialog saveFileDialog(this, _("Save to DAT file"), "", "", "DAT files (*.dat)|*.dat", wxFD_SAVE|wxFD_OVERWRITE_PROMPT);
+    if (saveFileDialog.ShowModal() == wxID_CANCEL)
+        return;     // the user changed idea...
+
+    // proceed loading the file chosen by the user;
+    // this can be done with e.g. wxWidgets input streams:
+    wxTextFile file(saveFileDialog.GetPath());
+    if(file.Exists())
+    {
+        file.Open();
+        file.Clear();
+    }
+    else
+    {
+        file.Create();
+    }
+    wxArrayString tmp=dataCoords.print();
+    wxString head=(wxT("X Y Z"));
+    file.AddLine(head);
+    for(int i=0; i<tmp.GetCount();i++)
+    {
+        file.AddLine(tmp[i]);
+    }
+    file.Write();
+    file.Close();
+}
+
+void Lab4_newFrame::OnGraphicData(wxCommandEvent& event)
+{
+    mainsizer->Show(false);
+    Draw();
+}
+
+void Lab4_newFrame::OnClose(wxCommandEvent& event)
+{
+    dataCoords.clear();
+    Grid->DeleteRows(0,Grid->GetNumberRows()-1);
+    MenuItem8->Check();
+    Draw();
+    filename="";
+}
+
+void Lab4_newFrame::OnTableData(wxCommandEvent& event)
+{
+        mainsizer->Show(true);
+        Grid->DeleteRows(0,Grid->GetNumberRows()-1);
+        Grid->SetColLabelValue(0,wxT("X"));
+        Grid->SetColLabelValue(1,wxT("Y"));
+        Grid->SetColLabelValue(2,wxT("Z"));
+        wxArrayString tmp=dataCoords.print();
+        wxString tmpstr;
+        for(int i=0; i<tmp.GetCount();i++)
+        {
+            Grid->AppendRows();
+            wxStringTokenizer tokenizer(tmp[i]," ");
+            for(int j=0;j<3;j++)
+            {
+                Grid->SetCellValue(i,j, tokenizer.GetNextToken());
+            }
+        }
+}
+
+void Lab4_newFrame::OnGenerateData(wxCommandEvent& event)
+{
+    srand(time(0));
+    GetDataDlg newDlg(this,-1);
+    if (newDlg.ShowModal() == wxID_CANCEL)
+    return;     // the user changed idea...
+    int pointcount;
+    XYZ pstart,pend, tmppoint;
+    if((pointcount=newDlg.GetPoints(pstart,pend)) !=0)
+    {
+        for(int i=0;i<pointcount;i++)
+        {
+            tmppoint.X=(pend.X - pstart.X) * ( (double)rand() / (double)RAND_MAX ) + pstart.X;
+            tmppoint.Y=(pend.Y - pstart.Y) * ( (double)rand() / (double)RAND_MAX ) + pstart.Y;
+            tmppoint.Z=(pend.Z - pstart.Z) * ( (double)rand() / (double)RAND_MAX ) + pstart.Z;
+            dataCoords.addPoint(tmppoint);
+        }
+    }
+    MenuItem8->Check();
+    mainsizer->Show(false);
+    Draw();
+
+}
+
+

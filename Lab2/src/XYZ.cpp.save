@@ -1,0 +1,9 @@
+#include "../include/XYZ.h"
+#include<wx/arrimpl.cpp>
+
+void XYZ::print()
+{
+    cout<<"X: "<<X<<" Y: "<<Y<<" Z: "<<Z<<endl;
+}
+
+WX_DEFINE_OBJARRAY()

@@ -1,0 +1,19 @@
+#ifndef XYZ_H
+#define XYZ_H
+#include<iostream>
+using namespace std;
+
+class XYZ
+{
+    public:
+        double X,Y,Z;
+        wxString print();
+
+    protected:
+
+    private:
+};
+
+
+//WX_DECLARE_OBJARRAY(XYZ,XYZArray);
+#endif // XYZ_H
