@@ -256,6 +256,39 @@ void Base::Print(Auto* el)
 	}
 }
 
+void Base::Print(const char* num)
+{
+	Auto* tmp = Find(num, root);
+	cout << tmp->number << endl;
+	cout << "Offence(s):\n";
+	tmp->offencelist->Print();
+	cout << endl;
+}
+
+void Base::Print(const char* min, const char* max, Auto* el)
+{
+	if (el)
+	{
+		Auto* position;
+		position = el;
+		if (position->left)
+		{
+			Print(min, max, position->left);
+		}
+		if (strcmp(min, position->number) <= 0 && strcmp(position->number, max) <= 0)
+		{
+			cout << position->number << endl;
+			cout << "Offence(s):\n";
+			position->offencelist->Print();
+			cout << endl;
+		}
+		if (position->right)
+		{
+			Print(min, max, position->right);
+		}
+	}
+}
+
 Auto* Base::Find(const char* number, Auto* el)
 {
 	if (el)

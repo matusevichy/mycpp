@@ -22,6 +22,8 @@ public:
 	Auto* Min(Auto*);
 	void DeleteAll(Auto*);
 	void Print(Auto*);
+	void Print(const char*);
+	void Print(const char*, const char*, Auto*);
 	Auto* Find(const char*, Auto*);
 };
 
