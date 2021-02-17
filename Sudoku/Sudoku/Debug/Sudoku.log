@@ -1,0 +1,3 @@
+﻿  Field.cpp
+C:\Work\c++\Sudoku\Sudoku\Field.cpp(63,16): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Sudoku.vcxproj -> C:\Work\c++\Sudoku\Debug\Sudoku.exe
