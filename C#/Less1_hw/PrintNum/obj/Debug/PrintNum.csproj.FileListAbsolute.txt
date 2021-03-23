@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less1_hw\PrintNum\bin\Debug\PrintNum.exe.config
+C:\Work\c++\C#\Less1_hw\PrintNum\bin\Debug\PrintNum.exe
+C:\Work\c++\C#\Less1_hw\PrintNum\bin\Debug\PrintNum.pdb
+C:\Work\c++\C#\Less1_hw\PrintNum\obj\Debug\PrintNum.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less1_hw\PrintNum\obj\Debug\PrintNum.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less1_hw\PrintNum\obj\Debug\PrintNum.exe
+C:\Work\c++\C#\Less1_hw\PrintNum\obj\Debug\PrintNum.pdb
