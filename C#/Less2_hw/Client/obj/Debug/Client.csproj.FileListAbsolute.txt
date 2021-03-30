@@ -1,0 +1,6 @@
+C:\Work\c++\C#\less2_hw\Client\bin\Debug\Client.exe.config
+C:\Work\c++\C#\less2_hw\Client\bin\Debug\Client.exe
+C:\Work\c++\C#\less2_hw\Client\bin\Debug\Client.pdb
+C:\Work\c++\C#\less2_hw\Client\obj\Debug\Client.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\less2_hw\Client\obj\Debug\Client.exe
+C:\Work\c++\C#\less2_hw\Client\obj\Debug\Client.pdb
