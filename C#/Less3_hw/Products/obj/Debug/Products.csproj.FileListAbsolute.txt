@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less3_hw\Products\bin\Debug\Products.exe.config
+C:\Work\c++\C#\Less3_hw\Products\bin\Debug\Products.exe
+C:\Work\c++\C#\Less3_hw\Products\bin\Debug\Products.pdb
+C:\Work\c++\C#\Less3_hw\Products\obj\Debug\Products.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less3_hw\Products\obj\Debug\Products.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less3_hw\Products\obj\Debug\Products.exe
+C:\Work\c++\C#\Less3_hw\Products\obj\Debug\Products.pdb

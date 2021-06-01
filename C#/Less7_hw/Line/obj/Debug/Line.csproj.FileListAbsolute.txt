@@ -1,0 +1,6 @@
+C:\Work\c++\C#\Less7_hw\Line\bin\Debug\Line.exe.config
+C:\Work\c++\C#\Less7_hw\Line\bin\Debug\Line.exe
+C:\Work\c++\C#\Less7_hw\Line\bin\Debug\Line.pdb
+C:\Work\c++\C#\Less7_hw\Line\obj\Debug\Line.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less7_hw\Line\obj\Debug\Line.exe
+C:\Work\c++\C#\Less7_hw\Line\obj\Debug\Line.pdb

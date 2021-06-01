@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less4_hw\Complex\bin\Debug\Complex.exe.config
+C:\Work\c++\C#\Less4_hw\Complex\bin\Debug\Complex.exe
+C:\Work\c++\C#\Less4_hw\Complex\bin\Debug\Complex.pdb
+C:\Work\c++\C#\Less4_hw\Complex\obj\Debug\Complex.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less4_hw\Complex\obj\Debug\Complex.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less4_hw\Complex\obj\Debug\Complex.exe
+C:\Work\c++\C#\Less4_hw\Complex\obj\Debug\Complex.pdb

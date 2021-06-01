@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less4_hw\System2Linear\bin\Debug\System2Linear.exe.config
+C:\Work\c++\C#\Less4_hw\System2Linear\bin\Debug\System2Linear.exe
+C:\Work\c++\C#\Less4_hw\System2Linear\bin\Debug\System2Linear.pdb
+C:\Work\c++\C#\Less4_hw\System2Linear\obj\Debug\System2Linear.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less4_hw\System2Linear\obj\Debug\System2Linear.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less4_hw\System2Linear\obj\Debug\System2Linear.exe
+C:\Work\c++\C#\Less4_hw\System2Linear\obj\Debug\System2Linear.pdb

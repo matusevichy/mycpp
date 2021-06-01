@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less7_hw\TextAnalizer\bin\Debug\TextAnalizer.exe.config
+C:\Work\c++\C#\Less7_hw\TextAnalizer\bin\Debug\TextAnalizer.exe
+C:\Work\c++\C#\Less7_hw\TextAnalizer\bin\Debug\TextAnalizer.pdb
+C:\Work\c++\C#\Less7_hw\TextAnalizer\obj\Debug\TextAnalizer.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less7_hw\TextAnalizer\obj\Debug\TextAnalizer.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less7_hw\TextAnalizer\obj\Debug\TextAnalizer.exe
+C:\Work\c++\C#\Less7_hw\TextAnalizer\obj\Debug\TextAnalizer.pdb

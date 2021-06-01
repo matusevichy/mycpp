@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less5_hw\ShowFigures\bin\Debug\ShowFigures.exe.config
+C:\Work\c++\C#\Less5_hw\ShowFigures\bin\Debug\ShowFigures.exe
+C:\Work\c++\C#\Less5_hw\ShowFigures\bin\Debug\ShowFigures.pdb
+C:\Work\c++\C#\Less5_hw\ShowFigures\obj\Debug\ShowFigures.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less5_hw\ShowFigures\obj\Debug\ShowFigures.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less5_hw\ShowFigures\obj\Debug\ShowFigures.exe
+C:\Work\c++\C#\Less5_hw\ShowFigures\obj\Debug\ShowFigures.pdb
