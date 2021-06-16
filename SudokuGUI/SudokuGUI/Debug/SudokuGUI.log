@@ -1,0 +1,38 @@
+﻿  Application.cpp
+  Cell.cpp
+C:\Work\c++\SudokuGUI\SudokuGUI\Cell.cpp(16,34): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Work\c++\SudokuGUI\SudokuGUI\Cell.cpp(16,32): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+  Field.cpp
+C:\Work\c++\SudokuGUI\SudokuGUI\Field.cpp(19,76): warning C4244: аргумент: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Work\c++\SudokuGUI\SudokuGUI\Field.cpp(19,44): warning C4244: аргумент: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Work\c++\SudokuGUI\SudokuGUI\Field.cpp(43,78): warning C4244: аргумент: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Work\c++\SudokuGUI\SudokuGUI\Field.cpp(43,45): warning C4244: аргумент: преобразование "T" в "int", возможна потеря данных
+          with
+          [
+              T=float
+          ]
+C:\Work\c++\SudokuGUI\SudokuGUI\Field.cpp(84,16): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
+  Source.cpp
+  tinyfiledialogs.cpp
+  Создание кода...
+  SudokuGUI.vcxproj -> C:\Work\c++\SudokuGUI\Debug\SudokuGUI.exe

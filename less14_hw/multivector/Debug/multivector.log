@@ -1,0 +1,5 @@
+﻿  Multivector.cpp
+C:\Work\c++\less14_hw\multivector\Multivector.cpp(21,20): warning C4018: <=: несоответствие типов со знаком и без знака
+  main.cpp
+  Создание кода...
+  multivector.vcxproj -> C:\Work\c++\less14_hw\Debug\multivector.exe

@@ -1,0 +1,6 @@
+C:\Work\c++\C#\Less1_hw\ReverseNum\bin\Debug\ReverseNum.exe.config
+C:\Work\c++\C#\Less1_hw\ReverseNum\bin\Debug\ReverseNum.exe
+C:\Work\c++\C#\Less1_hw\ReverseNum\bin\Debug\ReverseNum.pdb
+C:\Work\c++\C#\Less1_hw\ReverseNum\obj\Debug\ReverseNum.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less1_hw\ReverseNum\obj\Debug\ReverseNum.exe
+C:\Work\c++\C#\Less1_hw\ReverseNum\obj\Debug\ReverseNum.pdb

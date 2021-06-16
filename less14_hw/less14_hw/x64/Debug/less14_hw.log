@@ -1,0 +1,10 @@
+﻿  intvector.cpp
+C:\Work\c++\less14_hw\less14_hw\intvector.cpp(7,26): warning C4244: аргумент: преобразование "double" в "_Ty", возможна потеря данных
+          with
+          [
+              _Ty=int
+          ]
+  main.cpp
+C:\Work\c++\less14_hw\less14_hw\main.cpp(5,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+  less14_hw.vcxproj -> C:\Work\c++\less14_hw\x64\Debug\singlevector.exe

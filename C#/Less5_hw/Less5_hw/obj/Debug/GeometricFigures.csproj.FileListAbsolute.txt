@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less5_hw\Less5_hw\bin\Debug\Less5_hw.exe.config
+C:\Work\c++\C#\Less5_hw\Less5_hw\bin\Debug\Less5_hw.exe
+C:\Work\c++\C#\Less5_hw\Less5_hw\bin\Debug\Less5_hw.pdb
+C:\Work\c++\C#\Less5_hw\Less5_hw\obj\Debug\GeometricFigures.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less5_hw\Less5_hw\obj\Debug\GeometricFigures.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less5_hw\Less5_hw\obj\Debug\Less5_hw.exe
+C:\Work\c++\C#\Less5_hw\Less5_hw\obj\Debug\Less5_hw.pdb

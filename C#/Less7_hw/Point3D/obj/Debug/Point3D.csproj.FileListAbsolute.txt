@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less7_hw\Point3D\bin\Debug\Point3D.exe.config
+C:\Work\c++\C#\Less7_hw\Point3D\bin\Debug\Point3D.exe
+C:\Work\c++\C#\Less7_hw\Point3D\bin\Debug\Point3D.pdb
+C:\Work\c++\C#\Less7_hw\Point3D\obj\Debug\Point3D.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less7_hw\Point3D\obj\Debug\Point3D.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less7_hw\Point3D\obj\Debug\Point3D.exe
+C:\Work\c++\C#\Less7_hw\Point3D\obj\Debug\Point3D.pdb

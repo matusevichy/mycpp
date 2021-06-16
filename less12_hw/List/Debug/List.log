@@ -1,0 +1,5 @@
+﻿  List.cpp
+C:\Work\c++\less12_hw\List\List.h(76,7): error C3861: isFull: идентификатор не найден
+  main.cpp
+C:\Work\c++\less12_hw\List\List.h(76,7): error C3861: isFull: идентификатор не найден
+  Создание кода...

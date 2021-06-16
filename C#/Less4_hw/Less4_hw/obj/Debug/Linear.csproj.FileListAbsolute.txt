@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less4_hw\Less4_hw\bin\Debug\Less4_hw.exe.config
+C:\Work\c++\C#\Less4_hw\Less4_hw\bin\Debug\Less4_hw.exe
+C:\Work\c++\C#\Less4_hw\Less4_hw\bin\Debug\Less4_hw.pdb
+C:\Work\c++\C#\Less4_hw\Less4_hw\obj\Debug\Linear.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less4_hw\Less4_hw\obj\Debug\Linear.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less4_hw\Less4_hw\obj\Debug\Less4_hw.exe
+C:\Work\c++\C#\Less4_hw\Less4_hw\obj\Debug\Less4_hw.pdb

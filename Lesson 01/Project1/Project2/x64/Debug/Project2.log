@@ -1,3 +1,0 @@
-﻿  Source.cpp
-C:\Users\us\Desktop\C++\Lesson 01\Project1\Project2\Source.cpp(88,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  Project2.vcxproj -> C:\Users\us\Desktop\C++\Lesson 01\Project1\x64\Debug\FriendClasses.exe

@@ -1,0 +1,6 @@
+﻿  Application.cpp
+  Area.cpp
+  main.cpp
+C:\Work\c++\less12_hw\Life\main.cpp(6,12): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  Создание кода...
+  Life.vcxproj -> C:\Work\c++\less12_hw\Debug\Life.exe

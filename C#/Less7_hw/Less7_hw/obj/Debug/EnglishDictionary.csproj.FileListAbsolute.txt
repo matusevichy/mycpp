@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less7_hw\Less7_hw\bin\Debug\Less7_hw.exe.config
+C:\Work\c++\C#\Less7_hw\Less7_hw\bin\Debug\Less7_hw.exe
+C:\Work\c++\C#\Less7_hw\Less7_hw\bin\Debug\Less7_hw.pdb
+C:\Work\c++\C#\Less7_hw\Less7_hw\obj\Debug\EnglishDictionary.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less7_hw\Less7_hw\obj\Debug\EnglishDictionary.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less7_hw\Less7_hw\obj\Debug\Less7_hw.exe
+C:\Work\c++\C#\Less7_hw\Less7_hw\obj\Debug\Less7_hw.pdb

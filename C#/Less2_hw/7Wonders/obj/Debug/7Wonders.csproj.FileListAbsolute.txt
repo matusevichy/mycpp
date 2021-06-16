@@ -1,0 +1,7 @@
+C:\Work\c++\C#\less2_hw\7Wonders\bin\Debug\7Wonders.exe.config
+C:\Work\c++\C#\less2_hw\7Wonders\bin\Debug\7Wonders.exe
+C:\Work\c++\C#\less2_hw\7Wonders\bin\Debug\7Wonders.pdb
+C:\Work\c++\C#\less2_hw\7Wonders\obj\Debug\7Wonders.csprojAssemblyReference.cache
+C:\Work\c++\C#\less2_hw\7Wonders\obj\Debug\7Wonders.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\less2_hw\7Wonders\obj\Debug\7Wonders.exe
+C:\Work\c++\C#\less2_hw\7Wonders\obj\Debug\7Wonders.pdb

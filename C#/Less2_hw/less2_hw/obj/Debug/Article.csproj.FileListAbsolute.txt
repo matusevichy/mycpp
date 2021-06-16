@@ -1,0 +1,7 @@
+C:\Work\c++\C#\less2_hw\less2_hw\bin\Debug\less2_hw.exe.config
+C:\Work\c++\C#\less2_hw\less2_hw\bin\Debug\less2_hw.exe
+C:\Work\c++\C#\less2_hw\less2_hw\bin\Debug\less2_hw.pdb
+C:\Work\c++\C#\less2_hw\less2_hw\obj\Debug\Article.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\less2_hw\less2_hw\obj\Debug\less2_hw.exe
+C:\Work\c++\C#\less2_hw\less2_hw\obj\Debug\less2_hw.pdb
+C:\Work\c++\C#\less2_hw\less2_hw\obj\Debug\Article.csprojAssemblyReference.cache

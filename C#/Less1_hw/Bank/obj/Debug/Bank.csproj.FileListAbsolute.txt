@@ -1,0 +1,7 @@
+C:\Work\c++\C#\Less1_hw\Bank\bin\Debug\Bank.exe.config
+C:\Work\c++\C#\Less1_hw\Bank\bin\Debug\Bank.exe
+C:\Work\c++\C#\Less1_hw\Bank\bin\Debug\Bank.pdb
+C:\Work\c++\C#\Less1_hw\Bank\obj\Debug\Bank.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less1_hw\Bank\obj\Debug\Bank.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less1_hw\Bank\obj\Debug\Bank.exe
+C:\Work\c++\C#\Less1_hw\Bank\obj\Debug\Bank.pdb

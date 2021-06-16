@@ -1,0 +1,5 @@
+﻿  Equation.cpp
+  main.cpp
+C:\Work\c++\less12_hw\Equation\main.cpp(1,9): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  Создание кода...
+  Equation.vcxproj -> C:\Work\c++\less12_hw\Debug\Equation.exe

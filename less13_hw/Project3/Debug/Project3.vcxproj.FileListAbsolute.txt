@@ -1,0 +1,2 @@
+C:\Work\c++\less13_hw\Project3\Debug\Vector.exe
+C:\Work\c++\less13_hw\Project3\Debug\Vector.pdb

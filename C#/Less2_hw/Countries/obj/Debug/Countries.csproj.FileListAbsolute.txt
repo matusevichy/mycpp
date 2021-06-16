@@ -1,0 +1,7 @@
+C:\Work\c++\C#\less2_hw\Countries\bin\Debug\Countries.exe.config
+C:\Work\c++\C#\less2_hw\Countries\bin\Debug\Countries.exe
+C:\Work\c++\C#\less2_hw\Countries\bin\Debug\Countries.pdb
+C:\Work\c++\C#\less2_hw\Countries\obj\Debug\Countries.csprojAssemblyReference.cache
+C:\Work\c++\C#\less2_hw\Countries\obj\Debug\Countries.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\less2_hw\Countries\obj\Debug\Countries.exe
+C:\Work\c++\C#\less2_hw\Countries\obj\Debug\Countries.pdb

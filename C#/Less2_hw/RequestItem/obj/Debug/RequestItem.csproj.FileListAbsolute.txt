@@ -1,0 +1,7 @@
+C:\Work\c++\C#\less2_hw\RequestItem\bin\Debug\RequestItem.exe.config
+C:\Work\c++\C#\less2_hw\RequestItem\bin\Debug\RequestItem.exe
+C:\Work\c++\C#\less2_hw\RequestItem\bin\Debug\RequestItem.pdb
+C:\Work\c++\C#\less2_hw\RequestItem\obj\Debug\RequestItem.csprojAssemblyReference.cache
+C:\Work\c++\C#\less2_hw\RequestItem\obj\Debug\RequestItem.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\less2_hw\RequestItem\obj\Debug\RequestItem.exe
+C:\Work\c++\C#\less2_hw\RequestItem\obj\Debug\RequestItem.pdb
