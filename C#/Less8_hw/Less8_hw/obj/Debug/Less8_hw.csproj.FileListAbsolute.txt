@@ -5,3 +5,10 @@ E:\work\c++\C#\Less8_hw\Less8_hw\obj\Debug\Less8_hw.csproj.AssemblyReference.cac
 E:\work\c++\C#\Less8_hw\Less8_hw\obj\Debug\Less8_hw.csproj.CoreCompileInputs.cache
 E:\work\c++\C#\Less8_hw\Less8_hw\obj\Debug\Less8_hw.exe
 E:\work\c++\C#\Less8_hw\Less8_hw\obj\Debug\Less8_hw.pdb
+C:\Work\c++\C#\Less8_hw\Less8_hw\bin\Debug\Less8_hw.exe.config
+C:\Work\c++\C#\Less8_hw\Less8_hw\bin\Debug\Less8_hw.exe
+C:\Work\c++\C#\Less8_hw\Less8_hw\bin\Debug\Less8_hw.pdb
+C:\Work\c++\C#\Less8_hw\Less8_hw\obj\Debug\Less8_hw.csprojAssemblyReference.cache
+C:\Work\c++\C#\Less8_hw\Less8_hw\obj\Debug\Less8_hw.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less8_hw\Less8_hw\obj\Debug\Less8_hw.exe
+C:\Work\c++\C#\Less8_hw\Less8_hw\obj\Debug\Less8_hw.pdb
