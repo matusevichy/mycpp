@@ -1,0 +1,7 @@
+E:\work\c++\C#\Less9_hw\Less9_hw\bin\Debug\Less9_hw.exe.config
+E:\work\c++\C#\Less9_hw\Less9_hw\bin\Debug\Less9_hw.exe
+E:\work\c++\C#\Less9_hw\Less9_hw\bin\Debug\Less9_hw.pdb
+E:\work\c++\C#\Less9_hw\Less9_hw\obj\Debug\Less9_hw.csproj.AssemblyReference.cache
+E:\work\c++\C#\Less9_hw\Less9_hw\obj\Debug\Less9_hw.csproj.CoreCompileInputs.cache
+E:\work\c++\C#\Less9_hw\Less9_hw\obj\Debug\Less9_hw.exe
+E:\work\c++\C#\Less9_hw\Less9_hw\obj\Debug\Less9_hw.pdb
