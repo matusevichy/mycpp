@@ -1,0 +1,7 @@
+E:\work\c++\C#\Less8_hw_new\Less8_hw_new\obj\Debug\Less8_hw_new.csproj.AssemblyReference.cache
+E:\work\c++\C#\Less8_hw_new\Less8_hw_new\obj\Debug\Less8_hw_new.csproj.CoreCompileInputs.cache
+E:\work\c++\C#\Less8_hw_new\Less8_hw_new\bin\Debug\Less8_hw_new.exe.config
+E:\work\c++\C#\Less8_hw_new\Less8_hw_new\bin\Debug\Less8_hw_new.exe
+E:\work\c++\C#\Less8_hw_new\Less8_hw_new\bin\Debug\Less8_hw_new.pdb
+E:\work\c++\C#\Less8_hw_new\Less8_hw_new\obj\Debug\Less8_hw_new.exe
+E:\work\c++\C#\Less8_hw_new\Less8_hw_new\obj\Debug\Less8_hw_new.pdb
