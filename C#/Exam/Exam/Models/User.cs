@@ -22,5 +22,9 @@ namespace Exam.Models
         [DataType(DataType.DateTime, ErrorMessage ="Проверьте формат введенной даты")]
         public DateTime Birth { get; set; }
         public bool IsAdmin { get; set; }
+        public override string ToString()
+        {
+            return $"Id: {Id}\tLogin: {Login}\tBirth:{Birth}\tIsAdmin{IsAdmin}";
+        }
     }
 }

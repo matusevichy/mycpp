@@ -11,6 +11,16 @@ namespace Exam
 {
     class App
     {
+        enum MenuAction
+        {
+            RunQuiz = 1,
+            ViewHighscore,
+            ShowUsers,
+            ShowKnowledge,
+            ShowAllQwizes,
+            CreateQwiz,
+            Exit
+        }
         private User currentUser;
         private List<Knowledgesection> knowledgesections;
         private List<Question> questions;
@@ -62,23 +72,25 @@ namespace Exam
                     {
                         AdminMenu();
                         int.TryParse(Console.ReadLine(), out act);
-                        switch (act)
+                        switch ((MenuAction)act)
                         {
-                            case 1:
+                            case MenuAction.RunQuiz:
                                 break;
-                            case 2:
+                            case MenuAction.ViewHighscore:
+                                ShowHighscoreTable();
                                 break;
-                            case 3:
+                            case MenuAction.ShowUsers:
+                                ShowUsersList();
                                 break;
-                            case 4:
+                            case MenuAction.ShowKnowledge:
                                 ShowKnowledgeSections();
                                 AddKnowledgeSection();
                                 break;
-                            case 5:
+                            case MenuAction.ShowAllQwizes:
                                 break;
-                            case 6:
+                            case MenuAction.CreateQwiz:
                                 break;
-                            case 7:
+                            case MenuAction.Exit:
                                 return;
                             default:
                                 break;
@@ -88,13 +100,14 @@ namespace Exam
                     {
                         UserMenu();
                         int.TryParse(Console.ReadLine(), out act);
-                        switch (act)
+                        switch ((MenuAction)act)
                         {
-                            case 1:
+                            case MenuAction.RunQuiz:
                                 break;
-                            case 2:
+                            case MenuAction.ViewHighscore:
+                                ShowHighscoreTable();
                                 break;
-                            case 3:
+                            case MenuAction.Exit:
                                 return;
                             default:
                                 break;
@@ -264,6 +277,22 @@ namespace Exam
                 }
             }
         }
+
+        private void ShowHighscoreTable ()
+        {
+            int idx = 0;
+            var orderetResults = results.OrderBy(r => r.Points);
+            foreach (var item in orderetResults)
+            {
+                Console.WriteLine($"{++idx}: {users.FirstOrDefault(u => u.Id==item.UserId).Login}: {item.Points}");
+            }
+        }
+
+        private void ShowUsersList()
+        {
+            users.ForEach(u => Console.WriteLine(u));
+        }
+
         private void MainMenu()
         {
             Console.Clear();
@@ -278,8 +307,8 @@ namespace Exam
             Console.Clear();
             Console.WriteLine("Select option:");
             Console.WriteLine("[1] - Run quiz;");
-            Console.WriteLine("[2] - View record table;");
-            Console.WriteLine("[3] - Exit.");
+            Console.WriteLine("[2] - View highscore table;");
+            Console.WriteLine("[7] - Exit.");
         }
 
         private void AdminMenu()
@@ -287,7 +316,7 @@ namespace Exam
             Console.Clear();
             Console.WriteLine("Select option:");
             Console.WriteLine("[1] - Run quiz;");
-            Console.WriteLine("[2] - View record table;");
+            Console.WriteLine("[2] - View highscore table;");
             Console.WriteLine("[3] - Show users list;");
             Console.WriteLine("[4] - Show knowledge sections list;");
             Console.WriteLine("[5] - Show all qwizes;");
