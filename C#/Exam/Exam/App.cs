@@ -23,20 +23,17 @@ namespace Exam
         }
         Users users;
         Quizes quizes;
-        private List<Results> results;
-
+        Knowledgesections knowledgesections;
+        Results results;
         public App()
         {
-//            currentUser = new User();
             users = new Users();
             quizes = new Quizes();
-            results = new List<Results>();
+            knowledgesections = new Knowledgesections();
+            results = new Results();
             LoadData();
-            //if(users.Count==0)
-            //{
-            //    AddAdmin();
-            //}
         }
+
         public void Start()
         {
             while (true)
@@ -78,7 +75,7 @@ namespace Exam
                                 users.EditUsers();
                                 break;
                             case MenuAction.ShowKnowledge:
-                                quizes.EditKnowledgeSections();
+                                knowledgesections.Edit();
                                 break;
                             case MenuAction.ShowAllQwizes:
                                 break;
@@ -116,23 +113,15 @@ namespace Exam
         private void LoadData()
         {
             users.LoadData();
-            users.LoadData();
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            using (FileStream fileStream = new FileStream("result.dat", FileMode.Open, FileAccess.Read))
-            {
-                results = binaryFormatter.Deserialize(fileStream) as List<Results>;
-            }
+            quizes.LoadData();
+            knowledgesections.LoadData();
         }
 
         private void SaveData()
         {
             users.SaveData();
             quizes.SaveData();
-            BinaryFormatter binaryFormatter = new BinaryFormatter();
-            using (FileStream fileStream = new FileStream("result.dat", FileMode.Create, FileAccess.Write))
-            {
-                binaryFormatter.Serialize(fileStream, results);
-            }
+            knowledgesections.SaveData();
         }
 
         private void ShowHighscoreTable ()

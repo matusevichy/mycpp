@@ -5,7 +5,7 @@ using System.Text;
 namespace Exam.Models
 {
     [Serializable]
-    class Results
+    class Result
     {
         public int UserId { get; set; }
         public int Points { get; set; }
