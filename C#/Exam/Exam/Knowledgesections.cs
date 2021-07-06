@@ -34,7 +34,7 @@ namespace Exam
             }
         }
 
-        private void Show()
+        public void Show()
         {
             knowledgesections.ForEach(k => Console.WriteLine(k));
         }

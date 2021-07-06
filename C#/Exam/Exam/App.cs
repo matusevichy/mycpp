@@ -69,7 +69,7 @@ namespace Exam
                             case MenuAction.RunQuiz:
                                 break;
                             case MenuAction.ViewHighscore:
-                                ShowHighscoreTable();
+                                results.ShowHighscoreTable(users);
                                 break;
                             case MenuAction.ShowUsers:
                                 users.EditUsers();
@@ -78,8 +78,10 @@ namespace Exam
                                 knowledgesections.Edit();
                                 break;
                             case MenuAction.ShowAllQwizes:
+                                quizes.ShowAll();
                                 break;
                             case MenuAction.CreateQwiz:
+                                quizes.Add(knowledgesections);
                                 break;
                             case MenuAction.Exit:
                                 SaveData();
@@ -97,7 +99,7 @@ namespace Exam
                             case MenuAction.RunQuiz:
                                 break;
                             case MenuAction.ViewHighscore:
-                                ShowHighscoreTable();
+                                results.ShowHighscoreTable(users);
                                 break;
                             case MenuAction.Exit:
                                 SaveData();
@@ -123,18 +125,6 @@ namespace Exam
             quizes.SaveData();
             knowledgesections.SaveData();
         }
-
-        private void ShowHighscoreTable ()
-        {
-            int idx = 0;
-            var orderetResults = results.OrderBy(r => r.Points);
-            foreach (var item in orderetResults)
-            {
-                Console.WriteLine($"{++idx}: {users.GetUserByID(item.UserId).Login}: {item.Points}");
-            }
-            Console.ReadKey();
-        }
-
 
         private void MainMenu()
         {

@@ -34,7 +34,7 @@ namespace Exam
             }
         }
 
-        private void ShowHighscoreTable()
+        public void ShowHighscoreTable(Users users)
         {
             int idx = 0;
             var orderetResults = results.OrderBy(r => r.Points);
