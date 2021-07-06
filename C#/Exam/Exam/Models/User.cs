@@ -24,7 +24,7 @@ namespace Exam.Models
         public bool IsAdmin { get; set; }
         public override string ToString()
         {
-            return $"Id: {Id}\tLogin: {Login}\tBirth:{Birth}\tIsAdmin{IsAdmin}";
+            return $"Id: {Id}\tLogin: {Login}\tBirth:{Birth}\tIsAdmin: {IsAdmin}";
         }
     }
 }
