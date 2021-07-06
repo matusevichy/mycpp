@@ -11,3 +11,16 @@ E:\work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.csproj.CoreCompileInputs.c
 E:\work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.dll
 E:\work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.pdb
 E:\work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.genruntimeconfig.cache
+C:\Work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.csprojAssemblyReference.cache
+C:\Work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.AssemblyInfoInputs.cache
+C:\Work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.AssemblyInfo.cs
+C:\Work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.dll
+C:\Work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.pdb
+C:\Work\c++\C#\Exam\Exam\bin\Debug\netcoreapp3.1\Exam.exe
+C:\Work\c++\C#\Exam\Exam\bin\Debug\netcoreapp3.1\Exam.deps.json
+C:\Work\c++\C#\Exam\Exam\bin\Debug\netcoreapp3.1\Exam.runtimeconfig.json
+C:\Work\c++\C#\Exam\Exam\bin\Debug\netcoreapp3.1\Exam.runtimeconfig.dev.json
+C:\Work\c++\C#\Exam\Exam\bin\Debug\netcoreapp3.1\Exam.dll
+C:\Work\c++\C#\Exam\Exam\bin\Debug\netcoreapp3.1\Exam.pdb
+C:\Work\c++\C#\Exam\Exam\obj\Debug\netcoreapp3.1\Exam.genruntimeconfig.cache
