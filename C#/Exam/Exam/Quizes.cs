@@ -10,27 +10,27 @@ namespace Exam
 {
     class Quizes
     {
-        private List<Quiz> quizes;
+        private List<Question> questions;
         public Quizes()
         {
-            quizes = new List<Quiz>();
+            questions = new List<Question>();
         }
 
         public void LoadData()
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-            using (FileStream fileStream = new FileStream("quizes.dat", FileMode.Open, FileAccess.Read))
+            using (FileStream fileStream = new FileStream("questions.dat", FileMode.Open, FileAccess.Read))
             {
-                quizes = binaryFormatter.Deserialize(fileStream) as List<Quiz>;
+                questions = binaryFormatter.Deserialize(fileStream) as List<Question>;
             }
         }
 
         public void SaveData()
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
-            using (FileStream fileStream = new FileStream("quizes.dat", FileMode.Create, FileAccess.Write))
+            using (FileStream fileStream = new FileStream("questions.dat", FileMode.Create, FileAccess.Write))
             {
-                binaryFormatter.Serialize(fileStream, quizes);
+                binaryFormatter.Serialize(fileStream, questions);
             }
         }
 
@@ -79,20 +79,20 @@ namespace Exam
                         break;
                 }
             }
-            Quiz quiz = new Quiz
+            Question quiz = new Question
             {
                 KnowledgesectionId = id,
                 Text = qwestion,
                 answers = answers
             };
-            quizes.Add(quiz);
+            questions.Add(quiz);
         }
 
         public void ShowAll()
         {
             Console.Clear();
             Console.WriteLine("Quizes list:");
-            quizes.ForEach(q => Console.WriteLine(String.Join(' ', new String[] {"Index:", quizes.IndexOf(q).ToString(), "\n", q.ToString() })) );
+            questions.ForEach(q => Console.WriteLine(String.Join(' ', new String[] {"Index:", questions.IndexOf(q).ToString(), "\n", q.ToString() })) );
             Console.ReadKey();
         }
 
@@ -107,7 +107,7 @@ namespace Exam
 
         public void EditById(int idx)
         {
-            Quiz quiz = quizes[idx];
+            Question quiz = questions[idx];
             Console.WriteLine("Question:");
             Console.WriteLine(quiz.Text);
             Console.WriteLine("Enter new text of question or press Enter for skip this step:");
@@ -119,7 +119,7 @@ namespace Exam
             foreach (var item in quiz.answers)
             {
                 Console.WriteLine("Answers:");
-                Console.WriteLine(item.Text);
+                Console.WriteLine($"{item.Text}, IsTrue: {item.IsTrue}");
                 Console.WriteLine("Enter new text of question or press Enter for skip this step:");
                 text = Console.ReadLine();
                 if (text != "")
@@ -139,7 +139,27 @@ namespace Exam
                         break;
                 }
             }
-            quizes[idx] = quiz;
+            questions[idx] = quiz;
+        }
+        public int Run(User user, Knowledgesections knowledgesections)
+        {
+            int id;
+            Console.WriteLine("Select knowledge section. Enter Id:");
+            knowledgesections.Show();
+            int.TryParse(Console.ReadLine(), out id);
+            Console.ReadKey();
+            var quiz = questions.Where(q => q.KnowledgesectionId == id).ToList();
+            int counter = 0;
+            int point = 0;
+            foreach (var item in quiz)
+            {
+                if (counter<20)
+                {
+                    if (item.Run()) point++; ;
+                    counter++;
+                }
+            }
+            return point;
         }
     }
 }

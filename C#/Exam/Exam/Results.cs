@@ -16,7 +16,7 @@ namespace Exam
             results = new List<Result>();
         }
 
-        private void LoadData()
+        public void LoadData()
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             using (FileStream fileStream = new FileStream("result.dat", FileMode.Open, FileAccess.Read))
@@ -25,7 +25,7 @@ namespace Exam
             }
         }
 
-        private void SaveData()
+        public void SaveData()
         {
             BinaryFormatter binaryFormatter = new BinaryFormatter();
             using (FileStream fileStream = new FileStream("result.dat", FileMode.Create, FileAccess.Write))
@@ -43,6 +43,11 @@ namespace Exam
                 Console.WriteLine($"{++idx}: {users.GetUserByID(item.UserId).Login}: {item.Points}");
             }
             Console.ReadKey();
+        }
+
+        public void Add(User user, int points)
+        {
+            results.Add(new Result { Points = points, UserId = user.Id });
         }
 
     }

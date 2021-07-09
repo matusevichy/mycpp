@@ -30,7 +30,7 @@ namespace Exam
         {
             User user = new User
             {
-                Id = users.Max(u => u.Id) + 1,
+                Id = 1,
                 Login = "admin",
                 Password = "Qwerty654321",
                 Birth = DateTime.Parse("1990-01-01 00:00:00"),

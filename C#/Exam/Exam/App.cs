@@ -17,8 +17,9 @@ namespace Exam
             ViewHighscore,
             ShowUsers,
             ShowKnowledge,
-            ShowAllQwizes,
-            CreateQwiz,
+            ShowAllQuizes,
+            CreateQuiz,
+            EditQuiz,
             Exit
         }
         Users users;
@@ -67,6 +68,7 @@ namespace Exam
                         switch ((MenuAction)act)
                         {
                             case MenuAction.RunQuiz:
+                                results.Add(users.currentUser, quizes.Run(users.currentUser, knowledgesections));
                                 break;
                             case MenuAction.ViewHighscore:
                                 results.ShowHighscoreTable(users);
@@ -77,15 +79,18 @@ namespace Exam
                             case MenuAction.ShowKnowledge:
                                 knowledgesections.Edit();
                                 break;
-                            case MenuAction.ShowAllQwizes:
+                            case MenuAction.ShowAllQuizes:
                                 quizes.ShowAll();
                                 break;
-                            case MenuAction.CreateQwiz:
+                            case MenuAction.CreateQuiz:
                                 quizes.Add(knowledgesections);
                                 break;
                             case MenuAction.Exit:
                                 SaveData();
                                 return;
+                            case MenuAction.EditQuiz:
+                                quizes.Edit();
+                                break;
                             default:
                                 break;
                         }
@@ -97,6 +102,7 @@ namespace Exam
                         switch ((MenuAction)act)
                         {
                             case MenuAction.RunQuiz:
+                                results.Add(users.currentUser, quizes.Run(users.currentUser, knowledgesections));
                                 break;
                             case MenuAction.ViewHighscore:
                                 results.ShowHighscoreTable(users);
@@ -117,6 +123,7 @@ namespace Exam
             users.LoadData();
             quizes.LoadData();
             knowledgesections.LoadData();
+            results.LoadData();
         }
 
         private void SaveData()
@@ -124,6 +131,7 @@ namespace Exam
             users.SaveData();
             quizes.SaveData();
             knowledgesections.SaveData();
+            results.SaveData();
         }
 
         private void MainMenu()
@@ -141,7 +149,7 @@ namespace Exam
             Console.WriteLine("Select option:");
             Console.WriteLine("[1] - Run quiz;");
             Console.WriteLine("[2] - View highscore table;");
-            Console.WriteLine("[7] - Exit.");
+            Console.WriteLine("[8] - Exit.");
         }
 
         private void AdminMenu()
@@ -152,9 +160,10 @@ namespace Exam
             Console.WriteLine("[2] - View highscore table;");
             Console.WriteLine("[3] - Show users list;");
             Console.WriteLine("[4] - Show knowledge sections list;");
-            Console.WriteLine("[5] - Show all qwizes;");
-            Console.WriteLine("[6] - Create new qwiz;");
-            Console.WriteLine("[7] - Exit.");
+            Console.WriteLine("[5] - Show all quizes;");
+            Console.WriteLine("[6] - Create new quiz;");
+            Console.WriteLine("[7] - Edit quiz;");
+            Console.WriteLine("[8] - Exit.");
         }
     }
 }
