@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Work\\c++\\C#\\Exam\\Exam\\Exam.csproj": {}
+    "E:\\work\\c++\\C#\\Exam\\Exam\\Exam.csproj": {}
   },
   "projects": {
-    "C:\\Work\\c++\\C#\\Exam\\Exam\\Exam.csproj": {
+    "E:\\work\\c++\\C#\\Exam\\Exam\\Exam.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Work\\c++\\C#\\Exam\\Exam\\Exam.csproj",
+        "projectUniqueName": "E:\\work\\c++\\C#\\Exam\\Exam\\Exam.csproj",
         "projectName": "Exam",
-        "projectPath": "C:\\Work\\c++\\C#\\Exam\\Exam\\Exam.csproj",
-        "packagesPath": "C:\\Users\\Yura\\.nuget\\packages\\",
-        "outputPath": "C:\\Work\\c++\\C#\\Exam\\Exam\\obj\\",
+        "projectPath": "E:\\work\\c++\\C#\\Exam\\Exam\\Exam.csproj",
+        "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
+        "outputPath": "E:\\work\\c++\\C#\\Exam\\Exam\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Yura\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.204\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
         }
       }
     }
