@@ -1,0 +1,6 @@
+C:\Work\c++\C#\Less12_hw\Library.DAL\bin\Debug\Library.DAL.dll
+C:\Work\c++\C#\Less12_hw\Library.DAL\bin\Debug\Library.DAL.pdb
+C:\Work\c++\C#\Less12_hw\Library.DAL\obj\Debug\Library.DAL.csproj.AssemblyReference.cache
+C:\Work\c++\C#\Less12_hw\Library.DAL\obj\Debug\Library.DAL.csproj.CoreCompileInputs.cache
+C:\Work\c++\C#\Less12_hw\Library.DAL\obj\Debug\Library.DAL.dll
+C:\Work\c++\C#\Less12_hw\Library.DAL\obj\Debug\Library.DAL.pdb
