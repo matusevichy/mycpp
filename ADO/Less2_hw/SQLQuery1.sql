@@ -1,4 +1,4 @@
-use [Vegetables&Fruits]
+use [VegetablesAndFruits]
 
 create table VandF (
 	id int primary key identity,
@@ -31,3 +31,9 @@ exec sp_CaloriesInfo @min output, @max output, @avg output
 print @min;
 print @max;
 print @avg;
+
+Select distinct name from VandF 
+
+Select color, count(*) from VandF group by color
+
+select * from VandF where color in ('желтый','красный')
