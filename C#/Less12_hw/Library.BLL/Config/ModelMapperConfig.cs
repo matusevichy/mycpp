@@ -28,7 +28,7 @@ namespace Library.BLL.Config
                     cfg.CreateMap<Author, AuthorDTO>();
                     //cfg.CreateMap<BookDTO, Book>();
                     cfg.CreateMap<BookDTO, Book>().ForMember(dto => dto.Author2Books, opt => opt.MapFrom(x => x.Authors.Select(a => new { authorId = a.Id, bookId = x.Id }).ToList()));
-                    //cfg.CreateMap<Book, BookDTO>().ForMember(dto => dto.Authors, opt => opt.MapFrom(x => x.Author2Books.Select(a => authorRepository.Get(a.AuthorId)).ToList()));
+                    cfg.CreateMap<Book, BookDTO>().ForMember(dto => dto.Authors, opt => opt.MapFrom(x => x.Author2Books.Select(a => authorRepository.Get(a.AuthorId)).ToList()));
                     cfg.CreateMap<User, UserDTO>();
                     cfg.CreateMap<UserDTO, User>();
                 });

@@ -1,0 +1,14 @@
+C:\Work\c++\ADO\ADOExam\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Work\c++\ADO\ADOExam\DAL\bin\Debug\DAL.dll.config
+C:\Work\c++\ADO\ADOExam\DAL\bin\Debug\DAL.dll
+C:\Work\c++\ADO\ADOExam\DAL\bin\Debug\DAL.pdb
+C:\Work\c++\ADO\ADOExam\DAL\bin\Debug\EntityFramework.dll
+C:\Work\c++\ADO\ADOExam\DAL\bin\Debug\EntityFramework.SqlServer.dll
+C:\Work\c++\ADO\ADOExam\DAL\bin\Debug\EntityFramework.xml
+C:\Work\c++\ADO\ADOExam\DAL\bin\Debug\EntityFramework.SqlServer.xml
+C:\Work\c++\ADO\ADOExam\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Work\c++\ADO\ADOExam\DAL\obj\Debug\DAL.dll
+C:\Work\c++\ADO\ADOExam\DAL\obj\Debug\DAL.pdb
+C:\Work\c++\ADO\ADOExam\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Work\c++\ADO\ADOExam\DAL\bin\Debug\AutoMapper.dll
+C:\Work\c++\ADO\ADOExam\DAL\bin\Debug\AutoMapper.xml

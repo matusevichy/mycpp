@@ -22,23 +22,23 @@ namespace Library
             var authors = new List<AuthorDTO>();
             authors.Add(authorService.FindById(1));
             authors.Add(authorService.FindById(2));
-            var book = new BookDTO
-            {
-                Title = "Book1",
-                Pages = 100,
-                Description = "New Book 1",
-                Genre = genresService.FindById(1),
-                Authors = authors
-            };
-            var list = book.Authors.Select(a => new { authorId = a.Id, bookId = 1 }).ToList();
-            //booksService.Create(new BookDTO
+            //var book = new BookDTO
             //{
             //    Title = "Book1",
             //    Pages = 100,
             //    Description = "New Book 1",
-            //    Genre = genresService.FindById(1),
+            //    Genre = genresService.FindById(2),
             //    Authors = authors
-            //});
+            //};
+            //var list = book.Authors.Select(a => new { authorId = a.Id, bookId = 1 }).ToList();
+            booksService.Create(new BookDTO
+            {
+                Title = "Book1",
+                Pages = 100,
+                Description = "New Book 1",
+                Genre = genresService.FindById(2),
+                Authors = authors
+            });
 
             //authorService.Create(new AuthorDTO
             //{
