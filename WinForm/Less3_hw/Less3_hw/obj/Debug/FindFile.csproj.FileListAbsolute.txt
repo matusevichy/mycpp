@@ -1,0 +1,11 @@
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\bin\Debug\Less3_hw.exe.config
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\bin\Debug\Less3_hw.exe
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\bin\Debug\Less3_hw.pdb
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\obj\Debug\FindFile.csproj.AssemblyReference.cache
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\obj\Debug\Less3_hw.Forms.FindForm.resources
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\obj\Debug\Less3_hw.Properties.Resources.resources
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\obj\Debug\FindFile.csproj.GenerateResource.cache
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\obj\Debug\FindFile.csproj.CoreCompileInputs.cache
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\obj\Debug\Less3_hw.exe
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\obj\Debug\Less3_hw.pdb
+C:\Work\c++\WinForm\Less3_hw\Less3_hw\obj\Debug\Less3_hw.MainForm.resources

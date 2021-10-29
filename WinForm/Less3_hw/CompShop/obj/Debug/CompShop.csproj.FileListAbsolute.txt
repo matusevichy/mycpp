@@ -1,0 +1,11 @@
+C:\Work\c++\WinForm\Less3_hw\CompShop\bin\Debug\CompShop.exe.config
+C:\Work\c++\WinForm\Less3_hw\CompShop\bin\Debug\CompShop.exe
+C:\Work\c++\WinForm\Less3_hw\CompShop\bin\Debug\CompShop.pdb
+C:\Work\c++\WinForm\Less3_hw\CompShop\obj\Debug\CompShop.csproj.AssemblyReference.cache
+C:\Work\c++\WinForm\Less3_hw\CompShop\obj\Debug\CompShop.Form1.resources
+C:\Work\c++\WinForm\Less3_hw\CompShop\obj\Debug\CompShop.Properties.Resources.resources
+C:\Work\c++\WinForm\Less3_hw\CompShop\obj\Debug\CompShop.csproj.GenerateResource.cache
+C:\Work\c++\WinForm\Less3_hw\CompShop\obj\Debug\CompShop.csproj.CoreCompileInputs.cache
+C:\Work\c++\WinForm\Less3_hw\CompShop\obj\Debug\CompShop.exe
+C:\Work\c++\WinForm\Less3_hw\CompShop\obj\Debug\CompShop.pdb
+C:\Work\c++\WinForm\Less3_hw\CompShop\obj\Debug\CompShop.Forms.ProductsForm.resources
