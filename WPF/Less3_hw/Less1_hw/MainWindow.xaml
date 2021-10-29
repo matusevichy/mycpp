@@ -1,0 +1,214 @@
+﻿<Window x:Class="Less1_hw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Less1_hw"
+        mc:Ignorable="d"
+        Title="Calculator" Height="250" Width="136">
+    <Window.Resources>
+        <ResourceDictionary Source="Dictionary.xaml"/>
+    </Window.Resources>
+    <StackPanel Orientation="Vertical">
+        <TextBlock 
+            TextAlignment="Right" Background="{StaticResource bgColor}"
+            x:Name="textBlock"
+        />
+        <TextBox 
+            TextAlignment="Right"
+            x:Name="textBox"
+        />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="{StaticResource cellSize}"/>
+                <ColumnDefinition Width="{StaticResource cellSize}"/>
+                <ColumnDefinition Width="{StaticResource cellSize}"/>
+                <ColumnDefinition Width="{StaticResource cellSize}"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="{StaticResource cellSize}"/>
+                <RowDefinition Height="{StaticResource cellSize}"/>
+                <RowDefinition Height="{StaticResource cellSize}"/>
+                <RowDefinition Height="{StaticResource cellSize}"/>
+                <RowDefinition Height="{StaticResource cellSize}"/>
+            </Grid.RowDefinitions>
+            <Button
+                Content="1"
+                Grid.Row="0"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="2"
+                Grid.Row="0"
+                Grid.Column="1"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}"
+                Click="Button_Click"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="3"
+                Grid.Row="0"
+                Grid.Column="2"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}"
+                Click="Button_Click"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="4"
+                Grid.Row="1"
+                Grid.Column="0"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}"
+                Click="Button_Click"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="5"
+                Grid.Row="1"
+                Grid.Column="1"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}"
+                Click="Button_Click"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="6"
+                Grid.Row="1"
+                Grid.Column="2"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}"
+                Click="Button_Click"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="7"
+                Grid.Row="2"
+                Grid.Column="0"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}"
+                Click="Button_Click"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="8"
+                Grid.Row="2"
+                Grid.Column="1"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}"
+                Click="Button_Click"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="9"
+                Grid.Row="2"
+                Grid.Column="2"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}"
+                Click="Button_Click"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="0"
+                Grid.Row="3"
+                Grid.Column="1"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click_1"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="+"
+                Grid.Row="0"
+                Grid.Column="4"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click_4"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="-"
+                Grid.Row="1"
+                Grid.Column="4"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click_5"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="*"
+                Grid.Row="2"
+                Grid.Column="4"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click_6"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="/"
+                Grid.Row="3"
+                Grid.Column="4"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click_7"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="="
+                Grid.Row="4"
+                Grid.Column="3"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click_8"
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="-"
+                Grid.Row="3"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click_9" 
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="."
+                Grid.Row="3"
+                Grid.Column="2"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click_2" 
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+            <Button
+                Content="C"
+                Grid.Row="4"
+                Height="{StaticResource btnSize}"
+                Width="{StaticResource btnSize}" 
+                Click="Button_Click_3" 
+                Background="{StaticResource bgColor}"
+                Foreground="{StaticResource fgColor}"
+            />
+        </Grid>
+    </StackPanel>
+</Window>
