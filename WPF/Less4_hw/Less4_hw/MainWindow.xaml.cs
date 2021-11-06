@@ -49,5 +49,17 @@ namespace Less4_hw
             InitializeComponent();
             DataContext = this;
         }
+
+        private void ButtonBase_OnClick(object sender, RoutedEventArgs e)
+        {
+            var item = ((sender as Button).Parent as Grid).DataContext as Abonent;
+            Abonents.Remove(item);
+        }
+
+        private void ButtonAdd_OnClick(object sender, RoutedEventArgs e)
+        {
+            Abonents.Add(new Abonent());
+            lbAbonents.SelectedIndex = Abonents.Count - 1;
+        }
     }
 }

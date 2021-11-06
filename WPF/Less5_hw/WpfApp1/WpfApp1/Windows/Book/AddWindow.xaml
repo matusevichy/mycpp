@@ -1,0 +1,67 @@
+﻿<Window x:Class="WpfApp1.Windows.Book.AddWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1.Windows.Book"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Edit" Height="424" Width="383">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <TextBox materialDesign:HintAssist.Hint="Title"
+                 Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                 Text="{Binding Book.Title}"
+                 Padding="10"
+                 VerticalAlignment="Center" Cursor="IBeam" />
+        <TextBox Grid.Row="1"
+                 Padding="10"
+                 TextWrapping="Wrap"
+                 VerticalAlignment="Stretch"
+                 MinWidth="280"
+                 AcceptsReturn="True"
+                 VerticalScrollBarVisibility="Auto"
+                 SpellCheck.IsEnabled="True"
+                 materialDesign:HintAssist.Hint="Multiline text"
+                 Height="80"
+                 Text="{Binding Book.Description}" Cursor="IBeam" />
+        <TextBox Grid.Row="2"
+                 Padding="10"
+                 MaxLength="12"
+                 Text="{Binding Book.Price}"
+                 materialDesign:TransitionAssist.DisableTransitions="True" />
+        <DockPanel Grid.Row="3">
+                <TextBox
+                    x:Name="tbFileName"
+                    Width="290"
+                     materialDesign:HintAssist.Hint="Link to file"
+                     Style="{StaticResource MaterialDesignFloatingHintTextBox}"
+                     Text="{Binding Book.Cover}"
+                     VerticalAlignment="Center" Cursor="IBeam" />
+                <Button
+                    Click="ButtonFile_Click"
+                    Style="{StaticResource MaterialDesignFlatAccentBgButton}"
+                     ToolTip="MaterialDesignFlatAccentBackgroundButton"
+                     Content="File" Cursor="Hand" Width="63" />
+        </DockPanel>
+        <Button Grid.Row="4"
+                Width="100"
+                HorizontalAlignment="Right"
+                ToolTip="Resource name: MaterialDesignRaisedButton"
+                Click="ButtonSave_Click"
+                Content="Save" />
+    </Grid>
+</Window>
