@@ -1,0 +1,168 @@
+body{
+    margin: 0 auto;
+    width: 80%;
+    font-family: system-ui;
+}
+
+header{
+    background: url("/Images/header_fon.jpg");
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    color: white;
+}
+
+nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#main-menu{
+    display: flex;
+    justify-content: space-evenly;
+    min-width: 50%;
+}
+
+header a{
+    color: white;
+    text-decoration: none;
+}
+
+.header-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.header-content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    color: white;
+}
+
+.header-content a{
+    color:white;
+    text-decoration: none;
+}
+
+.header-content p{
+    margin-block: 10px;
+}
+
+.btn-prev, .btn-next{
+    font-size: 36px;
+}
+
+.header-content-btn{
+    width: 100px;
+    border-radius: 20px;
+    border: solid white 1px;
+    height: 30px;
+    background: none;
+    color: white;
+}
+
+.header-content-title{
+    font-size: x-large;
+}
+nav img{
+    width: 20px;
+}
+
+#pager{
+    margin-top: 30px;
+}
+
+.pager img{
+    width: 10px;
+}
+
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.article-title{
+    font-size: x-large;
+}
+
+.article-text{
+    font-size: x-small;
+}
+
+.about-items{
+    width: 90%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 30px;
+}
+
+.about-item{
+    font-size: x-small;
+    text-align: center;
+    width: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-item-title{
+    font-size: large;
+}
+
+.about-item img{
+    width: 96px;
+}
+
+.btn-learnmore{
+    border-radius: 20px;
+    background-color: mediumseagreen;
+    width: 100px;
+    height: 25px;
+    color: white;
+    border-color: seagreen;
+    margin-top: 30px;
+}
+
+article{
+    margin-top: 30px;
+}
+
+article.even{
+    background-color: lightgray;
+}
+
+.two-col{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 20px;
+}
+
+.two-col-item{
+    margin-top: 30px;
+    width: 40%;
+    text-align: left;
+}
+
+.two-col-item img{
+    width: 250px;
+}
+
+#banner1{
+    background: url("/Images/Dark-banner-background.jpg");
+    background-size: auto;
+    background-position: center center;
+    height: 500px;
+}
