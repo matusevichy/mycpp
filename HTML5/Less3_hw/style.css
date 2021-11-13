@@ -5,7 +5,7 @@ body{
 }
 
 header{
-    background: url("/Images/header_fon.jpg");
+    background: url("Images/header_fon.jpg");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: cover;
@@ -136,18 +136,18 @@ nav img{
 }
 
 article{
-    margin-top: 30px;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 article.even{
-    background-color: lightgray;
+    background-color: rgb(243, 240, 240);
 }
 
 .two-col{
     width: 100%;
     display: flex;
     justify-content: space-evenly;
-    padding: 20px;
 }
 
 .two-col-item{
@@ -161,8 +161,66 @@ article.even{
 }
 
 #banner1{
-    background: url("/Images/Dark-banner-background.jpg");
+    background: url("Images/Dark-banner-background.jpg");
     background-size: auto;
     background-position: center center;
     height: 500px;
+    margin-top: 30px;
+}
+
+.team-item{
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-item img{
+    width: 20%;
+}
+
+#price .about-item{
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+    background-color: white;
+    min-height: 200px;
+}
+
+#price .about-item-title{
+    color: seagreen;
+}
+
+#price .about-item img{
+    width: 10px;
+}
+
+#price .about-item button{
+    width: 100%;
+    border: none;
+    background-color: seagreen;
+    color: white;
+    height: 30px;
+    margin-bottom: 0px;
+}
+
+#map .two-col-item img{
+    width: 100%;
+}
+
+#banner2{
+    background: url("Images/blackfone.jpg");
+    background-size: auto;
+    background-position: center center;
+    height: 500px;
+    margin-top: 30px;
+}
+
+footer nav{
+    color: seagreen;
+    padding:20px;
+    font-size: small;
+}
+
+footer nav a{
+    color: grey;
+    text-decoration: none;
 }

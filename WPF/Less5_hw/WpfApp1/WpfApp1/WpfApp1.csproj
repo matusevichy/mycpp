@@ -11,10 +11,4 @@
     <PackageReference Include="MaterialDesignThemes" Version="4.2.1" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Page Update="Windows\Book\AddWindow.xaml">
-      <XamlRuntime>$(DefaultXamlRuntime)</XamlRuntime>
-    </Page>
-  </ItemGroup>
-
 </Project>

@@ -72,7 +72,7 @@ namespace WpfApp1
         private void ButtonEditBook_Click(object sender, RoutedEventArgs e)
         {
             BookModel book = (sender as Button).DataContext as BookModel;
-            AddWindow editWnd = new AddWindow(book);
+            EditWindow editWnd = new EditWindow(book);
 
             if (editWnd.ShowDialog() == true)
             {
@@ -97,7 +97,26 @@ namespace WpfApp1
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            EditWindow editWnd = new EditWindow(new BookModel());
 
+            if (editWnd.ShowDialog() == true)
+            {
+                Books.Add(editWnd.Book);
+                ViewBooks.Clear();
+                ViewBooks.AddRange(Books);
+            }
+        }
+
+        private void ButtonDeleteBook_Click(object sender, RoutedEventArgs e)
+        {
+            var result = MessageBox.Show("Do you want delete this record?", "Delete???", MessageBoxButton.OKCancel, MessageBoxImage.Warning);
+            if(result==MessageBoxResult.OK)
+            {
+                BookModel book = (sender as Button).DataContext as BookModel;
+                Books.Remove(book);
+                ViewBooks.Clear();
+                ViewBooks.AddRange(Books);
+            }
         }
     }
 }
