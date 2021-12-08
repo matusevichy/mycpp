@@ -1,14 +1,17 @@
 body{
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
+    font-family: system-ui;
+    min-width: 800px;
 }
 
 header{
     width: 100%;
-    height: 600px;
+    height: 650px;
     background-image: url("Images/headerfone.jpg");
     background-size: cover;
     padding-top: 1px;
+    margin-bottom: 60px;
 }
 
 .header-top{
@@ -17,7 +20,7 @@ header{
     align-items: center;
     justify-content: space-between;
     width: 90%;
-    height: 60px;
+    height: 80px;
     margin: 0 auto;
     background-color: white;
     margin-top:20px;
@@ -25,7 +28,7 @@ header{
 
 #logo{
     font-size: 36px;
-    color:rgb(74, 218, 182);
+    color:#1ab798;
     margin-left: 50px;
 }
 #logo img{
@@ -39,7 +42,7 @@ nav.mainmenu{
     display: flex;
     float: right;
     justify-content: space-evenly;
-    width: 40%;
+    width: 50%;
 }
 
 nav.mainmenu a{
@@ -52,3 +55,240 @@ nav.mainmenu a{
 nav.mainmenu a:current{
     color: black;
 }
+
+.btnDownload button{
+    background-color: #1ab798;
+    border:none;
+    border-radius: 5px;
+    height: 40px;
+    width: 170px;
+    margin-top: 50px;
+}
+.btnDownload button a{
+    color: white;
+    font-size: 24px;
+    vertical-align: middle;
+    text-decoration: none;
+}
+
+.btnDownload img{
+    width: 24px;
+}
+
+.header-body{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    width: 80%;
+    margin: 100px auto 0 auto;
+}
+
+.header-body-left{
+    color: white;
+}
+
+.header-body-left ul li{
+    margin: 10px 0 10px 0;
+    padding-left: 10px;}
+
+.header-body-left ul li::marker{
+    content: ">";
+
+}
+
+.header-body-left h1{
+    padding: 0;
+    margin:0
+}
+
+.header-body-left h2{
+    padding: 0;
+    margin:0
+}
+
+.header-body-right{
+    position: relative;
+}
+
+.header-body-right #img1{
+    position: absolute;
+    left: -400px;
+    top: -150px;
+    width: 250px;
+    z-index: 10;
+}
+
+.header-body-right #img2{
+    position: absolute;
+    left: -350px;
+    top: -250px;
+    width: 300px;
+}
+
+.line {
+    width: 53px;
+    height: 0;
+    border: 1px solid #C4C4C4;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    display:inline-block;
+}
+
+.content .features,
+.content .team,
+.content .customers{
+    margin: 50px auto 50px auto;
+    text-align: center;
+    width: 80%;
+}
+
+.content .features h1,
+.content .team h1,
+.content .customers h1{
+    text-transform: uppercase;
+    color: #1ab798;
+    margin:0;
+}
+
+.content .features .lineimage,
+.content .team .lineimage,
+.content .customers .lineimage,
+footer .lineimage{
+    width: 200px;
+}
+
+.features-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin:0 auto;
+}
+
+.features-body img{
+    width: 250px;
+}
+
+.features-body div{
+    align-items: flex-start;
+}
+
+.features-body div img{
+    width: 40px;
+}
+
+.video{
+    display: flex;
+    justify-content: center;
+    background-color:#31d4e7;
+    margin: 50px 0 50px 0;
+}
+.video > div{
+    width: 40%;
+    margin: 30px 0 30px 0;
+}
+
+.video-image img{
+    width:100%;
+}
+
+.video-text h1{
+    text-transform: uppercase;
+}
+
+.video-text p{
+    color:#fff;
+}
+
+.team{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.team-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+.team-item img{
+    width: 80%;
+}
+
+.customers-item img{
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+    border: 1px solid gray;
+}
+
+.customers-text{
+    width: 90%;
+    margin: 0 auto;
+}
+.customers-text img{
+    width: 30px;
+}
+
+footer{
+    text-align: center;
+    color: white;
+    background: url("Images/Dark-banner-background.jpg");
+    height: 500px;
+}
+
+.footer-items{
+    width: 70%;
+    margin: 50px auto 50px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .left-item{
+    text-align: left;
+}
+
+footer .contacts{
+    text-align: left;
+    color: blueviolet;
+}
+
+footer .right-item #name,
+footer .right-item #email{
+    display: inline;
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+footer .right-item #message{
+    display:block;
+    border-radius: 5px;
+    width: 422px;
+    height: 150px;
+    margin: 20px 5px 5px 5px;
+}
+
+footer #submit{
+    color: white;
+    width: 150px;
+    height: 50px;
+    background-color: turquoise;
+    border-radius: 5px;
+    border: none;
+    margin: 5px;
+    text-transform: uppercase;
+    font-size: 24px;
+}
+
+footer .right-item{
+    text-align: right;
+}
+
+footer .right-item #message::placeholder,
+footer .right-item #name::placeholder,
+footer .right-item #email::placeholder{
+    font-size: 20px;
+}
+

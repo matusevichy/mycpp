@@ -1,0 +1,297 @@
+body{
+    margin: 0;
+}
+
+.container{
+    width: 960px;
+    margin: 0 auto;
+}
+
+header,
+footer{
+    background-color: #000;
+    height:75px;
+}
+
+header .container{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 60%;
+}
+
+nav a{
+    font-size: 16px;
+    font-family: Comfortaa, Arial, sans-serif !important;
+    color: #fff !important; 
+    text-decoration: none;
+}
+
+a:hover{
+    color:#f7bc00 !important;
+}
+
+.slider{
+    background:url(Images/bg_pattern_1.png);
+    height: 500px;
+    display: flex;
+}
+
+.slider .container{
+    display: flex;
+    background: url(Images/icons_bg.png) no-repeat;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.slider .container .slider-image{
+    display: flex;
+    width: 939px;
+    margin: auto;
+    background-color: #fff;
+}
+
+.slider-image img{
+    padding: 5px;
+    width: 929px;
+}
+
+.about .container{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px auto;
+}
+
+.about .container .about-item{
+    position: relative;
+    text-align: center;
+    color: grey;
+}
+
+.about .container .about-item h3{
+    font: 22px/26px 'Comfortaa', Arial, sans-serif;
+}
+
+.about .container .about-item a{
+    color:#000;
+    text-decoration: none;
+}
+
+.about .container #image1::before,
+.about .container #image2::before{
+    position: absolute;
+    display: inline-block;
+    content: '';
+    width: 18px;
+    height: 20px;
+    right: -24px;
+    top: 55px;
+    }
+
+.about .container #image1::before{
+    background: url(Images/plus_sign.png);
+}
+
+.about .container #image2::before{
+    background: url(Images/equal_sign.png);
+}
+
+.subscribe {
+    background: url(Images/bg_pattern_1.png);
+    display: flex;
+    height: 145px;
+    color: #fff;
+    flex-direction: row;
+}
+
+.subscribe .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscribe .title{
+    font: 40px/70px 'Pacifico', cursive;
+    background: url(Images/letter_sign.png) no-repeat left;
+    padding-left: 90px;
+}
+
+.subscribe form{
+    height: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.subscribe #email{
+    width: 380px;
+    height: 34px;
+    margin-right: 10px;
+    color:#f7bc00;
+    font-size: 14px;
+}
+
+.subscribe button{
+    width: 220px;
+    height: 40px;
+    padding: 0 !important;
+    background-color: #7c7c7c;
+    border: none;
+    text-transform: uppercase;
+    color: #fff;
+    font: bold 20px/45px "Comfortaa", Arial, sans-serif;
+    transition: all .5s ease;
+}
+
+.subscribe button:hover{
+    background-color: #000;
+}
+
+.products {
+    margin-top: 50px;
+}
+
+.products .title{
+    font: 40px/70px 'Pacifico', cursive;
+    background: url(Images/cell_sign.png) no-repeat left;
+    padding-left: 90px;
+}
+
+.products .container .product-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.products .container .product-item{
+    position: relative;
+}
+
+.products .container .product-item p{
+    color: gray;
+}
+
+.products .container .product-item .marker{
+    right: 10px;
+    position: absolute;
+}
+
+.products .container .product-item .marker p{
+    right: 10px;
+    color: #fff;
+    top: -14px;
+    position: absolute;
+    font-size: 20px;
+}
+
+.products .container .product-item > img{
+    border: 1px lightgrey solid;
+}
+
+.products .container .product-item a{
+    color:#000;
+    text-decoration: none;
+    font: 22px/26px 'Comfortaa', Arial, sans-serif;
+    margin-top: 14px;
+}
+
+.products .container .product-item a:hover{
+    color:#f7bc00;
+}
+
+.ordering{
+    background: url(Images/bg_pattern_2.png);
+}
+
+.ordering .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.ordering .container >div{
+    padding-top: 30px;
+}
+
+.ordering .left{
+    width: 300px;
+}
+
+.ordering .left-item .text1{
+    background: url(Images/quote_bg.png);
+    height: 220px;
+}
+
+.ordering .left-item .text1 p{
+    width: 200px;
+    padding-top: 40px;
+    padding-left: 40px;
+    color: #fff;
+}
+
+.ordering .left-item .text2{
+    text-align: center;
+    padding: 0;
+    font: 22px/28px 'Comfortaa', Arial, sans-serif;
+    margin: 0;
+}
+
+.ordering .left-item .text3{
+    text-align: center;
+    margin: 0;
+    color: grey;
+    font: bold 14px/20px 'Comfortaa', Arial, sans-serif;
+}
+
+.ordering .right{
+    display: flex;
+    width: 65%;
+    color:#fff;
+    flex-direction: column;
+}
+
+.ordering .right .title{
+    background: url(Images/sign3.png) no-repeat left;
+    font: 40px/65px 'Pacifico', Arial, sans-serif;
+    padding-left: 60px;
+    height: 60px;
+}
+
+.ordering .right .p1,
+.ordering .right .p2{
+    display: flex;
+    padding: 10px;
+}
+
+.ordering .right .num{
+    font: 40px/40px 'Pacifico', Arial, sans-serif;
+}
+
+.ordering .right .text{
+    padding-left: 10px;
+}
+
+footer{
+    display: flex;
+    align-items: center;
+}
+
+footer .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #fff;
+}
+
