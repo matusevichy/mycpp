@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    <title>Honey</title>
+</head>
+<body>
+    <header>
+        <div class="container-1">
+            <div class="logo col-2">
+                <a href="#">
+                    <img src="Images/logo.png" alt="Home">
+                </a>
+            </div>
+            <nav>
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="#" class="nav-link">About Us</a>
+                <a href="#" class="nav-link">Products</a>
+                <a href="#" class="nav-link">Galery</a>
+                <a href="#" class="nav-link">Ordering</a>
+                <a href="#" class="nav-link">Contacts</a>
+            </nav>
+        </div>
+    </header>
+    <div class="slider">
+        <div class="container-1">
+            <div class="slider-image">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="Images/slide1.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="Images/slide2.jpg" class="d-block w-100" alt="...">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="Images/slide3.jpg" class="d-block w-100" alt="...">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Предыдущий</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"  data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Следующий</span>
+                    </button>
+                  </div>            </div>
+        </div>
+    </div>
+    <div class="about">
+        <div class="container-1">
+            <div id="image1" class="about-item col-4 p-3">
+                <img src="Images/page1_icon1.png" alt="" class="about-image" >
+                <h3><a href="#">Duis autemve</a></h3>
+                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet</p>
+            </div>
+            <div id="image2" class="about-item col-4 p-3">
+                <img src="Images/page1_icon2.png" alt="" class="about-image" >
+                <h3><a href="#">Eodem modot</a></h3>
+                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet</p>
+            </div>
+            <div id="image3" class="about-item col-4 p-3">
+                <img src="Images/page1_icon3.png" alt="" class="about-image" >
+                <h3><a href="#">Ut wisi enim adm</a></h3>
+                <p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet</p>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe">
+        <div class="container-1">
+            <div class="title">Newsletter</div>
+            <form action="">
+                <input type="email" name="email" id="email" placeholder="E-mail" class="form-control">
+                <button type="submit"  class="form-control">Subscribe</button>
+            </form>
+        </div>
+    </div>
+    <div class="products">
+        <div class="container-1">
+            <div class="title">Products</div>
+            <div class="product-items">
+                <div class="row row-cols-4 row-cols-md-4 g-4">
+                    <div class="col">
+                      <div class="card h-100 product-item">
+                        <div class="marker">
+                            <img src="Images/price_bg.png" alt="">
+                            <p>$7</p>
+                        </div>
+                        <img src="Images/page1_pic1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                          <h5 class="card-title"><a href="#">Duis autemve</a></h5>
+                          <p class="card-text">Nam liber teor cum soluta nob is</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100 product-item">
+                          <div class="marker">
+                              <img src="Images/price_bg.png" alt="">
+                              <p>$7</p>
+                          </div>
+                          <img src="Images/page1_pic1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="#">Duis autemve</a></h5>
+                            <p class="card-text">Nam liber teor cum soluta nob is</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100 product-item">
+                          <div class="marker">
+                              <img src="Images/price_bg.png" alt="">
+                              <p>$7</p>
+                          </div>
+                          <img src="Images/page1_pic1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="#">Duis autemve</a></h5>
+                            <p class="card-text">Nam liber teor cum soluta nob is</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100 product-item">
+                          <div class="marker">
+                              <img src="Images/price_bg.png" alt="">
+                              <p>$7</p>
+                          </div>
+                          <img src="Images/page1_pic1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="#">Duis autemve</a></h5>
+                            <p class="card-text">Nam liber teor cum soluta nob is</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100 product-item">
+                          <div class="marker">
+                              <img src="Images/price_bg.png" alt="">
+                              <p>$7</p>
+                          </div>
+                          <img src="Images/page1_pic1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="#">Duis autemve</a></h5>
+                            <p class="card-text">Nam liber teor cum soluta nob is</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100 product-item">
+                          <div class="marker">
+                              <img src="Images/price_bg.png" alt="">
+                              <p>$7</p>
+                          </div>
+                          <img src="Images/page1_pic1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="#">Duis autemve</a></h5>
+                            <p class="card-text">Nam liber teor cum soluta nob is</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100 product-item">
+                          <div class="marker">
+                              <img src="Images/price_bg.png" alt="">
+                              <p>$7</p>
+                          </div>
+                          <img src="Images/page1_pic1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="#">Duis autemve</a></h5>
+                            <p class="card-text">Nam liber teor cum soluta nob is</p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col">
+                        <div class="card h-100 product-item">
+                          <div class="marker">
+                              <img src="Images/price_bg.png" alt="">
+                              <p>$7</p>
+                          </div>
+                          <img src="Images/page1_pic1.jpg" class="card-img-top" alt="...">
+                          <div class="card-body">
+                            <h5 class="card-title"><a href="#">Duis autemve</a></h5>
+                            <p class="card-text">Nam liber teor cum soluta nob is</p>
+                          </div>
+                        </div>
+                      </div>
+                              </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="ordering">
+        <div class="container-1">
+            <div class="left">
+                <div class="left-item">
+                    <div class="text1">
+                        <p>“congue nihil imperdiet doming id am liber tempor cum so luta nob is eleifend option quod mazim pla cerat facer possim  nihil imperdiet doming id qu”</p>
+                    </div>
+                    <h3 class="text2">Jessy Smith</h3>
+                    <p class="text3">Office Manager, USA</p>
+                </div>
+            </div>
+            <div class="right">
+                <div class="title">
+                    Ordering
+                </div>
+                <div class="p1">
+                    <div class="num">
+                        1.
+                    </div>
+                    <div class="text">
+                        Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea.
+                    </div>
+                </div>
+                <div class="p2">
+                    <div class="num">
+                        2.
+                    </div>
+                    <div class="text">
+                        Sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imper.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="container-1 justify-content-between">
+            <div class="logo col-4">
+                <a href="#">
+                    <img src="Images/logo.png" alt="Home">
+                </a>
+            </div>
+            <div class="copyright col-4">
+                (C) 2021 | Privacy policy
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
