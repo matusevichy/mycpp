@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .hw2{
+            position: fixed;
+            width: 100%;
+            min-height: 100%;
+            border: 1px solid grey;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <!-- Задание 2 -->
+    <div class="hw2">
+        <span class="x">0</span> : <span class="y">0</span><br>
+        <span class="button"></span>
+    </div>
+
+    <script>
+    const UI={
+        onMoveDiv: document.querySelector('.hw2'),
+        coords:{
+            x: document.querySelector('.x'),
+            y: document.querySelector('.y'),
+            button: document.querySelector('.button')
+        },
+    };
+    UI.onMoveDiv.onmousemove = (ev) => {
+        UI.coords.x.innerText=ev.x;
+        UI.coords.y.innerText=ev.y;
+    }
+
+    UI.onMoveDiv.onmousedown = (ev) => {
+        ev=ev|| window.event;
+        switch(ev.button){
+            case 0:
+                UI.coords.button.innerText = 'Left bullon';
+                break;
+            case 1:
+                UI.coords.button.innerText = 'Middle bullon';
+                break;
+            case 2:
+                UI.coords.button.innerText = 'Right bullon';
+                break;
+        }
+    }
+    </script>
+</body>
+</html>
