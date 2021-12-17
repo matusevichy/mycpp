@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            width: 450px;
+            background-color: wheat;
+            padding: 10px;
+        }
+        button{
+            margin-top: 10px;
+            width: 450px;
+        }
+        .container table{
+            margin-top: 20px;
+            width: 100%;
+            border-spacing: 0px;
+        }
+        .container table thead{
+            font-weight: bold;
+            text-align: center;
+        }
+        .container table td{
+            border: 1px solid gray;
+            text-align: center;
+        }
+        .container table td.weekend{
+            color:red;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <label for="month">Month:</label>
+        <input type="text" name="month" id="month">
+        <label for="year">Year:</label>
+        <input type="text" name="year" id="year">
+        <button id="btnGen">Generate</button>
+        <table>
+            <thead><tr>
+                <td>MON</td>
+                <td>TUE</td>
+                <td>WED</td>
+                <td>THU</td>
+                <td>FRI</td>
+                <td>SUT</td>
+                <td>SUN</td>
+            </tr></thead>
+        </table>
+    </div>
+    <script>
+        const button = document.querySelector("#btnGen");
+        const month = document.querySelector("#month");
+        const year = document.querySelector("#year");
+        const table = document.querySelector("table");
+        const thead = document.querySelector("thead");
+        button.onclick = () => {
+            let date = new Date(`${year.value}-${month.value}-01`);
+            create(date);
+        }
+        
+        function create(date){
+            const tbody = document.querySelector("tbody");
+            tbody?.remove();
+            let str="<tr>";
+            let day=1;
+            let style="";
+            while(date.getMonth()+1 == parseInt(month.value, 10))
+            {
+                if(date.getMonth()+1 == parseInt(month.value, 10)){
+                    if(day==7) day=0;
+                    if(day==0 || day==6) style="class='weekend'"; else style="";
+                    if(date.getDay() == day){
+                        str+=`<td ${style}>${date.getDate()}</td>`;
+                        date.setDate(date.getDate()+1);
+                    }
+                    else{
+                        str+=`<td>&nbsp</td>`;
+                    }
+                }
+                if(day==0) {
+                    str+="</tr><tr>";
+                }
+                day++;
+
+            }
+            str+="</tr>";
+            const tr=document.createElement("tbody");
+            tr.innerHTML= str;
+            thead.parentNode.insertBefore(tr,thead);
+        }
+    </script>
+</body>
+</html>

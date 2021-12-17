@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .container{
+            display: flex;
+            width: 550px;
+            height: 50px;
+            border: 1px solid grey;
+            align-items: center;
+            justify-content: center;
+        }
+        .bar{
+            display: block;
+            width: 500px;
+            height: 14px;
+            background-color: lightgray;
+            position: relative;
+        }
+        .track{
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: blue;
+            top: -3px;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="bar">
+            <div class="track"></div>
+        </div>
+    </div>
+    <script>
+        let pos = 0;
+        let run=false;
+        const bar=document.querySelector(".bar");
+        const track=document.querySelector(".track");
+        bar.onmousemove = (ev) => {
+            if(run) if(ev.x-34 <500) track.style.left = `${ev.x-34}px`;
+        };
+        bar.onmousedown = (ev) => {
+            ev=ev|| window.event;
+            if(ev.button === 0) run=true;            
+        }
+        bar.onmouseup = (ev) => {
+            ev=ev|| window.event;
+            if(ev.button === 0) run=false;            
+        }
+    </script>
+</body>
+</html>
