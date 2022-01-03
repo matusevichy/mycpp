@@ -1,0 +1,137 @@
+body{
+    background-color: antiquewhite;
+}
+
+.content{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.search-block{
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    align-items: center;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 300px;
+    height: 150px;
+    align-items: center;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+.search-block h2{
+    margin: 0;
+}
+
+.search-form > div{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 10px;
+}
+.search-form label{
+    padding-right: 30px;
+}
+
+.search-form #title{
+    width: 200px;
+}
+
+.search-form #type{
+    width: 205px;
+}
+
+.search-form #submit{
+    width: 90%;
+    margin: 5px;
+}
+
+.list-block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.list-item{
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+    margin: 20px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.list-item img{
+    width: 150px;
+    height: 222px;
+}
+
+.list-item .info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 10px;
+}
+
+.list-item .info .title{
+    font-weight: bold;
+}
+
+.paginator{
+    display: flex;
+    justify-content: center;
+}
+
+.paginator .current{
+    background-color: lightgrey;
+    pointer-events: none;
+}
+
+.disabled{
+    pointer-events: none;
+}
+
+.movies{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-block{
+    display: flex;
+    flex-direction: row;
+    margin: 30px auto;
+    border: 1px solid grey;
+    border-radius: 5px;
+    width: 1000px;
+    padding: 10px;
+    font-size: large;
+}
+
+.movie-block .info{
+    padding: 20px;
+}
+
+.movie-block .info >div{
+    display: flex;
+    flex-direction: row;
+    padding-top: 20px;
+}
+
+.movie-block .info .label{
+    width: 140px;
+}
+
+.movie-block img{
+    width: 300px;
+    height: 436px;
+}
