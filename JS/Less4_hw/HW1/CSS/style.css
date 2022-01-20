@@ -1,0 +1,116 @@
+body{
+    background-color: bisque;
+}
+
+.buttonsPanel{
+    margin: 20px auto;
+    width: 265px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.buttonsPanel input{
+    width: 170px;
+    margin: 2px;
+}
+
+.buttonsPanel #size{
+    width: 160px;
+    text-align: center;
+}
+
+.board{
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.board .row{
+    display: flex;
+    flex-direction: row;
+}
+
+.board .cell{
+    width: 60px;
+    height: 60px;
+    border: 1px solid grey;
+    font-size: 30px;
+    line-height: 60px;
+    text-align: center;
+    pointer-events: none;
+    user-select: none;
+}
+
+.board .empty{
+    background-color: white;
+}
+
+.board .row #num-2{
+    background-color: yellowgreen;
+}
+
+.board .row #num-4{
+    background-color: lightblue;
+}
+
+.board .row #num-8{
+    background-color: lightpink;
+}
+
+.board .row #num-16{
+    background-color: lightyellow;
+}
+
+.board .row #num-32{
+    background-color: lightseagreen;
+}
+
+.board .row #num-64{
+    background-color: goldenrod;
+}
+
+.board .row #num-128{
+    background-color: mediumseagreen;
+}
+
+.board .row #num-256{
+    background-color: mediumslateblue;
+}
+
+.board .row #num-512{
+    background-color: mediumpurple;
+}
+
+.board .row #num-1024{
+    background-color: olivedrab;
+}
+
+.board .row #num-2048{
+    background-color: orange;
+}
+
+.board .row #num-4096{
+    background-color: plum;
+}
+
+.board .row #num-8192{
+    background-color: red;
+}
+
+.board .row #num-16384{
+    background-color: royalblue;
+}
+
+.board .row #num-32768{
+    background-color: salmon;
+}
+
+.disabled{
+    pointer-events: none;
+    opacity: 0.4;
+}

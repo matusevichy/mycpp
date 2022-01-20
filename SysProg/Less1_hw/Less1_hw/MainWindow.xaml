@@ -1,0 +1,32 @@
+﻿<Window x:Class="Less1_hw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Less1_hw"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <StackPanel>
+        <ListBox ItemsSource="{Binding Workers}" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="400px">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid DataContext="{Binding}">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="{Binding FirstName}" Grid.Column="0"></TextBlock>
+                        <TextBlock Text="{Binding LastName}" Grid.Column="1"></TextBlock>
+                        <TextBlock Text="{Binding Phone}" Grid.Column="2"></TextBlock>
+                        <TextBlock Text="{Binding Email}" Grid.Column="3"></TextBlock>
+                        <TextBlock Text="{Binding DateBegin}" Grid.Column="4"></TextBlock>
+                    </Grid>
+
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</Window>

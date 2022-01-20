@@ -8,19 +8,19 @@
     "net5.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\user\\.nuget\\packages\\": {}
+    "C:\\Users\\Yura\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\work\\c++\\WPF\\Less3_hw\\Less1_hw\\Less1_hw.csproj",
+      "projectUniqueName": "C:\\Work\\c++\\WPF\\Less3_hw\\Less1_hw\\Less1_hw.csproj",
       "projectName": "Less1_hw",
-      "projectPath": "E:\\work\\c++\\WPF\\Less3_hw\\Less1_hw\\Less1_hw.csproj",
-      "packagesPath": "C:\\Users\\user\\.nuget\\packages\\",
-      "outputPath": "E:\\work\\c++\\WPF\\Less3_hw\\Less1_hw\\obj\\",
+      "projectPath": "C:\\Work\\c++\\WPF\\Less3_hw\\Less1_hw\\Less1_hw.csproj",
+      "packagesPath": "C:\\Users\\Yura\\.nuget\\packages\\",
+      "outputPath": "C:\\Work\\c++\\WPF\\Less3_hw\\Less1_hw\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\user\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Yura\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -63,7 +63,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.303\\RuntimeIdentifierGraph.json"
       }
     }
   }
