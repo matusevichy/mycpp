@@ -17,10 +17,5 @@ namespace DAL.Repositories
             entity.MiddleName = user.MiddleName;
             entity.Birth = user.Birth;
         }
-
-        public void Create(Func<object, Action<global::AutoMapper.IMappingOperationOptions<object, User>>, User> map)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

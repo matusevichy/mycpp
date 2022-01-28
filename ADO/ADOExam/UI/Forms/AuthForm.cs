@@ -19,6 +19,7 @@ namespace UI.Forms
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.KeyPreview = true;
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -38,6 +39,14 @@ namespace UI.Forms
             else
             {
                 MessageBox.Show("Login or password incorrect", "Error", MessageBoxButtons.OK);
+            }
+        }
+
+        private void AuthForm_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if(e.KeyChar == (char)Keys.Enter)
+            {
+                btnOk_Click(btnOk, e);
             }
         }
     }

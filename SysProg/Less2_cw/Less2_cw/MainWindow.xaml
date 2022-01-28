@@ -1,0 +1,85 @@
+﻿<Window x:Class="Less2_cw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Less2_cw"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0">
+            <TextBlock Text="All tasks"></TextBlock>
+            <ListBox ItemsSource="{Binding Tasks}" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="400px">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Progress}" Grid.Column="1"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <TextBlock Text="Worked tasks"></TextBlock>
+            <ListBox ItemsSource="{Binding WorkedTasks}" Grid.Column="1" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="400px">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Progress}" Grid.Column="1"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Column="2">
+            <TextBlock Text="Waiting tasks"></TextBlock>
+            <ListBox ItemsSource="{Binding WaitingTasks}" Grid.Column="2" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="400px">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Progress}" Grid.Column="1"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Column="3">
+            <TextBlock Text="Finished tasks"></TextBlock>
+            <ListBox ItemsSource="{Binding FinishedTasks}" Grid.Column="3" ScrollViewer.VerticalScrollBarVisibility="Visible" Height="400px">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="100"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Progress}" Grid.Column="1"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>

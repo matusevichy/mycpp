@@ -1,0 +1,124 @@
+﻿<Window x:Class="Less2_hw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Less2_hw"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" KeyDown="Window_KeyDown">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock Text="Sea" HorizontalAlignment="Center"></TextBlock>
+            <ScrollViewer Height="100">
+                <ListBox  ItemsSource="{Binding Ships}">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                    <ColumnDefinition Width="50"></ColumnDefinition>
+                                    <ColumnDefinition Width="*"></ColumnDefinition>
+                                </Grid.ColumnDefinitions>
+                                <TextBlock Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                                <TextBlock Text="{Binding Type}" Grid.Column="1"></TextBlock>
+                                <TextBlock Text="{Binding Capasity}" Grid.Column="2"></TextBlock>
+                            </Grid>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+            </ScrollViewer>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="Tunnel" HorizontalAlignment="Center"></TextBlock>
+            <ListBox ItemsSource="{Binding ShipsInTunnel}" ScrollViewer.VerticalScrollBarVisibility="Visible" VerticalAlignment="Stretch">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Type}" Grid.Column="1"></TextBlock>
+                            <TextBlock Text="{Binding Capasity}" Grid.Column="2"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="0">
+            <TextBlock Text="BananPier" HorizontalAlignment="Center"></TextBlock>
+            <ListBox ItemsSource="{Binding ShipsInBananPier}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Type}" Grid.Column="1"></TextBlock>
+                            <TextBlock Text="{Binding Capasity}" Grid.Column="2"></TextBlock>
+                            <TextBlock Text="{Binding Current}" Grid.Column="3"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="1">
+            <TextBlock Text="BreadPier" HorizontalAlignment="Center"></TextBlock>
+            <ListBox ItemsSource="{Binding ShipsInBreadPier}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Type}" Grid.Column="1"></TextBlock>
+                            <TextBlock Text="{Binding Capasity}" Grid.Column="2"></TextBlock>
+                            <TextBlock Text="{Binding Current}" Grid.Column="3"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Grid.Column="2">
+            <TextBlock Text="DressPier" HorizontalAlignment="Center"></TextBlock>
+            <ListBox ItemsSource="{Binding ShipsInDressPier}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="50"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <TextBlock Text="{Binding Id}" Grid.Column="0"></TextBlock>
+                            <TextBlock Text="{Binding Type}" Grid.Column="1"></TextBlock>
+                            <TextBlock Text="{Binding Capasity}" Grid.Column="2"></TextBlock>
+                            <TextBlock Text="{Binding Current}" Grid.Column="3"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>

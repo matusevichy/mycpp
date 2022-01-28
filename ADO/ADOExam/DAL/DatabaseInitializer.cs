@@ -46,7 +46,7 @@ namespace DAL
             context.SaveChanges();
             var author = new Author
             {
-                FirstName = "Anrey",
+                FirstName = "Andrey",
                 LastName = "Belyanin",
                 MiddleName = "H",
                 Birth = DateTime.Parse("01.05.1970")
@@ -63,7 +63,12 @@ namespace DAL
             {
                 Name = "Fantastic"
             };
+            var genre1 = new Genre
+            {
+                Name = "Roman"
+            };
             context.Genres.Add(genre);
+            context.Genres.Add(genre1);
             context.SaveChanges();
             var book1 = new Book
             {
@@ -95,7 +100,7 @@ namespace DAL
                 Name = "Cossack in the paradise",
                 Pages = 220,
                 Author = author,
-                Genre = genre,
+                Genre = genre1,
                 Creator = creator,
                 BasePrice = 300,
                 Price = 400,
@@ -113,6 +118,31 @@ namespace DAL
                 Books = new List<Book> { book1, book3 }
             };
             context.Promos.Add(promo);
+            context.SaveChanges();
+            var sale = new Sale
+            {
+                Book = book1,
+                User = acc1.User,
+                SaleDate = DateTime.Parse("01.01.2022"),
+                Count = 10
+            };
+            var sale1 = new Sale
+            {
+                Book = book3,
+                User = acc1.User,
+                SaleDate = DateTime.Parse("01.01.2022"),
+                Count = 20
+            };
+            var sale2 = new Sale
+            {
+                Book = book2,
+                User = acc.User,
+                SaleDate = DateTime.Parse("01.01.2022"),
+                Count = 15
+            };
+            context.Sales.Add(sale);
+            context.Sales.Add(sale1);
+            context.Sales.Add(sale2);
             context.SaveChanges();
         }
     }

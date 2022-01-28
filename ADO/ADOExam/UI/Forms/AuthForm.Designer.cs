@@ -85,11 +85,11 @@ namespace UI.Forms
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 5;
-            this.btnOk.Text = "Ok";
+            this.btnOk.Text = "aaaaaaaaaaazdffffffffffff";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 
-            // Form1
+            // AuthForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -100,8 +100,9 @@ namespace UI.Forms
             this.Controls.Add(this.label1);
             this.Controls.Add(this.tbPassword);
             this.Controls.Add(this.tbLogin);
-            this.Name = "Form1";
+            this.Name = "AuthForm";
             this.Text = "Form1";
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.AuthForm_KeyPress);
             this.ResumeLayout(false);
             this.PerformLayout();
 

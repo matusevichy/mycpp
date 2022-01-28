@@ -21,5 +21,10 @@ namespace BLL.DTO
         public double Price { get; set; }
         public int? PrevBookId { get; set; }
         public BookDTO PrevBook { get; set; }
+
+        public override string ToString()
+        {
+            return $"{Name} Author: {Author}";
+        }
     }
 }

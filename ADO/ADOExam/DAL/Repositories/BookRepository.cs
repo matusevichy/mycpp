@@ -44,5 +44,6 @@ namespace DAL.Repositories
                 FirstOrDefault(b => b.Id == id);
             return book;
         }
+        public 
     }
 }

@@ -75,6 +75,7 @@
     <Compile Include="Services\GenreService.cs" />
     <Compile Include="Services\IService.cs" />
     <Compile Include="Services\PromoService.cs" />
+    <Compile Include="Services\SaleService.cs" />
     <Compile Include="Services\UserService.cs" />
   </ItemGroup>
   <ItemGroup />
