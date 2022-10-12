@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевірка знання таблиці множення</title>
+    <style>
+        * {
+            font-family: cursive;
+        }
+
+        td ~ td, th ~ th {
+            border-left: 1px solid black;
+        }
+
+        td {
+            text-align: center;
+        }
+
+        table {
+            font-size: 1.3rem;
+            width: 350px;
+            margin: 20px auto;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            width: 15em;
+        }
+
+        fieldset {
+            border-radius: 10px;
+        }
+
+        [type=number] {
+            width: 5em;
+        }
+
+        form div {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            justify-content: center;
+        }
+
+        label {
+            width: 10em;
+        }
+
+        .right {
+            color: green;
+        }
+
+        .wrong {
+            color: red;
+        }
+
+        h2 {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h1>Перевірка знання таблиці множення</h1>
+<h2>Відповіді</h2>
+<table>
+    <thead>
+    <tr>
+        <th>№</th>
+        <th>Вираз</th>
+        <th>Відповідь</th>
+        <th>Вірна відповідь</th>
+    </tr>
+    </thead>
+    <tbody>
+    @RenderBody()
+    </tbody>
+</table>
+</body>
+</html>

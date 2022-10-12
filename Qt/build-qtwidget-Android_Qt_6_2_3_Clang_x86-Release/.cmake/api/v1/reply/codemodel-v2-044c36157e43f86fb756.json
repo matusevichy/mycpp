@@ -1,0 +1,141 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "qtwidget",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aab-Release-5d5ddc192dbde76f034b.json",
+					"name" : "aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk-Release-c42dd7ea215d81cbb694.json",
+					"name" : "apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Release-b898d1444eb835abccd6.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Release-6fc57b1b79e00ed2c2a4.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qtwidget::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qtwidget-Release-3f2d7c110b6c69161b05.json",
+					"name" : "qtwidget",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qtwidget_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qtwidget_autogen-Release-fc9ed295a759148065f8.json",
+					"name" : "qtwidget_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qtwidget_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qtwidget_autogen_timestamp_deps-Release-a020256c6dfdb5c39d50.json",
+					"name" : "qtwidget_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qtwidget_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qtwidget_make_aab-Release-701e36f46dca0cfab81d.json",
+					"name" : "qtwidget_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qtwidget_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qtwidget_make_apk-Release-1a0d64c6eef02c64aa25.json",
+					"name" : "qtwidget_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qtwidget_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qtwidget_prepare_apk_dir-Release-87e526c7af1a6fce3e4a.json",
+					"name" : "qtwidget_prepare_apk_dir",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Release",
+		"source" : "C:/Work/c++/Qt/qtwidget"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

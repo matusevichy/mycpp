@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<statistics>
+  <!---->
+  <Statistic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <date>2022-10-12T15:12:39.086774+03:00</date>
+    <trueAnswersCount>0</trueAnswersCount>
+    <falseAnswersCount>10</falseAnswersCount>
+  </Statistic>
+  <!---->
+  <Statistic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <date>2022-10-12T15:13:02.6421913+03:00</date>
+    <trueAnswersCount>5</trueAnswersCount>
+    <falseAnswersCount>5</falseAnswersCount>
+  </Statistic>
+  <!---->
+  <Statistic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <date>2022-10-12T15:14:45.4454885+03:00</date>
+    <trueAnswersCount>5</trueAnswersCount>
+    <falseAnswersCount>5</falseAnswersCount>
+  </Statistic>
+  <!---->
+  <Statistic xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <date>2022-10-12T16:56:57.6707717+03:00</date>
+    <trueAnswersCount>10</trueAnswersCount>
+    <falseAnswersCount>0</falseAnswersCount>
+  </Statistic>
+</statistics>

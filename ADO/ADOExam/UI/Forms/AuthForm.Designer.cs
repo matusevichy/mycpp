@@ -48,6 +48,7 @@ namespace UI.Forms
             // 
             this.tbPassword.Location = new System.Drawing.Point(12, 75);
             this.tbPassword.Name = "tbPassword";
+            this.tbPassword.PasswordChar = '*';
             this.tbPassword.Size = new System.Drawing.Size(216, 20);
             this.tbPassword.TabIndex = 1;
             // 
@@ -85,7 +86,7 @@ namespace UI.Forms
             this.btnOk.Name = "btnOk";
             this.btnOk.Size = new System.Drawing.Size(75, 23);
             this.btnOk.TabIndex = 5;
-            this.btnOk.Text = "aaaaaaaaaaazdffffffffffff";
+            this.btnOk.Text = "Ok";
             this.btnOk.UseVisualStyleBackColor = true;
             this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
             // 

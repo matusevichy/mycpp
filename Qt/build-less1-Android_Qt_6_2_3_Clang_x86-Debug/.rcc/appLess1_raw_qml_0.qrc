@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/Less1/">
+    <file alias="main.qml">C:/Work/c++/Qt/less1/main.qml</file>
+    <file alias="RESOURCE">C:/Work/c++/Qt/less1/RESOURCE</file>
+    <file alias="propolis-pchelinyj.jpg">C:/Work/c++/Qt/less1/propolis-pchelinyj.jpg</file>
+  </qresource>
+</RCC>
+

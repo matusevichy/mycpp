@@ -19,9 +19,12 @@ namespace DAL.Repositories
             entity.Name = promo.Name;
             Save();
         }
-        public override IEnumerable<Promo> GetAll()
+        public override IEnumerable<Promo> GetAll() 
         {
-            var promos = Table.Include(p => p.Books).ToList();
+            var promos = Table.Include(p => p.Books.Select(b =>b.Author))
+                              .Include(p => p.Books.Select(b => b.Creator))
+                              .Include(p => p.Books.Select(b => b.Genre))
+                              .Include(p => p.Books.Select(b => b.PrevBook)).ToList();
             return promos;
         }
         public override Promo GetById(int id)

@@ -1,0 +1,54 @@
+{
+  "Version": 1,
+  "Hash": "IWNzS+G8qh6phVveT0Q9eVrJyRXIY19Vjnz4ZyeJoLE=",
+  "Source": "Less1_hw",
+  "BasePath": "_content/Less1_hw",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Less1_hw\\wwwroot",
+      "Source": "Less1_hw",
+      "ContentRoot": "C:\\Work\\c++\\ASPNet\\Less1_hw\\Less1_hw\\wwwroot\\",
+      "BasePath": "_content/Less1_hw",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Work\\c++\\ASPNet\\Less1_hw\\Less1_hw\\wwwroot\\Default.html",
+      "SourceId": "Less1_hw",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Work\\c++\\ASPNet\\Less1_hw\\Less1_hw\\wwwroot\\",
+      "BasePath": "_content/Less1_hw",
+      "RelativePath": "Default.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Default.html"
+    },
+    {
+      "Identity": "C:\\Work\\c++\\ASPNet\\Less1_hw\\Less1_hw\\wwwroot\\README.html",
+      "SourceId": "Less1_hw",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Work\\c++\\ASPNet\\Less1_hw\\Less1_hw\\wwwroot\\",
+      "BasePath": "_content/Less1_hw",
+      "RelativePath": "README.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\README.html"
+    }
+  ]
+}

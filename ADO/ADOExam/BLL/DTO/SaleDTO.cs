@@ -14,5 +14,9 @@ namespace BLL.DTO
         public UserDTO User { get; set; }
         public DateTime SaleDate { get; set; } = DateTime.Now;
         public int Count { get; set; }
+        public override string ToString()
+        {
+            return $"{Book} Count: {Count} for {User} on {SaleDate}";
+        }
     }
 }

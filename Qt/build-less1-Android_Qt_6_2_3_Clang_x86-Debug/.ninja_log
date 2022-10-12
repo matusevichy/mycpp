@@ -1,0 +1,13 @@
+# ninja log v5
+6	44	0	C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/cmake.verify_globs	cc291d66f3cb97b6
+13	278	6684732800043725	less1_autogen/timestamp	c99e61e7e34cf3cb
+13	278	6684732800043725	less1_autogen/mocs_compilation.cpp	c99e61e7e34cf3cb
+286	368	6684732801703775	less1_autogen/EWIEGA46WW/qrc_qml.cpp	897bdaeb340a116f
+13	278	6684732800043725	C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/less1_autogen/timestamp	c99e61e7e34cf3cb
+13	278	6684732800043725	C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/less1_autogen/mocs_compilation.cpp	c99e61e7e34cf3cb
+286	368	6684732801703775	C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/less1_autogen/EWIEGA46WW/qrc_qml.cpp	897bdaeb340a116f
+278	404	6684732802100336	C:/Work/c++/Qt/less1/less1_en_150.ts	4730a8bd98126cd1
+404	486	6684732802898060	CMakeFiles/less1.dir/less1_autogen/mocs_compilation.cpp.o	482ad7c84219293d
+411	505	6684732803091665	CMakeFiles/less1.dir/less1_autogen/EWIEGA46WW/qrc_qml.cpp.o	63ef26f5f00ca615
+417	2211	6684732819966687	CMakeFiles/less1.dir/main.cpp.o	adcd3307dc469b1
+2215	2423	6684732822151204	libless1_x86.so	b2f479f0d5592546

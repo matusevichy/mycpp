@@ -1,0 +1,15 @@
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\bin\Debug\net6.0\ThreadPool HW.exe
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\bin\Debug\net6.0\ThreadPool HW.deps.json
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\bin\Debug\net6.0\ThreadPool HW.runtimeconfig.json
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\bin\Debug\net6.0\ThreadPool HW.dll
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\bin\Debug\net6.0\ThreadPool HW.pdb
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\ThreadPool HW.csproj.AssemblyReference.cache
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\ThreadPool HW.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\ThreadPool HW.AssemblyInfoInputs.cache
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\ThreadPool HW.AssemblyInfo.cs
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\ThreadPool HW.csproj.CoreCompileInputs.cache
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\ThreadPool HW.dll
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\refint\ThreadPool HW.dll
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\ThreadPool HW.pdb
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\ThreadPool HW.genruntimeconfig.cache
+C:\Work\c++\SysProg\Less2_new_hw\Less2_new_hw\obj\Debug\net6.0\ref\ThreadPool HW.dll

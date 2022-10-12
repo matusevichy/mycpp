@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LHCzVCd1QEV0pmhuQ1v6os1uowuE6VT/aHFt7QTqVNrQKJKGh5HgFHfaWpUgW7rBkPFQ0eT37kKMVtUkUtt3Aw==",
+  "dgSpecHash": "GKAkmL0rr7idD1l7+VxFY5n8ZSo0pj7AnginPPXhIwDQwylqXT79GcD7TOpIGrpUXYxK7kRmmj8Fs4RBUcei0Q==",
   "success": true,
-  "projectFilePath": "E:\\work\\c++\\C#\\Exam\\Exam\\Exam.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Work\\c++\\C#\\Exam\\Exam\\Exam.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Yura\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.18\\microsoft.netcore.app.host.win-x64.3.1.18.nupkg.sha512"
+  ],
   "logs": []
 }

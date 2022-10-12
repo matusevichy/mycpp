@@ -9,6 +9,6 @@ namespace DAL.Entities
     public class BaseEntity<T> where T:struct
     {
         public int Id { get; set; }
-        public DateTime Cteated { get; set; } = DateTime.Now;
+        public DateTime Created { get; set; } = DateTime.Now;
     }
 }

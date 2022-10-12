@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>militreg_lite</id>
+    <version>1.0.0</version>
+    <authors>militreg_lite</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net5.0-windows7.0">
+        <dependency id="AutoMapper" version="11.0.1" exclude="Build,Analyzers" />
+        <dependency id="DotNetZip" version="1.16.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore" version="5.0.15" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Proxies" version="5.0.15" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.EntityFrameworkCore.Sqlite" version="5.0.15" exclude="Build,Analyzers" />
+        <dependency id="System.Linq" version="4.3.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+    <frameworkReferences>
+      <group targetFramework="net5.0-windows7.0">
+        <frameworkReference name="Microsoft.WindowsDesktop.App.WPF" />
+      </group>
+    </frameworkReferences>
+  </metadata>
+  <files>
+    <file src="C:\Work\c++\WPF\militreg_lite\militreg_lite\bin\Release\net5.0-windows\militreg_lite.runtimeconfig.json" target="lib\net5.0-windows7.0\militreg_lite.runtimeconfig.json" />
+    <file src="C:\Work\c++\WPF\militreg_lite\militreg_lite\bin\Release\net5.0-windows\militreg_lite.dll" target="lib\net5.0-windows7.0\militreg_lite.dll" />
+  </files>
+</package>

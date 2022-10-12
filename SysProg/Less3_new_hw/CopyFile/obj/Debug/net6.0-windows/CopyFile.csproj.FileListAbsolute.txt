@@ -1,0 +1,17 @@
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.csproj.AssemblyReference.cache
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.Form1.resources
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.csproj.GenerateResource.cache
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.AssemblyInfoInputs.cache
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.AssemblyInfo.cs
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.csproj.CoreCompileInputs.cache
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\bin\Debug\net6.0-windows\CopyFile.exe
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\bin\Debug\net6.0-windows\CopyFile.deps.json
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\bin\Debug\net6.0-windows\CopyFile.runtimeconfig.json
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\bin\Debug\net6.0-windows\CopyFile.dll
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\bin\Debug\net6.0-windows\CopyFile.pdb
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.dll
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\refint\CopyFile.dll
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.pdb
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\CopyFile.genruntimeconfig.cache
+C:\Work\c++\SysProg\Less3_new_hw\CopyFile\obj\Debug\net6.0-windows\ref\CopyFile.dll

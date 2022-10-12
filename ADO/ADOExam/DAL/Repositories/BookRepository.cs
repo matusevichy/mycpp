@@ -44,6 +44,53 @@ namespace DAL.Repositories
                 FirstOrDefault(b => b.Id == id);
             return book;
         }
-        public 
+        public IEnumerable<Book> GetLatest(string offset)
+        {
+            var prevDate = SaleRepository.PrevDate(offset);
+            var books = Table.
+                Include(b => b.Author).
+                Include(b => b.Creator).
+                Include(b => b.Genre).
+                Include(b => b.PrevBook).
+                Where(b => b.Created <= DateTime.Now && b.Created > prevDate).
+                ToList();
+            return books;
+        }
+
+        public IEnumerable<Book> GetBooksOfListBookId(List<int> ids)
+        {
+            var books = Table.
+            Include(b => b.Author).
+            Include(b => b.Creator).
+            Include(b => b.Genre).
+            Include(b => b.PrevBook).
+            Where(b => ids.Contains(b.Id)).
+            ToList();
+            return books;
+        }
+
+        public IEnumerable<Book> GetByAuthorId(int id)
+        {
+            var books = Table.
+                Include(b => b.Author).
+                Include(b => b.Creator).
+                Include(b => b.Genre).
+                Include(b => b.PrevBook).
+                Where(b => b.AuthorId == id).
+                ToList();
+            return books;
+        }
+
+        public IEnumerable<Book> GetByGenreId(int id)
+        {
+            var books = Table.
+                Include(b => b.Author).
+                Include(b => b.Creator).
+                Include(b => b.Genre).
+                Include(b => b.PrevBook).
+                Where(b => b.GenreId == id).
+                ToList();
+            return books;
+        }
     }
 }

@@ -1,0 +1,15 @@
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\bin\Debug\net6.0\WebServer.exe
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\bin\Debug\net6.0\WebServer.deps.json
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\bin\Debug\net6.0\WebServer.runtimeconfig.json
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\bin\Debug\net6.0\WebServer.dll
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\bin\Debug\net6.0\WebServer.pdb
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\WebServer.csproj.AssemblyReference.cache
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\WebServer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\WebServer.AssemblyInfoInputs.cache
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\WebServer.AssemblyInfo.cs
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\WebServer.csproj.CoreCompileInputs.cache
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\WebServer.dll
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\refint\WebServer.dll
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\WebServer.pdb
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\WebServer.genruntimeconfig.cache
+C:\Work\c++\LanProg\Less1_hw\Less1_hw\obj\Debug\net6.0\ref\WebServer.dll

@@ -1,0 +1,17 @@
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\bin\Debug\net6.0-windows\StopWatch.exe
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\bin\Debug\net6.0-windows\StopWatch.deps.json
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\bin\Debug\net6.0-windows\StopWatch.runtimeconfig.json
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\bin\Debug\net6.0-windows\StopWatch.dll
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\bin\Debug\net6.0-windows\StopWatch.pdb
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.csproj.AssemblyReference.cache
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.Form1.resources
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.csproj.GenerateResource.cache
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.AssemblyInfoInputs.cache
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.AssemblyInfo.cs
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.csproj.CoreCompileInputs.cache
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.dll
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\refint\StopWatch.dll
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.pdb
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\StopWatch.genruntimeconfig.cache
+C:\Work\c++\SysProg\Less2_new_hw\StopWatch\obj\Debug\net6.0-windows\ref\StopWatch.dll

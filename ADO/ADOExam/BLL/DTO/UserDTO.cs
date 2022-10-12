@@ -12,5 +12,9 @@ namespace BLL.DTO
         public string LastName { get; set; }
         public string MiddleName { get; set; }
         public DateTime Birth { get; set; }
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName}"; 
+        }
     }
 }

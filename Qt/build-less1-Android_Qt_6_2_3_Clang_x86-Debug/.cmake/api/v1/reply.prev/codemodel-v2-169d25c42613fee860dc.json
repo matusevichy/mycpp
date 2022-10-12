@@ -1,0 +1,195 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "Less1",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-aab-Debug-0d7e178a4f89309bf85f.json",
+					"name" : "aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-146ec2a06cc24b6607f5.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-93bf6178ee3cd3a86b27.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk-Debug-568844f4c276f6584d15.json",
+					"name" : "apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "apk_all::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-apk_all-Debug-dc4860ea6f2928488892.json",
+					"name" : "apk_all",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1-Debug-6e3a2ddf54ab857e076c.json",
+					"name" : "appLess1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1_autogen-Debug-914ee1cb1e98e35df142.json",
+					"name" : "appLess1_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1_autogen_timestamp_deps-Debug-640cc1ce3023ae594434.json",
+					"name" : "appLess1_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1_make_aab::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1_make_aab-Debug-e9f8528319216b1a9514.json",
+					"name" : "appLess1_make_aab",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1_make_apk::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1_make_apk-Debug-793adb783040ccd6a891.json",
+					"name" : "appLess1_make_apk",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1_other_files-Debug-33bb190e209bcdc5a799.json",
+					"name" : "appLess1_other_files",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1_prepare_apk_dir::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1_prepare_apk_dir-Debug-66a0d4ba70062b4b10f9.json",
+					"name" : "appLess1_prepare_apk_dir",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1_qmllint-Debug-acd94a2727c44447d62e.json",
+					"name" : "appLess1_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1_qmltyperegistration-Debug-108f74c4a1442bad559c.json",
+					"name" : "appLess1_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appLess1_tooling::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appLess1_tooling-Debug-4bf7cdb0ccfb356ed927.json",
+					"name" : "appLess1_tooling",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-qt_internal_plugins-Debug-e6082a3993086fc732bb.json",
+					"name" : "qt_internal_plugins",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug",
+		"source" : "C:/Work/c++/Qt/less1"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}

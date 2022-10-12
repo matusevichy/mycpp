@@ -1,0 +1,17 @@
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\bin\Debug\net6.0-windows\DirComparer.exe
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\bin\Debug\net6.0-windows\DirComparer.deps.json
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\bin\Debug\net6.0-windows\DirComparer.runtimeconfig.json
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\bin\Debug\net6.0-windows\DirComparer.dll
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\bin\Debug\net6.0-windows\DirComparer.pdb
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\DirComparer.csproj.AssemblyReference.cache
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\Less3_new_hw.Form1.resources
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\DirComparer.csproj.GenerateResource.cache
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\DirComparer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\DirComparer.AssemblyInfoInputs.cache
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\DirComparer.AssemblyInfo.cs
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\DirComparer.csproj.CoreCompileInputs.cache
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\DirComparer.dll
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\refint\DirComparer.dll
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\DirComparer.pdb
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\DirComparer.genruntimeconfig.cache
+C:\Work\c++\SysProg\Less4_new_hw\Less3_new_hw\obj\Debug\net6.0-windows\ref\DirComparer.dll

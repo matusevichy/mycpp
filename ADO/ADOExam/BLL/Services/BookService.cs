@@ -38,5 +38,25 @@ namespace BLL.Services
         {
             repository.Update(mapper.Map<Book>(dto));
         }
+        public List<BookDTO> GetLatest(string offset)
+        {
+            List<Book> books = (List<Book>)repository.GetLatest(offset);
+            return mapper.Map<List<BookDTO>>(books);
+        }
+        public IEnumerable<BookDTO> GetBooksOfListBookId(List<int> ids)
+        {
+            List<Book> books = (List<Book>)repository.GetBooksOfListBookId(ids);
+            return mapper.Map<List<BookDTO>>(books);
+        }
+        public List<BookDTO> GetBooksByAuthorId(int id)
+        {
+            List<Book> books = (List<Book>)repository.GetByAuthorId(id);
+            return mapper.Map<List<BookDTO>>(books);
+        }
+        public List<BookDTO> GetBooksByGenreId(int id)
+        {
+            List<Book> books = (List<Book>)repository.GetByGenreId(id);
+            return mapper.Map<List<BookDTO>>(books);
+        }
     }
 }

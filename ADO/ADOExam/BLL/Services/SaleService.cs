@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BLL.Services
 {
-    class SaleService : BaseService, IService<SaleDTO>
+    public class SaleService : BaseService, IService<SaleDTO>
     {
         SaleRepository repository = new SaleRepository();
         public void Create(SaleDTO dto)
@@ -37,13 +37,19 @@ namespace BLL.Services
         {
             throw new NotImplementedException();
         }
-        public int GetMostPopularGenreId()
+
+        public int GetMostPopularGenreId(string offset)
         {
-            return repository.GetMostPopularGenreId();
+            return repository.GetMostPopularGenreId(offset);
         }
-        public int GetMostPopularAuthorId()
+        public int GetMostPopularAuthorId(string offset)
         {
-            return repository.GetMostPopularAuthorId();
+            return repository.GetMostPopularAuthorId(offset);
+        }
+        public List<int> GetMostPopularBooks(string offset)
+        {
+            List<int> books = (List<int>)repository.GetMostPopularBooks(offset);
+            return books;
         }
     }
 }

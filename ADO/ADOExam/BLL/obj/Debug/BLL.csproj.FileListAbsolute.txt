@@ -1,3 +1,5 @@
+C:\Work\c++\ADO\ADOExam\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Work\c++\ADO\ADOExam\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Work\c++\ADO\ADOExam\BLL\bin\Debug\BLL.dll.config
 C:\Work\c++\ADO\ADOExam\BLL\bin\Debug\BLL.dll
 C:\Work\c++\ADO\ADOExam\BLL\bin\Debug\BLL.pdb
@@ -10,8 +12,6 @@ C:\Work\c++\ADO\ADOExam\BLL\bin\Debug\DAL.dll.config
 C:\Work\c++\ADO\ADOExam\BLL\bin\Debug\AutoMapper.xml
 C:\Work\c++\ADO\ADOExam\BLL\bin\Debug\EntityFramework.xml
 C:\Work\c++\ADO\ADOExam\BLL\bin\Debug\EntityFramework.SqlServer.xml
-C:\Work\c++\ADO\ADOExam\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
-C:\Work\c++\ADO\ADOExam\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
 C:\Work\c++\ADO\ADOExam\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Work\c++\ADO\ADOExam\BLL\obj\Debug\BLL.dll
 C:\Work\c++\ADO\ADOExam\BLL\obj\Debug\BLL.pdb

@@ -1,0 +1,12 @@
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/apk_all.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/qtwidget_prepare_apk_dir.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/apk.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/aab.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/qtwidget.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/qt_internal_plugins.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/qtwidget_make_apk.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/qtwidget_make_aab.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/edit_cache.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/rebuild_cache.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/qtwidget_autogen_timestamp_deps.dir
+C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/qtwidget_autogen.dir

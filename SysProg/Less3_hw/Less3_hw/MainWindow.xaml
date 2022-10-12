@@ -1,0 +1,127 @@
+﻿<Window x:Class="Less3_hw.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Less3_hw"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="1024">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <StackPanel Grid.Column="0" Grid.Row="0" Name="spDict">
+            <TextBlock Text="Dictionary of the forbidden words" Grid.Column="0" HorizontalAlignment="Center"></TextBlock>
+            <ListBox ItemsSource="{Binding dict}" Grid.Column="0" VerticalAlignment="Stretch" Height="100" ScrollViewer.VerticalScrollBarVisibility="Visible" Name="lbDict">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+            <TextBlock Text="Input words for add to dictionary, separate ','" HorizontalAlignment="Center"></TextBlock>
+            <TextBox x:Name="tbAddToDict" MinWidth="100"></TextBox>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="btnAddToDict" Content="Add to dict" Margin="10" MinWidth="100" Click="btnAddToDict_Click"></Button>
+                <Button x:Name="btnClearDict" Content="Clear dict" Margin="10" MinWidth="100" Click="btnClearDict_Click" IsEnabled="False"></Button>
+                <Button x:Name="btnDeleteFromDict" Content="Delete word" Margin="10" MinWidth="100" Click="btnDeleteFromDict_Click" IsEnabled="False"></Button>
+                <Button x:Name="btnSaveDict" Content=" Save to file" Margin="10" MinWidth="100" IsEnabled="False" Click="btnSaveDict_Click"></Button>
+            </StackPanel>
+            
+        </StackPanel>
+        <StackPanel Grid.Row="0" Grid.Column="1">
+            <TextBlock Text="Path to folder for move file" HorizontalAlignment="Center"></TextBlock>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Stretch">
+                <TextBlock MinWidth="200px" Name="tbMoveTOFolder" HorizontalAlignment="Stretch"></TextBlock>
+                <Button Content="Change folder" Margin="10" Click="Button_Click"></Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button Content="Load dictionary" Name="btnLoadDict" Margin="10" MinWidth="100" Click="btnLoadDict_Click"></Button>
+                <Button Content="Start" Name="btnStart" Margin="10" MinWidth="100" IsEnabled="False" Click="btnStart_Click"></Button>
+                <Button Content="Pause" Name="btnPause" Margin="10" MinWidth="100" IsEnabled="False" Click="btnPause_Click"></Button>
+                <Button Content="Stop" Name="btnStop" Margin="10" MinWidth="100" IsEnabled="False" Click="btnStop_Click"></Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel x:Name="spCurrentDirs" Grid.Row="1">
+            <TextBlock Text="Current Directories" HorizontalAlignment="Center"></TextBlock>
+            <ListBox x:Name="lbCurrentDirs" ItemsSource="{Binding currentDirs}"  VerticalAlignment="Stretch" Height="170" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel x:Name="spCurrentFiles" Grid.Row="1" Grid.Column="1">
+            <TextBlock Text="Current Files" HorizontalAlignment="Center"></TextBlock>
+            <ListBox x:Name="lbCurrentFiles" ItemsSource="{Binding currentFiles}"  VerticalAlignment="Stretch" Height="170" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel x:Name="spReportList" Grid.Row="2">
+            <TextBlock Text="Changed files" HorizontalAlignment="Center"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="File name" Width="300"></TextBlock>
+                <TextBlock Text="Replace count"></TextBlock>
+            </StackPanel>
+            <ListBox x:Name="lbChangedFiles" ItemsSource="{Binding items}"  VerticalAlignment="Stretch" Height="155" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Name}" Width="300"></TextBlock>
+                            <TextBlock Text="{Binding ReplaceCount}"></TextBlock>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel x:Name="spTopWords" Grid.Row="2" Grid.Column="1">
+            <TextBlock Text="Top 10 forbidden words" HorizontalAlignment="Center"></TextBlock>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Word" Width="300"></TextBlock>
+                <TextBlock Text="Count"></TextBlock>
+            </StackPanel>
+            <ListBox x:Name="lbTopWords" ItemsSource="{Binding topLists}"  VerticalAlignment="Stretch" Height="155" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Name}" Width="300"></TextBlock>
+                            <TextBlock Text="{Binding Count}"></TextBlock>                           
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel x:Name="spWrongDirs" Grid.Row="3">
+            <TextBlock Text="Wrong Directories" HorizontalAlignment="Center"></TextBlock>
+            <ListBox x:Name="lbWrongDirs" ItemsSource="{Binding wrongDirectories}"  VerticalAlignment="Stretch" Height="170" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+        <StackPanel x:Name="spWrongFiles" Grid.Row="3" Grid.Column="1">
+            <TextBlock Text="Wrong Files" HorizontalAlignment="Center"></TextBlock>
+            <ListBox x:Name="lbWrongFiles" ItemsSource="{Binding wrongFiles}"  VerticalAlignment="Stretch" Height="170" ScrollViewer.VerticalScrollBarVisibility="Visible">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <TextBlock Text="{Binding}"></TextBlock>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </StackPanel>
+    </Grid>
+</Window>

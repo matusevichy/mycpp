@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Перевірка знання таблиці множення</title>
+    <style>
+        * {
+            font-family: cursive;            
+        }
+        form {
+            font-size: 1.3rem;
+        }
+        h1 {
+            text-align: center;
+        }
+
+        form {
+            margin: 20px auto;
+            padding: 20px;
+            width: 15em;
+        }
+        
+        fieldset {
+            border-radius: 10px;
+        }
+
+        [type=number] {
+            width: 5em;
+        }
+
+        form div {
+            display: flex;
+            flex-direction: row;
+            margin: 10px;
+            justify-content: center;
+        }
+
+        label {
+            width: 10em;
+        }
+    </style>
+</head>
+<body>
+<h1>Перевірка знання таблиці множення</h1>
+<form method="post">
+    <fieldset>
+        <legend>Завдання</legend>
+        @RenderBody()
+    </fieldset>
+    <div>
+        <input type="submit" value="Перевірити"/>
+    </div>
+</form>
+</body>
+</html>

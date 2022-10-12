@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Статистика перевірки знань</title>
+    <style>
+        * {
+            font-family: cursive;
+        }
+        h1 {
+            text-align: center;
+        }
+        table{
+            margin: auto;
+            border: 1px solid gray;
+            text-align: center;
+        }
+        td {
+            border: 1px solid gray;
+        }
+        thead{
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Статистика перевірки знань
+    </h1>
+    <table>
+        <thead>
+            <tr>
+                <td>Дата перевірки</td>
+                <td>Вірних відповідей</td>
+                <td>Невірних відповідей</td>
+            </tr>
+        </thead>
+        <tbody>
+            @RenderStatistic
+        </tbody>
+    </table>
+</body>
+</html>

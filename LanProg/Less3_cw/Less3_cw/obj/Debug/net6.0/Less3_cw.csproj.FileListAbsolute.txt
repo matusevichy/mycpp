@@ -1,0 +1,15 @@
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\bin\Debug\net6.0\Less3_cw.exe
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\bin\Debug\net6.0\Less3_cw.deps.json
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\bin\Debug\net6.0\Less3_cw.runtimeconfig.json
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\bin\Debug\net6.0\Less3_cw.dll
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\bin\Debug\net6.0\Less3_cw.pdb
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\Less3_cw.csproj.AssemblyReference.cache
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\Less3_cw.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\Less3_cw.AssemblyInfoInputs.cache
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\Less3_cw.AssemblyInfo.cs
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\Less3_cw.csproj.CoreCompileInputs.cache
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\Less3_cw.dll
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\refint\Less3_cw.dll
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\Less3_cw.pdb
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\Less3_cw.genruntimeconfig.cache
+C:\Work\c++\LanProg\Less3_cw\Less3_cw\obj\Debug\net6.0\ref\Less3_cw.dll

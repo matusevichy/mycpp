@@ -9,8 +9,8 @@ namespace BLL.DTO
     public class PromoDTO: BaseDTO
     {
         public string Name { get; set; }
-        public DateTime DateBegin { get; set; }
-        public DateTime DateEnd { get; set; }
-        public List<BookDTO> Books { get; set; }
+        public DateTime DateBegin { get; set; } = DateTime.Now;
+        public DateTime DateEnd { get; set; } = DateTime.Now;
+        public List<BookDTO> Books { get; set; } = new List<BookDTO>();
     }
 }

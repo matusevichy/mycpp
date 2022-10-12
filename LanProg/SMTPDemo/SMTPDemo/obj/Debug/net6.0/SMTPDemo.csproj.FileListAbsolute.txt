@@ -1,0 +1,15 @@
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/bin/Debug/net6.0/SMTPDemo
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/bin/Debug/net6.0/SMTPDemo.deps.json
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/bin/Debug/net6.0/SMTPDemo.runtimeconfig.json
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/bin/Debug/net6.0/SMTPDemo.dll
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/bin/Debug/net6.0/ref/SMTPDemo.dll
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/bin/Debug/net6.0/SMTPDemo.pdb
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/obj/Debug/net6.0/SMTPDemo.csproj.AssemblyReference.cache
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/obj/Debug/net6.0/SMTPDemo.GeneratedMSBuildEditorConfig.editorconfig
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/obj/Debug/net6.0/SMTPDemo.AssemblyInfoInputs.cache
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/obj/Debug/net6.0/SMTPDemo.AssemblyInfo.cs
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/obj/Debug/net6.0/SMTPDemo.csproj.CoreCompileInputs.cache
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/obj/Debug/net6.0/SMTPDemo.dll
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/obj/Debug/net6.0/ref/SMTPDemo.dll
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/obj/Debug/net6.0/SMTPDemo.pdb
+/home/maksym/RiderProjects/SMTPDemo/SMTPDemo/obj/Debug/net6.0/SMTPDemo.genruntimeconfig.cache

@@ -1,0 +1,17 @@
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\bin\Debug\net6.0-windows\Less1_new_hw2.exe
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\bin\Debug\net6.0-windows\Less1_new_hw2.deps.json
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\bin\Debug\net6.0-windows\Less1_new_hw2.runtimeconfig.json
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\bin\Debug\net6.0-windows\Less1_new_hw2.dll
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\bin\Debug\net6.0-windows\Less1_new_hw2.pdb
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.csproj.AssemblyReference.cache
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.Form1.resources
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.csproj.GenerateResource.cache
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.AssemblyInfoInputs.cache
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.AssemblyInfo.cs
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.csproj.CoreCompileInputs.cache
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.dll
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\refint\Less1_new_hw2.dll
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.pdb
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\Less1_new_hw2.genruntimeconfig.cache
+C:\Work\c++\SysProg\Less1_new_hw2\Less1_new_hw2\obj\Debug\net6.0-windows\ref\Less1_new_hw2.dll

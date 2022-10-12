@@ -34,6 +34,7 @@ namespace DAL
                 Login = "admin",
                 Password = "123456",
                 Email = "admin@gmail.com",
+                IsAdmin = true,
                 User = new User
                 {
                     FirstName = "Admin",

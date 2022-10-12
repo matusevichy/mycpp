@@ -1,0 +1,6 @@
+Подготовить техническое задание на Курсовой проект по .NET
+1. Тема
+2. Используеміе фреймворки и внешние библиотеки (если есть)
+3. Функционал
+
+При необходимости внести изменения в таблицу https://docs.google.com/spreadsheets/d/1uncPdGMxiifZRvFnKaQxikOTXWFMtemEPHqvxmoeWGw/edit?usp=sharing

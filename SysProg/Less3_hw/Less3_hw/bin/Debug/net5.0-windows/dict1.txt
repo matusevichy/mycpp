@@ -1,0 +1,9 @@
+in
+rem
+bot
+run
+count
+lan
+plan
+sun
+out

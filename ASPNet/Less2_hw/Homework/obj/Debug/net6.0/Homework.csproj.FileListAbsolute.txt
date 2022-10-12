@@ -1,0 +1,42 @@
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/bin/Debug/net6.0/appsettings.Development.json
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/bin/Debug/net6.0/appsettings.json
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/bin/Debug/net6.0/Homework
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/bin/Debug/net6.0/Homework.deps.json
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/bin/Debug/net6.0/Homework.runtimeconfig.json
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/bin/Debug/net6.0/Homework.dll
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/bin/Debug/net6.0/ref/Homework.dll
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/bin/Debug/net6.0/Homework.pdb
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/Homework.csproj.AssemblyReference.cache
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/Homework.GeneratedMSBuildEditorConfig.editorconfig
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/Homework.AssemblyInfoInputs.cache
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/Homework.AssemblyInfo.cs
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/Homework.csproj.CoreCompileInputs.cache
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/Homework.MvcApplicationPartsAssemblyInfo.cache
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/staticwebassets.build.json
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/staticwebassets.development.json
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/scopedcss/bundle/Homework.styles.css
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/Homework.dll
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/ref/Homework.dll
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/Homework.pdb
+/home/maksym/Lessons/DotNet/ASP.NET/Fundamentals/Dependency injection/Homework/Homework/obj/Debug/net6.0/Homework.genruntimeconfig.cache
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\bin\Debug\net6.0\appsettings.Development.json
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\bin\Debug\net6.0\appsettings.json
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\bin\Debug\net6.0\Homework.exe
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\bin\Debug\net6.0\Homework.deps.json
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\bin\Debug\net6.0\Homework.runtimeconfig.json
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\bin\Debug\net6.0\Homework.dll
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\bin\Debug\net6.0\Homework.pdb
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\Homework.csproj.AssemblyReference.cache
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\Homework.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\Homework.AssemblyInfoInputs.cache
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\Homework.AssemblyInfo.cs
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\Homework.csproj.CoreCompileInputs.cache
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\Homework.MvcApplicationPartsAssemblyInfo.cache
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\staticwebassets.build.json
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\staticwebassets.development.json
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\scopedcss\bundle\Homework.styles.css
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\Homework.dll
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\refint\Homework.dll
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\Homework.pdb
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\Homework.genruntimeconfig.cache
+C:\Work\ASPNetLessons\Lesson2\Homework\Homework\obj\Debug\net6.0\ref\Homework.dll

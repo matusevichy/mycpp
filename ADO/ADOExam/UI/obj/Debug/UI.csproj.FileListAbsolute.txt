@@ -1,3 +1,14 @@
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Forms.AddBookForm.resources
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Forms.AddPromoForm.resources
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Forms.MainForm.resources
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Forms.AuthForm.resources
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Forms.PromoListForm.resources
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Forms.SaleBookForm.resources
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Forms.SaleInfoForm.resources
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Properties.Resources.resources
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.csproj.GenerateResource.cache
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
+C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.csproj.AssemblyReference.cache
 C:\Work\c++\ADO\ADOExam\UI\bin\Debug\UI.exe.config
 C:\Work\c++\ADO\ADOExam\UI\bin\Debug\UI.exe
 C:\Work\c++\ADO\ADOExam\UI\bin\Debug\UI.pdb
@@ -13,12 +24,6 @@ C:\Work\c++\ADO\ADOExam\UI\bin\Debug\DAL.dll.config
 C:\Work\c++\ADO\ADOExam\UI\bin\Debug\EntityFramework.xml
 C:\Work\c++\ADO\ADOExam\UI\bin\Debug\EntityFramework.SqlServer.xml
 C:\Work\c++\ADO\ADOExam\UI\bin\Debug\AutoMapper.xml
-C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.csproj.AssemblyReference.cache
-C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.MainForm.resources
-C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Forms.AuthForm.resources
-C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.Properties.Resources.resources
-C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.csproj.GenerateResource.cache
-C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.csproj.CoreCompileInputs.cache
 C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.csproj.CopyComplete
 C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.exe
 C:\Work\c++\ADO\ADOExam\UI\obj\Debug\UI.pdb

@@ -1,0 +1,4 @@
+module Less1
+typeinfo appLess1.qmltypes
+prefer :/Less1/
+

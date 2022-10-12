@@ -1,0 +1,15 @@
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\EAP.csproj.AssemblyReference.cache
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\EAP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\EAP.AssemblyInfoInputs.cache
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\EAP.AssemblyInfo.cs
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\EAP.csproj.CoreCompileInputs.cache
+C:\Work\c++\SysProg\Less3_new_cw\EAP\bin\Debug\net6.0\EAP.exe
+C:\Work\c++\SysProg\Less3_new_cw\EAP\bin\Debug\net6.0\EAP.deps.json
+C:\Work\c++\SysProg\Less3_new_cw\EAP\bin\Debug\net6.0\EAP.runtimeconfig.json
+C:\Work\c++\SysProg\Less3_new_cw\EAP\bin\Debug\net6.0\EAP.dll
+C:\Work\c++\SysProg\Less3_new_cw\EAP\bin\Debug\net6.0\EAP.pdb
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\EAP.dll
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\refint\EAP.dll
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\EAP.pdb
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\EAP.genruntimeconfig.cache
+C:\Work\c++\SysProg\Less3_new_cw\EAP\obj\Debug\net6.0\ref\EAP.dll

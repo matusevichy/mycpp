@@ -1,0 +1,105 @@
+{
+	"backtrace" : 5,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_custom_target",
+			"qt6_android_add_apk_target",
+			"_qt_internal_finalize_executable",
+			"qt6_finalize_target"
+		],
+		"files" : 
+		[
+			"C:/Qt/6.2.3/android_x86/lib/cmake/Qt6Core/Qt6AndroidMacros.cmake",
+			"C:/Qt/6.2.3/android_x86/lib/cmake/Qt6Core/Qt6CoreMacros.cmake",
+			"C:/Qt/6.2.3/android_x86/lib/cmake/Qt6Core/Qt6CoreMacros.cmake:661:EVAL",
+			"CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 3
+			},
+			{
+				"file" : 3,
+				"line" : -1,
+				"parent" : 0
+			},
+			{
+				"command" : 3,
+				"file" : 2,
+				"line" : 1,
+				"parent" : 1
+			},
+			{
+				"command" : 2,
+				"file" : 1,
+				"line" : 681,
+				"parent" : 2
+			},
+			{
+				"command" : 1,
+				"file" : 1,
+				"line" : 622,
+				"parent" : 3
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 337,
+				"parent" : 4
+			}
+		]
+	},
+	"dependencies" : 
+	[
+		{
+			"id" : "qt_internal_plugins::@6890427a1f51a3e7e1df"
+		},
+		{
+			"backtrace" : 5,
+			"id" : "appLess1::@6890427a1f51a3e7e1df"
+		}
+	],
+	"id" : "appLess1_prepare_apk_dir::@6890427a1f51a3e7e1df",
+	"name" : "appLess1_prepare_apk_dir",
+	"paths" : 
+	{
+		"build" : ".",
+		"source" : "."
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		},
+		{
+			"name" : "CMake Rules",
+			"sourceIndexes" : 
+			[
+				1
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 5,
+			"isGenerated" : true,
+			"path" : "C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/appLess1_prepare_apk_dir",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 0,
+			"isGenerated" : true,
+			"path" : "C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/appLess1_prepare_apk_dir.rule",
+			"sourceGroupIndex" : 1
+		}
+	],
+	"type" : "UTILITY"
+}

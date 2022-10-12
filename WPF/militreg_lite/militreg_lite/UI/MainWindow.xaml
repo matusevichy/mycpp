@@ -1,0 +1,56 @@
+﻿<Window x:Class="militreg_lite.UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:militreg_lite"
+        mc:Ignorable="d"
+        Title="Облік кадрів" Height="450" Width="800" WindowState="Maximized" WindowStyle="SingleBorderWindow">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="Налаштування">
+                <MenuItem Name="miUser" Header ="Користувачі" Click="miUser_Click"></MenuItem>
+                <MenuItem Name="miDict" Header="Довідники" Click="miDict_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="60"></RowDefinition>
+            </Grid.RowDefinitions>
+            <DataGrid Grid.Row="0" MouseDoubleClick="DG_MouseDoubleClick" ItemsSource="{Binding Militarists}" Name="DG" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Grid.ColumnSpan="4">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Binding="{Binding Rtck.Name}" Header="ТЦК"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Pidrozdil.Name}" Header="Підрозділ"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Posada.Name}" Header="Посада"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Oklad}" Header="Оклад"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Vos.Number}" Header="№ ВОС за штатом"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding ZvanShtat.Name}" Header="Звання за штатом"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding ZvanFact.Name}" Header="Звання фактичне"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Pib}" Header="ПІБ"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding DateBegin}" Header="Дата призову"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding DateEnd}" Header="Дата закінчення контракту"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding BirthDay}" Header="Дата народження"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Osvita}" Header="Освіта"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Ubd.Name}" Header="УБД"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding PrizivType.Name}" Header="Вид призову"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Gender.Name}" Header="Стать"></DataGridTextColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Grid Grid.ColumnSpan="4" Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="0" Content="Додати запис" Click="ButtonAdd_Click"></Button>
+                <Button Grid.Row="0" Grid.Column="1" Content="Редагувати запис" Click="ButtonEd_Click"></Button>
+                <Button Grid.Row="0" Grid.Column="2" Content="Видалити запис" Click="ButtonRM_Click"></Button>
+                <Button Grid.Row="0" Grid.Column="3" Content="Експорт" Click="ButtonExport_Click" />
+                <Button Grid.Row="0" Grid.Column="4" Content="Оновити" Click="Button_Refresh_Click" />
+            </Grid>
+        </Grid>
+    </DockPanel>
+</Window>

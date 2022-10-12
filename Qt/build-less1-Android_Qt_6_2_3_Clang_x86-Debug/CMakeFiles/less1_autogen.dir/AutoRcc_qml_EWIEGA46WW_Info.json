@@ -1,0 +1,19 @@
+{
+	"BUILD_DIR" : "C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/less1_autogen",
+	"CMAKE_BINARY_DIR" : "C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug",
+	"CMAKE_CURRENT_BINARY_DIR" : "C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug",
+	"CMAKE_CURRENT_SOURCE_DIR" : "C:/Work/c++/Qt/less1",
+	"CMAKE_SOURCE_DIR" : "C:/Work/c++/Qt/less1",
+	"INCLUDE_DIR" : "C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/less1_autogen/include",
+	"INPUTS" : [ "C:/Work/c++/Qt/less1/main.qml" ],
+	"LOCK_FILE" : "C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/less1_autogen.dir/AutoRcc_qml_EWIEGA46WW_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "qml" ],
+	"OUTPUT_CHECKSUM" : "EWIEGA46WW",
+	"OUTPUT_NAME" : "qrc_qml.cpp",
+	"RCC_EXECUTABLE" : "C:/Qt/6.2.3/mingw_64/./bin/rcc.exe",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "C:/Work/c++/Qt/build-less1-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/less1_autogen.dir/AutoRcc_qml_EWIEGA46WW_Used.txt",
+	"SOURCE" : "C:/Work/c++/Qt/less1/qml.qrc",
+	"VERBOSITY" : 0
+}

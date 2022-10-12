@@ -1,0 +1,31 @@
+﻿<Window x:Class="militreg_lite.UI.AddUserWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:militreg_lite.UI"
+        mc:Ignorable="d"
+        Title="AddUserWindow" Height="199" Width="400" SizeToContent="Height">
+    <Grid DataContext="{Binding}">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="36"></RowDefinition>
+            <RowDefinition Height="36"></RowDefinition>
+            <RowDefinition Height="36"></RowDefinition>
+            <RowDefinition Height="36"></RowDefinition>
+            <RowDefinition Height="36"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Content="Логін"></Label>
+        <TextBox x:Name="tbLogin" Text="{Binding Login}" Margin="100,0,0,0"/>
+        <Label Content="Пароль" Grid.Row="1"></Label>
+        <TextBox x:Name="tbPassword" Grid.Row="1" Text="{Binding Password}" Margin="100,0,0,0"/>
+        <Label Content="Роль (1,2,3)" Grid.Row="2"></Label>
+        <TextBox x:Name="tbRole" Grid.Row="2" Text="{Binding Role}" Margin="100,0,0,0" PreviewTextInput="tbRole_PreviewTextInput"/>
+        <Label Content="ТЦК:" Grid.Row="3"></Label>
+        <ComboBox x:Name="cbRtck" Grid.Row="3" SelectedItem="{Binding Path=Rtck, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Name" Margin="100,0,0,0"></ComboBox>
+        <DockPanel Grid.Row="15">
+            <Button Content="Cancel" Click="ButtonCancel_Click" Width="200"></Button>
+            <Button Content="Ok" Click="ButtonOk_Click"></Button>
+        </DockPanel>
+
+    </Grid>
+</Window>

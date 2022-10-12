@@ -1,0 +1,13 @@
+# ninja log v5
+5	849	6695120906475978	qtwidget_autogen/timestamp	98218b0013f312b6
+3423	3553	6695120935200329	libqtwidget_x86.so	c2e179fb714be6a1
+5	849	6695120906475978	qtwidget_autogen/mocs_compilation.cpp	98218b0013f312b6
+5	849	6695120906475978	C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/qtwidget_autogen/timestamp	98218b0013f312b6
+852	3423	6695120933799351	CMakeFiles/qtwidget.dir/mainwindow.cpp.o	7e7675c31f7b1fe3
+5	849	6695120906475978	C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/qtwidget_autogen/mocs_compilation.cpp	98218b0013f312b6
+850	3208	6695120931673751	CMakeFiles/qtwidget.dir/qtwidget_autogen/mocs_compilation.cpp.o	12efdff6553ef445
+854	3356	6695120933131559	CMakeFiles/qtwidget.dir/main.cpp.o	6163016bfab8b96e
+3553	3594	0	CMakeFiles/qtwidget_prepare_apk_dir	f506e4f6ce5cf7ef
+3553	3594	0	C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_x86-Debug/CMakeFiles/qtwidget_prepare_apk_dir	f506e4f6ce5cf7ef
+3	558	6695126464675169	build.ninja	5ad540907dace25d
+829	2553	6694905813744010	CMakeFiles/qtwidget.dir/database.cpp.o	da3e270ee1c3b5b7

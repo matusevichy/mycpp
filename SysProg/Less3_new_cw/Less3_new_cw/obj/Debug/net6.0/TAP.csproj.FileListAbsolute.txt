@@ -1,0 +1,15 @@
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\bin\Debug\net6.0\TAP.exe
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\bin\Debug\net6.0\TAP.deps.json
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\bin\Debug\net6.0\TAP.runtimeconfig.json
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\bin\Debug\net6.0\TAP.dll
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\bin\Debug\net6.0\TAP.pdb
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\TAP.csproj.AssemblyReference.cache
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\TAP.GeneratedMSBuildEditorConfig.editorconfig
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\TAP.AssemblyInfoInputs.cache
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\TAP.AssemblyInfo.cs
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\TAP.csproj.CoreCompileInputs.cache
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\TAP.dll
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\refint\TAP.dll
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\TAP.pdb
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\TAP.genruntimeconfig.cache
+C:\Work\c++\SysProg\Less3_new_cw\Less3_new_cw\obj\Debug\net6.0\ref\TAP.dll

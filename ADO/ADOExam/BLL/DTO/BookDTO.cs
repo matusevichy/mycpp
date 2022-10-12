@@ -16,7 +16,7 @@ namespace BLL.DTO
         public GenreDTO Genre { get; set; }
         public int? CreatorId { get; set; }
         public CreatorDTO Creator { get; set; }
-        public DateTime DateCreate { get; set; }
+        public DateTime DateCreate { get; set; } = DateTime.Now;
         public double BasePrice { get; set; }
         public double Price { get; set; }
         public int? PrevBookId { get; set; }
@@ -25,6 +25,11 @@ namespace BLL.DTO
         public override string ToString()
         {
             return $"{Name} Author: {Author}";
+        }
+
+        public override bool Equals(object obj)
+        {
+            return this.Id == (obj as BookDTO)?.Id;
         }
     }
 }

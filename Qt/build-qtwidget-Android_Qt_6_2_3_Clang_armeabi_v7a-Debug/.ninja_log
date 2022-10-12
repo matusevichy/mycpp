@@ -1,0 +1,12 @@
+# ninja log v5
+2	810	6694932575619410	qtwidget_autogen/timestamp	318a8904b7d87f04
+2	810	6694932575619410	qtwidget_autogen/mocs_compilation.cpp	318a8904b7d87f04
+2	810	6694932575619410	C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_armeabi_v7a-Debug/qtwidget_autogen/timestamp	318a8904b7d87f04
+828	2755	6694932596436227	CMakeFiles/qtwidget.dir/main.cpp.o	74981cbfb700e7fe
+2	810	6694932575619410	C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_armeabi_v7a-Debug/qtwidget_autogen/mocs_compilation.cpp	318a8904b7d87f04
+817	2511	6694932593999885	CMakeFiles/qtwidget.dir/database.cpp.o	c40cd53dd842ba9e
+810	2637	6694932595268654	CMakeFiles/qtwidget.dir/qtwidget_autogen/mocs_compilation.cpp.o	eb42952013a31261
+823	2762	6694932596500527	CMakeFiles/qtwidget.dir/mainwindow.cpp.o	af26e3f2d33521e4
+2763	2895	6694932597896507	libqtwidget_armeabi-v7a.so	6d57e87683a0d77c
+8	41	0	CMakeFiles/qtwidget_prepare_apk_dir	ad8395e003451f77
+8	41	0	C:/Work/c++/Qt/build-qtwidget-Android_Qt_6_2_3_Clang_armeabi_v7a-Debug/CMakeFiles/qtwidget_prepare_apk_dir	ad8395e003451f77

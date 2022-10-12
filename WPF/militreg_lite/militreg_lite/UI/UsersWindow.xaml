@@ -1,0 +1,26 @@
+﻿<Window x:Class="militreg_lite.UI.UsersWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:militreg_lite.UI"
+        mc:Ignorable="d"
+        Title="UsersWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="8*"></RowDefinition>
+            <RowDefinition Height="1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DataGrid Name="DG" ItemsSource="{Binding Users}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Grid.Row="0" SelectedIndex="1">
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Login}" Header="Логін" Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Role}" Header="Роль" Width="1*"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Rtck.Name}" Header="ТЦК" Width="6*"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+        <DockPanel Grid.Row="1" LastChildFill="False" HorizontalAlignment="Center">
+            <Button x:Name="btnAdd" Content="Додати" Click="btnAdd_Click" Width="100" Margin="0,0,10,0" IsEnabled="False"/>
+            <Button x:Name="btnEdit" Content="Редагувати" Click="btnEdit_Click" Width="100" Margin="10,0,10,0" IsEnabled="False"/>
+            <Button x:Name="btnClose" Content="Закрити" Click="btnClose_Click"  Width="100" DockPanel.Dock="Right" Margin="10,0,0,0"/>
+        </DockPanel>
+    </Grid></Window>
