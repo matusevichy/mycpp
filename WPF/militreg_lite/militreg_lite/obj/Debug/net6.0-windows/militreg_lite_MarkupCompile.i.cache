@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
 C:\Work\c++\WPF\militreg_lite\militreg_lite\App.xaml
-6645127467
+8-354785969
 
-6478177004
-216-1064562773
-UI\AddMilitaristWindow.xaml;UI\AddUserWindow.xaml;UI\AuthForm.xaml;UI\DictionariesWindow.xaml;UI\MainWindow.xaml;UI\UsersWindow.xaml;
+67790206362
+2172126508842
+UI\AddMilitaristWindow.xaml;UI\AddToDict.xaml;UI\AddUserWindow.xaml;UI\AuthForm.xaml;UI\DictionariesWindow.xaml;UI\ImportWindow.xaml;UI\MainWindow.xaml;UI\UsersWindow.xaml;
 
 True
 

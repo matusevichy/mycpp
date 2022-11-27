@@ -24,12 +24,18 @@ namespace militreg_lite.UI
     public partial class AddMilitaristWindow : Window
     {
         MainWindowViewModel viewModel;
+        UserDTO user;
         
         public MilitaristDTO militarist;
-        public AddMilitaristWindow(MainWindowViewModel viewModel, MilitaristDTO militarist)
+        public AddMilitaristWindow(MainWindowViewModel viewModel, MilitaristDTO militarist, UserDTO user)
         {
+            if (militarist.Rtck == null)
+            {
+                militarist.Rtck = user.Rtck;
+            }
             this.viewModel = viewModel;
             this.militarist = militarist;
+            this.user = user;
             InitializeComponent();
             this.DataContext = this.militarist;
             //cbRtck.DataContext = cbPidrozdil.DataContext = cbPosada.DataContext = cbVos.DataContext = cbZvanFact.DataContext = cbZvanShtat.DataContext = cbUbd.DataContext = cbPrizivType.DataContext = cbGender.DataContext = this;

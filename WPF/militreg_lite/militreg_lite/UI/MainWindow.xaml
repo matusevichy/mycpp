@@ -24,7 +24,7 @@
                     <DataGridTextColumn Binding="{Binding Pidrozdil.Name}" Header="Підрозділ"></DataGridTextColumn>
                     <DataGridTextColumn Binding="{Binding Posada.Name}" Header="Посада"></DataGridTextColumn>
                     <DataGridTextColumn Binding="{Binding Oklad}" Header="Оклад"></DataGridTextColumn>
-                    <DataGridTextColumn Binding="{Binding Vos.Number}" Header="№ ВОС за штатом"></DataGridTextColumn>
+                    <DataGridTextColumn Binding="{Binding Vos.Name}" Header="№ ВОС за штатом"></DataGridTextColumn>
                     <DataGridTextColumn Binding="{Binding ZvanShtat.Name}" Header="Звання за штатом"></DataGridTextColumn>
                     <DataGridTextColumn Binding="{Binding ZvanFact.Name}" Header="Звання фактичне"></DataGridTextColumn>
                     <DataGridTextColumn Binding="{Binding Pib}" Header="ПІБ"></DataGridTextColumn>
@@ -44,12 +44,14 @@
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
                     <ColumnDefinition></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Button Grid.Row="0" Grid.Column="0" Content="Додати запис" Click="ButtonAdd_Click"></Button>
                 <Button Grid.Row="0" Grid.Column="1" Content="Редагувати запис" Click="ButtonEd_Click"></Button>
                 <Button Grid.Row="0" Grid.Column="2" Content="Видалити запис" Click="ButtonRM_Click"></Button>
                 <Button Grid.Row="0" Grid.Column="3" Content="Експорт" Click="ButtonExport_Click" />
-                <Button Grid.Row="0" Grid.Column="4" Content="Оновити" Click="Button_Refresh_Click" />
+                <Button x:Name="btnImport" Grid.Row="0" Grid.Column="4" Content="Імпорт" Click="Button_Import_Click" IsEnabled="False" />
+                <Button Grid.Row="0" Grid.Column="5" Content="Оновити" Click="Button_Refresh_Click" />
             </Grid>
         </Grid>
     </DockPanel>

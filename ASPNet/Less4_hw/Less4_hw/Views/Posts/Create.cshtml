@@ -1,0 +1,75 @@
+﻿@model Less4_hw.Models.ExtPostModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Post</h4>
+<hr />
+<div class="col-lg-8">
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Post.Title" class="control-label"></label>
+                <input asp-for="Post.Title" class="form-control" />
+                <span asp-validation-for="Post.Title" class="text-danger"></span>
+            </div>
+            <div class="form-group" id="image-block">
+                <label for="upload-form" class="control-label">Upload image</label>
+                    <input id="uploadImage" name="uploadImage" type="file" class="form-control"/>
+                    <input type="button" onclick="Upload()" value="Upload"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.Image" class="control-label">Uploaded image</label>
+                <input asp-for="Post.Image" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.Published" class="control-label"></label>
+                <input asp-for="Post.Published" class="form-control" />
+                <span asp-validation-for="Post.Published" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Post.Content" class="control-label"></label>
+                <input asp-for="Post.Content" class="form-control" />
+                <span asp-validation-for="Post.Content" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Categories" class="control-label"></label>
+                @Html.ListBoxFor(m=>m.SelectedIds,Model.Categories);
+                <span asp-validation-for="Post.Categories" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+</div>
+<script>
+    function Upload (){
+      var input = document.getElementById("uploadImage");
+      var files = input.files;
+      var formData = new FormData();
+      formData.append("uploadImage", files[0]);
+    $.ajax({
+        url: '/Upload/Upload',
+        type: 'post',
+      processData: false,
+      contentType: false,
+        data: formData,
+        success: function(result){
+           var input = document.getElementById("Post_Image");
+           input.setAttribute('value', result);
+        }
+    });
+}
+</script>
+

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "lsWCfR601vKSW/oBFu1qV2uoCnAvkfRCs3lpMmK5WVM8GrbL5YlD7YR6PGTXe553/D+UptSw3OTeM3P5U2z6ZQ==",
+  "dgSpecHash": "Q/1Aumo80F699/GXx51M47gnanuvBqzuZvFHLrQJVh3Af3Zy4MYG0MLU4+0yqIqRJuafDz/gxV1nYsyajuqHIw==",
   "success": true,
   "projectFilePath": "C:\\Work\\c++\\WPF\\militreg_lite\\militreg_lite\\militreg_lite.csproj",
   "expectedPackageFiles": [
@@ -31,6 +31,7 @@
     "C:\\Users\\Yura\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\Yura\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\Yura\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
+    "C:\\Users\\Yura\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
     "C:\\Users\\Yura\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Yura\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\Yura\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

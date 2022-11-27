@@ -29,12 +29,12 @@ namespace militreg_lite.BLL.Services.Services
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            unitOfWork.PidrozdilRepository.Remove(id);
         }
 
         public void Update(PidrozdilDTO dto)
         {
-            throw new NotImplementedException();
+            unitOfWork.PidrozdilRepository.Update(mapper.Map<Pidrozdil>(dto));
         }
     }
 }

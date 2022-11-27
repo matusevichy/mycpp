@@ -29,12 +29,12 @@ namespace militreg_lite.BLL.Services.Services
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            unitOfWork.PosadaRepository.Remove(id);
         }
 
         public void Update(PosadaDTO dto)
         {
-            throw new NotImplementedException();
+            unitOfWork.PosadaRepository.Update(mapper.Map<Posada>(dto));
         }
     }
 }

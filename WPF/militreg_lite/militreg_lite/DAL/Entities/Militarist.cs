@@ -9,8 +9,8 @@ namespace militreg_lite.DAL.Entities
     public class Militarist: BaseEntity<int>
 
     {
-        int? posadaId;
-        public int? PosadaId
+        int posadaId;
+        public int PosadaId
         {
             get
             {
@@ -38,8 +38,8 @@ namespace militreg_lite.DAL.Entities
             }
         }
         
-        int? vosId;
-        public int? VosId
+        int vosId;
+        public int VosId
         {
             get
             {
@@ -53,8 +53,8 @@ namespace militreg_lite.DAL.Entities
         }
         public virtual Vos Vos { get; set; }
         
-        private int? zvanShtatId;
-        public int? ZvanShtatId
+        private int zvanShtatId;
+        public int ZvanShtatId
         {
             get { return zvanShtatId; }
             set 
@@ -65,8 +65,8 @@ namespace militreg_lite.DAL.Entities
         }
         public virtual Zvan ZvanShtat { get; set; }
         
-        private int? zvanFactId;
-        public int? ZvanFactId
+        private int zvanFactId;
+        public int ZvanFactId
         {
             get { return zvanFactId; }
             set
@@ -127,8 +127,8 @@ namespace militreg_lite.DAL.Entities
             }
         }
         
-        int? rtckId;
-        public int? RtckId
+        int rtckId;
+        public int RtckId
         {
             get
             {

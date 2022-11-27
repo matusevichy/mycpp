@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "BAzAptt5ES/rKs2xnU/nVBHralYtL+dSVBaiQSRTeA8=",
+  "Source": "Less3_hw",
+  "BasePath": "_content/Less3_hw",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Less3_hw\\wwwroot",
+      "Source": "Less3_hw",
+      "ContentRoot": "C:\\Work\\c++\\ASPNet\\Less3_hw\\Less3_hw\\wwwroot\\",
+      "BasePath": "_content/Less3_hw",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Work\\c++\\ASPNet\\Less3_hw\\Less3_hw\\wwwroot\\assets\\favicon.ico",
+      "SourceId": "Less3_hw",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Work\\c++\\ASPNet\\Less3_hw\\Less3_hw\\wwwroot\\",
+      "BasePath": "_content/Less3_hw",
+      "RelativePath": "assets/favicon.ico",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\assets\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Work\\c++\\ASPNet\\Less3_hw\\Less3_hw\\wwwroot\\css\\styles.css",
+      "SourceId": "Less3_hw",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Work\\c++\\ASPNet\\Less3_hw\\Less3_hw\\wwwroot\\",
+      "BasePath": "_content/Less3_hw",
+      "RelativePath": "css/styles.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
+    {
+      "Identity": "C:\\Work\\c++\\ASPNet\\Less3_hw\\Less3_hw\\wwwroot\\js\\script.js",
+      "SourceId": "Less3_hw",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Work\\c++\\ASPNet\\Less3_hw\\Less3_hw\\wwwroot\\",
+      "BasePath": "_content/Less3_hw",
+      "RelativePath": "js/script.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\script.js"
+    }
+  ]
+}

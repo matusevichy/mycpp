@@ -67,3 +67,8 @@ C:\Work\c++\WPF\militreg_lite\militreg_lite\obj\Debug\net6.0-windows\UI\AddUserW
 C:\Work\c++\WPF\militreg_lite\militreg_lite\obj\Debug\net6.0-windows\UI\AddUserWindow.baml
 C:\Work\c++\WPF\militreg_lite\militreg_lite\obj\Debug\net6.0-windows\UI\DictionariesWindow.g.cs
 C:\Work\c++\WPF\militreg_lite\militreg_lite\obj\Debug\net6.0-windows\UI\DictionariesWindow.baml
+C:\Work\c++\WPF\militreg_lite\militreg_lite\obj\Debug\net6.0-windows\UI\AddToDict.g.cs
+C:\Work\c++\WPF\militreg_lite\militreg_lite\obj\Debug\net6.0-windows\UI\AddToDict.baml
+C:\Work\c++\WPF\militreg_lite\militreg_lite\bin\Debug\net6.0-windows\Newtonsoft.Json.dll
+C:\Work\c++\WPF\militreg_lite\militreg_lite\obj\Debug\net6.0-windows\UI\ImportWindow.g.cs
+C:\Work\c++\WPF\militreg_lite\militreg_lite\obj\Debug\net6.0-windows\UI\ImportWindow.baml

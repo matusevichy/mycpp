@@ -29,12 +29,12 @@ namespace militreg_lite.BLL.Services.Services
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            unitOfWork.UbdRepository.Remove(id);
         }
 
         public void Update(UbdDTO dto)
         {
-            throw new NotImplementedException();
+            unitOfWork.UbdRepository.Update(mapper.Map<Ubd>(dto));
         }
     }
 }

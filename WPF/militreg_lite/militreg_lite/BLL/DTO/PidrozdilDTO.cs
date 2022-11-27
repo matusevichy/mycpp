@@ -6,9 +6,21 @@ using System.Threading.Tasks;
 
 namespace militreg_lite.BLL.DTO
 {
-    public class PidrozdilDTO:BaseDTO
+    public class PidrozdilDTO:BaseDTO, IDict
     {
-        public string Name { get; set; }
+        private string name;
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+            set
+            {
+                name = value;
+                OnPropertyChanged(nameof(Name));
+            }
+        }
         public PidrozdilDTO()
         {
         }

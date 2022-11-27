@@ -42,8 +42,8 @@ namespace militreg_lite.DAL.Databases
 
             modelBuilder.Entity<Vos>().HasKey(v => v.Id);
             modelBuilder.Entity<Vos>().Property(v => v.Id).ValueGeneratedOnAdd();
-            modelBuilder.Entity<Vos>().HasData(new Vos { Id = 1, Number = "100" },
-                                               new Vos { Id = 2, Number = "101" });
+            modelBuilder.Entity<Vos>().HasData(new Vos { Id = 1, Name = "100" },
+                                               new Vos { Id = 2, Name = "101" });
 
             modelBuilder.Entity<Zvan>().HasKey(v => v.Id);
             modelBuilder.Entity<Zvan>().Property(v => v.Id).ValueGeneratedOnAdd();

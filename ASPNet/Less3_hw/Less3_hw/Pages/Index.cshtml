@@ -1,0 +1,23 @@
+﻿@page
+@using System.Text.RegularExpressions
+@model Less3_hw.Pages.Postes.IndexModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+                <div class="col-lg-8">
+                    <!-- Nested row for non-featured blog posts-->
+                    @foreach (var post in Model.Post)
+                    {
+                            <div class="card mb-4">
+                                <a href="#!"><img class="card-img-top" src="https://dummyimage.com/850x350/dee2e6/6c757d.jpg" alt="..." /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">@post.Published</div>
+                                    <h2 class="card-title">@post.Title</h2>
+                                    <p class="card-text">@Regex.Match(post.Content, "^(\\w+. ){20}").Value</p>
+                                    <a class="btn btn-primary" asp-page="./Details" asp-route-id="@post.Id">Read more →</a>
+                                </div>
+                            </div>
+                    }
+                </div>
+

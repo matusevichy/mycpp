@@ -52,7 +52,7 @@
         <Label Content="Оклад:" Grid.Row="3" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
         <TextBox Text="{Binding Oklad}" Grid.Row="3" Margin="120,0,0,0" PreviewTextInput="TextBox_PreviewTextInput"/>
         <Label Content="ВОС:" Grid.Row="4" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
-        <ComboBox x:Name="cbVos" Grid.Row="4" SelectedItem="{Binding Path=Vos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Number" Margin="120,0,0,0"></ComboBox>
+        <ComboBox x:Name="cbVos" Grid.Row="4" SelectedItem="{Binding Path=Vos, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Name" Margin="120,0,0,0"></ComboBox>
         <Label Content="Звання штат:" Grid.Row="5" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>
         <ComboBox x:Name="cbZvanShtat" Grid.Row="5" SelectedItem="{Binding Path=ZvanShtat, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Name" Margin="120,0,0,0"></ComboBox>
         <Label Content="Звання факт:" Grid.Row="6" HorizontalAlignment="Left" VerticalAlignment="Top"></Label>

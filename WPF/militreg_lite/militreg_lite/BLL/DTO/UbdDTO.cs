@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace militreg_lite.BLL.DTO
 {
-    public class UbdDTO:BaseDTO
+    public class UbdDTO:BaseDTO, IDict
     {
         public string Name { get; set; }
         public UbdDTO()

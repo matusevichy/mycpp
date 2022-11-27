@@ -27,6 +27,7 @@ namespace militreg_lite.BLL.DTO
         public virtual RtckDTO Rtck { get; set; }
         public UserDTO(UserDTO user)
         {
+            Id = user.Id;
             Login = user.Login;
             Password = user.Password;
             Role = user.Role;

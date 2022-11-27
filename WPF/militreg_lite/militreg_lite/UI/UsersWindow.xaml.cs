@@ -58,7 +58,10 @@ namespace militreg_lite.UI
             var result = addUserWindow.ShowDialog();
             if (result == true)
             {
-                viewModel.Users.Add(addUserWindow.user);
+                var id = viewModel.Users.Max(x => x.Id);
+                var user = addUserWindow.user;
+                user.Id = id+1;
+                viewModel.Users.Add(user);
             }
         }
         void SetUI()
@@ -67,6 +70,11 @@ namespace militreg_lite.UI
             {
                 btnAdd.IsEnabled = btnEdit.IsEnabled = true;
             }
+        }
+
+        private void DG_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            btnEdit_Click(sender, e);
         }
     }
 }

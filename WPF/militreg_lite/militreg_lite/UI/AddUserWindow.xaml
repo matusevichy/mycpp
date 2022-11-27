@@ -23,8 +23,8 @@
         <Label Content="ТЦК:" Grid.Row="3"></Label>
         <ComboBox x:Name="cbRtck" Grid.Row="3" SelectedItem="{Binding Path=Rtck, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" DisplayMemberPath="Name" Margin="100,0,0,0"></ComboBox>
         <DockPanel Grid.Row="15">
-            <Button Content="Cancel" Click="ButtonCancel_Click" Width="200"></Button>
-            <Button Content="Ok" Click="ButtonOk_Click"></Button>
+            <Button Content="Відмінити" Click="ButtonCancel_Click" Width="200"></Button>
+            <Button Content="Ок" Click="ButtonOk_Click"></Button>
         </DockPanel>
 
     </Grid>

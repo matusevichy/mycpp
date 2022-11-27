@@ -1,0 +1,37 @@
+@page
+@model AcademyWebApp.Pages.Academy.CreateModel
+
+@{
+    Layout = "Shared/_Layout";
+}
+
+<form method="post">
+    <div>
+        <label for="FirstName">First Name</label>
+        <input type="text" id="FirstName" name="FirstName"/>
+    </div>
+    <div>
+        <label for="LastName">Last Name</label>
+        <input type="text" id="LastName" name="LastName"/>
+    </div>
+    <div>
+        <label for="BirthDate">Birth Date</label>
+        <input type="date" id="BirthDate" name="BirthDate"/>
+    </div>
+    <div>
+        <label for="GroupId">Group</label>
+        <select id="GroupId" name="GroupId">
+        @foreach(var group in Model.Groups)
+        {
+            <option value=@group.Id>@group.Name</option>
+        }
+        </select>
+    </div>
+    @if (ViewData["Error"] != null)
+    {
+        <div style="color: red">@ViewData["Error"]</div>
+    }
+    <div>
+        <input type="submit" />
+    </div>
+</form>

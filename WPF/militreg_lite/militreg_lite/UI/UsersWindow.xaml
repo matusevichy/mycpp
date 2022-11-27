@@ -11,7 +11,7 @@
             <RowDefinition Height="8*"></RowDefinition>
             <RowDefinition Height="1*"></RowDefinition>
         </Grid.RowDefinitions>
-        <DataGrid Name="DG" ItemsSource="{Binding Users}" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Grid.Row="0" SelectedIndex="1">
+        <DataGrid Name="DG" ItemsSource="{Binding Users}" MouseDoubleClick="DG_MouseDoubleClick" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True" Grid.Row="0" SelectedIndex="1">
             <DataGrid.Columns>
                 <DataGridTextColumn Binding="{Binding Login}" Header="Логін" Width="1*"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding Role}" Header="Роль" Width="1*"></DataGridTextColumn>

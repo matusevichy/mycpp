@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace militreg_lite.BLL.DTO
 {
-    public class VosDTO : BaseDTO
+    public class VosDTO : BaseDTO, IDict
     {
-        public string Number
+        public string Name
         {
             get; set;
         }
@@ -18,7 +18,7 @@ namespace militreg_lite.BLL.DTO
 
         public VosDTO(VosDTO vos)
         {
-            Number = vos.Number;
+            Name = vos.Name;
         }
         public override bool Equals(object obj)
         {

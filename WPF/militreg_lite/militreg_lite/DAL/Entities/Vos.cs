@@ -14,9 +14,9 @@ namespace militreg_lite.DAL.Entities
 
         public Vos(Vos vos)
         {
-            Number = vos.Number;
+            Name = vos.Name;
         }
 
-        public string Number { get; set; }
+        public string Name { get; set; }
     }
 }

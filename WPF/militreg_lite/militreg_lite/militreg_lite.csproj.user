@@ -10,6 +10,9 @@
     <Compile Update="UI\AddMilitaristWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UI\AddToDict.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UI\AddUserWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -17,6 +20,9 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UI\DictionariesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UI\ImportWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="UI\UsersWindow.xaml.cs">
@@ -27,6 +33,9 @@
     <Page Update="UI\AddMilitaristWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="UI\AddToDict.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="UI\AddUserWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -34,6 +43,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\DictionariesWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UI\ImportWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UI\MainWindow.xaml">

@@ -39,14 +39,224 @@ namespace militreg_lite.ViewModels
             Militarists.AddRange(serviceManager.MilitaristService.GetAll());
             Militarists.CollectionChanged += Militarists_CollectionChanged;
             Pidrozdils.AddRange(serviceManager.PidrozdilService.GetAll());
+            Pidrozdils.CollectionChanged += Pidrozdils_CollectionChanged;
             Posadas.AddRange(serviceManager.PosadaService.GetAll());
+            Posadas.CollectionChanged += Posadas_CollectionChanged;
             PrizivTypes.AddRange(serviceManager.PrizivTypeService.GetAll());
+            PrizivTypes.CollectionChanged += PrizivTypes_CollectionChanged;
             Rtcks.AddRange(serviceManager.RtckService.GetAll());
+            Rtcks.CollectionChanged += Rtcks_CollectionChanged;
             Ubds.AddRange(serviceManager.UbdService.GetAll());
+            Ubds.CollectionChanged += Ubds_CollectionChanged;
             Users.AddRange(serviceManager.UserService.GetAll());
             Users.CollectionChanged += Users_CollectionChanged;
             Voss.AddRange(serviceManager.VosService.GetAll());
+            Voss.CollectionChanged += Voss_CollectionChanged;
             Zvans.AddRange(serviceManager.ZvanService.GetAll());
+            Zvans.CollectionChanged += Zvans_CollectionChanged;
+        }
+
+        private void Zvans_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Replace)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    serviceManager.ZvanService.Update(added as ZvanDTO);
+                }
+                return;
+            }
+            if (e.NewItems != null)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    added.PropertyChanged += SpringDataOnPropertyChanged;
+                    serviceManager.ZvanService.Add(added as ZvanDTO);
+                }
+            }
+
+            if (e.OldItems != null)
+            {
+                foreach (INotifyPropertyChanged removed in e.OldItems)
+                {
+                    removed.PropertyChanged -= SpringDataOnPropertyChanged;
+                    serviceManager.ZvanService.Remove((removed as ZvanDTO).Id);
+                }
+            }
+        }
+
+        private void Voss_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Replace)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    serviceManager.VosService.Update(added as VosDTO);
+                }
+                return;
+            }
+            if (e.NewItems != null)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    added.PropertyChanged += SpringDataOnPropertyChanged;
+                    serviceManager.VosService.Add(added as VosDTO);
+                }
+            }
+
+            if (e.OldItems != null)
+            {
+                foreach (INotifyPropertyChanged removed in e.OldItems)
+                {
+                    removed.PropertyChanged -= SpringDataOnPropertyChanged;
+                    serviceManager.VosService.Remove((removed as VosDTO).Id);
+                }
+            }
+        }
+
+        private void Ubds_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Replace)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    serviceManager.UbdService.Update(added as UbdDTO);
+                }
+                return;
+            }
+            if (e.NewItems != null)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    added.PropertyChanged += SpringDataOnPropertyChanged;
+                    serviceManager.UbdService.Add(added as UbdDTO);
+                }
+            }
+
+            if (e.OldItems != null)
+            {
+                foreach (INotifyPropertyChanged removed in e.OldItems)
+                {
+                    removed.PropertyChanged -= SpringDataOnPropertyChanged;
+                    serviceManager.UbdService.Remove((removed as UbdDTO).Id);
+                }
+            }
+        }
+
+        private void Rtcks_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Replace)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    serviceManager.PrizivTypeService.Update(added as PrizivTypeDTO);
+                }
+                return;
+            }
+            if (e.NewItems != null)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    added.PropertyChanged += SpringDataOnPropertyChanged;
+                    serviceManager.PrizivTypeService.Add(added as PrizivTypeDTO);
+                }
+            }
+
+            if (e.OldItems != null)
+            {
+                foreach (INotifyPropertyChanged removed in e.OldItems)
+                {
+                    removed.PropertyChanged -= SpringDataOnPropertyChanged;
+                    serviceManager.PrizivTypeService.Remove((removed as PrizivTypeDTO).Id);
+                }
+            }
+        }
+
+        private void PrizivTypes_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Replace)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    serviceManager.PrizivTypeService.Update(added as PrizivTypeDTO);
+                }
+                return;
+            }
+            if (e.NewItems != null)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    added.PropertyChanged += SpringDataOnPropertyChanged;
+                    serviceManager.PrizivTypeService.Add(added as PrizivTypeDTO);
+                }
+            }
+
+            if (e.OldItems != null)
+            {
+                foreach (INotifyPropertyChanged removed in e.OldItems)
+                {
+                    removed.PropertyChanged -= SpringDataOnPropertyChanged;
+                    serviceManager.PrizivTypeService.Remove((removed as PrizivTypeDTO).Id);
+                }
+            }
+        }
+
+        private void Posadas_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Replace)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    serviceManager.PosadaService.Update(added as PosadaDTO);
+                }
+                return;
+            }
+            if (e.NewItems != null)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    added.PropertyChanged += SpringDataOnPropertyChanged;
+                    serviceManager.PosadaService.Add(added as PosadaDTO);
+                }
+            }
+
+            if (e.OldItems != null)
+            {
+                foreach (INotifyPropertyChanged removed in e.OldItems)
+                {
+                    removed.PropertyChanged -= SpringDataOnPropertyChanged;
+                    serviceManager.PosadaService.Remove((removed as PosadaDTO).Id);
+                }
+            }
+        }
+
+        private void Pidrozdils_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)
+        {
+            if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Replace)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    serviceManager.PidrozdilService.Update(added as PidrozdilDTO);
+                }
+                return;
+            }
+            if (e.NewItems != null)
+            {
+                foreach (INotifyPropertyChanged added in e.NewItems)
+                {
+                    added.PropertyChanged += SpringDataOnPropertyChanged;
+                    serviceManager.PidrozdilService.Add(added as PidrozdilDTO);
+                }
+            }
+
+            if (e.OldItems != null)
+            {
+                foreach (INotifyPropertyChanged removed in e.OldItems)
+                {
+                    removed.PropertyChanged -= SpringDataOnPropertyChanged;
+                    serviceManager.PidrozdilService.Remove((removed as PidrozdilDTO).Id);
+                }
+            }
         }
 
         private void Users_CollectionChanged(object sender, System.Collections.Specialized.NotifyCollectionChangedEventArgs e)

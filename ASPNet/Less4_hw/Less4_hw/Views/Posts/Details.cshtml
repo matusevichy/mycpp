@@ -1,0 +1,69 @@
+﻿@model Less4_hw.Models.Post
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <!-- Post header-->
+                        <header class="mb-4">
+                            <!-- Post title-->
+                            <h1 class="fw-bolder mb-1">@Model.Title</h1>
+                            <!-- Post meta content-->
+                            <div class="text-muted fst-italic mb-2">Posted on @Model.Published</div>
+                            <!-- Post categories-->
+                            @foreach (var item in Model.Categories)
+                            {
+                                @item.Name
+                            }
+                        </header>
+                        <!-- Preview image figure-->
+                        <figure class="mb-4"><img class="img-fluid rounded card-img" src="@Model.Image" alt="..." onerror="this.src='https://dummyimage.com/900x400/ced4da/6c757d.jpg'"/></figure>
+                        <!-- Post content-->
+                        <section class="mb-5">
+                            <p class="fs-5 mb-4">@Model.Content</p>
+                        </section>
+                    </article>
+                    <!-- Comments section-->
+                    <section class="mb-5">
+                        <div class="card bg-light">
+                            <div class="card-body">
+                                <!-- Comment form-->
+                                <form asp-action="Create" asp-controller="Comment" class="mb-4">
+                                    <div class="form-group">
+                                        <label for="UserName" class="control-label">Your name</label>
+                                        <input id="UserName" name="UserName" class="form-control" />
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="Message" class="control-label">Your message</label>
+                                        <textarea id="Message" name="Message" class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea>
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="hidden" name="PostId" value=@Model.Id />
+                                        <input type="submit" value="Create" class="btn btn-primary" />
+                                    </div>
+                                </form>
+                                <!-- Single comments-->
+                                @foreach (var comment in Model.Comments.OrderByDescending(c => c.DateCreate))
+                                {
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                        <div class="ms-3">
+                                            <div class="fw-bold">@comment.UserName</div>
+                                            @comment.Message
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    </section>
+                    <div>
+                        <a asp-action="Edit" asp-route-id="@Model?.Id">Edit</a> |
+                        <a asp-action="Delete" asp-route-id="@Model?.Id">Delete</a> |
+                        <a asp-action="Index">Back to List</a>
+                    </div>
+                </div>

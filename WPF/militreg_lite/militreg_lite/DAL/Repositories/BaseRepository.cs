@@ -38,7 +38,9 @@ namespace militreg_lite.DAL.Repositories
 
         public void Update(TValue value)
         {
-            Table.Attach(value);
+            var tmp = Table.FirstOrDefault(e => e.Id == value.Id);
+            context.Entry(tmp).State = EntityState.Detached;
+            Table.Update(value);
             context.Entry(value).State=EntityState.Modified;
             Save();
         }

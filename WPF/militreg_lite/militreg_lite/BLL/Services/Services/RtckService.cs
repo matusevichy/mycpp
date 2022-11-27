@@ -29,12 +29,12 @@ namespace militreg_lite.BLL.Services.Services
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            unitOfWork.RtckRepository.Remove(id);
         }
 
         public void Update(RtckDTO dto)
         {
-            throw new NotImplementedException();
+            unitOfWork.RtckRepository.Update(mapper.Map<Rtck>(dto));
         }
     }
 }

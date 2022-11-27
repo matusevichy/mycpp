@@ -29,12 +29,12 @@ namespace militreg_lite.BLL.Services.Services
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            unitOfWork.ZvanRepository.Remove(id);
         }
 
         public void Update(ZvanDTO dto)
         {
-            throw new NotImplementedException();
+            unitOfWork.ZvanRepository.Update(mapper.Map<Zvan>(dto));
         }
     }
 }

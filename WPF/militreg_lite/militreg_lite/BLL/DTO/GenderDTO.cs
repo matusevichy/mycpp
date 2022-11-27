@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace militreg_lite.BLL.DTO
 {
-    public class GenderDTO:BaseDTO
+    public class GenderDTO:BaseDTO, IDict
     {
         public string Name 
         { 

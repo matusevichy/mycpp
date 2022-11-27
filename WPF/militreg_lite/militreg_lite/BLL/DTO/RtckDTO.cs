@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace militreg_lite.BLL.DTO
 {
-    public class RtckDTO:BaseDTO
+    public class RtckDTO:BaseDTO, IDict
     {
         public RtckDTO()
         {

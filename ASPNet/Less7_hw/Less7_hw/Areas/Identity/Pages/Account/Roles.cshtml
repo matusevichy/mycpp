@@ -1,0 +1,40 @@
+@page
+@model Less7_hw.Areas.Identity.Pages.Account.Roles
+
+@{
+    ViewData["Title"] = "Roles";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div class="row">
+    <div class="col-md-4">
+        <form id="registerForm" method="post">
+            <h2>Create a role.</h2>
+            <hr/>
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-floating">
+                <input asp-for="Input.RoleName" class="form-control" aria-required="true"/>
+                <label asp-for="Input.RoleName"></label>
+                <span asp-validation-for="Input.RoleName" class="text-danger"></span>
+            </div>
+            <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Create</button>
+        </form>
+    </div>
+</div>
+
+<table class="table table-bordered">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+    </tr>
+    </thead>
+    @foreach (var role in Model.AllRoles)
+    {
+        <tr>
+            <td>@role.Id</td>
+            <td>@role.Name</td>
+        </tr>
+    }
+</table>

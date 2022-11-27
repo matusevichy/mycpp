@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace militreg_lite.BLL.DTO
 {
-    public class PosadaDTO:BaseDTO
+    public class PosadaDTO:BaseDTO, IDict
     {
         public string Name { get; set; }
         public PosadaDTO()

@@ -5,19 +5,29 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:militreg_lite.UI"
         mc:Ignorable="d"
-        Title="Dictionaries" Height="450" Width="300" SizeToContent="WidthAndHeight">
-    <DockPanel>
-        <ListBox SelectionChanged="ListBox_SelectionChanged">
-            <ListBoxItem Content="Підрозділи"></ListBoxItem>
-            <ListBoxItem Content="Посади"></ListBoxItem>
-            <ListBoxItem Content="Типи призову"></ListBoxItem>
-            <ListBoxItem Content="ТЦК"></ListBoxItem>
-            <ListBoxItem Content="Види УБД"></ListBoxItem>
-            <ListBoxItem Content="ВОСи"></ListBoxItem>
-            <ListBoxItem Content="Звання"></ListBoxItem>
-        </ListBox>
-        <DataGrid Name="DG" AutoGenerateColumns="False" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
-            <DataGridTextColumn Binding="{Binding Name}" Header="Назва"></DataGridTextColumn>
-        </DataGrid>
-    </DockPanel>
+        Title="Dictionaries" Height="450" Width="300" SizeToContent="Manual">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition Height="30"></RowDefinition>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <ListBox Name="lbDict" SelectionChanged="ListBox_SelectionChanged">
+                <ListBoxItem Name="lbiPidrozdil" Content="Підрозділи" ></ListBoxItem>
+                <ListBoxItem Name="lbiPosada" Content="Посади"></ListBoxItem>
+                <ListBoxItem Name="lbiPrizivType" Content="Типи призову"></ListBoxItem>
+                <ListBoxItem Name="lbiRtck" Content="ТЦК"></ListBoxItem>
+                <ListBoxItem Name="lbiUbd" Content="Види УБД"></ListBoxItem>
+                <ListBoxItem Name="lbiVos" Content="ВОСи"></ListBoxItem>
+                <ListBoxItem Name="lbiZvan" Content="Звання"></ListBoxItem>
+            </ListBox>
+            <DataGrid Name="DG" AutoGenerateColumns="False" MouseDoubleClick="DG_MouseDoubleClick" CanUserAddRows="False" CanUserDeleteRows="False" IsReadOnly="True">
+            </DataGrid>
+        </DockPanel>
+        <DockPanel Grid.Row="1">
+            <Button x:Name="btnAdd" Content="Додати" Click="btnAdd_Click" Width="100" IsEnabled="False"/>
+            <Button x:Name="btnEdit" Content="Редагувати" Click="btnEdit_Click" Width="100" IsEnabled="False"/>
+            <Button x:Name="btnClose" Content="Закрити" Click="btnClose_Click"  Width="100" DockPanel.Dock="Right"/>
+        </DockPanel>
+    </Grid>
 </Window>

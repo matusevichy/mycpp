@@ -29,12 +29,12 @@ namespace militreg_lite.BLL.Services.Services
 
         public void Remove(int id)
         {
-            throw new NotImplementedException();
+            unitOfWork.PrizivTypeRepository.Remove(id);
         }
 
         public void Update(PrizivTypeDTO dto)
         {
-            throw new NotImplementedException();
+            unitOfWork.PrizivTypeRepository.Update(mapper.Map<PrizivType>(dto));
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace militreg_lite.BLL.DTO
 {
-    public class ZvanDTO:BaseDTO
+    public class ZvanDTO:BaseDTO, IDict
     {
         public string Name { get; set; }
         public ZvanDTO()

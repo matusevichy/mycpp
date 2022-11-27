@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace militreg_lite.BLL.DTO
 {
-    public class PrizivTypeDTO:BaseDTO
+    public class PrizivTypeDTO:BaseDTO, IDict
     {
         public string Name { get; set; }
         public PrizivTypeDTO()

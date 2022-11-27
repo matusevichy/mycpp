@@ -1,0 +1,51 @@
+﻿@using System.Text.RegularExpressions
+@model IEnumerable<Less4_hw.Models.Post>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+                <div class="col-lg-8">
+                    <div class="search row">
+                        <form asp-action="Search" class="col-md-6">
+                            <div class="form-group">
+                                <label for="searchText">Search:</label>
+                                <input name="searchText" id="searchText"/>
+                                <input type="submit" value="Search" class="btn btn-primary"/>
+                            </div>
+                        </form>
+                        <form asp-action="Index" method="Get"  class="col-md-6">
+                            <div class="form-group">
+                                @Html.DropDownList("categoryId")
+                                <input type="submit" value="Filter" class="btn btn-primary"/>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- Nested row for non-featured blog posts-->
+                    @foreach (var post in Model)
+                    {
+                            <div class="card mb-4">
+                                    <a href="#!"><img class="card-img-top" src="@post.Image" alt="..." onerror="this.src='https://dummyimage.com/850x350/dee2e6/6c757d.jpg'" /></a>
+                                <div class="card-body">
+                                    <div class="small text-muted">@post.Published</div>
+                                    <h2 class="card-title">@post.Title</h2>
+                                    <p class="card-text">@Regex.Match(post.Content, "^(\\w+. ){20}").Value</p>
+                                    <p class="card-categories">Categories: <br>
+                                        @if (post.Categories != null)
+                                        {
+                                            @foreach (var item in post.Categories)
+                                            {
+                                                @item.Name <text>; </text>
+                                            }
+                                        }
+                                    </p>
+                                    <a class="btn btn-primary" asp-action="Details" asp-route-id="@post.Id">Read more →</a>
+                                </div>
+                            </div>
+                    }
+                </div>

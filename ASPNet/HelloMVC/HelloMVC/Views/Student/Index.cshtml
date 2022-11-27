@@ -1,0 +1,37 @@
+@model IEnumerable<Student>
+@{
+    ViewData["Title"] = "Students";
+}
+
+<table class="table">
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First name</th>
+        <th>Last name</th>
+        <th>Birth date</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    @foreach (var s in Model)
+    {
+        <tr>
+            <td>@s.Id</td>
+            <td>@s.FirstName</td>
+            <td>@s.LastName</td>
+            <td>@s.BirthDate.ToShortDateString()</td>
+            <td>
+                <a href="/Student/Update/@s.Id">Update</a>
+            </td>
+            <td>
+                <a href="/Student/Delete/@s.Id">Delete</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+</table>
+
+<p>
+    <a href="/Student/Create">Create</a>
+</p>

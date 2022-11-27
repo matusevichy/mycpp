@@ -34,7 +34,7 @@ namespace militreg_lite.BLL.Services.Services
 
         public void Update(UserDTO dto)
         {
-            throw new NotImplementedException();
+            unitOfWork.UserRepository.Update(mapper.Map<User>(dto));
         }
     }
 }
