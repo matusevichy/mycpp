@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="Less07_hw:war" />
+    </artifacts-to-build>
+  </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="69cec55c-afad-44d5-a579-a31e2fc70e0b" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Less04_cw/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_cw/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_cw/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_cw/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_cw/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_cw/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_cw/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_cw/src/test/java/org/example/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_hw/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_hw/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_hw/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_hw/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_hw/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_hw/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_hw/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Less04_hw/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Less07_hw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/itstep/App.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/org/itstep/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Lesson01_cw/Lesson01_cw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PHP/Lesson02_hw/.idea/Lesson02_hw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PHP/Lesson03_cw/.idea/Lesson03_cw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PHP/Lesson03_hw/.idea/Lesson03_hw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PHP/Lesson04_cw/.idea/Lesson04_cw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../PHP/Lesson04_hw/.idea/Lesson04_hw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ReactAngular/less01hw/.idea/less01hw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ReactAngular/less02hw/.idea/less02hw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ReactAngular/less03hw/.idea/less03hw.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ReactAngular/less03hw/src/components/ToDoForm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ReactAngular/less03hw/src/components/ToDoList.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ReactAngular/less03hw/src/components/ToDos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../ReactAngular/less05hw/.idea/less02hw.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../PHP/Lesson02_cw.zip" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ReactAngular/Less1hw.zip" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="LogFilters">
+    <option name="FILTER_ERRORS" value="false" />
+    <option name="FILTER_WARNINGS" value="false" />
+    <option name="FILTER_INFO" value="true" />
+    <option name="FILTER_DEBUG" value="true" />
+    <option name="CUSTOM_FILTER" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2M3H4wSpHXOSe4bYvjYZs8L9HgL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Work/c++/Java/Less07_hw/src/main/resources",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Work\c++\Java\Less07_hw\src\main\resources" />
+      <recent name="C:\Work\c++\Java\Less07_hw\src\main\webapp\WEB-INF\classes" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Work\c++\Java\Less07_hw\src\main\webapp\WEB-INF" />
+      <recent name="C:\Work\c++\Java\Less07_hw\src\main\webapp" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="Tomcat 10.0.27" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 10.0.27" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
+      <option name="UPDATING_POLICY" value="restart-server" />
+      <deployment>
+        <artifact name="Less07_hw:war">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Less07_hw_war" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="d679e922-05fd-4681-a091-a1b06c5b0633" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <RunnerSettings RunnerId="Debug">
+        <option name="DEBUG_PORT" value="62070" />
+      </RunnerSettings>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Debug">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Profile">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Less07_hw:war" />
+        </option>
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69cec55c-afad-44d5-a579-a31e2fc70e0b" name="Changes" comment="" />
+      <created>1676989159834</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1676989159834</updated>
+      <workItem from="1676989161034" duration="7175000" />
+      <workItem from="1677142651771" duration="3942000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
