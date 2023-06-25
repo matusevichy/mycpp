@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 85
+    placeholder_text: //Implement the oneMinus() extension for Array<Int>
+    initial_state:
+      length: 51
+      offset: 0
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: 76UDqhxUWQt9HJspVQS9XZIrp+B7WJkg69qgaiKjsvBs8ekLuw4FHm8E5v6WhXpEfG2EIMn6Cy1LnMX1FXdoQtxHycnC1mr6kJ4twSN4VrVotCLQcXXucRo2qx0xlkiQ
+  encrypted_text: 98vX0tb8GcCAwOn6niJ1iQ7Ky509N1tU0sjuls7DLydjgltmHajEqP8008JjIkXbFkIGTmNC56es6gpRsGEPPwBvUjd513w+9LmvTLtnvUj2UEYLdsL8rO2PqVrdDJhlhRSBClHIfJy01Upi3vfDXRCXvBrv2ExY8pM0AdOlVdjOArj8RSL7rESUkmGBX57nLtsFjO6P8tOrusZWNLQ+5ZJbSRvkswuzjIFbKxgeA/XYyJv9SrYaVJ9sbgAKA7BufaJCXyrcLr/7ebTCNC2kzucUaEEr8a8hlfk7zM+lmchVvRM5e6wed6AC8cTahKeX
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nEa5qUSa0Fz8LoT3jUZc8XAGGWfhXpN0mlwkOR55DyxU7dpbJMTCMpRO2kZMv6zvqmCljIx1WQHX/89pt1fDNCtqvzguNdNkF5f5An+2dxp0V3jA2Do8w6kts1Hcm+TTaR9LT/Yh61JlTX/ZwR+UVtrOfOL9XcVHUNtuYN4wugYwrvk5H6W7qd+CXu9OkCB2C41/nfvDQd/W1ObbRJLkoRkA+f977p5STJTwd5qnKRNT9+iuT0n9Hb6lEfjQ371KJjzdEMBMORjT+eaHkGRekC0yz8yMjYtIjKz1XglBIT4CU24rhA1fH9VETOcp0vI10x/dc0H1nEYnR2GpDGq3p+J0Fd7FysV/pbITEQQuF4r7hHgC0vIy+8Om8XOFmopuTMhUT2rMpJHk5h2OeKgvleS3yIXxoXmXweLTOOO3sQ4zRSeOYVWq/aS10xab80buX8arQtY1+7e9N53gX4sKy//WF7+053F6TkESUd4R7ADaNeMPzhqPfOvQJCQhWwBYGQ==
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 20 Mar 2023 07:26:26 UTC"
+record: -1

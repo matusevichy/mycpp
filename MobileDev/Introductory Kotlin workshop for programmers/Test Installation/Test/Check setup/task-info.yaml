@@ -1,0 +1,35 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 6
+    length: 43
+    placeholder_text: "ReplaceMe //Replace this with the text: TestMe"
+    initial_state:
+      length: 46
+      offset: 6
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: wB3EAWIkjyYWYED92pjmdg==
+  encrypted_text: ZYWKF/+R36aqW+/RYQ87fjCrZN3hZkCxV610tCSDXbadaYUALSfzOeLsfXQtv0wojsVPOJsXklI/v5u4HUn8N81Bk6k3w/g3vJH/9upwozgYD5DphwAY8Ict8SLYxwmaU7pF8Lg+Rnhl9CRtZSKYwdDDvdrE10rEp5yofx8UEz64YYKzoqEOcaWQMzUF2+1cw3fmT/mCGbdbmqngntAZnXuX2+v2tpnuMcmM7lI+2VlvLMrmSTGSMVeCqj117gscc8t6E6MexFBul8vDtZ4jEP8an8dREWm+kTaPJJ9atp1aoBVrLz0lxSX8xAtihR1oY+Xg0Wq9FBuoQQC0tFIaxg==
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nCbrLPoZNTYAX8EbQHppKy+TR7uFhZF7JnSL5/nnFJttOoUbKzjzjKMy0T1IKOzzSCd1hYJ/rLOohU/eobM6+txsiHixvgrboM8LNJVHfuxhWNCH5MUljFTWuRqg2BaC8STF46V0g6En50R7udd3V10hQ2ocGOlryYVwtJ139wYydT8c2FM/RIdl1/L+3+OlAg8EFb9kbBAIWUB7cmr2+wHEl97LqopygaZNdUFBlg+bBbYxqByuvSeSM67P6T9E9qiN3Idy3xgBOQfaaoEg9nmV3UE2X25OEdaWTsz6YExyGLSW9HG9OaWygGG60BoI2R6VgnZxmo/YFobvrtMpMGDaWYz4XFFYGPIM+mQVh23569qt36rka+wJmFiFwOobgOHsRm+nX2EoCmmLSHrP4vSEnfxMpFVUX+TJpg2/PGkThb5GvUaTITrD11+xBZIv/g==
+  learner_created: false
+- name: placeholder.png
+  visible: false
+  learner_created: false
+- name: check-task.png
+  visible: false
+  learner_created: false
+- name: main-run.png
+  visible: false
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 19 Mar 2023 11:39:33 UTC"
+record: -1

@@ -1,0 +1,27 @@
+type: edu
+custom_name: "Hello, World!"
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 25
+    length: 15
+    placeholder_text: '"replace me"'
+    initial_state:
+      length: 12
+      offset: 25
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: MrjWpzEDqs1l9gBjIx3HaQ==
+  encrypted_text: aXKLDOchZHOeOMczEMZxdk7idsAA5yr7z4y6zyxnYLN9/LQ51zxIXTUpy8e/G999RNDlR36oxpDfksShzzJuEq9PFOPaIwKB5kgNJNZQCsR/Al6SD0kuEEvQ0W6RRq2K8KOwuRGPqCHwYIuHyYOAoIUb+SarTl1WMa/NUe/f8xyXwH8W0wWGl0Qmp1LtONvipPGmtdRMiyvD+aqGRjYewQ==
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nEa5qUSa0Fz8LoT3jUZc8XAGGWfhXpN0mlwkOR55DyxU7dpbJMTCMpRO2kZMv6zvqgfGFYpqudtRSHbqfQVg9gyRNmUgjF9++vsSiM/4bazTD67Bb3U5IPKJpxh1HUf+DLE7p9i1ylXxflh+lKcaa4l+DHZRlqtHDSInOz6uIye9ihwPifHKxyP8hzXVKe9fKDEcWzTvxaks31ZyQmFbvvu6hELgXZYpmlcphk3DmK7Hr7JGXYJwH836w2zwzenjZ3v50gnPo2HpEQw87QIxwboXfNtlsWrn7/OcapTjOHsL
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 19 Mar 2023 13:16:00 UTC"
+record: -1

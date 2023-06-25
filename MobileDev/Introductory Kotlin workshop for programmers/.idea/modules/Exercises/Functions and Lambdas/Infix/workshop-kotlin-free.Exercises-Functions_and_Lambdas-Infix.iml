@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":Exercises-Functions_and_Lambdas-Infix" external.linked.project.path="$MODULE_DIR$/../../../../../Exercises/Functions and Lambdas/Infix" external.root.project.path="$MODULE_DIR$/../../../../.." external.system.id="GRADLE" external.system.module.group="workshop-kotlin-free" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../../../Exercises/Functions and Lambdas/Infix">
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Exercises/Functions and Lambdas/Infix/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Exercises/Functions and Lambdas/Infix/build" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../../../Exercises/Functions and Lambdas/Infix/out" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

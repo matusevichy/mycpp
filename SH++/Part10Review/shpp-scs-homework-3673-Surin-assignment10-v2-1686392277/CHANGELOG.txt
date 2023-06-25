@@ -1,0 +1,6 @@
+1.uploaded the code with the correct folder structure
+2.fixed the problem with negative numbers and with exponentiation
+3.replaced the Ukrainian language with English
+4.added support for dots and commas
+5.implemented formula storage for subsequent processing
+6.noticed that the program almost always throws exceptions correctly

@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 34
+    placeholder_text: //Implement extension function
+    initial_state:
+      length: 30
+      offset: 0
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: 2S87AC3MF1LtWha2H9nOkb8dzoDpEJ0aY0byQaqOnS5FPknWYtld7DGZw4uhz3lY
+  encrypted_text: kGZkF219iy9vn6YNeVLO/ZvW7mKgu7S9O0/Gv/DF43YFVZBk8wpBHrSje3j3jzvGuz31QVjj0vmzfnbr/4Pq4p/kDJYcZLQljfrIW+EEv8SJ2e0OV4srMmhKJiZNq9ML3417ejerbGr1cw+CBh2ZdlIhYhyiHdqCsecf2Wg0IOc=
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nCbrLPoZNTYAX8EbQHppKy+TR7uFhZF7JnSL5/nnFJttOoUbKzjzjKMy0T1IKOzzSKcmYN6vttO2VYkO4mltId6WciCGOni1wblBCwRfrDQuMG36ApJwh8DU7TQcVnIiiUww9EtFSxA1E8bZRbjs78PQQAIsVbiKHw1F95Z9Ula9a5Ad4RmwuwjFEiYcPacrryMNRb0365fA+IVrUOhJbKO8L5NEERfJtAhXNXUg3D5Z2ITPUlMlDn89w/2xNUfcRA==
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 19 Mar 2023 20:15:30 UTC"
+record: -1

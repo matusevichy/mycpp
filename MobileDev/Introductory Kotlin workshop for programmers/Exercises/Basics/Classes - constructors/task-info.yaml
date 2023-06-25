@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 109
+    placeholder_text: //Implement the Car class
+    initial_state:
+      length: 25
+      offset: 0
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: U+JdwMuJXBRGnB12C+fn/eIZTIfg143uSRVP5WGOJsVDELSsbSG5JH2cSf9vOSeO+ZqK2Z8KEOhFDyZk9c9S6PPhSa64k09PsvzyGiBSfzGJs0YpojTrT5l9ZInZiCNwot4rOilxN3JAXE104BKjgA==
+  encrypted_text: 98vX0tb8GcCAwOn6niJ1iWrruHHWjm8heGla5dmqYHkWN/sAADY6XPpz/vzNKuGo4R2z9YlG34ya+vu8CbYEL0HvCe9N2/G+usMtijvIcqFnF+cEEEIifIiHlhakH9//lIYhq5u31NBmEBoo8lLUWkXWZ4cCK+SUnmw6hUEE5AX4LpzKJgTRzIVJnrALkpQypBoUDXIpfvn4m5xebtazlg==
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nPgSprX82ws8KyMUcK9groLEKPAYAQJRQ1nyaUsYod+6tl4qG2hzxpRfR1j4SdCd4sg5AUl5Dn4UAEPmT9WDpa0xFni/W9935SKj7g0TgMPuO9rALiyhatFwSCMLb+DCvL4LQIsfm5SFsbUMAkQS82R++ESJGAWBpndgw1X2cbNx
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 19 Mar 2023 13:34:31 UTC"
+record: -1

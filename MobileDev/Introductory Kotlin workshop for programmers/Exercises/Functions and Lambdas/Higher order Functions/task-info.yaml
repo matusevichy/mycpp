@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 290
+    length: 241
+    placeholder_text: //implement elapse function
+    initial_state:
+      length: 27
+      offset: 209
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: jXypvPm5nYKun2olfOiVMTDA27BLVqXQQTlxiKLuV/VCFhFjh0tbJr1tAbNfe+2ArXnGkaN54fQ8YNTSETMuhjf2WsO3as37lkIsYZgMWr/LtlUxPMUNTDln8koUtdkvHOve/v2Bh5OkXsDm/a/zFNXYQd4ZEsCw+PfwbBsp76J476rD5OtRzG/fKDGthEPHsFmdwTgjkb75rAwXEgXSj/cOeLFOfO4Z1nqAE3WT1te4Y9+ZCqiMk019gyMbOOwi3Fm3F1iWHD47Jx4HxzyQJb2YEu0IbznmwVaj7al6+bZ8itI2pqkzF+7+eRGmFVGr
+  encrypted_text: oceNBJ5pYcIVAZYArWeY0Nt1MkI64YZA85+bIjqm7jWHdMm5+cMqCHtBV0Oq8Pe4tc2Q0WWPoH7j/YF6dWV+ERT3XJ8UUJsUrRssWjCuA5OvViGFcgsPROD2colRtpI/uBmgx9YznE1UxX0ieqGag3Mz1Oclnz8snN+DSawFnhaQIpu/Vm5f3rHxThLR28pZXzz4HL2G9sblwOd1E7C2r3npHeVwA2I9nBL44lRpV4HWv0FhLx+NDjRdl/AUTD3tdntgWQeb67MwxYKCXP/rejT5TV3dccKqSSHHRZ7dgkSCKou1D65tifRrGmasv9irb4MeUizKZRK9OURrKCzGY5QLEQa7s5YpfTb58DITg4mckXKIBLpR4zlC9rSdTnla1WlJDr2EeJ1RGGnZaXB+7mq8hUz9kZM+NSY0L8iuuL+mJIrlZ1cXTt/R9wVb9YH4QdoceTdFcKeXlYdEs1fiUfbk/6T70H4zK8i8ndu2127IwAH6eEGj1Rkxx2flU8ZgkZE8tYV54xEe3AyIopdcuYPB02P4Ghgk3gL0RIHBadI=
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nHtLpzdQxMsPoABRFaziEnKFzNCtltUQnNCbqHIqIzzmfFELycZ6dNN+w/ngoPAYK5WEC0aUL/pv/aSO5j3+icQXb4bO3B5aapqRQu86dCBWcHSiRIN+NFJp8ZQpfs9AgNGKUDC+Pm+dEbVFID8j5TieewJ1EvXDJi8psKOttE//BBI8ezZjbcyeGHdGVDs7j6XJ/kDlI1thef3nRMLl4+gJWdA/khi2jtufh5gDOMm8JebadL8hP3hDDRZMUuRY29AsAQ9Q3Tx9+yuuMqNRLXB1fze8ILtsfRhWfpIb9qv1TPryuo4pCOYf3I4mYZB2oG7e360e+8YpImfLMkj0BQAAI+LQ0jXGgkPMoiQYR8BEPNZ2lD+RhmfcMIiBTpnHDhxrOPnV0WBgLTvjg0pxrTnYScbCRRZzavgqECMaNhtF
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 19 Mar 2023 19:23:13 UTC"
+record: -1

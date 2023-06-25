@@ -1,0 +1,40 @@
+Part 1
+
+    private void startTest() {
+        check("Unity", 3);
+        check("Unite", 2);
+        check("Growth", 1);
+        check("Possibilities", 5);
+        check("Nimble", 1);
+        check("Me", 1);
+        check("Beautiful", 3);
+        check("Manatee", 3);
+    }
+
+    private void check(String testCase, int expectedResult) {
+        if (syllablesInWord(testCase) == expectedResult) {
+            println("  Pass: " + testCase);
+        } else {
+            println("! FAIL: " + testCase);
+        }
+    }
+
+Part 2
+
+    private void startTest(){
+        check("123", "456", "579");
+        check("137", "865", "1002");
+        check("199", "1", "200");
+        check("12345678910111213", "9876543210123", "12355555453321336");
+        check("0", "0", "0");
+        check("999999999999999", "999999999999999", "1999999999999998");
+        check("111", "999999999999999", "1000000000000110");
+    }
+
+    private void check(String firstStr, String secondStr, String expectedResult) {
+        if (addNumericStrings(firstStr, secondStr).equals(expectedResult)) {
+            println("  Pass: " + firstStr + "+" + secondStr);
+        } else {
+            println("! FAIL: " + firstStr + "+" + secondStr);
+        }
+    }

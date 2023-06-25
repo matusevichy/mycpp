@@ -1,0 +1,36 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 39
+    placeholder_text: //Implement Transport class here
+    initial_state:
+      length: 32
+      offset: 0
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: y4LUQi9LcWjHEowzhzgBkryM1ectL3AlPzorK1gk96cAxcJEpES8MDxbXaggih7S
+  - offset: 93
+    length: 97
+    placeholder_text: //implement the catTransporter() function
+    initial_state:
+      length: 41
+      offset: 86
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: L8aBzIHnqoAaHe/F2f1y6QXW+mkbcIzCLKMbaGnjC7+5PVSgSvZ6WqkNzFKBhYLHLwzGdeOaJtNsyNrtVaBYHA==
+  encrypted_text: GlUU0jDQntipJ3eQxoQ/qtKXCIw3sGIEX9wr6h+odB/+TL+g4a9i+GlI9a3eU75/AbtYtUSsc/mwvnkt3AHgBkgWpqk90TF2YZX8TIprHRZ+RDTyqT36VG3KqbPqQtmhEme1usPS8BpfXlQqE1SENA1ZRhjc8rpnwL/35hVzNXZZnV3xFfm7QyE64GuA/l9uP5swW4aGLzUaixb3+wsGbg==
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: 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
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 19 Mar 2023 19:35:54 UTC"
+record: -1

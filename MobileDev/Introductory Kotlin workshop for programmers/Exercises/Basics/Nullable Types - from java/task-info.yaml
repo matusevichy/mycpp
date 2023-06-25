@@ -1,0 +1,34 @@
+type: edu
+files:
+- name: src/Mail.java
+  visible: true
+  encrypted_text: a3Oc3sOKihNm0o8Cls6Am18SwkH91Ot0VMsZNbUyZTU=
+  learner_created: false
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 86
+    length: 49
+    placeholder_text: //Wrap the method
+    initial_state:
+      length: 17
+      offset: 94
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: C1jmNs2YcUmhlW4+g+/oH3ruSd9hsVWr/vWBgeylFS1bMvk5xFRjL3JXZZjLymTv
+  encrypted_text: I6Qp62PB5mbWqo9OeiWXElH4L+NQnDtn6ocpc+HK2sjUM4TBfbHWJWa+be2JnZyW45laMWqaQfl1tw2KqnxaKYbU2YKW9wYPQyfSMELXTW3ONLBv0yhdYMLZd9v2sqDtt+KFD9w7Wz0L37jx7X6GUzhgLhPFyjotKILMo3hH4qk=
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nHtLpzdQxMsPoABRFaziEnKFzNCtltUQnNCbqHIqIzzmfFELycZ6dNN+w/ngoPAYKz7r0Hjbqdxum1sEIUgSdyBfjZEv5aNBGuRj7liJGXW3aNRr2snS9tVeyWh4Z9SBF69CgbPNuxlISqetXaAy5D9TnaUR3nJn6/wt+LJ0a1dYeIufOzA/ZAqaJcUrUVauAyV+/3pJ7Mtg5HL4xxlyTakkV3SfF4QNfHS4nXuexIlk8q7GdBbIm72qEDPS3a7rpcHbjrj3yH7DNsKVDLeb4Xq26Lbg0B86mvle4GL8rkhSj2fzsr/Y9fof9BnT9uZDCOeRcPENe2KhnACEHSJ9rpopxu208MkwHvHC7ThMF2FIEGi27Y44GEayS322UB2c08OpadVlARWDb02DAbXl2r8pTtmhu75HabtLOW4dA4kJZFNS+B5rHAVabDLaSTYSQlgWceQVpZkhOqp7NihsYmNI52+QHfHcdcyAmsLJo8+1ZlQnrLt2bfJ5kc0wVIZVRThzrk9zR2jAwvoGqH9mdbKWxO7XZF6hjrYg7DJf3dyfW700bN8S2LMfD8AZKVqM+Q/BjDwu+60OZn9QOcQU+tlpgNoxBe0z2jUfRz+oH/iAxQ3/SQlkHehGAZoMIQH0tIoNu3fzpIDYa53wfnxTO/QSljygMVxhiXRPKbtDVJqOxSyf6R+UrOc4rWU0nYP7tQ3cF5LVHQ64NHwWIpcywqxST8bZ611ro4oH6sywpvhG
+  learner_created: false
+- name: src/JavaMailer.java
+  visible: true
+  encrypted_text: NYgHoNruO3t7vIi6YFhoH82zfokqSu39pBCjVzXbdl1eZKF7b1hMgI13XG4Hzrk0bbP0K9L+gyp3/T/WQH7oHUGS1pw/0LQqJ/4ZFTuOdilfcPJSKcTxM5utVi0R/OfV
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 19 Mar 2023 18:26:12 UTC"
+record: -1

@@ -1,0 +1,44 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 37
+    length: 170
+    placeholder_text: |-
+      class Carrier<T>(private var thing: T){
+          private var name:String = "unnamed"
+          fun getThing():T = thing
+
+          fun addThing(thing:T) { this.thing = thing}
+          fun changeName(newName:String) { name = newName }
+
+      }
+    initial_state:
+      length: 214
+      offset: 37
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: rivZG9hGigInh8T5+eYquBmaIEljy1fYfcepK+UfdSmBdZYP6kPdNp2+9PM1HcyTE19hDQQzBkU8HzQ9Ln3bgQDvOjWzONj1qbhXGqN0F4ZbCpwzdy+AqLwDvrIB88/IcVnrK/Xxjzs1SWvxpe/AkvEaHYSoX/Ogquw3gRnEv6QGIuAEmvVbzNXB92rS0Mr3rdCbtmUxbuoDahide6D+ySFqzmu9XAHnbWHyGsaSoYZCSSFvR5EtEslGkUoX/2TX
+  - offset: 350
+    length: 85
+    placeholder_text: //Assign a dog Carrier to the animal carrier here
+    initial_state:
+      length: 49
+      offset: 394
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: vzS2PRsv1qvaQnQWKs4/5B7pRky9BHkWU6tyLqEZacg6kiMA1QWKW3xzx5Esl2Tr
+  encrypted_text: XnygPPtlVwAcpAzcBmhaksBV97WoCxY5xp2GF4FQ8/IeY9zsmjCXX4mFtpg7r6xKPm5ClnK0SL3pYjYrmqHm/7SOt6Xykf616tPJIHrr/ASWmpKzdXT16oAZ2oOHYgqrHuQtQw3eIamwNefXsV6nyrzAdAVYIQvJZpK+XrQNMWT2jpXq6EZTnvbiNa2pYveYIRbovrpd08He6CEmnnjKa9s1SnCe9AXbd7UNAmkG2BmeLfZxvz7tLww+XxcN9UynOvKllE+rP+ZDykukP2yeJxHHf1O1CpMWIfFrYMKu1Fxmj4Wr/d+nUkJ1ODrbb2UaBiaIZnir7PwvRtGuW0Ou0hn1+Q3HBqGH3bv5SG6MlOL4/Ts7vTC3t4ydRlyacd9+DVsWNOwiM6C5ydhZlGkE2GDitlATMimNRiZURsnrIwTcsQy7DRfg0J752fQHnQYbxFH4/c88rAQnL+xPyUlEIF/rdbVOsSD5oETxIBkMU8cynOCxQAXdiHa8BjQSQyr4pOrfN0TIiJoRyoY+H5RX1k+gPD9kNl1NSyAGYvzlQX7ADth/1NrE7Quo5uuzl/gHbL3KZ7eihptPFf0i2H4VjDHCumSvkPxx12hmjyS8mbw=
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nB2i9B2xZdXcJ9/0gZP2KhFBJlrDeSB0tTLi4hmlvfKIwzdqTZMAwvNJbzQOq4+1jruCrL2jeRFKz0soYRHgXWMv+SO1ZspoZeiMWCadUxOFqGYlIsT7+2jDgEtXivKr4hVW5Dgi6gogIy8KBykDToAdGz0OI+NpPKDHavUZCA+R9kB/r1sR/N5TSdJdgglSBhjV5SVeAoNML9YekE5jeq3uGaQdIWl0i9fTzSxkJXPj8toeDUyWFUuLW5EH/cBd4PoiWO06+Z45HsaafU3bkv+fvjrnSjl1hjAeWUz3gIYoEyibj/a5f3RBiA4Ll3iibcTKGLPSdFnFjiUDT2Gg+RjGqweO++gze3ZWOVR/irUB8NT2F6ZyBOWnzKXRm22EHLDiS8asAFGb6D1OUsCjyCgh1/MV2FqbBhsc2Xv1/pwbMN9yYCzfIx1L4NxibgeUjGDoFQQN3waWMp6hbYDXAFJA+rdIL/En9QCj1PhPMhNnTrsT3Ti907w1p+Ins4AqSMcVr88p42uU/0+6Nmim+ccWzTUfJWH2n/XQT/OdOy7S/8n8CjavafTP/6ZylRYyDxVYRnl7OGiKGXWuob58t6eEKqyNAe7XVNeaCQ1ucOFHVDABZX5r6eyyXPQ8N2aZzg==
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 20 Mar 2023 09:05:40 UTC"
+record: -1

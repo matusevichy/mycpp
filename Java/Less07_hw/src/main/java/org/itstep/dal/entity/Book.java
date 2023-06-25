@@ -16,17 +16,17 @@ import org.hibernate.annotations.NotFound;
 @NoArgsConstructor
 public class Book {
     @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
-    int id;
+    private int id;
     @NonNull
-    String title;
+    private String title;
     @NonNull
-    String author;
+    private String author;
     @NonNull
-    String year;
+    private String year;
     @NonNull
-    String genre;
+    private String genre;
     @NonNull
-    int pageCount;
+    private int pageCount;
     @NonNull
-    String description;
+    private String description;
 }

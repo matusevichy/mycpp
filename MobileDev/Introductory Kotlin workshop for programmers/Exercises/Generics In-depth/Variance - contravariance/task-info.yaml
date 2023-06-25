@@ -1,0 +1,46 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 80
+    length: 104
+    placeholder_text: |-
+      open class Trainer<T> {
+
+          open fun train(target: T) {
+              throw NotImplementedError()
+          }
+
+          open fun trainedTarget(): T {
+              throw NotImplementedError()
+          }
+      }
+    initial_state:
+      length: 177
+      offset: 80
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: rA+kZJnS1sQM5UjssAXaE/3wkx5PKUymyGKtMRPfYFOT+dSZWPcIfjdLYHZTT4qzztxyiYNhlUNhud1kASsk9wLhp2EsbAumv07q+eHLcICpL4HxZgmZaQGRa4kBCVnjRT1l7RnVGDLeC9LBgQxyXw==
+  - offset: 469
+    length: 96
+    placeholder_text: //Assign the generic dog trainer to the danish dog trainer
+    initial_state:
+      length: 58
+      offset: 542
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: oDRKoodiLo4kpyjosCtJrO7aMinbInSfnkpPJJpjWHs=
+  encrypted_text: ci4RQhTu69bUtcqqVnH41VE8H9Ggl0Q/XzedDDo71HIaD0tYoO492LPM0icBIImV4lJvU6YZy+QTarxjYViiDmRg1L8EbBjgVI/lI+/SRjH+TjZMJgTXmmBlzU7zSv5SI8AHeWOU9NF6f0pvjawvT/sv8CltDsydgFJy8uLHZAgVmfeEnME3emdCxOs9JSCVFWGoeTHdTkIqAUTJkaBHUSJfPEtqQAk3T3Q2KUBMSuKUOz+Hdd4xK4/yhyKDfQp9PyiB4HHbn/kODoy5Nzwop8q3vK2WpUDplDEXLi9pj5elVVGSosqJ130sJq5kEPTNttgWMiBtwGK0jcrdVufazKZi+5zg0XlBPJiSP72bn4mYF0R1ySiGlgffTvy74ocW9PVCOinhaVfNI1dvW6WkecBu4tApK0TdfUqdtqff4w4bu/dP3vHP+BWuObAJWiqm9t4rDxPSyU6IZ8hu0kgBwybAzbK6BH7leEbiNxNNX0XMrAAF2OnJB3fdke81Q4q0PzIi66XhtCm6ansS2xh12I57Pgu0pHaabUHLx/oRmiU4hi+3XEkz8WB8ZyuTOUM4S68XRWVSjKI8iPSm9B0/U3O3mmX4qUbTFKZzZC/zVeRp8vLNLi+FLDe7VaAl2bmb5GVe+ugtnW/61q9r6n/j2HZTVpIlyHxa0UaGES7fv3QbDn3sGN2coUPa0cDK9JVfPfjWC7kSlLzZzvmK7FquDevUhyqIz3eskDRBNYhFqdrEPTl4egKclg1fzFYqDtGK78SptSCxz46fVQGUyvgi9J3JAtyhHFCL9Fgo0suywfk4txvfNoivRNwy45sY9ZkB
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nNqpMrA3fwpyZ1G7/X9K1RIvYNOFpUD6g3KzoxwgKTq5nEtk8cz75Ul6SzGQSDlJDgAPonH6hs46x+dpVIRETY/UODJmenJ0xS/j0mzYksHR+qSqZmGZ+BmnyqIhJsq48v2f7TIYFQLDckG1A0iPnu3WTJrEj9oEc478JnQG1PhSzzLzxdvftKpBmh4lUmTYGmcGkyp9s4oOUVw+0SwXEY0ozPyBfXIWgNzn4wQFCfu0wuhMKctiG0GhUzsNNer5tgsmWT6FoH4tLHBKIUQD7dzFUV5SqN3UUKEm42uyL7mySJ5tgXKscwlQTfzN/RLjcQ66NCY1uvWZ+Lmi8ovsLZQ0WMOSaO2Yj/mt7Iqy+Lnj+KyVGyF8gCbb/cdseM4Q41brl7u8Xf7dZcVG+oUYftVHlTX4GDu5GieTrCHNPp5sb4GHLpoT73Xw8kWlvaaRhepE6QPi5nPyhwDHw9kI6NDlIrAs5MrmUJItPZcSryjGHKSNbOixtF6bkOm16IMiwsck3Ebf+HGIOlQtqi1smwUQsW64I9rT4A2R0DQBdDSQw5oipn7uSfFtpeAuhMddAGB76vyP7zoN19laqwBBcTkGQpHqeozwNpNFqqrurpZuWQG196AW9VQ/bn+jTWZ8usiy/oEzBVuSDVf6Qc2UwODeBPaEvYjN6ccAk7XNlou0SGX41Xgoap3ZR8VWP2PIfgJIeLBWPXRwHV49518fg701yGtiRLBbfFJrcDai4tAoCALUgsNk+9fdVtyKGfFu4wwL+vgIHTV9ONc4g7hS1+I=
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 20 Mar 2023 09:11:03 UTC"
+record: -1

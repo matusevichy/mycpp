@@ -1,0 +1,28 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 157
+    length: 203
+    placeholder_text: "//FIXME: assign the dogCarrier to a new variable \"myCarrier\"\
+      . The following doesn't work:\n//var myCarrier: Carrier<Animal>= dogCarrier\
+      \ \n\n//Temporary placeholder:\nvar myCarrier: Carrier<*>? = null"
+    initial_state:
+      length: 195
+      offset: 157
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: 3XkE2DtYTp3Tz4Fye77u7TWlkiOn4VgNA637rVil8Hk6pEkFLyd/c7yOj4gydYLJ
+  encrypted_text: XnygPPtlVwAcpAzcBmhaksBV97WoCxY5xp2GF4FQ8/KImU/m7aS2WkUN1BFPJfC8GnAfaT3p8chbGK7zGddazHMtasZVFoAuFUfGo7Z+bFV5ynJnwzwIjOOr4wl4V0TP/yBBtW0thjTS968NNN6Pi5vt58BOyakDzqJRFMD7rN2HdZA9CebTnyVSWEt1RzUoGiH1mfVa73SCBRmfU82jXLIMzKmnF3FWF8TjRmCongEHCyCV/yAYB/t8hrv81L2RPu1gz70kdcJJYz8qzdyGhGgBwkKNdK+d00JpDuWkTOsSTUDoB2iSxUAwIh2YqjQq+qh5Y5Bhwwel8jLP+1B0ZMtW/tBqukp1PRK2uvammkpQ/l0hdpPQSan/UbWFdSztDjPvjOWJO8jOlbMe7scujpT8LD2InnzbuQ5Tma8tOBtojeFnkSls9zAppTPWsCleUHjwerghVDDuboUXvbcWYWw6/hvqlOot/iB2swdzMjxUL862kIdjpKG6pauSKiZM
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nHtLpzdQxMsPoABRFaziEnKFzNCtltUQnNCbqHIqIzzmfFELycZ6dNN+w/ngoPAYK5WEC0aUL/pv/aSO5j3+icTB5UD/adoXpCFKrGk2E5W1oLi2nCeLL3wpQksvSZReb+3YA4mvmNYsCv/u0777tlz/O/600avJNNLaKICEJKIg8AnJJRTUQ9f6UIasllEBKSakbmq+fpKna8I+M24KHMzOn5x3qkCRFXGJ7lxKcqd0szBeScVBtrGLjFwMjHkzquMwiguyhqlBbPIFIjfZztdCgdVCq0SxUZ8h7nju0B0R
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Mon, 20 Mar 2023 09:01:40 UTC"
+record: -1

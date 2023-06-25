@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: src/Task.kt
+  visible: true
+  placeholders:
+  - offset: 22
+    length: 129
+    placeholder_text: //implement the method
+    initial_state:
+      length: 22
+      offset: 22
+    initialized_from_dependency: false
+    selected: true
+    status: Solved
+    encrypted_possible_answer: HsJnRkvkRXYb15WR4U2/dsrdIfOSfEBybfjTrYwzmBcu7+MW7/mvdv4fbPDY6AmcHUmYzzyWCxo8fl37MMyqzjTjAqL3NZg1twBJgsqMy6h8dZ0fpa/1v4Uu+UvT2ppQL5culPZuPW+SlyNwaB9PmZvzww1jxv1y+T51L9CZ+buphG6OZDustgYZpII4ipg1
+  encrypted_text: QfOYqID4RK3/joHMt6aMrRFxO4GbF68BQiQU5ORUMyfXSnSu9YK6XwJZRK86apu0
+  learner_created: false
+- name: test/Tests.kt
+  visible: false
+  encrypted_text: ITs8Nv8EH6QWJG5nufD7nNqpMrA3fwpyZ1G7/X9K1RIvYNOFpUD6g3KzoxwgKTq5nEtk8cz75Ul6SzGQSDlJDgAPonH6hs46x+dpVIRETY9v0/WTozXUcgQOorVNsY4Ili06Kp32yOuBpEASBxLD3FbToJiGpjZ3Uj80rHBP33pZaJvKPeGa5aiao8DQeHM8secZm51k9S0g3WKENYtMVrZ1KFr9iSgLSwNIYCwlwpsmvcfVYTwqXs4k4LpmR4RSkdyiaR4EAw7VooELbo8oPzipRSXIbOQXphDQzX/d4MNG95P46MWiA9L4OMdf69wug39z58RPmdENZzRxFEo+GpTr+AH8GsQlPD4ssj7ckjnHm+Uq+yDJuP4zLUZpDUhW581NuewvWnDzF8DgIreZwwwF4jtiKxTTeNB4xxbxAhuB1xy9jEs4YOVhfJeHC2htvwEMO4v1lGwTUVIwf3fYp1UrjK+KTw/HHM7Hu+fPLc5NSXYD3tLJp+Z2LXM86Hsgj38nNGxpN8mYEFNQ25+g4dd/wnrtHdxhVVwmDK0rIeUhdCwselvzR+Sp1/fnHIDG
+  learner_created: false
+status: Solved
+feedback:
+  message: Congratulations!
+  time: "Sun, 19 Mar 2023 19:40:41 UTC"
+record: -1

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Test" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-03-19T18:26:12" hostname="DESKTOP-BCU1QI7" time="0.011">
+  <properties/>
+  <testcase name="shouldHandleNull" classname="Test" time="0.011"/>
+  <testcase name="shouldHandleAList" classname="Test" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
